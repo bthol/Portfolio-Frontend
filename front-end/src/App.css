@@ -1,38 +1,69 @@
-
-@media(min-width: 0) {
-  .App {
-    background: rgb(230, 230, 230);
-    text-align: center;
-    min-height: 100%;
-  }
-  .app-header {
-    background: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
-  }
-  .header-links {
-    display: flex;
-    align-items: center;
-  }
-  .header-links a {
-    text-decoration: none;
-    color: black;
-  }
-  .app-nav {
-    background: rgb(245, 245, 245);
-  }
-  .app-aside {
-    background: rgb(245, 245, 245);
-    width: 100vw;
-  }
-  .app-main {
-    background: rgb(245, 245, 245);
-    width: 100vw;
-  }
-  .app-footer {
-    background: rgb(245, 245, 245);
-  }
+.App {
+  background: rgb(230, 230, 230);
+  text-align: center;
+  min-height: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.app-header {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 75px;
+}
+
+.app-nav {
+  background: rgb(245, 245, 245);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.nav-links a {
+  margin: 10vw;
+}
+
+.app-aside {
+  background: rgb(245, 245, 245);
+  padding-bottom: 16px;
+}
+
+.app-main {
+  background: rgb(245, 245, 245);
+  padding-bottom: 16px;
+}
+
+.app-footer {
+  background: rgb(245, 245, 245);
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-top: 16px;
+}
+
+#augium {
+  margin: 10px;
+}
+
+#aside-main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1em;
+}
+
+/* @media(min-width: 0) {
+} */
 
 /* @media(min-width: 576px) {
 } */
