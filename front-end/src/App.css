@@ -1,66 +1,105 @@
-.App {
-  background: rgb(230, 230, 230);
-  text-align: center;
-  min-height: 100%;
-}
 
-.app-header {
-  background: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-between;
-}
-.header-links {
-  display: flex;
-  align-items: center;
-}
-.header-links a {
-  text-decoration: none;
-  color: black;
-}
-
-.app-nav {
-  background: rgb(245, 245, 245);
-}
-
-.app-aside {
-  background: rgb(245, 245, 245);
-  width: 100vw;
-}
-
-.app-main {
-  background: rgb(245, 245, 245);
-  width: 100vw;
-}
-
-.app-footer {
-  background: rgb(245, 245, 245);
-}
 @media(min-width: 0) {
   .App {
-    background-color: crimson;
+    background: rgb(230, 230, 230);
+    text-align: center;
+    min-height: 100%;
+  }
+  .app-header {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+  .header-links a {
+    text-decoration: none;
+    color: black;
+  }
+  .app-nav {
+    background: rgb(245, 245, 245);
+  }
+  .app-aside {
+    background: rgb(245, 245, 245);
+    width: 100vw;
+  }
+  .app-main {
+    background: rgb(245, 245, 245);
+    width: 100vw;
+  }
+  .app-footer {
+    background: rgb(245, 245, 245);
   }
 }
 
 @media(min-width: 576px) {
   .App {
-    background-color: orangered;
+    background: rgb(230, 230, 230);
+    text-align: center;
+    min-height: 100%;
+  }
+  .app-header {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+  .header-links a {
+    text-decoration: none;
+    color: black;
+  }
+  .app-nav {
+    background: rgb(245, 245, 245);
+  }
+  .app-aside {
+    background: rgb(245, 245, 245);
+    width: 100vw;
+  }
+  .app-main {
+    background: rgb(245, 245, 245);
+    width: 100vw;
+  }
+  .app-footer {
+    background: rgb(245, 245, 245);
   }
 }
 
 @media(min-width: 768px) {
   .App {
-    background-color: orange;
+    background: rgb(230, 230, 230);
+    text-align: center;
+    min-height: 100%;
   }
-}
-
-@media(min-width: 992px) {
-  .App {
-    background-color: yellow;
+  .app-header {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
   }
-}
-
-@media(min-width: 1200px) {
-  .App {
-    background-color: rgb(0, 252, 0)
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+  .header-links a {
+    text-decoration: none;
+    color: black;
+  }
+  .app-nav {
+    background: rgb(245, 245, 245);
+  }
+  .app-aside {
+    background: rgb(245, 245, 245);
+    width: 100vw;
+  }
+  .app-main {
+    background: rgb(245, 245, 245);
+    width: 100vw;
+  }
+  .app-footer {
+    background: rgb(245, 245, 245);
   }
 }
