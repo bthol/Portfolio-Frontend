@@ -1,7 +1,55 @@
 .App {
+  background: rgb(230, 230, 230);
   text-align: center;
+  min-height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* @media(min-width: 0px) {
+  .App {
+    background-color: red;
+  }
+}
+
+@media(min-width: 576px) {
+  .App {
+    background-color: rgb(255, 94, 0);
+  }
+}
+
+@media(min-width: 800px) {
+  .App {
+    background-color: rgb(255, 170, 0);
+  }
+} */
+
+.app-header {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+}
+.header-links {
+  display: flex;
+  align-items: center;
+}
+.header-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.app-nav {
+  background: rgb(245, 245, 245);
+}
+
+.app-aside {
+  background: rgb(245, 245, 245);
+  width: 100vw;
+}
+
+.app-main {
+  background: rgb(245, 245, 245);
+  width: 100vw;
+}
+
+.app-footer {
+  background: rgb(245, 245, 245);
 }
