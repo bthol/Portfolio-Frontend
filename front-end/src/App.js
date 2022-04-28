@@ -30,9 +30,9 @@ function App() {
       <nav className="app-nav">
         <h4>Navigation</h4>
         <div className="nav-links">
-          <a href="">link1</a>
-          <a href="">link2</a>
-          <a href="">link3</a>
+          <a href="">Page link1</a>
+          <a href="">Page link2</a>
+          <a href="">Page link3</a>
         </div>
       </nav>
       <span id="aside-main">
@@ -42,15 +42,18 @@ function App() {
         </aside>
         <main className="app-main">
           <section>
-            <h4>Main</h4>
+            <h4>Main Section 1</h4>
           </section>
           <section>
-
+            <h4>Main Section 2</h4>
             <p>{JSON.stringify(data)}</p>
             <p id="num-display"></p>
             <button onClick={printData}>append numbers</button>
             <button onClick={increase}>increase numbers</button>
             <button onClick={decrease}>decrease numbers</button>
+          </section>
+          <section>
+            <h4>Main Section 3</h4>
           </section>
         </main>
       </span>
