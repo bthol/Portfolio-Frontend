@@ -4,21 +4,10 @@ import { Container1 } from "./Container1/Container1";
 
 function App() {
   const [data, setData] = useState([])
-  const printData = () => {
-    data.forEach((i) => {
-      document.getElementById("num-display").append(`${i}`)
-    })
-  }
-  const increase = () => {
+  const create = () => {
     setData([
       ...data,
       data.push(data[data.length - 1] + 1)
-    ])
-  }
-  const decrease = () => {
-    setData([
-      ...data,
-      data.push(data[data.length - 1] - 1)
     ])
   }
   return (
@@ -39,21 +28,27 @@ function App() {
         <aside className="app-aside">
           <h4>Aside</h4>
           <Container1></Container1>
+          <Container1></Container1>
         </aside>
         <main className="app-main">
           <section>
-            <h4>Main Section 1</h4>
+            <h4>Main</h4>
           </section>
           <section>
-            <h4>Main Section 2</h4>
+            <h4>Front End logic for CRUD testing</h4>
             <p>{JSON.stringify(data)}</p>
             <p id="num-display"></p>
-            <button onClick={printData}>append numbers</button>
-            <button onClick={increase}>increase numbers</button>
-            <button onClick={decrease}>decrease numbers</button>
+            <button onClick={create}>increase numbers</button>
           </section>
           <section>
-            <h4>Main Section 3</h4>
+            <h4>Skills</h4>
+            <ul>
+              <li><p>li 1</p></li>
+              <li><p>li 2</p></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Projects</h4>
           </section>
         </main>
       </span>
