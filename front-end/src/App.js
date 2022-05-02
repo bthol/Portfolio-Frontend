@@ -80,7 +80,6 @@ function App() {
         <aside className="app-aside">
           <h4>Aside</h4>
           <Container1></Container1>
-          <Container1></Container1>
         </aside>
       </span>
       <hr></hr>
