@@ -1,6 +1,19 @@
 import './App.css';
 import React, { useState } from 'react';
 import { Container1 } from "./Container1/Container1";
+import DocumentMeta from "react-document-meta";
+
+const meta = {
+  title: "Blake Thollaug Portfolio",
+  description: "I am a description, and I can create multiple tags",
+  canonical: "http://blakethollaugportfolio.com/",
+  meta: {
+    charset: "utf-8",
+    name: {
+      keywords: "react,meta,document,html,tags"
+    }
+  }
+};
 
 function App() {
   const [data, setData] = useState([])
@@ -24,24 +37,27 @@ function App() {
   }
   return (
     <div className="App">
+      <div>
+        <DocumentMeta {...meta} />
+      </div>
       <header className="app-header">
         <img src="" alt="Augium Icon" id="augium"></img>
         <h3>Blake Thollaug Portfolio</h3>
       </header>
-      {/* <nav className="app-nav">
+      <nav className="app-nav">
         <div className="nav-links">
           <a href="" className="link1">Page link1</a>
           <a href="" className="link2">Page link2</a>
           <a href="" className="link3">Page link3</a>
         </div>
-      </nav> */}
+      </nav>
       <span id="aside-main">
         <aside className="app-aside">
           <img src="" alt="Profile Photo" id="profile-photo"></img>
           <p><strong>About Me: </strong>I am a full stack developer searching for a position to apply and grow my talents.</p>
         </aside>
         <main className="app-main">
-          {/* <section>
+          <section>
             <h4>Front End logic for CRUD testing</h4>
             <p>front end data: {JSON.stringify(data)}</p>
             <p id="num-display"></p>
@@ -59,7 +75,7 @@ function App() {
               <button onClick={toggle}>update</button>
             }
             <button onClick={destroy}>destroy</button>
-          </section> */}
+          </section>
           <section className="section-lists">
             <h3>Skills</h3>
             <div>

@@ -32,15 +32,16 @@ a:hover {
 
 /* NAV */
 
-/* .app-nav {
+.app-nav {
   background: rgb(245, 245, 245);
   padding: 5px;
   margin-bottom: 16px;
+  border-top: 1.5px solid rgb(210, 210, 210);
 }
 
 .nav-links a {
   margin-right: 10vw;
-} */
+}
 
 
 /* ASIDE */
