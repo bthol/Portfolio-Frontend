@@ -41,7 +41,7 @@ function App() {
           <p><strong>About Me: </strong>I am a full stack developer searching for a position to apply and grow my talents.</p>
         </aside>
         <main className="app-main">
-          <section>
+          {/* <section>
             <h4>Front End logic for CRUD testing</h4>
             <p>front end data: {JSON.stringify(data)}</p>
             <p id="num-display"></p>
@@ -59,36 +59,66 @@ function App() {
               <button onClick={toggle}>update</button>
             }
             <button onClick={destroy}>destroy</button>
-          </section>
+          </section> */}
           <section className="section-lists">
             <h3>Skills</h3>
             <div>
               <p>Programming Languages</p>
               <ul>
-                <li>JavaScript</li>
+                <li>JavaScript (Libraries: Node.js | Frameworks: Express.js, React.js)</li>
                 <li>HTML5</li>
-                <li>CSS3</li>
+                <li>CSS3 (Modules: Flexbox, CSS Grid | Frameworks: Bootstrap)</li>
               </ul>
             </div>
             <div>
-              <p>List name</p>
+              <p>Audio Engineering</p>
               <ul>
-                <li>li 1</li>
-                <li>li 2</li>
-                <li>li 3</li>
+                <li>Composed 400+ songs at 25+ hours in multiple genres (~12.5% songs published; only the very best)</li>
+                <li>Produces all phases of music production (i.e. music concept and sound design, composition, performance and recording, mix engineering, and mastering)</li>
+                <li>General Mastering ensures that the audio playback is consistent on a variety of playback systems.</li>
+                <li>Create audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, granular)</li>
               </ul>
             </div>
           </section>
           <section>
             <h3>Projects</h3>
             <div>
+              <p><strong>Project name</strong></p>
+              <img src="" alt="project screenshot"></img>
+              <p>Description: lorem ipsum.</p>
+              <ul>
+                <li><a href="" target="_blank">Live Link</a></li>
+                <li><a href="" target="_blank">GitHub Page</a></li>
+              </ul>
+            </div>
+            <div>
+              <p><strong>Project name</strong></p>
+              <img src="" alt="project screenshot"></img>
+              <p>Description: lorem ipsum.</p>
+              <ul>
+                <li><a href="" target="_blank">Live Link</a></li>
+                <li><a href="" target="_blank">GitHub Page</a></li>
+              </ul>
+            </div>
+            <div>
               <p><strong>Tic Tac Toe</strong></p>
+              <img src="" alt="project screenshot"></img>
               <p>Description: This is a web application that runs the game tic tac toe.</p>
               <ul>
                 <li><a href="" target="_blank">Live Link</a></li>
                 <li><a href="https://github.com/bthol/Tic-Tac-Toe" target="_blank">GitHub Page</a></li>
               </ul>
             </div>
+          </section>
+          <section>
+            <h3>Experience</h3>
+            <p>Canyon Ranch Woodside</p>
+            <p><i>Ketchen Steward</i> Jan 2020 - Oct 2020</p>
+            <ul>
+              <li>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
+              <li>Managed a food inventory, where I consolidated food resources to optimize use of storage area, and processed incoming shipments by testing for quality and allocating the shipment contents into appropriate storage areas in compliance with company and legal standards.</li>
+              <li>Received preliminary training in food preparation to further assist the kitchen staff after receiving food handlers certification.</li>
+            </ul>
           </section>
         </main>
       </span>
