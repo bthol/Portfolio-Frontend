@@ -66,8 +66,8 @@ function App() {
               <p>Programming Languages</p>
               <ul>
                 <li>JavaScript (Libraries: Node.js | Frameworks: Express.js, React.js)</li>
-                <li>HTML5</li>
                 <li>CSS3 (Modules: Flexbox, CSS Grid | Frameworks: Bootstrap)</li>
+                <li>HTML5 (website markdown)</li>
               </ul>
             </div>
             <div>
@@ -112,13 +112,24 @@ function App() {
           </section>
           <section>
             <h3>Experience</h3>
-            <p>Canyon Ranch Woodside</p>
-            <p><i>Ketchen Steward</i> Jan 2020 - Oct 2020</p>
-            <ul>
-              <li>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
-              <li>Managed a food inventory, where I consolidated food resources to optimize use of storage area, and processed incoming shipments by testing for quality and allocating the shipment contents into appropriate storage areas in compliance with company and legal standards.</li>
-              <li>Received preliminary training in food preparation to further assist the kitchen staff after receiving food handlers certification.</li>
-            </ul>
+            <div>
+              <p>Canyon Ranch Woodside</p>
+              <p><i>Ketchen Steward</i> Jan 2020 - Oct 2020</p>
+              <ul>
+                <li>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
+                <li>Managed a food inventory, where I consolidated food resources to optimize use of storage area, and processed incoming shipments by testing for quality and allocating the shipment contents into appropriate storage areas in compliance with company and legal standards.</li>
+                <li>Received preliminary training in food preparation to further assist the kitchen staff after receiving food handlers certification.</li>
+              </ul>
+            </div>
+            <div>
+              <p>Electronic Music Producer</p>
+              <p><i>Ketchen Steward</i> Jan 2020 - present</p>
+              <ul>
+                <li>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
+                <li>Managed a food inventory, where I consolidated food resources to optimize use of storage area, and processed incoming shipments by testing for quality and allocating the shipment contents into appropriate storage areas in compliance with company and legal standards.</li>
+                <li>Received preliminary training in food preparation to further assist the kitchen staff after receiving food handlers certification.</li>
+              </ul>
+            </div>
           </section>
         </main>
       </span>
