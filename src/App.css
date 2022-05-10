@@ -1,6 +1,12 @@
+
 .App {
-  background: rgb(230, 230, 230);
-  height: 100%;
+  background: hsl(0, 0%, 90%);
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 #augium {
@@ -14,67 +20,76 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: hsl(0, 0%, 50%);
+  color: hsl(0, 0%, 40%);
 }
-
 
 /* HEADER */
 
-.app-header {
-  background: rgb(245, 245, 245);
-  display: flex;
-  justify-content: flex-start;
+.app-header div {
+  background: hsl(0, 0%, 95%);
+  display: grid;
   align-items: center;
-  flex-wrap: nowrap;
+  grid-template-columns: 100px 1000px 10px;
+  grid-template-rows: 1fr;
   height: 75px;
 }
-
 
 /* NAV */
 
 .app-nav {
-  background: rgb(245, 245, 245);
+  background: hsl(0, 0%, 95%);
+  background: linear-gradient(270deg, rgba(180,180,180,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(180,180,180,1) 100%);
+  border-top: 2px solid hsl(0, 0%, 75%);
   padding: 5px;
-  margin-bottom: 16px;
-  border-top: 1.5px solid rgb(210, 210, 210);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
 }
-
-.nav-links a {
-  margin-right: 10vw;
-}
-
 
 /* ASIDE */
 
 .app-aside {
-  background: rgb(230, 230, 230);
+  background: hsl(0, 0%, 95%);
   padding: 5px;
 }
-
 
 /* MAIN */
 
 .app-main {
-  background: rgb(245, 245, 245);
+  background: hsl(0, 0%, 98%);
   padding: 5px;
-  padding-bottom: 16px;
   margin-bottom: 16px;
+}
+
+.remove-bullet-list {
+  list-style-type: none;
+}
+
+.title-line {
+  border-bottom: 1px solid hsl(0, 0%, 75%);
 }
 
 #aside-main {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 10fr;
+  margin-bottom: 8px;
 }
 
+.exp-list {
+  width: 350px;
+}
 
 /* FOOTER */
 
 .app-footer {
-  background: rgb(230, 230, 230);
+  background: hsl(0, 0%, 90%);
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
   padding: 5px;
+  width: 10%;
 }
 
 .app-footer ul {
@@ -89,7 +104,16 @@ a:hover {
 
 /* QUERIES */
 
-@media(min-width: 880px) {
+@media(min-width: 576px) {
+  main section {
+    padding-right: 2vw;
+  }
+  .exp-list {
+    width: 65vw;
+  }
+}
+
+@media(min-width: 767px) {
   .App {
     padding-bottom: 60px;
   }
@@ -99,14 +123,26 @@ a:hover {
   #aside-main {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
-    gap: 1em;
-    margin: 16px;
+    gap: 8px;
+    margin: 8px;
   }
   .section-lists div {
     display: grid;
-    grid-template-columns: 2fr 8fr 1fr;
+    grid-template-columns: 110px 400px 1fr;
   }
-  .app-aside {
-    background: rgb(245, 245, 245);
+  main section {
+    padding: 0vw 2vw;
+  }
+  .exp-list {
+    width: 45vw;
+  }
+}
+@media(min-width: 1020px) {
+  .section-lists div {
+    display: grid;
+    grid-template-columns: 110px 500px 1fr;
+  }
+  .exp-list {
+    width: 55vw;
   }
 }
