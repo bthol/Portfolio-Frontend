@@ -4,7 +4,7 @@ import React from "react";
 const Aside = () => {
     return (
         <aside className="app-aside">
-            <img src="" alt="Profile Photo" id="profile-photo"></img>
+            <img src=".../public/BlakeThollaugProfileImage" alt="Profile Photo" id="profile-photo"></img>
             <p><strong>About Me: </strong>I am a full stack developer searching for a position to apply and grow my talents.</p>
         </aside>
     )

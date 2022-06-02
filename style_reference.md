@@ -15,3 +15,8 @@ light_gray-------rgb(240, 240, 240)
 Xlight_gray------rgb(250, 250, 250)
 warm_white------rgb(255, 255, 240)
 white-----------rgb(255, 255, 255)
+
+
+Lumosity
+background = 75%
+header = 70%
