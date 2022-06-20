@@ -1,5 +1,6 @@
 import React from 'react';
 import { AugiumIcon } from '../Images/AugiumIcon'
+import { Nav } from '../Nav/Nav';
 
 const Header = () => {
     return(
@@ -12,10 +13,7 @@ const Header = () => {
                     <h3 id="website-title">Blake Thollaug's Portfolio Website</h3>
                 </div>
             </div>
-            <nav className="app-nav">
-                <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer">Space Battle</a> 
-                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer">Retro Toe</a>
-            </nav>
+            <Nav></Nav>
         </header>
     )
 };

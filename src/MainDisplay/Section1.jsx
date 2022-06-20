@@ -6,33 +6,41 @@ const Section1 = () => {
         <section className="section-lists">
             <h3 className="title-line">Skills</h3>
             <div>
-                <p>Programming Languages</p>
+                <p>Full Stack Web and App Development</p>
                 <ul className="remove-bullet-list">
                     <li>JavaScript (Libraries: Node.js | Frameworks: Express.js, React.js)</li>
                     <p></p>
+                    <li>Python (Frameworks: Django)</li>
+                    <p></p>
                     <li>CSS3 (Modules: Flexbox, CSS Grid | Frameworks: Bootstrap)</li>
                     <p></p>
-                    <li>HTML5 (Hypertext Markdown language)</li>
+                    <li>HTML5 (markdown content, images, forms, vector graphics)</li>
+                    <p></p>
+                </ul>
+            </div>
+            <div>
+                <p>Music Production</p>
+                <ul className="remove-bullet-list">
+                    <li>Digital Audio Workstations (DAWs): FL Studio, Studio One, GarageBand</li>
+                    <p></p>
+                    <li>Seven years of Mix Engineering on over twenty-five hours of audio</li>
+                    <p></p>
+                    <li>Prolific Multi-genre composer (Dubstep, DnB, House, Ambient, Jazz, Rock, Metal, Funk, HipHop, Hybrid Orchestral, Western Classical, Avant-garde)</li>
+                    <p></p>
+                    <li>Audio Recording, Audio Repair and Audio Editing</li>
+                    <p></p>
                 </ul>
             </div>
             <div>
                 <p>Digital Graphic Design</p>
                 <ul className="remove-bullet-list">
-                    <li>Technologies: Affinity Photo, Affinity Designer, Paint.net</li>
+                    <li>Technologies: Affinity Photo, Affinity Designer, Paint.net, MS Paint</li>
                     <p></p>
-                    <li>Familiarity with Gestalt psychological principles of artistic design</li>
+                    <li>Gestalt principles of design</li>
                     <p></p>
-                    <li>Profeciency with a wide variety of color palletes and themes</li>
-                </ul>
-            </div>
-            <div>
-                <p>Audio Production</p>
-                <ul className="remove-bullet-list">
-                    <li>Digital Audio Workstations: FL Studio, Studio One, GarageBand</li>
+                    <li>Proficiency with a wide variety of color palletes and themes</li>
                     <p></p>
-                    <li>Seven years of Mix Engineering on over twenty-five hours of audio</li>
-                    <p></p>
-                    <li>Audio Repair and Editing</li>
+                    <li>Years of experience drawing and designing</li>
                     <p></p>
                 </ul>
             </div>

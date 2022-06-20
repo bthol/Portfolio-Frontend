@@ -2,25 +2,35 @@
   font-family: 'Raleway', sans-serif;
 }
 
-.App {
+body {
   background: hsl(220, 40%, 87%);
   background: linear-gradient(to bottom, hsl(192, 77%, 87%), rgb(102, 148, 204));
 }
 
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
 a {
   text-decoration: none;
-  color: black;
+  color: hsl(0, 0%, 0%);
 }
 
 a:hover {
   color: hsl(0, 0%, 40%);
-  text-decoration: underline;
 }
 
 .augium-web-icon {
   border-radius: 100%;
   width: 3em;
-  margin: 10px;
+  margin: 0px 10px;
 }
 
 .profile-photo {
@@ -42,7 +52,7 @@ a:hover {
   border-bottom: 8px solid hsl(213, 100%, 75%);
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr 15fr;
 }
 
 .app-nav {
@@ -50,15 +60,7 @@ a:hover {
   background: linear-gradient(270deg, rgba(180,180,180,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(180,180,180,1) 100%);
   padding: 8px 0px;
   margin-bottom: 8px;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-wrap: nowrap;
-}
-
-.flex-between {
-  display: flex;
-  justify-content: space-between;
   flex-wrap: nowrap;
 }
 
@@ -88,11 +90,7 @@ a:hover {
 }
 
 .app-footer-link-grid {
-  display: grid;
-  grid-template-columns: 16vw 16vw 16vw;
-  justify-items: center;
-  justify-content: center;
-  gap: 8vw;
+  justify-content: space-around;
   line-height: 2;
   padding-left: 8px;
 }
@@ -104,7 +102,6 @@ a:hover {
 .app-footer ul li {
   list-style: none;
   padding: 0px;
-  margin: 0px;
 }
 
 @media(min-width: 576px) {
@@ -145,7 +142,7 @@ a:hover {
   .exp-list {
     width: 40vw;
   }
-  #profile-photo {
+  .profile-photo {
     width: 23vw;
   }
   .remove-bullet-list {
@@ -157,7 +154,7 @@ a:hover {
   .section-lists div {
     grid-template-columns: 1fr 5fr;
   }
-  #profile-photo {
+  .profile-photo {
     width: 300px;
   }
 }

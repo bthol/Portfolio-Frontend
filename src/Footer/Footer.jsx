@@ -5,7 +5,7 @@ const Footer = () => {
     return(
         <footer className="app-footer">
             <AugiumIcon></AugiumIcon>
-            <div className="app-footer-link-grid">
+            <div className="app-footer-link-grid flex-around">
                 <ul id="footer-coding-links">
                     <li><strong><p>Coding</p></strong></li>
                     <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer">GitHub</a></li>
@@ -21,10 +21,10 @@ const Footer = () => {
                     <li><strong><p>Follow</p></strong></li>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-
                     </ul>
                 </ul>
             </div>
+            <p>Copyright © Blake Thollaug, 2022. All rights reserved.</p>
       </footer>
     )
 };
