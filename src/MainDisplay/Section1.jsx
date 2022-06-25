@@ -14,7 +14,7 @@ const Section1 = () => {
                     <p></p>
                     <li>CSS3 (Modules: Flexbox, CSS Grid | Frameworks: Bootstrap)</li>
                     <p></p>
-                    <li>HTML5 (markdown content, images, forms, vector graphics)</li>
+                    <li>HTML5 (markdown content, modals and forms, images, vector graphics)</li>
                     <p></p>
                 </ul>
             </div>
@@ -32,7 +32,7 @@ const Section1 = () => {
                 </ul>
             </div>
             <div>
-                <p>Digital Graphic Design</p>
+                <p>Graphic Design</p>
                 <ul className="remove-bullet-list">
                     <li>Technologies: Affinity Photo, Affinity Designer, Paint.net, MS Paint</li>
                     <p></p>
@@ -40,7 +40,7 @@ const Section1 = () => {
                     <p></p>
                     <li>Proficiency with a wide variety of color palletes and themes</li>
                     <p></p>
-                    <li>Years of experience drawing and designing</li>
+                    <li>Years of experience hand and mouse drawing</li>
                     <p></p>
                 </ul>
             </div>

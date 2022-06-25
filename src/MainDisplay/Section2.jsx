@@ -8,7 +8,7 @@ const Section2 = () => {
                 <div>
                     <p><strong>Space Battle</strong></p>
                     <img src="" alt="project screenshot"></img>
-                    <p>Description: Fight off the Alien ships for a new high score!</p>
+                    <p>Description: Fight off the alien hoarde for a new high score in this rougelike battle game!</p>
                     <ul>
                         <li><a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer">Live Link</a></li>
                         <li><a href="https://github.com/bthol/Space-Battle" target="_blank" rel="noreferrer">GitHub Page</a></li>
@@ -17,7 +17,7 @@ const Section2 = () => {
                 <div>
                     <p><strong>Retro Toe</strong></p>
                     <img src="" alt="project screenshot"></img>
-                    <p>Description: This is a web application that runs the game tic tac toe with a retro style to it.</p>
+                    <p>Description: Tic Tac Toe, but retro style.</p>
                     <ul>
                         <li><a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer">Live Link</a></li>
                         <li><a href="https://github.com/bthol/Tic-Tac-Toe" target="_blank" rel="noreferrer">GitHub Page</a></li>
@@ -26,7 +26,7 @@ const Section2 = () => {
                 <div>
                     <p><strong>Magic 8 Ball</strong></p>
                     <img src="" alt="project screenshot"></img>
-                    <p>Description: .</p>
+                    <p>Description: Discover your destiny with the guidance of the Magic 8 Ball.</p>
                     <ul>
                         <li><a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer">Live Link</a></li>
                         <li><a href="https://github.com/bthol/Magic-8-Ball" target="_blank" rel="noreferrer">GitHub Page</a></li>
