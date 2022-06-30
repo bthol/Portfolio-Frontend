@@ -11,7 +11,7 @@ const MainDisplay = () => {
         <span id="aside-main">
             <aside className="app-aside">
                 <ProfilePhoto></ProfilePhoto>
-                <p><strong>About Me: </strong>I am a full stack developer searching for a position to apply and grow my talents.</p>
+                <p><strong>About Me: </strong>I am a Full Stack Web and App Developer searching for a position to utilize and further develop my creative and technological skillset.</p>
                 <br />
                 {/* <Form1></Form1> */}
             </aside>

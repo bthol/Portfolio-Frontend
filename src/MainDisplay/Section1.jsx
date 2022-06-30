@@ -4,46 +4,105 @@ import React from "react";
 const Section1 = () => {
     return (
         <section className="section-lists">
-            <h3 className="title-line">Skills</h3>
+            <h3 className="title-line">Skills and Knowledge</h3>
             <div>
                 <p>Full Stack Web and App Development</p>
                 <ul className="remove-bullet-list">
-                    <li>JavaScript (Libraries: Node.js | Frameworks: Express.js, React.js)</li>
+                    <li>JavaScript</li>
+                    <ul>
+                        <li>Libraries: Node.js</li>
+                        <li>Frameworks: Express.js, React.js</li>
+                        <li>Compilers: Babel, Webpack</li>
+                        <li>Debugging: ESLint</li>
+                    </ul>
                     <p></p>
-                    <li>Python (Frameworks: Django)</li>
+                    <li>Python</li>
+                    <ul>
+                        <li>Frameworks: Django</li>
+                        <li>Debugging: Pylint</li>
+                    </ul>
                     <p></p>
-                    <li>CSS3 (Modules: Flexbox, CSS Grid | Frameworks: Bootstrap)</li>
+                    <li>CSS3</li>
+                    <ul>
+                        <li>Modules: Flexbox, CSS Grid</li>
+                        <li>Frameworks: Bootstrap</li>
+                    </ul>
                     <p></p>
-                    <li>HTML5 (markdown content, modals and forms, images, vector graphics)</li>
+                    <li>HTML5</li>
+                        <ul>
+                            <li>markdown content</li>
+                            <li>modals and forms</li>
+                            <li>raster images</li>
+                            <li>vector graphics</li>
+                        </ul>
                     <p></p>
                 </ul>
             </div>
+            <br />
             <div>
                 <p>Music Production</p>
                 <ul className="remove-bullet-list">
-                    <li>Digital Audio Workstations (DAWs): FL Studio, Studio One, GarageBand</li>
+                    <li>Engineered 25+ hrs of audio</li>
                     <p></p>
-                    <li>Seven years of Mix Engineering on over twenty-five hours of audio</li>
+                    <li>Audio Processors</li>
+                    <ul>
+                        <li>Equilzers (parameteric, stereographic, linear phase and adaptive)</li>
+                        <li>Compressors (tube, analog emulation, graphical, Automatic Gain Consideration(AGC))</li>
+                        <li>Limiters (0dB Peak, brickwall, soft clip)</li>
+                        <li>Stereo Processors (limit, spread, merge, position, and modulate)</li>
+                        <li>Reverberation (Plate, Room, Hall, Shimmer, Low gravity, reflectionless Pitch tracking)</li>
+                        <li>Phasers (monophazer, biphaser, tempo syncable)</li>
+                        <li>Chorus/flanger Effect</li>
+                        <li>Saturation/Distortion</li>
+                    </ul>
                     <p></p>
-                    <li>Prolific Multi-genre composer (Dubstep, DnB, House, Ambient, Jazz, Rock, Metal, Funk, HipHop, Hybrid Orchestral, Western Classical, Avant-garde)</li>
-                    <p></p>
-                    <li>Audio Recording, Audio Repair and Audio Editing</li>
+                    <li>Audio Synthesis</li>
+                    <ul>
+                        <li>Additive (noise and/or Digitally Controlled Oscillator(DCO) generate signals combined to form one sound through the unison psychoaccoustic effect)</li>
+                        <li>Subtractive (hipass, lopass, bandpass, and shelf filters modulated with ASDR, ASD, AD, and graphical envelopes)</li>
+                        <li>Frequency Modulation (FM), Amplitude Modulation(AM), Ring Modulation(RM), Pulse Width Modulation(PWM) (properties of a modulator signal acts on properties of a carrier signal)</li>
+                        <li>Granular (audio sample spliced into parts looped at high frequency to generate tones)</li>
+                        <li>Pitch Mapping (tones are generated relative to a map visually characterizing changes in frequency and amplitude accross time)</li>
+                        <li>Spectral (audible frequency spectrum is divided into separately manipulated sections)</li>
+                    </ul>
                     <p></p>
                 </ul>
             </div>
+            <br />
             <div>
                 <p>Graphic Design</p>
                 <ul className="remove-bullet-list">
-                    <li>Technologies: Affinity Photo, Affinity Designer, Paint.net, MS Paint</li>
+                    <li>User Experience (UX) and User Interface (UI) Design</li>
+                    <ul>
+                        <li>Interactive Design: provides user feedback to make for a more intuitive and compelling user experience.</li>
+                        <li>Responsive Design: useful for compatability accross various device viewport dimensions and necessary for the growing number of devices on the market.</li>
+                        <li>Mobile First Design: a design practice where the layout is first created on mobile viewports and then adapted to desktop, which is motivated by the widespread user preference for mobile over desktop platforms.</li>
+                    </ul>
                     <p></p>
-                    <li>Gestalt principles of design</li>
+                    <li>Gestalt Psycholgical Principles of Design</li>
+                    <ul>
+                        <li>Similarity: like figures are seen as related.</li>
+                        <li>Continuity: figures can be discerned from the arrangement of smaller figures.</li>
+                        <li>Closure: a figure may be accesible without its full realism.</li>
+                        <li>Proximity: where figures near to one another are seen as related.</li>
+                        <li>Figure/Ground: the space between figures is its own figure</li>
+                        <li>Symmetry: the tendency to interpret the arrangement of figures in the simplest order</li>
+                        <li>Common Fate: figures moving as one are seen as one.</li>
+                    </ul>
                     <p></p>
-                    <li>Proficiency with a wide variety of color palletes and themes</li>
+                    <li>Digital Graphic Technologies</li>
+                    <ul>
+                        <li>Affinity Photo</li>
+                        <li>Affinity Designer</li>
+                        <li>Paint.net</li>
+                        <li>MS Paint</li>
+                    </ul>
                     <p></p>
                     <li>Years of experience hand and mouse drawing</li>
                     <p></p>
                 </ul>
             </div>
+            <br />
         </section>
     )
 };

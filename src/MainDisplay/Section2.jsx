@@ -6,32 +6,38 @@ const Section2 = () => {
             <section>
                 <h3 className="title-line">Project Highlights</h3>
                 <div>
-                    <p><strong>Space Battle</strong></p>
                     <img src="" alt="project screenshot"></img>
+                    <p><b>Space Battle</b></p>
+                    <p>Technologies: JavaScript, HTML, CSS</p>
                     <p>Description: Fight off the alien hoarde for a new high score in this rougelike battle game!</p>
                     <ul>
-                        <li><a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer">Live Link</a></li>
-                        <li><a href="https://github.com/bthol/Space-Battle" target="_blank" rel="noreferrer">GitHub Page</a></li>
+                        <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
+                        <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
                     </ul>
                 </div>
+                <br />
                 <div>
-                    <p><strong>Retro Toe</strong></p>
                     <img src="" alt="project screenshot"></img>
+                    <p><b>Retro Toe</b></p>
+                    <p>Technologies: JavaScript, HTML, CSS</p>
                     <p>Description: Tic Tac Toe, but retro style.</p>
                     <ul>
-                        <li><a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer">Live Link</a></li>
-                        <li><a href="https://github.com/bthol/Tic-Tac-Toe" target="_blank" rel="noreferrer">GitHub Page</a></li>
+                        <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
+                        <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
                     </ul>
                 </div>
+                <br />
                 <div>
-                    <p><strong>Magic 8 Ball</strong></p>
                     <img src="" alt="project screenshot"></img>
+                    <p><b>Magic 8 Ball</b></p>
+                    <p>Technologies: JavaScript, HTML, CSS</p>
                     <p>Description: Discover your destiny with the guidance of the Magic 8 Ball.</p>
                     <ul>
-                        <li><a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer">Live Link</a></li>
-                        <li><a href="https://github.com/bthol/Magic-8-Ball" target="_blank" rel="noreferrer">GitHub Page</a></li>
+                        <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
+                        <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
                     </ul>
                 </div>
+                <br />
             </section>
     )
 };

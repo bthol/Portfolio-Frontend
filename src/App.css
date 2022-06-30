@@ -12,7 +12,6 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-
 .flex-around {
   display: flex;
   justify-content: space-around;
@@ -22,9 +21,11 @@ a {
   text-decoration: none;
   color: hsl(0, 0%, 0%);
 }
-
-a:hover {
+.link-desat:hover {
   color: hsl(0, 0%, 40%);
+}
+.footer-link:hover {
+  color: hsl(0, 0%, 100%);
 }
 
 .augium-web-icon {
@@ -34,15 +35,18 @@ a:hover {
 }
 
 .profile-photo {
-  border: 3px solid rgba(115, 115, 155, 0.3);
+  border: 3px solid rgba(115, 115, 155, 0.4);
   border-radius: 50%;
   width: 180px;
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #website-title {
   color: white;
   font-family: 'Orbitron', sans-serif;
-  font-size: 1em;
+  font-size: .9em;
   letter-spacing: .1em;
   width: 12em;
 }
@@ -83,10 +87,6 @@ a:hover {
   display: grid;
   margin-bottom: 8px;
   border-bottom: 1px solid black;
-}
-
-.exp-list {
-  width: 50vw;
 }
 
 .app-footer-link-grid {
@@ -134,7 +134,7 @@ a:hover {
   }
   .section-lists div {
     display: grid;
-    grid-template-columns: 3fr 5fr 2fr;
+    grid-template-columns: 2fr 5fr 1fr;
   }
   main section {
     padding: 0vw 2vw;
@@ -146,13 +146,17 @@ a:hover {
     width: 23vw;
   }
   .remove-bullet-list {
+    margin-bottom: 0px;
     list-style-type: none;
+  }
+  .profile-photo {
+    margin-left: 0vw;
   }
 }
 
 @media(min-width: 1251px) {
   .section-lists div {
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr 1fr;
   }
   .profile-photo {
     width: 300px;
