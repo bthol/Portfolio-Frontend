@@ -2,6 +2,7 @@ import React from 'react';
 import { AugiumIcon } from '../Images/AugiumIcon'
 import { Nav } from '../Nav/Nav';
 
+
 const Header = () => {
     return(
         <header className="app-header">

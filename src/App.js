@@ -7,6 +7,7 @@ import { Section3 } from './Content/Section3';
 import { Footer } from './Footer/Footer';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 
+
 function App() {
   return (
     <div className="App">
