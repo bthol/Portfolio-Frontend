@@ -1,5 +1,4 @@
 import React from "react";
-// import { useState } from "react";
 
 const Section3 = () => {
     return (
@@ -9,10 +8,10 @@ const Section3 = () => {
                     <p>Augium Productions</p>
                     <p className="flex-between"><i>Composer/Engineer</i> Jan 2012 - Present</p>
                     <ul className="exp-list">
-                        <li>Composed 400+ songs at 25+ hours using a variety of Digital Audio Workstations(DAWs) accross multiple genres (~12.5% songs published; only the very best)</li>
-                        <li>Produces all phases of music production (i.e. music concept and sound design, composition, performance and recording, mix engineering, and mastering)</li>
+                        <li>Composed 400+ songs at 25+ hours using a variety of digital audio workstations(DAWs) accross multiple genres</li>
+                        <li>Involved in all phases of music production (i.e. music concept and sound design, composition, performance and recording, mix engineering, and mastering)</li>
                         <li>General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
-                        <li>Create audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, granular)</li>
+                        <li>Created audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, granular)</li>
                     </ul>
                 </div>
                 <br />
