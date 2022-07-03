@@ -7,6 +7,12 @@ import { Section3 } from './Content/Section3';
 import { Footer } from './Footer/Footer';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 
+//use event handlers to create interactive links for compatability with touch screens (pseudo classes don't work)
+// const desat = document.querySelectorAll(`.isActive-link`);
+// desat.addEventListener("click", (e) => {
+//   e.target.style.color = "hsl(0, 0%, 100%)";
+// });
+
 
 function App() {
   return (

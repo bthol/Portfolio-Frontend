@@ -73,8 +73,8 @@ const Section1 = () => {
                 <ul className="remove-bullet-list">
                     <li>User Experience (UX) and User Interface (UI) Design</li>
                     <ul>
-                        <li>Interactive Design: provides user feedback to make for a more intuitive and compelling user experience.</li>
-                        <li>Responsive Design: useful for compatability accross various device viewport dimensions and necessary for the growing number of devices on the market.</li>
+                        <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so user features don't go unnoticed.</li>
+                        <li>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the market.</li>
                         <li>Mobile First Design: a design practice where the layout is first created on mobile viewports and then adapted to desktop, which is motivated by the widespread user preference for mobile over desktop platforms.</li>
                     </ul>
                     <p></p>

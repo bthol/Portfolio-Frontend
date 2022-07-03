@@ -14,7 +14,7 @@ const Header = () => {
                     <h3 id="website-title">Blake Thollaug's Portfolio Website</h3>
                 </div>
                 <div>
-                    <a href="" rel="noreferrer" className="link-highlight" onClick={() => {alert("Feature still in development")}}>Contact</a>
+                    <a href="" rel="noreferrer" className="link-highlight header-padd-right isActive-link" onClick={() => {alert("Feature still in development")}}>Contact</a>
                 </div>
             </div>
             <Nav></Nav>
