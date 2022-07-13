@@ -17,6 +17,7 @@ import { ProfilePhoto } from './Images/ProfilePhoto';
 function App() {
   return (
     <div className="App">
+      <a name="top"></a>
       <Header />
       <span id="aside-main">
           <aside className="app-aside">

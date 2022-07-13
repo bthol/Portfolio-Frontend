@@ -1,5 +1,6 @@
 * {
   font-family: 'Raleway', sans-serif;
+
   --color-background-1: #6694cc;
   --color-background-2: #c4edf7;
   --color-background-3: #f4f5fa;
@@ -11,7 +12,6 @@
   --color-white: #ffffff;
   
   --color--header-detail-1: #80b9ff;
-
   --color-photo-detail-1: #73739b80;
 }
 
