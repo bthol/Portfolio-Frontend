@@ -2,7 +2,7 @@ import React from "react";
 
 const Section1 = () => {
     return (
-        <section className="section-lists">
+        <section>
             <h3 className="title-line text-x-large">Skills and Knowledge</h3>
             <div>
                 <p className="text-large">Full Stack Web and App Development</p>
