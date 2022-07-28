@@ -7,7 +7,7 @@
   --color-shadow: #808080;
 
   --color-black: #000000;
-  --color-gray: #595959;
+  --color-gray: #5c5c5c;
   --color-gray-2: #b4b4b4;
   --color-white: #ffffff;
   
@@ -20,6 +20,14 @@ body {
   background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
 }
 
+.text-x-large {
+  font-size: x-large;
+}
+
+.text-large {
+  font-size: large;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -29,6 +37,11 @@ body {
 .flex-around {
   display: flex;
   justify-content: space-around;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -99,7 +112,6 @@ a {
 .app-aside {
   background: var(--color-background-3);
   padding: 2vw;
-  border-bottom: 1px solid var(--color-black);
 }
 
 .app-main {

@@ -3,9 +3,9 @@ import React from "react";
 const Section3 = () => {
     return (
         <section>
-            <h3 className="title-line">Work Experience</h3>
+            <h3 className="title-line text-x-large">Work Experience</h3>
             <div>
-                <p>Augium Productions</p>
+                <p className="text-large">Augium Productions</p>
                 <p className="flex-between"><i>Composer/Engineer</i> Jan 2012 - Present</p>
                 <ul className="exp-list">
                     <li>Composed 400+ songs at 25+ hours using a variety of digital audio workstations(DAWs) accross multiple genres</li>
@@ -16,7 +16,7 @@ const Section3 = () => {
             </div>
             <br />
             <div>
-                <p>Canyon Ranch Woodside</p>
+                <p className="text-large">Canyon Ranch Woodside</p>
                 <p className="flex-between"><i>Kitchen Steward</i> Jan 2020 - Oct 2020</p>
                 <ul className="exp-list">
                     <li>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
@@ -25,7 +25,7 @@ const Section3 = () => {
                 </ul>
             </div>
             <br />
-            <a href="#top">back to top</a>
+            <a href="#top" className="flex-center link-desat">back to top</a>
         </section>
     )
 };
