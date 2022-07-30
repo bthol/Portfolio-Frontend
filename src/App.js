@@ -1,5 +1,5 @@
 import './App.css';
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Header } from "./Header/Header";
 import { Aside } from './Aside/Aside';
 import { Section1 } from './Content/Section1';
@@ -8,13 +8,20 @@ import { Section3 } from './Content/Section3';
 import { Footer } from './Footer/Footer';
 
 function App() {
+  const [theme, setTheme] = useState("color-theme-normal");
+  const setThemeDark = () => {
+    setTheme("color-theme-dark")
+  }
+  const setThemeNormal = () => {
+    setTheme("color-theme-normal")
+  }
   return (
-    <div id="root-react" className="App color-theme-dark">
+    <div id="root-react" className={`App color + ${theme}`}>
       <a name="top"></a>
       <Header />
       <span id="aside-main">
           <aside className="app-aside">
-            <Aside />
+            <Aside setThemeNormal={setThemeNormal} setThemeDark={setThemeDark}/>
           </aside>
           <main className="app-main">
             <div className="section-lists">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 
-const Aside = () => {
+const Aside = (props) => {
     return(
         <div>
             <ProfilePhoto></ProfilePhoto>
@@ -12,8 +12,8 @@ const Aside = () => {
             <p><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further develop my creative and technological skillset.</p>
             <br />
             <div className="flex-between">
-                <button id="btn-theme-normal" className="buttons" onClick={() => {alert("Feature still in development")}}>Normal Theme</button>
-                <button id="btn-theme-dark" className="buttons dark-button" onClick={() => {alert("Feature still in development")}}>Dark Theme</button>
+                <button id="btn-theme-normal" className="buttons" onClick={props.setThemeNormal}>Normal Theme</button>
+                <button id="btn-theme-dark" className="buttons dark-button" onClick={props.setThemeDark}>Dark Theme</button>
             </div>
         </div>
     )
