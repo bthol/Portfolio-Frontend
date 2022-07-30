@@ -3,7 +3,8 @@
 
   --color-background-1: #6694cc;
   --color-background-2: #c4edf7;
-  --color-background-3: #f4f5fa;
+  --color-background-3: #f5f5fa;
+  
   --color-shadow: #808080;
 
   --color-black: #000000;
@@ -127,6 +128,14 @@ a {
   display: grid;
   margin-bottom: 8px;
   border-bottom: 1px solid var(--color-black);
+}
+
+.top-link-style {
+  padding: 1vmin 0;
+  width: 100%;
+}
+.top-link-style:hover {
+  background: var(--color-background-3);
 }
 
 .app-footer-link-grid {

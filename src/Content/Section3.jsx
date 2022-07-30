@@ -25,7 +25,7 @@ const Section3 = () => {
                 </ul>
             </div>
             <br />
-            <a href="#top" className="flex-center link-desat">back to top</a>
+            <a href="#top" className="flex-center top-link-style">back to top</a>
         </section>
     )
 };
