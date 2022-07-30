@@ -9,7 +9,7 @@ import { Footer } from './Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div id="root-react" className="App color-theme-dark">
       <a name="top"></a>
       <Header />
       <span id="aside-main">
