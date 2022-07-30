@@ -1,6 +1,8 @@
 * {
   font-family: 'Raleway', sans-serif;
+}
 
+.color-theme-normal {
   --color-background-1: #6694cc;
   --color-background-2: #c4edf7;
   --color-background-3: #f5f5fa;
@@ -14,6 +16,23 @@
   
   --color--header-detail-1: #80b9ff;
   --color-photo-detail-1: #73739b80;
+}
+
+.color-theme-dark {
+  --color-background-1: hsl(213, 50%, 20%);
+  --color-background-2: hsl(192, 76%, 87%);
+  --color-background-3: hsl(240, 33%, 97%);
+  
+  --color-shadow: hsl(0, 0%, 50%);
+  
+  --color-black: #000000;
+  --color-gray: #5c5c5c;
+  --color-gray-2: #b5b5b5;
+  --color-white: #ffffff;
+  
+  --color--header-detail-1: hsl(213, 100%, 75%);
+  --color-photo-detail-1: hsla(240, 17%, 53%, 0.502);
+  /* color: var(--color-white); */
 }
 
 body {
@@ -87,6 +106,18 @@ a {
   pointer-events: none;
 }
 
+.buttons {
+  border: 1.5px solid var(--color-gray-2);
+  background-color: var(--color-white);
+}
+.buttons:hover {
+  border-color: var(--color-white);
+}
+.dark-button:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
 .app-header > div {
   background: var(--color-background-1);
   border-bottom: 8px solid var(--color--header-detail-1);
@@ -94,10 +125,6 @@ a {
   align-items: center;
   grid-template-columns: .4fr 10fr 2fr;
   font-size: .9em;
-}
-
-.header-padd-right {
-  padding-right: 8px;
 }
 
 .app-nav {
