@@ -107,11 +107,12 @@ a {
 }
 
 .buttons {
+  padding: 3px 5px;
   border: 1.5px solid var(--color-gray-2);
   background-color: var(--color-white);
 }
 .buttons:hover {
-  border-color: var(--color-white);
+  background-color: var(--color-gray-2);
 }
 .dark-button:hover {
   background-color: var(--color-black);
@@ -162,7 +163,7 @@ a {
   width: 100%;
 }
 .top-link-style:hover {
-  background: var(--color-background-3);
+  background: var(--color-gray-2);
 }
 
 .app-footer-link-grid {
