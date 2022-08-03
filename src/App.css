@@ -1,3 +1,13 @@
+/* --------------------------------------STYLE-------------------------------------- */
+
+/* FONT */
+#root-react {
+  font-family: 'Raleway', sans-serif;
+  background: var(--color-background-1);
+  background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
+}
+
+/* COLORS */
 .color-theme-normal {
   --color-background-1: #6694cc;
   --color-background-2: #c4edf7;
@@ -36,12 +46,7 @@
   --button-dark-detail: #000000;
 }
 
-#root-react {
-  font-family: 'Raleway', sans-serif;
-  background: var(--color-background-1);
-  background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
-}
-
+/* TEXT */
 .text-x-large {
   font-size: x-large;
 }
@@ -50,22 +55,7 @@
   font-size: large;
 }
 
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
-.flex-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-}
-
+/* LINK */
 a {
   text-decoration: none;
   color: var(--font-color-1);
@@ -79,35 +69,15 @@ a {
   color: var(--font-color-3);
 }
 
-.augium-web-icon {
-  border-radius: 100%;
-  width: 3em;
-  margin: 0px 10px;
+.top-link-style {
+  padding: 1vmin 0;
+  width: 100%;
+}
+.top-link-style:hover {
+  background: var(--color-gray);
 }
 
-.profile-photo {
-  border: 2px solid var(--color-photo-detail-1);
-  -moz-box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
-  -webkit-box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
-  box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
-  border-radius: 50%;
-  width: 180px;
-  margin: 8px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#website-title {
-  color: #ffffff;
-  font-family: 'Orbitron', sans-serif;
-  font-size: .9em;
-  letter-spacing: .1em;
-  width: 12em;
-  cursor: default;
-  pointer-events: none;
-}
-
+/* BUTTON */
 .buttons {
   padding: 3px 5px;
   color: var(--font-color-1);
@@ -120,6 +90,48 @@ a {
 .dark-button:hover {
   background-color: var(--button-dark-detail);
   color: var(--font-color-3);
+}
+
+/* TITLE */
+#website-title {
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: .9em;
+  letter-spacing: .1em;
+  width: 12em;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* LOGO */
+.augium-web-icon {
+  width: 3em;
+  margin: 0px 10px;
+}
+
+/* PROFILE IMAGE */
+.profile-photo {
+  border-radius: 50%;
+  border: 2px solid var(--color-photo-detail-1);
+  -moz-box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
+  -webkit-box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
+  box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
+  position: relative;
+  width: 180px;
+  margin: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --------------------------------------LAYOUT-------------------------------------- */
+
+/* HEADER + NAV */
+.app-header {
+  position: fixed;
+  width: 100%;
+}
+
+.static-elements {
 }
 
 .app-header > div {
@@ -141,6 +153,7 @@ a {
   background: linear-gradient(270deg, var(--color-gray) 0%, var(--color-white) 10%, var(--color-white) 90%, var(--color-gray) 100%);
 }
 
+/* ASIDE + MAIN */
 .app-aside {
   padding: 2vw;
   background: var(--color-background-3);
@@ -161,14 +174,7 @@ a {
   color: var(--font-color-1);
 }
 
-.top-link-style {
-  padding: 1vmin 0;
-  width: 100%;
-}
-.top-link-style:hover {
-  background: var(--color-gray);
-}
-
+/* FOOTER */
 .app-footer {
   font-size: .9em;
   color: var(--font-color-1);
@@ -189,6 +195,24 @@ a {
   padding: 0px;
 }
 
+/* GENERIC */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* QUIERIES */
 @media(min-width: 576px) {
   main section {
     padding-right: 3vw;

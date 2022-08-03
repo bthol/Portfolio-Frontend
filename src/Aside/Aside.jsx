@@ -9,7 +9,7 @@ const Aside = (props) => {
                 <a href="" rel="noreferrer" className="link-desat header-padd-right" onClick={() => {alert("Feature still in development")}}>Contact</a>
                 <a href="" className="link-desat" onClick={() => {alert("You wanted an error message?")}}>error message</a>
             </div>
-            <p><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further develop my creative and technological skillset.</p>
+            <p><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
             <br />
             <div className="flex-between">
                 <button id="btn-theme-normal" className="buttons" onClick={props.setThemeNormal}>Normal Theme</button>

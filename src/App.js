@@ -19,18 +19,20 @@ function App() {
     <div id="root-react" className={`App color + ${theme}`}>
       <a name="top"></a>
       <Header />
-      <span id="aside-main">
-          <aside className="app-aside">
-            <Aside setThemeNormal={setThemeNormal} setThemeDark={setThemeDark}/>
-          </aside>
-          <main className="app-main">
-            <div className="section-lists">
-              <Section1></Section1>
-            </div>
-              <Section2></Section2>
-              <Section3></Section3>
-          </main>
-      </span>
+      <div className="static-elements">
+        <span id="aside-main">
+            <aside className="app-aside">
+              <Aside setThemeNormal={setThemeNormal} setThemeDark={setThemeDark}/>
+            </aside>
+            <main className="app-main">
+              <div className="section-lists">
+                <Section1></Section1>
+              </div>
+                <Section2></Section2>
+                <Section3></Section3>
+            </main>
+        </span>
+      </div>
       <Footer />
     </div>
   );
