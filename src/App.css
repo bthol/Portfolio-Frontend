@@ -163,7 +163,6 @@ a {
 
 .app-main {
   padding: 5px 5px 18px 5px;
-  margin-top: 100px;
   background: var(--color-white);
 }
 
@@ -230,6 +229,7 @@ a {
     -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
     -webkit-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
     box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
+    margin-top: 100px;
   }
   .app-aside {
     -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
@@ -240,7 +240,7 @@ a {
   #aside-main {
     grid-template-columns: 1fr 4fr;
     gap: 8px;
-    margin: 8px;
+    margin: .66%;
     border-bottom: 0px;
   }
   .section-lists div {
