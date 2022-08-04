@@ -70,7 +70,9 @@ a {
 }
 
 .top-link-style {
+  background: var(--color-white);
   padding: 1vmin 0;
+  margin-bottom: 8px;
   width: 100%;
 }
 .top-link-style:hover {
@@ -260,6 +262,10 @@ a {
   }
   .profile-photo {
     margin-left: 0vw;
+  }
+  .top-link-style {
+    width: 98.68%;
+    margin: 0px .66% 8px .66%;
   }
 }
 

@@ -31,6 +31,7 @@ function App() {
               <Section3></Section3>
           </main>
       </span>
+      <a href="#top" className="flex-center top-link-style">back to top</a>
       <Footer />
     </div>
   );

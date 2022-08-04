@@ -9,8 +9,8 @@ const Footer = () => {
                 <ul id="footer-coding-links">
                     <li><p><b>Coding</b></p></li>
                     <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
-                    <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
                     <li><a href="https://replit.com/@BlakeThollaug" target="_blank" rel="noreferrer" className="link-highlight">Replit</a></li>
+                    <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
                 </ul>
                 <ul id="footer-music-links">
                     <li><p><b>Music</b></p></li>

@@ -10,13 +10,13 @@ const Section1 = () => {
                     <li className="text-large">JavaScript</li>
                     <ul>
                         <li>Libraries: Node.js</li>
-                        <li>Frameworks: Express.js, React.js</li>
+                        <li>Frameworks: Express, React</li>
                         <li>Debugging: ESLint</li>
                     </ul>
                     <p></p>
                     <li className="text-large">Python</li>
                     <ul>
-                        <li>Libraries: Pip.py</li>
+                        <li>Libraries: Pip</li>
                         <li>Frameworks: Django</li>
                         <li>Debugging: Pylint</li>
                     </ul>
