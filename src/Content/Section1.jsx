@@ -10,7 +10,7 @@ const Section1 = () => {
                     <li className="text-large">JavaScript</li>
                     <ul>
                         <li>Libraries: Node.js</li>
-                        <li>Frameworks: Express, React</li>
+                        <li>Frameworks: Express.js, React</li>
                         <li>Debugging: ESLint</li>
                     </ul>
                     <p></p>
