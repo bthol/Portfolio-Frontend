@@ -60,11 +60,11 @@ a {
   text-decoration: none;
   color: var(--font-color-1);
 }
-.link-desat:hover {
+.link-desat:hover, .link-desat:focus {
   transition: all 100ms ease;
   color: var(--font-color-2);
 }
-.link-highlight:hover {
+.link-highlight:hover, .link-highlight:focus {
   transition: all 100ms ease;
   color: var(--font-color-3);
 }
@@ -86,10 +86,10 @@ a {
   background-color: var(--color-white);
   border: 1.5px solid var(--color-gray);
 }
-.buttons:hover {
+.buttons:hover, .buttons:focus {
   background-color: var(--color-gray);
 }
-.dark-button:hover {
+.dark-button:hover, .dark-button:focus {
   background-color: var(--button-dark-detail);
   color: var(--font-color-3);
 }
@@ -214,7 +214,7 @@ a {
   justify-content: center;
 }
 
-/* QUIERIES */
+/*--------------------------------------QUIERIES--------------------------------------*/
 @media(min-width: 576px) {
   main section {
     padding-right: 3vw;
