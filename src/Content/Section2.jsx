@@ -17,23 +17,23 @@ const Section2 = () => {
                 <br />
                 <div>
                     <img src="" alt="project screenshot"></img>
-                    <b><p className="text-large">Retro Toe</p></b>
-                    <p>Technologies: JavaScript, HTML, CSS</p>
-                    <p>Description: Tic Tac Toe. Retro style.</p>
-                    <ul>
-                        <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
-                        <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-                    </ul>
-                </div>
-                <br />
-                <div>
-                    <img src="" alt="project screenshot"></img>
                     <b><p className="text-large">Magic 8 Ball</p></b>
                     <p>Technologies: JavaScript, HTML, CSS</p>
                     <p>Description: Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
                     <ul>
                         <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
                         <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
+                    </ul>
+                </div>
+                <br />
+                <div>
+                    <img src="" alt="project screenshot"></img>
+                    <b><p className="text-large">Retro Toe</p></b>
+                    <p>Technologies: JavaScript, HTML, CSS</p>
+                    <p>Description: Tic Tac Toe. Retro style.</p>
+                    <ul>
+                        <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
+                        <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
                     </ul>
                 </div>
                 <br />

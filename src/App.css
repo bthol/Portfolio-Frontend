@@ -60,11 +60,11 @@ a {
   text-decoration: none;
   color: var(--font-color-1);
 }
-.link-desat:hover, .link-desat:focus {
+.link-desat:hover {
   transition: all 100ms ease;
   color: var(--font-color-2);
 }
-.link-highlight:hover, .link-highlight:focus {
+.link-highlight:hover {
   transition: all 100ms ease;
   color: var(--font-color-3);
 }
@@ -86,10 +86,10 @@ a {
   background-color: var(--color-white);
   border: 1.5px solid var(--color-gray);
 }
-.buttons:hover, .buttons:focus {
+.buttons:hover {
   background-color: var(--color-gray);
 }
-.dark-button:hover, .dark-button:focus {
+.dark-button:hover {
   background-color: var(--button-dark-detail);
   color: var(--font-color-3);
 }
