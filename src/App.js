@@ -30,7 +30,7 @@ function App() {
             </div>
               <Section2></Section2>
               <Section3></Section3>
-              {/* <Section4></Section4> */}
+              <Section4></Section4>
           </main>
       </span>
       <a href="#top" className="flex-center top-link-style">back to top</a>
