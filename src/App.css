@@ -55,6 +55,12 @@
   font-size: large;
 }
 
+/* LIST */
+.remove-bullet-list {
+  margin-bottom: 0px;
+  list-style-type: none;
+}
+
 /* LINK */
 a {
   text-decoration: none;
@@ -256,10 +262,6 @@ a {
   }
   .profile-photo {
     width: 23vw;
-  }
-  .remove-bullet-list {
-    margin-bottom: 0px;
-    list-style-type: none;
   }
   .profile-photo {
     margin-left: 0vw;
