@@ -152,6 +152,7 @@ a {
   flex-wrap: nowrap;
   background: var(--color-white);
   background: linear-gradient(270deg, var(--color-gray) 0%, var(--color-white) 10%, var(--color-white) 90%, var(--color-gray) 100%);
+  border-bottom: 1.3px solid var(--color-gray);
 }
 
 /* ASIDE + MAIN */
