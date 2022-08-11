@@ -13,12 +13,12 @@ import { Section4 } from './Content/Section4';
 import { Footer } from './Footer/Footer';
 
 function App() {
-  const [theme, setTheme] = useState("color-theme-normal");
+  const [theme, setTheme] = useState("color-theme-light");
   const setThemeDark = () => {
     setTheme("color-theme-dark")
   }
-  const setThemeNormal = () => {
-    setTheme("color-theme-normal")
+  const setThemeLight = () => {
+    setTheme("color-theme-light")
   }
   const featureAlert = (e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ function App() {
       <Header />
       <span id="aside-main">
           <aside className="app-aside">
-            <Aside setThemeNormal={setThemeNormal} setThemeDark={setThemeDark} featureAlert={featureAlert}/>
+            <Aside setThemeLight={setThemeLight} setThemeDark={setThemeDark} featureAlert={featureAlert}/>
           </aside>
           <main className="app-main">
             <div className="section-lists">
