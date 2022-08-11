@@ -7,7 +7,7 @@ const Section4 = () => {
             <div>
                 <p className="flex-between"><p className="text-large"><b>BitWise Industries</b></p>May 2022 - June 2022</p>
                 <ul>
-                    <li className="exp-list remove-bullet-list"><b>Description: </b>BitWise industry offers courses on computer programming and web development, offering a learning community to support its members in their journey to learning to code.</li>
+                    <li className="exp-list remove-bullet-list"><b>Description: </b>BitWise industry has courses on computer programming and web development, offering a learning community to support its members in their journey to learning to code.</li>
                 </ul>
             </div>
             <div>
