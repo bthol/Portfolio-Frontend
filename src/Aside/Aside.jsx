@@ -5,7 +5,7 @@ const Aside = (props) => {
     return(
         <div>
             <ProfilePhoto></ProfilePhoto>
-            <div className="flex-between">
+            <div className="flex-around">
                 <a href="" rel="noreferrer" className="link-desat header-padd-right" onClick={props.featureAlert}>Contact</a>
             </div>
             <p><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
