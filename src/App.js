@@ -13,12 +13,18 @@ import { Section4 } from './Content/Section4';
 import { Footer } from './Footer/Footer';
 
 function App() {
+  const [btnText, setBtnText] = useState("Dark Theme");
+  const [btnClass, setBtnClass] = useState("buttons");
   const [theme, setTheme] = useState("color-theme-light");
   const setThemeDark = () => {
+    setBtnText("Dark Theme")
     setTheme("color-theme-dark")
+    setBtnClass("buttons dark-button");
   }
   const setThemeLight = () => {
+    setBtnText("Light Theme")
     setTheme("color-theme-light")
+    setBtnClass("buttons")
   }
   const featureAlert = (e) => {
     e.preventDefault();
@@ -30,7 +36,13 @@ function App() {
       <Header />
       <span id="aside-main">
           <aside className="app-aside">
-            <Aside setThemeLight={setThemeLight} setThemeDark={setThemeDark} featureAlert={featureAlert}/>
+            <Aside
+              btnText={btnText}
+              btnClass={btnClass}
+              setThemeLight={setThemeLight}
+              setThemeDark={setThemeDark}
+              featureAlert={featureAlert}
+            />
           </aside>
           <main className="app-main">
             <div className="section-lists">

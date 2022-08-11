@@ -21,7 +21,7 @@ const Aside = (props) => {
             <p><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
             <br />
             <div className="flex-around">
-                <button id="btn-theme" className="buttons dark-button" onClick={toggle}>Dark Theme</button>
+                <button id="btn-theme" className={props.btnClass} onClick={toggle}>{props.btnText}</button>
             </div>
         </div>
     )
