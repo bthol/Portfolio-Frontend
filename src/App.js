@@ -1,6 +1,9 @@
 import './App.css';
 import React, { useState } from 'react';
 
+import { IIdleTimer } from 'react-idle-timer';
+import { IIdleTimerProps } from 'react-idle-timer';
+
 import { Header } from "./Header/Header";
 import { Aside } from './Aside/Aside';
 import { Section1 } from './Content/Section1';
