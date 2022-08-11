@@ -15,14 +15,12 @@ const Aside = (props) => {
     return(
         <div>
             <ProfilePhoto></ProfilePhoto>
-            <div className="flex-around">
-                <a href="" rel="noreferrer" className="link-desat header-padd-right" onClick={props.featureAlert}>Contact</a>
+            <div className="flex-between">
+                <button className={props.btnClass} onClick={props.featureAlert}>Contact</button>
+                <button className={props.btnClass} onClick={toggle}>{props.btnText}</button>
             </div>
             <p><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
             <br />
-            <div className="flex-around">
-                <button id="btn-theme" className={props.btnClass} onClick={toggle}>{props.btnText}</button>
-            </div>
         </div>
     )
 }

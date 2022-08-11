@@ -126,7 +126,7 @@ a {
   box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
   position: relative;
   width: 180px;
-  margin: 8px;
+  margin-bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
 }
