@@ -16,13 +16,17 @@ function App() {
   const setThemeNormal = () => {
     setTheme("color-theme-normal")
   }
+  const featureAlert = (e) => {
+    e.preventDefault();
+    alert("Feature still in development");
+  }
   return (
     <div id="root-react" className={`App color + ${theme}`}>
       <a name="top"></a>
       <Header />
       <span id="aside-main">
           <aside className="app-aside">
-            <Aside setThemeNormal={setThemeNormal} setThemeDark={setThemeDark}/>
+            <Aside setThemeNormal={setThemeNormal} setThemeDark={setThemeDark} featureAlert={featureAlert}/>
           </aside>
           <main className="app-main">
             <div className="section-lists">
