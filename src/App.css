@@ -87,6 +87,7 @@ a {
 
 /* BUTTON */
 .buttons {
+  cursor: pointer;
   padding: 3px 5px;
   color: var(--font-color-1);
   background-color: var(--color-white);
@@ -168,16 +169,20 @@ a {
   background: var(--color-background-3);
 }
 
-.app-main {
-  padding: 5px 5px 18px 5px;
+.main-section-style {
+  padding: 5px 2vw 18px 2vw;
+  margin-bottom: .66%;
   background: var(--color-white);
+}
+#main-section-style-last {
+  margin-bottom: 0%;
 }
 
 .title-line {
   border-bottom: 1.3px solid var(--color-gray);
 }
 
-#aside-main {
+.aside-main {
   margin-bottom: 8px;
   display: grid;
   color: var(--font-color-1);
@@ -233,10 +238,12 @@ a {
 
 @media(min-width: 768px) {
   .app-main {
+    margin-top: 100px;
+  }
+  .main-section-style {
     -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
     -webkit-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
     box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-    margin-top: 100px;
   }
   .app-aside {
     -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
@@ -244,7 +251,7 @@ a {
     box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
     border-bottom: 0px;
   }
-  #aside-main {
+  .aside-main {
     grid-template-columns: 1fr 4fr;
     gap: 8px;
     margin: .66%;

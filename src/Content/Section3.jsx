@@ -2,7 +2,7 @@ import React from "react";
 
 const Section3 = () => {
     return (
-        <section>
+        <section className="main-section-style">
             <h3 className="title-line text-x-large">Work Experience</h3>
             <div>
                 <p className="text-large">Augium Productions</p>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Section2 = () => {
     return (
-        <section>
+        <section className="main-section-style">
             <h3 className="title-line text-x-large">Project Highlights</h3>
             <div>
                 <img src="" alt="project screenshot"></img>

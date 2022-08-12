@@ -13,41 +13,53 @@ import { Section4 } from './Content/Section4';
 import { Footer } from './Footer/Footer';
 
 function App() {
+
   const [btnText, setBtnText] = useState("Dark Theme");
   const [btnClass, setBtnClass] = useState("buttons");
   const [theme, setTheme] = useState("color-theme-light");
+
   const setThemeDark = () => {
-    setBtnText("Dark Theme")
+    setBtnText("Light Theme")
     setTheme("color-theme-dark")
     setBtnClass("buttons dark-button");
-  }
+  };
+
   const setThemeLight = () => {
-    setBtnText("Light Theme")
+    setBtnText("Dark Theme")
     setTheme("color-theme-light")
     setBtnClass("buttons")
-  }
+  };
+
+  const [togTheme, setTogTheme] = useState(true);
+  const toggleTheme = () => {
+    setTogTheme(!togTheme)
+    if (togTheme) {
+      setThemeLight();
+    } else {
+      setThemeDark();
+    }
+  };
+
   const featureAlert = (e) => {
     e.preventDefault();
     alert("Feature still in development");
-  }
+  };
+
   return (
     <div id="root-react" className={`App color + ${theme}`}>
       <a name="top"></a>
       <Header />
-      <span id="aside-main">
+      <span className="aside-main">
           <aside className="app-aside">
             <Aside
               btnText={btnText}
               btnClass={btnClass}
-              setThemeLight={setThemeLight}
-              setThemeDark={setThemeDark}
+              toggleTheme={toggleTheme}
               featureAlert={featureAlert}
             />
           </aside>
           <main className="app-main">
-            <div className="section-lists">
               <Section1></Section1>
-            </div>
               <Section2></Section2>
               <Section3></Section3>
               <Section4></Section4>

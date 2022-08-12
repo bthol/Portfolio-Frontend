@@ -2,7 +2,7 @@ import React from "react";
 
 const Section4 = () => {
     return (
-        <section>
+        <section className="main-section-style" id="main-section-style-last">
             <h3 className="title-line text-x-large">Education</h3>
             <div>
                 <div className="flex-between"><div className="text-large"><b>BitWise Industries</b></div>May 2022 - June 2022</div>
