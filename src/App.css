@@ -1,28 +1,21 @@
 /* --------------------------------------STYLE-------------------------------------- */
 
-/* FONT */
-#root-react {
-  font-family: 'Raleway', sans-serif;
-  background: var(--color-background-1);
-  background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
-}
-
-/* COLORS */
+/* COLOR THEMES */
 .color-theme-light {
   --color-background-1: #6694cc;
   --color-background-2: #c4edf7;
-  --color-background-3: #f5f5fa;
+  --color-background-3: #fafafa;
   
-  --color-gray: #b4b4b4;
+  --color-gray: #b5b5b5;
   --color-white: #ffffff;
   
   --font-color-1: #000000;
-  --font-color-2: #5c5c5c;
+  --font-color-2: #808080;
   --font-color-3: #ffffff;
   
   --color-shadow: #808080;
   
-  --color--header-detail-1: #80b9ff;
+  --color-header-detail-1: #80b9ff;
   --color-photo-detail-1: #73739b80;
   --button-dark-detail: #000000;
 }
@@ -41,24 +34,34 @@
   
   --color-shadow: #4a4a4a;
   
-  --color--header-detail-1: #103b70;
+  --color-header-detail-1: #103b70;
   --color-photo-detail-1: #ffffff80;
   --button-dark-detail: #000000;
 }
 
-/* TEXT */
-.text-x-large {
-  font-size: x-large;
+/* BACKGROUND COLOR */
+#root-react {
+  background: var(--color-background-1);
+  background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
 }
 
-.text-large {
-  font-size: large;
+.app-header > div {
+  background: var(--color-background-1);
+  border-bottom: 8px solid var(--color-header-detail-1);
 }
 
-/* LIST */
-.remove-bullet-list {
-  margin-bottom: 0px;
-  list-style-type: none;
+.app-nav {
+  background: var(--color-white);
+  background: linear-gradient(270deg, var(--color-gray) 0%, var(--color-white) 10%, var(--color-white) 90%, var(--color-gray) 100%);
+  border-bottom: 1.3px solid var(--color-gray);
+}
+
+.app-aside {
+  background: var(--color-background-3);
+}
+
+.main-section-style {
+  background: var(--color-white);
 }
 
 /* LINK */
@@ -76,13 +79,32 @@ a {
 }
 
 .top-link-style {
-  background: var(--color-white);
   padding: 1vmin 0;
   margin-bottom: 8px;
-  width: 100%;
+  width: 96.33%;
+  background: var(--color-background-3);
 }
 .top-link-style:hover {
   background: var(--color-gray);
+}
+
+/* TEXT */
+.text-x-large {
+  font-size: x-large;
+}
+
+.text-large {
+  font-size: large;
+}
+
+.title-line {
+  border-bottom: 1.5px solid var(--color-gray);
+}
+
+/* LIST */
+.remove-bullet-list {
+  margin-bottom: 0px;
+  list-style-type: none;
 }
 
 /* BUTTON */
@@ -121,19 +143,20 @@ a {
 /* PROFILE IMAGE */
 .profile-photo {
   border-radius: 50%;
-  border: 2px solid var(--color-photo-detail-1);
+  position: relative;
+  width: 180px;
+  padding: 1px;
+  margin-top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-photo-detail-1);
+  border: 1px solid var(--color-photo-detail-1);
   -moz-box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
   -webkit-box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
   box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
-  position: relative;
-  width: 180px;
-  margin-bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* --------------------------------------LAYOUT-------------------------------------- */
-
 
 /* HEADER + NAV */
 .app-header {
@@ -148,8 +171,6 @@ a {
   align-items: center;
   grid-template-columns: .4fr 10fr 2fr;
   font-size: .9em;
-  background: var(--color-background-1);
-  border-bottom: 8px solid var(--color--header-detail-1);
 }
 
 .app-nav {
@@ -157,33 +178,28 @@ a {
   font-size: .9em;
   align-items: center;
   flex-wrap: nowrap;
-  background: var(--color-white);
-  background: linear-gradient(270deg, var(--color-gray) 0%, var(--color-white) 10%, var(--color-white) 90%, var(--color-gray) 100%);
-  border-bottom: 1.3px solid var(--color-gray);
 }
 
 /* ASIDE + MAIN */
 .app-aside {
   padding: 2vw;
   margin-top: 100px;
-  background: var(--color-background-3);
+}
+
+main section {
+  padding: 0vw 2vw;
 }
 
 .main-section-style {
-  padding: 5px 2vw 18px 2vw;
-  margin-bottom: .66%;
-  background: var(--color-white);
+  padding-top: 8px;
+  margin-bottom: 8px;
 }
 #main-section-style-last {
   margin-bottom: 0%;
 }
 
-.title-line {
-  border-bottom: 1.3px solid var(--color-gray);
-}
-
 .aside-main {
-  margin-bottom: 8px;
+  margin: 2%;
   display: grid;
   color: var(--font-color-1);
 }
@@ -226,33 +242,26 @@ a {
   justify-content: center;
 }
 
-/*--------------------------------------QUIERIES--------------------------------------*/
-@media(min-width: 576px) {
-  main section {
-    padding-right: 3vw;
-  }
-  .exp-list {
-    width: 60vw;
-  }
+.border-left {
+  padding-top: 10px;
+  padding-left: 20px;
+  margin-left: 1.5rem;
+  border-left: .1rem solid var(--color-gray);
+  -moz-box-shadow: -.2rem 0rem 0.2rem -.2rem var(--color-shadow);
+  -webkit-box-shadow: -.2rem 0rem 0.2rem -.2rem var(--color-shadow);
+  box-shadow: -.3rem 0rem 0.4rem -.3rem var(--color-gray);
 }
 
+/*--------------------------------------QUIERIES--------------------------------------*/
 @media(min-width: 768px) {
   .app-main {
     margin-top: 100px;
   }
-  .main-section-style {
-    -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-    -webkit-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-    box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-  }
   .app-aside {
-    -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-    -webkit-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-    box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
     border-bottom: 0px;
   }
   .aside-main {
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     gap: 8px;
     margin: .66%;
     border-bottom: 0px;
@@ -261,21 +270,29 @@ a {
     display: grid;
     grid-template-columns: 2fr 5fr 1fr;
   }
-  main section {
-    padding: 0vw 2vw;
-  }
   .exp-list {
     width: 40vw;
   }
   .profile-photo {
     width: 23vw;
+    margin-top: 0px;
+    margin-bottom: 25px;
   }
   .profile-photo {
     margin-left: 0vw;
   }
   .top-link-style {
-    width: 98.68%;
+    width: 98.80%;
     margin: 0px .66% 8px .66%;
+  }
+  .border-left {
+    margin-top: 75px;
+    margin-left: 0rem;
+  }
+  .shadow-behind {
+    -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
+    -webkit-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
+    box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
   }
 }
 

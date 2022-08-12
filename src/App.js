@@ -50,7 +50,7 @@ function App() {
       <a name="top"></a>
       <Header />
       <span className="aside-main">
-          <aside className="app-aside">
+          <aside className="app-aside shadow-behind">
             <Aside
               btnText={btnText}
               btnClass={btnClass}
@@ -65,7 +65,9 @@ function App() {
               <Section4></Section4>
           </main>
       </span>
-      <a href="#top" className="flex-center top-link-style">back to top</a>
+      <div className="flex-center">
+        <a href="#top" className="flex-center top-link-style shadow-behind">back to top</a>
+      </div>
       <Footer />
     </div>
   );

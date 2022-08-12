@@ -2,11 +2,11 @@ import React from "react";
 
 const Section1 = () => {
     return (
-        <section className="section-lists main-section-style">
+        <section className="section-lists main-section-style shadow-behind">
             <h3 className="title-line text-x-large">Skills and Knowledge</h3>
             <div>
                 <p className="text-large">Full Stack Web and App Development</p>
-                <ul className="remove-bullet-list">
+                <ul className="remove-bullet-list border-left">
                     <li className="text-large">JavaScript</li>
                     <ul>
                         <li>Libraries: Node.js</li>
@@ -31,8 +31,7 @@ const Section1 = () => {
                         <ul>
                             <li>markdown content</li>
                             <li>modals and forms</li>
-                            <li>raster images</li>
-                            <li>vector graphics</li>
+                            <li>raster images & vector graphics</li>
                         </ul>
                     <p></p>
                 </ul>
@@ -40,23 +39,12 @@ const Section1 = () => {
             <br />
             <div>
                 <p className="text-large">Graphic Design</p>
-                <ul className="remove-bullet-list">
+                <ul className="remove-bullet-list border-left">
                     <li className="text-large">User Experience (UX) and User Interface (UI) Design</li>
                     <ul>
                         <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so user features don't go unnoticed.</li>
-                        <li>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the market.</li>
+                        <li>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the tech market.</li>
                         <li>Mobile First Design: a design practice where the layout is first created on mobile viewports and then adapted to desktop, which is motivated by the widespread user preference for mobile over desktop platforms.</li>
-                    </ul>
-                    <p></p>
-                    <li className="text-large">Gestalt Psycholgical Principles of Design</li>
-                    <ul>
-                        <li>Similarity: like figures are seen as related.</li>
-                        <li>Continuity: figures can be discerned from the arrangement of smaller figures.</li>
-                        <li>Closure: a figure may be accesible without its full realism.</li>
-                        <li>Proximity: where figures near to one another are seen as related.</li>
-                        <li>Figure/Ground: the space between figures is its own figure</li>
-                        <li>Symmetry: the tendency to interpret the arrangement of figures in the simplest order</li>
-                        <li>Common Fate: figures moving as one are seen as one.</li>
                     </ul>
                     <p></p>
                     <li className="text-large">Digital Graphic Technologies</li>
@@ -67,12 +55,23 @@ const Section1 = () => {
                         <li>MS Paint</li>
                     </ul>
                     <p></p>
+                    <li className="text-large">Gestalt Psycholgical Principles of Design</li>
+                    <ul>
+                        <li>Similarity</li>
+                        <li>Continuity</li>
+                        <li>Closure:</li>
+                        <li>Proximity</li>
+                        <li>Figure/Ground</li>
+                        <li>Symmetry</li>
+                        <li>Common Fate</li>
+                    </ul>
+                    <p></p>
                 </ul>
             </div>
             <br />
             <div>
                 <p className="text-large">Music Production</p>
-                <ul className="remove-bullet-list">
+                <ul className="remove-bullet-list border-left">
                     <li className="text-large">Audio Engineering</li>
                     <ul>
                         <li>Self taught</li>

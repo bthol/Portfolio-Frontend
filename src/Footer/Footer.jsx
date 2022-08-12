@@ -23,6 +23,7 @@ const Footer = () => {
                 </ul>
             </div>
             <small className="flex-around">&copy; 2022, Blake Thollaug</small>
+            <br />
       </footer>
     )
 };
