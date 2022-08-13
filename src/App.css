@@ -79,6 +79,7 @@ a {
 }
 
 .top-link-style {
+  border-radius: 25px;
   padding: 1vmin 0;
   margin-bottom: 8px;
   width: 96.33%;
@@ -182,6 +183,7 @@ a {
 
 /* ASIDE + MAIN */
 .app-aside {
+  border-radius: 2vmin 2vmin 0vmin 0vmin;
   padding: 2vw;
   margin-top: 100px;
 }
@@ -257,7 +259,11 @@ main section {
   .app-main {
     margin-top: 100px;
   }
+  .main-section-style {
+    border-radius: 2vmin;
+  }
   .app-aside {
+    border-radius: 12px;
     border-bottom: 0px;
   }
   .aside-main {
@@ -265,6 +271,10 @@ main section {
     gap: 8px;
     margin: .66%;
     border-bottom: 0px;
+  }
+  .top-link-style {
+    width: 98.80%;
+    margin: 0px .66% 8px .66%;
   }
   .section-lists div {
     display: grid;
@@ -280,10 +290,6 @@ main section {
   }
   .profile-photo {
     margin-left: 0vw;
-  }
-  .top-link-style {
-    width: 98.80%;
-    margin: 0px .66% 8px .66%;
   }
   .border-left {
     margin-top: 75px;
