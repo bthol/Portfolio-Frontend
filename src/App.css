@@ -39,7 +39,7 @@
   --button-dark-detail: #000000;
 }
 
-/* BACKGROUND COLOR */
+/* BACKGROUND + BORDER */
 #root-react {
   background: var(--color-background-1);
   background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
@@ -47,12 +47,12 @@
 
 .app-header > div {
   background: var(--color-background-1);
-  border-bottom: 8px solid var(--color-header-detail-1);
 }
 
 .app-nav {
   background: var(--color-white);
   background: linear-gradient(270deg, var(--color-gray) 0%, var(--color-white) 10%, var(--color-white) 90%, var(--color-gray) 100%);
+  border-top: 8px solid var(--color-header-detail-1);
   border-bottom: 1.3px solid var(--color-gray);
 }
 
@@ -185,7 +185,7 @@ a {
 .app-aside {
   border-radius: 2vmin 2vmin 0vmin 0vmin;
   padding: 2vw;
-  margin-top: 100px;
+  margin-top: 102px;
 }
 
 main section {
@@ -257,13 +257,13 @@ main section {
 /*--------------------------------------QUIERIES--------------------------------------*/
 @media(min-width: 768px) {
   .app-main {
-    margin-top: 100px;
+    margin-top: 102px;
   }
   .main-section-style {
-    border-radius: 2vmin;
+    border-radius: 25px;
   }
   .app-aside {
-    border-radius: 12px;
+    border-radius: 25px;
     border-bottom: 0px;
   }
   .aside-main {

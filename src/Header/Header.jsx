@@ -11,7 +11,7 @@ const Header = () => {
                     <AugiumIcon></AugiumIcon>
                 </div>
                 <div>
-                    <h3 id="website-title">Blake Thollaug's Portfolio Website</h3>
+                    <h3 id="website-title" tabIndex={0} title="Blake Thollaug's Portfolio Website">Blake Thollaug's Portfolio Website</h3>
                 </div>
             </div>
             <Nav></Nav>
