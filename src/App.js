@@ -47,7 +47,6 @@ function App() {
 
   return (
     <div id="root-react" className={`App color + ${theme}`}>
-      <a name="top"></a>
       <Header />
       <span className="aside-main">
           <aside className="app-aside shadow-behind">
@@ -66,7 +65,7 @@ function App() {
           </main>
       </span>
       <div className="flex-center">
-        <a href="#top" className="flex-center top-link-style shadow-behind">back to top</a>
+        <a href="#" className="flex-center top-link-style shadow-behind">back to top</a>
       </div>
       <Footer />
     </div>
