@@ -58,6 +58,7 @@
 
 .app-aside {
   background: var(--color-background-3);
+  border-top: 1.3px solid var(--color-gray);
 }
 
 .main-section-style {
@@ -72,10 +73,12 @@ a {
 .link-desat:hover {
   transition: all 100ms ease;
   color: var(--font-color-2);
+  font-style: italic;
 }
 .link-highlight:hover {
   transition: all 100ms ease;
   color: var(--font-color-3);
+  font-style: italic;
 }
 
 .top-link-style {
@@ -248,10 +251,10 @@ main section {
   padding-top: 10px;
   padding-left: 20px;
   margin-left: 1.5rem;
-  border-left: .1rem solid var(--color-gray);
-  -moz-box-shadow: -.2rem 0rem 0.2rem -.2rem var(--color-shadow);
-  -webkit-box-shadow: -.2rem 0rem 0.2rem -.2rem var(--color-shadow);
-  box-shadow: -.3rem 0rem 0.4rem -.3rem var(--color-gray);
+  border-left: 1px solid var(--color-gray);
+  -moz-box-shadow: -5px 0px 4px -5px var(--color-gray);
+  -webkit-box-shadow: -5px 0px 4px -5px var(--color-gray);
+  box-shadow: -5px 0px 4px -5px var(--color-gray);
 }
 
 /*--------------------------------------QUIERIES--------------------------------------*/
@@ -264,7 +267,7 @@ main section {
   }
   .app-aside {
     border-radius: 25px;
-    border-bottom: 0px;
+    border: 0px;
   }
   .aside-main {
     grid-template-columns: 1fr 5fr;

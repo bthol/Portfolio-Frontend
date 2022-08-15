@@ -14,18 +14,18 @@ import { Footer } from './Footer/Footer';
 
 function App() {
 
-  const [btnText, setBtnText] = useState("Dark Theme");
+  const [btnText, setBtnText] = useState("Night Theme");
   const [btnClass, setBtnClass] = useState("buttons");
   const [theme, setTheme] = useState("color-theme-light");
 
   const setThemeDark = () => {
-    setBtnText("Light Theme")
+    setBtnText("Day Theme")
     setTheme("color-theme-dark")
     setBtnClass("buttons dark-button");
   };
 
   const setThemeLight = () => {
-    setBtnText("Dark Theme")
+    setBtnText("Night Theme")
     setTheme("color-theme-light")
     setBtnClass("buttons")
   };

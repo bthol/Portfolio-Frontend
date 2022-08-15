@@ -8,7 +8,7 @@ const Section2 = () => {
                 <b><p className="text-large flex-center" tabIndex={0}>Space Battle</p></b>
                 <img src="" alt="project screenshot"></img>
                 <p tabIndex={0}><b>Technologies</b>: JavaScript, JQuery, Express.js, MongoDB Atlas, Mongoose ODM, HTML, CSS</p>
-                <p tabIndex={0}><b>Description</b>: Fight off the alien hoarde for a new high score in this arcade-style battle game!</p>
+                <p tabIndex={0}><b>Description</b>: Fight off the alien horde for a new high score in this arcade-style battle game!</p>
                 <ul>
                     <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
                     <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
