@@ -7,14 +7,14 @@ const Section2 = () => {
             <div>
                 <b><p className="text-large flex-center" tabIndex={0}>Space Battle</p></b>
                 <img src="" alt="project screenshot"></img>
-                <p tabIndex={0}><b>Technologies</b>: JavaScript, Express, HTML, CSS</p>
+                <p tabIndex={0}><b>Technologies</b>: JavaScript, JQuery, Express.js, MongoDB Atlas, Mongoose ODM, HTML, CSS</p>
                 <p tabIndex={0}><b>Description</b>: Fight off the alien hoarde for a new high score in this arcade-style battle game!</p>
                 <ul>
                     <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
                     <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
                     <li tabIndex={0}>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
-                    <li tabIndex={0}>Displayed pages by mutating the DOM and tracked pages by using a global variable that updates on page change.</li>
-                    <li tabIndex={0}>Organized all static variables and data structures into a JS module for best code manageability practices</li>
+                    <li tabIndex={0}>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
+                    <li tabIndex={0}>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
                 </ul>
             </div>
             <br />
@@ -26,7 +26,7 @@ const Section2 = () => {
                 <ul>
                     <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
                     <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-                    <li tabIndex={0}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to dynamically update style.</li>
+                    <li tabIndex={0}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
                     <li tabIndex={0}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
                     <li tabIndex={0}>Implemented a polychromatic animated background gradient.</li>
                 </ul>

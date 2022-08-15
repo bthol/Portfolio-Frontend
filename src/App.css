@@ -185,7 +185,7 @@ a {
 .app-aside {
   border-radius: 2vmin 2vmin 0vmin 0vmin;
   padding: 2vw;
-  margin-top: 102px;
+  margin-top: 100px;
 }
 
 main section {
@@ -257,7 +257,7 @@ main section {
 /*--------------------------------------QUIERIES--------------------------------------*/
 @media(min-width: 768px) {
   .app-main {
-    margin-top: 102px;
+    margin-top: 100px;
   }
   .main-section-style {
     border-radius: 25px;
