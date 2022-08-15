@@ -1,9 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-
-import { IIdleTimer } from 'react-idle-timer';
-import { IIdleTimerProps } from 'react-idle-timer';
-
 import { Header } from "./Header/Header";
 import { Aside } from './Aside/Aside';
 import { Section1 } from './Content/Section1';
@@ -11,9 +7,9 @@ import { Section2 } from './Content/Section2';
 import { Section3 } from './Content/Section3';
 import { Section4 } from './Content/Section4';
 import { Footer } from './Footer/Footer';
+import Idle from './IdleTimer/IdleTimer';
 
 function App() {
-
   const [btnText, setBtnText] = useState("Night Theme");
   const [btnClass, setBtnClass] = useState("buttons");
   const [theme, setTheme] = useState("color-theme-light");
@@ -47,6 +43,7 @@ function App() {
 
   return (
     <div id="root-react" className={`App color + ${theme}`}>
+      {/* <Idle></Idle> */}
       <Header />
       <span className="aside-main">
           <aside className="app-aside shadow-behind">
