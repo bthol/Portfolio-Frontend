@@ -56,17 +56,6 @@ const Section1 = () => {
                         <li tabIndex={0}>MS Paint</li>
                     </ul>
                     <p></p>
-                    <li className="text-large" tabIndex={0}>Gestalt Psycholgical Principles of Design</li>
-                    <ul>
-                        <li tabIndex={0}>Similarity</li>
-                        <li tabIndex={0}>Continuity</li>
-                        <li tabIndex={0}>Closure</li>
-                        <li tabIndex={0}>Proximity</li>
-                        <li tabIndex={0}>Figure/Ground</li>
-                        <li tabIndex={0}>Symmetry</li>
-                        <li tabIndex={0}>Common Fate</li>
-                    </ul>
-                    <p></p>
                 </ul>
             </div>
             <br />

@@ -73,12 +73,10 @@ a {
 .link-desat:hover {
   transition: all 100ms ease;
   color: var(--font-color-2);
-  font-style: italic;
 }
 .link-highlight:hover {
   transition: all 100ms ease;
   color: var(--font-color-3);
-  font-style: italic;
 }
 
 .top-link-style {
@@ -270,7 +268,7 @@ main section {
     border: 0px;
   }
   .aside-main {
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
     gap: 8px;
     margin: .66%;
     border-bottom: 0px;
