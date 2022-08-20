@@ -70,14 +70,6 @@ a {
   text-decoration: none;
   color: var(--font-color-1);
 }
-.link-desat:hover {
-  transition: all 100ms ease;
-  color: var(--font-color-2);
-}
-.link-highlight:hover {
-  transition: all 100ms ease;
-  color: var(--font-color-3);
-}
 
 .top-link-style {
   border-radius: 25px;
@@ -85,9 +77,6 @@ a {
   margin-bottom: 8px;
   width: 96.33%;
   background: var(--color-background-3);
-}
-.top-link-style:hover {
-  background: var(--color-gray);
 }
 
 /* TEXT */
@@ -116,13 +105,6 @@ a {
   color: var(--font-color-1);
   background-color: var(--color-white);
   border: 1.5px solid var(--color-gray);
-}
-.buttons:hover {
-  background-color: var(--color-gray);
-}
-.dark-button:hover {
-  background-color: var(--button-dark-detail);
-  color: var(--font-color-3);
 }
 
 /* TITLE */
@@ -255,7 +237,32 @@ main section {
   box-shadow: -5px 0px 4px -5px var(--color-gray);
 }
 
-/*--------------------------------------QUIERIES--------------------------------------*/
+/*--------------------------------------QUIERIES(INTERACTIVITY)--------------------------------------*/
+
+/* laptop */
+@media(hover: hover) and (pointer: fine) {
+  .buttons:hover {
+    background-color: var(--color-gray);
+  }
+  .dark-button:hover {
+    background-color: var(--button-dark-detail);
+    color: var(--font-color-3);
+  }
+  
+  .link-desat:hover {
+    transition: all 100ms ease;
+    color: var(--font-color-2);
+  }
+  .link-highlight:hover {
+    transition: all 100ms ease;
+    color: var(--font-color-3);
+  }
+  .top-link-style:hover {
+    background: var(--color-gray);
+  }
+}
+
+/*--------------------------------------QUIERIES(RESPONSIVITY)--------------------------------------*/
 @media(min-width: 768px) {
   .app-main {
     margin-top: 100px;
