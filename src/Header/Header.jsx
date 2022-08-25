@@ -8,6 +8,14 @@ const Header = () => {
     const toggleMenuItem1 = () => {
         setMenuItem1(!menuItem1);
     }
+    const [menuItem2, setMenuItem2] = useState(false);
+    const toggleMenuItem2 = () => {
+        setMenuItem2(!menuItem2);
+    }
+    const closeMenus = () => {
+        setMenuItem1(false);
+        setMenuItem2(false);
+    }
 
     return(
         <header className="app-header">
@@ -19,6 +27,19 @@ const Header = () => {
                 <div>
                     <div className="link-desat nav-root-links" onClick={(e) => {
                             e.preventDefault();
+                            closeMenus();
+                            toggleMenuItem2();
+                        }}>Utility Apps</div>
+                    {menuItem2 &&
+                        <div className="nav-menu-style">
+                            <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
+                        </div>
+                    }
+                </div>
+                <div>
+                    <div className="link-desat nav-root-links" onClick={(e) => {
+                            e.preventDefault();
+                            closeMenus();
                             toggleMenuItem1();
                         }}>Game Apps</div>
                     {menuItem1 &&
