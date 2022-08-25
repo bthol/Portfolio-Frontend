@@ -1,7 +1,7 @@
 /* --------------------------------------STYLE-------------------------------------- */
 
 /* COLOR THEMES */
-.color-theme-light {
+.color-theme-day {
   --color-background-1: #6694cc;
   --color-background-2: #c4edf7;
   --color-background-3: #fafafa;
@@ -20,7 +20,7 @@
   --button-dark-detail: #000000;
 }
 
-.color-theme-dark {
+.color-theme-night {
   --color-background-1: #19304d;
   --color-background-2: #0e5567;
   --color-background-3: #1e1e24;

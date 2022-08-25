@@ -12,17 +12,17 @@ import Idle from './IdleTimer/IdleTimer';
 function App() {
   const [btnText, setBtnText] = useState("Night Theme");
   const [btnClass, setBtnClass] = useState("buttons");
-  const [theme, setTheme] = useState("color-theme-light");
+  const [theme, setTheme] = useState("color-theme-day");
 
-  const setThemeDark = () => {
+  const setThemeNight = () => {
     setBtnText("Day Theme")
-    setTheme("color-theme-dark")
+    setTheme("color-theme-night")
     setBtnClass("buttons dark-button");
   };
 
-  const setThemeLight = () => {
+  const setThemeDay = () => {
     setBtnText("Night Theme")
-    setTheme("color-theme-light")
+    setTheme("color-theme-day")
     setBtnClass("buttons")
   };
 
@@ -30,9 +30,9 @@ function App() {
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
-      setThemeLight();
+      setThemeNight();
     } else {
-      setThemeDark();
+      setThemeDay();
     }
   };
 
