@@ -8,10 +8,12 @@ const Header = () => {
     const toggleMenuItem1 = () => {
         setMenuItem1(!menuItem1);
     }
+
     const [menuItem2, setMenuItem2] = useState(false);
     const toggleMenuItem2 = () => {
         setMenuItem2(!menuItem2);
     }
+
     const closeMenus = () => {
         setMenuItem1(false);
         setMenuItem2(false);
@@ -19,14 +21,13 @@ const Header = () => {
 
     return(
         <header className="app-header">
-            <div>
+            <div className="no-select">
                 <AugiumIcon></AugiumIcon>
                 <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
             </div>
             <nav className="app-nav flex-around">
                 <div>
-                    <div className="link-desat nav-root-links" onClick={(e) => {
-                            e.preventDefault();
+                    <div className="link-desat nav-root-links no-select" onClick={(e) => {
                             closeMenus();
                             toggleMenuItem2();
                         }}>Utility Apps</div>
@@ -37,8 +38,7 @@ const Header = () => {
                     }
                 </div>
                 <div>
-                    <div className="link-desat nav-root-links" onClick={(e) => {
-                            e.preventDefault();
+                    <div className="link-desat nav-root-links no-select" onClick={(e) => {
                             closeMenus();
                             toggleMenuItem1();
                         }}>Game Apps</div>
