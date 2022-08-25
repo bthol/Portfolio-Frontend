@@ -56,7 +56,12 @@
   border-bottom: 1.3px solid var(--color-gray);
 }
 
-.nav-root-links {
+.nav-root-buttons {
+  margin: 0px;
+  border: none;
+  background: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
   color: var(--font-color-1);
 }
 
