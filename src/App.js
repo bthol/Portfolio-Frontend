@@ -10,6 +10,7 @@ import { Footer } from './Footer/Footer';
 import Idle from './IdleTimer/IdleTimer';
 
 function App() {
+  
   const [btnText, setBtnText] = useState("Night Theme");
   const [btnClass, setBtnClass] = useState("buttons");
   const [theme, setTheme] = useState("color-theme-day");
@@ -26,13 +27,13 @@ function App() {
     setBtnClass("buttons")
   };
 
-  const [togTheme, setTogTheme] = useState(true);
+  const [togTheme, setTogTheme] = useState(false);
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
-      setThemeNight();
-    } else {
       setThemeDay();
+    } else {
+      setThemeNight();
     }
   };
 
@@ -42,7 +43,7 @@ function App() {
   };
 
   return (
-    <div id="root-react" className={`App color + ${theme}`}>
+    <div id="root-react" className={`App color ${theme}`}>
       {/* <Idle></Idle> */}
       <Header />
       <span className="aside-main">
