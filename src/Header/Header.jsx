@@ -19,6 +19,12 @@ const Header = () => {
         setMenuItem2(false);
     }
 
+    const keyPress = (e) => {
+        if (e.key === 'enter') {
+            
+        }
+    }
+
     return(
         <header className="app-header">
             <div className="no-select">
@@ -27,10 +33,14 @@ const Header = () => {
             </div>
             <nav className="app-nav flex-around">
                 <div>
-                    <div className="link-desat nav-root-links no-select" onClick={(e) => {
+                    <a href="" className="link-desat nav-root-links no-select"
+                        onClick={(e) => {
+                            e.preventDefault();
                             closeMenus();
                             toggleMenuItem2();
-                        }}>Utility Apps</div>
+                        }}
+                        tabIndex={0}>Utility Apps
+                    </a>
                     {menuItem2 &&
                         <div className="nav-menu-style">
                             <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
@@ -38,10 +48,14 @@ const Header = () => {
                     }
                 </div>
                 <div>
-                    <div className="link-desat nav-root-links no-select" onClick={(e) => {
+                    <a href="" className="link-desat nav-root-links no-select"
+                        onClick={(e) => {
+                            e.preventDefault();
                             closeMenus();
                             toggleMenuItem1();
-                        }}>Game Apps</div>
+                        }}
+                        tabIndex={0}>Game Apps
+                    </a>
                     {menuItem1 &&
                         <div className="nav-menu-style">
                             <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat">Space Battle</a> 
