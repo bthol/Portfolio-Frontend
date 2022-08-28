@@ -1,32 +1,40 @@
 import './App.css';
 import React, { useState } from 'react';
-import { Header } from "./Header/Header";
+import { NavButton } from './NavButton/NavButton';
 import { Aside } from './Aside/Aside';
 import { Section1 } from './Content/Section1';
 import { Section2 } from './Content/Section2';
 import { Section3 } from './Content/Section3';
 import { Section4 } from './Content/Section4';
 import { Footer } from './Footer/Footer';
-import Idle from './IdleTimer/IdleTimer';
+import { AugiumIcon } from './Images/AugiumIcon';
+// import Idle from './IdleTimer/IdleTimer';
 
 function App() {
   
+  // ALERTS
+  const featureAlert = (e) => {
+    e.preventDefault();
+    alert("Feature still in development");
+  };
+
+  // THEME LOGIC
   const [btnText, setBtnText] = useState("Night Theme");
   const [btnClass, setBtnClass] = useState("buttons");
   const [theme, setTheme] = useState("color-theme-day");
-
+  
   const setThemeNight = () => {
     setBtnText("Day Theme")
     setTheme("color-theme-night")
     setBtnClass("buttons dark-button");
   };
-
+  
   const setThemeDay = () => {
     setBtnText("Night Theme")
     setTheme("color-theme-day")
     setBtnClass("buttons")
   };
-
+  
   const [togTheme, setTogTheme] = useState(false);
   const toggleTheme = () => {
     setTogTheme(!togTheme)
@@ -37,15 +45,41 @@ function App() {
     }
   };
 
-  const featureAlert = (e) => {
-    e.preventDefault();
-    alert("Feature still in development");
-  };
+  // NAV PROPS
+  // 1
+  const rootName1 = "Utility Apps";
+  const rootLinks1 = <div className="nav-menu-style">
+    <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
+  </div>;
+  // 2
+  const rootName2 = "Game Apps";
+  const rootLinks2 = <div className="nav-menu-style">
+    <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat">Space Battle</a> 
+    <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer" className="link-desat">Magic 8 Ball</a>
+    <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer" className="link-desat">Retro Toe</a>
+  </div>;
 
   return (
     <div id="root-react" className={`App color ${theme}`}>
       {/* <Idle></Idle> */}
-      <Header />
+
+      <header className="app-header">
+        <div className="no-select">
+          <AugiumIcon></AugiumIcon>
+          <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
+        </div>
+        <nav className="app-nav flex-around">
+          <NavButton
+            rootName={rootName1}
+            rootLinks={rootLinks1}
+          ></NavButton>
+          <NavButton
+            rootName={rootName2}
+            rootLinks={rootLinks2}
+          ></NavButton>
+        </nav>
+      </header>
+
       <span className="aside-main">
           <aside className="app-aside shadow-behind">
             <Aside

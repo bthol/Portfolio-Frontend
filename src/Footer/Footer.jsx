@@ -22,7 +22,7 @@ const Footer = () => {
                     <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
                 </ul>
             </div>
-            <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug</small>
+            <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
             <br />
       </footer>
     )
