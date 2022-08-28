@@ -5,7 +5,6 @@ import { Section1 } from './Content/Section1';
 import { Section2 } from './Content/Section2';
 import { Section3 } from './Content/Section3';
 import { Section4 } from './Content/Section4';
-
 import { AugiumIcon } from './Images/AugiumIcon';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 // import Idle from './IdleTimer/IdleTimer';
@@ -45,19 +44,34 @@ function App() {
     }
   };
 
-  // NAV PROPS
+  // NAV LOGIC
+
   // 1
+  const [navState1, setNavState1] = useState(false);
+  const toggleNavState1 = () => {
+    setNavState1(!navState1);
+  }
   const rootName1 = "Utility Apps";
   const rootLinks1 = <div className="nav-menu-style">
     <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
   </div>;
+
   // 2
+  const [navState2, setNavState2] = useState(false);
+  const toggleNavState2 = () => {
+    setNavState2(!navState2);
+  }
   const rootName2 = "Game Apps";
   const rootLinks2 = <div className="nav-menu-style">
     <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat">Space Battle</a> 
     <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer" className="link-desat">Magic 8 Ball</a>
     <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer" className="link-desat">Retro Toe</a>
   </div>;
+
+  const closeNav = () => {
+    setNavState1(false);
+    setNavState2(false);
+  }
 
   return (
     <div id="root-react" className={`App color ${theme}`}>
@@ -71,10 +85,16 @@ function App() {
           <NavButton
             rootName={rootName1}
             rootLinks={rootLinks1}
+            navState={navState1}
+            toggleNavState={toggleNavState1}
+            closeNav={closeNav}
           ></NavButton>
           <NavButton
             rootName={rootName2}
             rootLinks={rootLinks2}
+            navState={navState2}
+            toggleNavState={toggleNavState2}
+            closeNav={closeNav}
           ></NavButton>
         </nav>
       </header>
@@ -101,18 +121,18 @@ function App() {
       <footer className="app-footer">
             <AugiumIcon></AugiumIcon>
             <div className="app-footer-link-grid flex-around">
-                <ul id="footer-coding-links">
+                <ul>
                     <li tabIndex={0}><p><b>Coding</b></p></li>
                     <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
                     <li><a href="https://replit.com/@BlakeThollaug" target="_blank" rel="noreferrer" className="link-highlight">Replit</a></li>
                     <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
                 </ul>
-                <ul id="footer-music-links">
+                <ul>
                     <li tabIndex={0}><p><b>Music</b></p></li>
                     <li><a href="https://augium.bandcamp.com/" target="_blank" rel="noreferrer" className="link-highlight">Bandcamp</a></li>
                     <li><a href="https://soundcloud.com/augium" target="_blank" rel="noreferrer" className="link-highlight">SoundCloud</a></li>
                 </ul>
-                <ul id="footer-social-links">
+                <ul>
                     <li tabIndex={0}><p><b>Follow</b></p></li>
                     <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
                 </ul>
