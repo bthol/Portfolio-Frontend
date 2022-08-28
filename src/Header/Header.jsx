@@ -27,7 +27,7 @@ const Header = () => {
             </div>
             <nav className="app-nav flex-around">
                 <div>
-                    <button className="link-desat nav-root-buttons no-select"
+                    <button className="nav-root-buttons link-desat no-select"
                         onClick={(e) => {
                             e.preventDefault();
                             closeMenus();
@@ -42,7 +42,7 @@ const Header = () => {
                     }
                 </div>
                 <div>
-                    <button className="link-desat nav-root-buttons no-select"
+                    <button className="nav-root-buttons link-desat no-select"
                         onClick={(e) => {
                             e.preventDefault();
                             closeMenus();

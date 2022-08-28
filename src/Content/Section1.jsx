@@ -42,10 +42,10 @@ const Section1 = () => {
                 <ul className="remove-bullet-list border-left">
                     <li className="text-large" tabIndex={0}>User Experience (UX) and User Interface (UI) Design</li>
                     <ul>
-                        <li tabIndex={0}>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the tech market.</li>
+                        <li tabIndex={0}>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
                         <li tabIndex={0}>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so user features don't go unnoticed.</li>
-                        <li tabIndex={0}>Mobile First Design: a design practice where the layout is first created on mobile viewports and then adapted to desktop, which is motivated by the widespread user preference for mobile over desktop platforms.</li>
-                        <li tabIndex={0}>ARIA Acessibility: enables interface navigation with keyboard accessibility for users with motor impairments and read-aloud compatability for users with visual impairments.</li>
+                        <li tabIndex={0}>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
+                        <li tabIndex={0}>WAI ARIA Acessibility standard: provides interoperability with assistive technologies to enable user accessibility.</li>
                     </ul>
                     <p></p>
                     <li className="text-large" tabIndex={0}>Digital Graphic Technologies</li>
