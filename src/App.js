@@ -1,13 +1,14 @@
 import './App.css';
 import React, { useState } from 'react';
 import { NavButton } from './NavButton/NavButton';
-import { Aside } from './Aside/Aside';
 import { Section1 } from './Content/Section1';
 import { Section2 } from './Content/Section2';
 import { Section3 } from './Content/Section3';
 import { Section4 } from './Content/Section4';
 import { Footer } from './Footer/Footer';
+
 import { AugiumIcon } from './Images/AugiumIcon';
+import { ProfilePhoto } from './Images/ProfilePhoto';
 // import Idle from './IdleTimer/IdleTimer';
 
 function App() {
@@ -62,7 +63,6 @@ function App() {
   return (
     <div id="root-react" className={`App color ${theme}`}>
       {/* <Idle></Idle> */}
-
       <header className="app-header">
         <div className="no-select">
           <AugiumIcon></AugiumIcon>
@@ -79,15 +79,15 @@ function App() {
           ></NavButton>
         </nav>
       </header>
-
       <span className="aside-main">
           <aside className="app-aside shadow-behind">
-            <Aside
-              btnText={btnText}
-              btnClass={btnClass}
-              toggleTheme={toggleTheme}
-              featureAlert={featureAlert}
-            />
+            <ProfilePhoto></ProfilePhoto>
+            <div className="flex-around">
+                <button className={btnClass} onClick={featureAlert}>Contact Me</button>
+                <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
+            </div>
+            <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
+            <br />
           </aside>
           <main className="app-main">
               <Section1></Section1>
