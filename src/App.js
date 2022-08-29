@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavButton } from './NavButton/NavButton';
 import { Section1 } from './Content/Section1';
 import { Section2 } from './Content/Section2';
@@ -7,7 +7,6 @@ import { Section3 } from './Content/Section3';
 import { Section4 } from './Content/Section4';
 import { AugiumIcon } from './Images/AugiumIcon';
 import { ProfilePhoto } from './Images/ProfilePhoto';
-// import Idle from './IdleTimer/IdleTimer';
 
 function App() {
   
@@ -16,6 +15,24 @@ function App() {
     e.preventDefault();
     alert("Feature still in development");
   };
+
+  // Idle Modal
+  const [modal, setModal] = useState("closed");
+  useEffect(() => {
+    let seconds = 0;
+    // listners reset the count
+    document.addEventListener("mousemove", () => {seconds = 0});
+    document.addEventListener("keydown", () => {seconds = 0});
+    const counter = setInterval(() => {
+      seconds += 1;
+      if (seconds === 60) {
+        // display modal
+        setModal("open")
+        seconds = 0;
+      }
+    }, 1000);
+    return () => clearInterval(counter);
+  }, []);
 
   // THEME LOGIC
   const [btnText, setBtnText] = useState("Night Theme");
@@ -46,7 +63,7 @@ function App() {
 
   // NAV LOGIC
 
-  // 1
+  // item 1
   const [navState1, setNavState1] = useState(false);
   const toggleNavState1 = () => {
     setNavState1(!navState1);
@@ -56,7 +73,7 @@ function App() {
     <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
   </div>;
 
-  // 2
+  // item 2
   const [navState2, setNavState2] = useState(false);
   const toggleNavState2 = () => {
     setNavState2(!navState2);
@@ -72,6 +89,8 @@ function App() {
     setNavState1(false);
     setNavState2(false);
   }
+
+  // PROPS //
 
   const contentProps = {
     skills: [
@@ -257,10 +276,17 @@ function App() {
     ],
   };
 
-
   return (
     <div id="root-react" className={`App color ${theme}`}>
-      {/* <Idle></Idle> */}
+      <div className={`modal modal-container-${modal} flex-center`}>
+        <div className={`modal modal-content-${modal}`}>
+          <h2 tabIndex={0}>Inactive</h2>
+          <p tabIndex={0}>Are you still there?</p>
+          <div>
+            <button tabIndex={0} onClick={() => {setModal("closed")}} className="buttons modal-button">Yes</button>
+          </div>
+        </div>
+      </div>
       <header className="app-header">
         <div className="no-select">
           <AugiumIcon></AugiumIcon>

@@ -14,7 +14,6 @@
   --font-color-3: #ffffff;
   
   --color-shadow: #808080;
-  
   --color-header-detail-1: #80b9ff;
   --color-photo-detail-1: #73739b80;
   --button-dark-detail: #000000;
@@ -33,7 +32,6 @@
   --font-color-3: #808080;
   
   --color-shadow: #4a4a4a;
-  
   --color-header-detail-1: #103b70;
   --color-photo-detail-1: #ffffff80;
   --button-dark-detail: #000000;
@@ -272,6 +270,29 @@ main section {
   -moz-box-shadow: -5px 0px 4px -5px var(--color-gray);
   -webkit-box-shadow: -5px 0px 4px -5px var(--color-gray);
   box-shadow: -5px 0px 4px -5px var(--color-gray);
+}
+
+/*----------------------------------------------MODALS----------------------------------------------*/
+.modal {
+  position: fixed;
+  z-index: -1;
+}
+
+.modal-container-open {
+  z-index: 3;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  background: #00000060;
+}
+
+.modal-content-open {
+  top: 25%;
+  padding: 5vmin 7vmin 10vmin 7vmin;
+  text-align: center;
+  background: var(--color-background-3);
+  border: 1px solid var(--button-dark-detail);
+  color: var(--font-color-1);
 }
 
 /*--------------------------------------QUIERIES(INTERACTIVITY)--------------------------------------*/
