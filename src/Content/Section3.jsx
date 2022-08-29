@@ -5,7 +5,7 @@ const Section3 = (props) => {
         <div>
             <p className="text-large" tabIndex={0}>{props.jobTitle}</p>
             <p className="flex-between" tabIndex={0}><i>{props.employer}</i>{props.workPeriod}</p>
-            {props.xpList}
+            {props.list}
         </div>
     )
 };
