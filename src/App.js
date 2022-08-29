@@ -10,13 +10,13 @@ import { ProfilePhoto } from './Images/ProfilePhoto';
 
 function App() {
   
-  // ALERTS
+  // ERROR ALERTS
   const featureAlert = (e) => {
     e.preventDefault();
     alert("Feature still in development");
   };
 
-  // Idle Modal
+  // IDLE MODAL
   const [modal, setModal] = useState("closed");
   useEffect(() => {
     let seconds = 0;
@@ -25,7 +25,7 @@ function App() {
     document.addEventListener("keydown", () => {seconds = 0});
     const counter = setInterval(() => {
       seconds += 1;
-      if (seconds === 60) {
+      if (seconds === 300) {
         // display modal
         setModal("open")
         seconds = 0;
@@ -62,35 +62,40 @@ function App() {
   };
 
   // NAV LOGIC
-
-  // item 1
   const [navState1, setNavState1] = useState(false);
   const toggleNavState1 = () => {
     setNavState1(!navState1);
   }
-  const rootName1 = "Utility Apps";
-  const rootLinks1 = <div className="nav-menu-style">
-    <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
-  </div>;
 
-  // item 2
   const [navState2, setNavState2] = useState(false);
   const toggleNavState2 = () => {
     setNavState2(!navState2);
   }
-  const rootName2 = "Game Apps";
-  const rootLinks2 = <div className="nav-menu-style">
-    <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat">Space Battle</a> 
-    <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer" className="link-desat">Magic 8 Ball</a>
-    <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer" className="link-desat">Retro Toe</a>
-  </div>;
 
   const closeNav = () => {
     setNavState1(false);
     setNavState2(false);
   }
 
-  // PROPS //
+  // NAV PROPS
+  const navData = [
+    {
+      name: "Utility Apps",
+      links: <div className="nav-menu-style">
+        <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
+      </div>,
+    },
+    {
+      name: "Game Apps",
+      links: <div className="nav-menu-style">
+        <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat">Space Battle</a> 
+        <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer" className="link-desat">Magic 8 Ball</a>
+        <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer" className="link-desat">Retro Toe</a>
+      </div>,
+    },
+  ];
+
+  // CONTENT PROPS //
 
   const contentProps = {
     skills: [
@@ -294,15 +299,15 @@ function App() {
         </div>
         <nav className="app-nav flex-around">
           <NavButton
-            rootName={rootName1}
-            rootLinks={rootLinks1}
+            rootName={navData[0].name}
+            rootLinks={navData[0].links}
             navState={navState1}
             toggleNavState={toggleNavState1}
             closeNav={closeNav}
           ></NavButton>
           <NavButton
-            rootName={rootName2}
-            rootLinks={rootLinks2}
+            rootName={navData[1].name}
+            rootLinks={navData[1].links}
             navState={navState2}
             toggleNavState={toggleNavState2}
             closeNav={closeNav}
