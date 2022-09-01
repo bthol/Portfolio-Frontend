@@ -62,7 +62,8 @@ function App() {
   };
 
   // NAV LOGIC
-  const [drop1, setDrop1] = useState("menu-closed");
+  // 1
+  const [drop1, setDrop1] = useState("");
   const [navState1, setNavState1] = useState(false);
   const toggleNavState1 = () => {
     setNavState1(!navState1);
@@ -72,11 +73,11 @@ function App() {
     if (!navState1) {
       setDrop1("menu-open");
     } else {
-      setDrop1("menu-closed");
+      setDrop1("menu-close");
     }
   }
-  
-  const [drop2, setDrop2] = useState("menu-closed");
+  // 2
+  const [drop2, setDrop2] = useState("");
   const [navState2, setNavState2] = useState(false);
   const toggleNavState2 = () => {
     setNavState2(!navState2);
@@ -86,14 +87,14 @@ function App() {
     if (!navState2) {
       setDrop2("menu-open");
     } else {
-      setDrop2("menu-closed");
+      setDrop2("menu-close");
     }
   }
   
   const closeNav = () => {
-    setDrop1("menu-closed");
+    setDrop1("menu-close");
+    setDrop2("menu-close");
     setNavState1(false);
-    setDrop2("menu-closed");
     setNavState2(false);
   }
 

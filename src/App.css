@@ -199,14 +199,32 @@ a {
   grid-gap: 1.5vmin;
   white-space: nowrap;
   padding: 1.5vmin;
+  top: 0px;
 }
 
-.menu-closed > div {
-  top: 0px
+.menu-close > div {
+  animation: slideup 180ms linear;
+}
+@keyframes slideup {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
 }
 
 .menu-open > div {
+  animation: dropdown 180ms linear;
   top: 100px;
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 /* ASIDE + MAIN */
