@@ -54,10 +54,9 @@
   border-bottom: 1.3px solid var(--color-gray);
 }
 
-.nav-menu-style {
+.nav-menu-style > div {
   background: var(--color-white);
   border: 1.3px solid var(--color-gray);
-  border-top: hidden;
 }
 
 .app-aside {
@@ -193,13 +192,21 @@ a {
   padding: 3px 5px;
 }
 
-.nav-menu-style {
+.nav-menu-style > div {
+  z-index: -1;
   position: absolute;
-  top: 100px;
   display: grid;
   grid-gap: 1.5vmin;
   white-space: nowrap;
   padding: 1.5vmin;
+}
+
+.menu-closed > div {
+  top: 0px
+}
+
+.menu-open > div {
+  top: 100px;
 }
 
 /* ASIDE + MAIN */
@@ -291,10 +298,10 @@ main section {
 
 .modal-content-open {
   top: 25%;
-  padding: 5vmin 7vmin 10vmin 7vmin;
+  padding: 10vmin 14vmin 20vmin 14vmin;
   text-align: center;
   background: var(--color-background-3);
-  border: 1px solid var(--button-dark-detail);
+  border: 1.3px solid var(--button-dark-detail);
   color: var(--font-color-1);
 }
 

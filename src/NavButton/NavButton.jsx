@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import { React } from 'react';
 
 const NavButton = (props) => {
-
     return (
         <div>
             <button className="nav-root-buttons link-desat no-select"
@@ -10,11 +10,11 @@ const NavButton = (props) => {
                     props.closeNav();
                     props.toggleNavState();
                 }}
-                >{props.rootName}
+                >{props.name}
             </button>
             {props.navState &&
-                <div>
-                    {props.rootLinks}
+                <div className={`nav-menu-style ${props.drop}`}>
+                    {props.links}
                 </div>
             }
         </div>

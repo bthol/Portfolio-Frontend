@@ -62,18 +62,38 @@ function App() {
   };
 
   // NAV LOGIC
+  const [drop1, setDrop1] = useState("menu-closed");
   const [navState1, setNavState1] = useState(false);
   const toggleNavState1 = () => {
     setNavState1(!navState1);
+    menuDisplay1();
   }
-
+  const menuDisplay1 = () => {
+    if (!navState1) {
+      setDrop1("menu-open");
+    } else {
+      setDrop1("menu-closed");
+    }
+  }
+  
+  const [drop2, setDrop2] = useState("menu-closed");
   const [navState2, setNavState2] = useState(false);
   const toggleNavState2 = () => {
     setNavState2(!navState2);
+    menuDisplay2();
   }
-
+  const menuDisplay2 = () => {
+    if (!navState2) {
+      setDrop2("menu-open");
+    } else {
+      setDrop2("menu-closed");
+    }
+  }
+  
   const closeNav = () => {
+    setDrop1("menu-closed");
     setNavState1(false);
+    setDrop2("menu-closed");
     setNavState2(false);
   }
 
@@ -190,7 +210,7 @@ function App() {
     projects: [
       {
         title: "Space Battle",
-        carousel: <img src="" alt="project screenshot"></img>,
+        carousel: <img src="" alt="project carousel"></img>,
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, JQuery, Express.js, MongoDB Atlas, Mongoose ODM, HTML, CSS</p>
           <p tabIndex={0}><b>Description</b>: Fight off the alien horde for a new high score in this arcade-style battle game!</p>
@@ -205,7 +225,7 @@ function App() {
       },
       {
         title: "Magic 8 Ball",
-        carousel: <img src="" alt="project screenshot"></img>,
+        carousel: <img src="" alt="project carousel"></img>,
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
           <p tabIndex={0}><b>Description</b>: Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
@@ -220,7 +240,7 @@ function App() {
       },
       {
         title: "Retro Toe",
-        carousel: <img src="" alt="project screenshot"></img>,
+        carousel: <img src="" alt="project carousel"></img>,
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
           <p tabIndex={0}><b>Description</b>: Tic Tac Toe. Retro style.</p>
@@ -285,10 +305,10 @@ function App() {
     <div id="root-react" className={`App color ${theme}`}>
       <div className={`modal modal-container-${modal} flex-center`}>
         <div className={`modal modal-content-${modal}`}>
-          <h2 tabIndex={0}>Inactive</h2>
-          <p tabIndex={0}>Are you still there?</p>
+          <h2>Inactive</h2>
+          <p>Are you still there?</p>
           <div>
-            <button tabIndex={0} onClick={() => {setModal("closed")}} className="buttons modal-button">Yes</button>
+            <button onClick={() => {setModal("closed")}} className="buttons modal-button">Yes</button>
           </div>
         </div>
       </div>
@@ -299,16 +319,18 @@ function App() {
         </div>
         <nav className="app-nav flex-around">
           <NavButton
-            rootName={navData[0].name}
-            rootLinks={navData[0].links}
+            name={navData[0].name}
+            links={navData[0].links}
             navState={navState1}
+            drop={drop1}
             toggleNavState={toggleNavState1}
             closeNav={closeNav}
-          ></NavButton>
+            ></NavButton>
           <NavButton
-            rootName={navData[1].name}
-            rootLinks={navData[1].links}
+            name={navData[1].name}
+            links={navData[1].links}
             navState={navState2}
+            drop={drop2}
             toggleNavState={toggleNavState2}
             closeNav={closeNav}
           ></NavButton>
