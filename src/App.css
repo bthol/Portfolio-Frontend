@@ -164,6 +164,11 @@ a {
 }
 
 /* --------------------------------------LAYOUT-------------------------------------- */
+* {
+  --below-header: 115px; 
+  --margin-space: 8px;
+}
+
 
 /* HEADER */
 .app-header {
@@ -189,29 +194,17 @@ a {
 }
 
 .nav-root-buttons {
-  padding: 3px 5px;
+  padding: 3px 0px;
 }
 
 .nav-menu-style > div {
   z-index: -1;
   position: absolute;
   display: grid;
-  grid-gap: 1.5vmin;
+  grid-gap: 20px;
   white-space: nowrap;
-  padding: 1.5vmin;
+  padding: 20px;
   top: 0px;
-}
-
-.menu-close > div {
-  animation: slideup 180ms linear;
-}
-@keyframes slideup {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-100px);
-  }
 }
 
 .menu-open > div {
@@ -220,10 +213,10 @@ a {
 }
 @keyframes dropdown {
   from {
-    transform: translateY(-100px);
+    transform: translateY(-87.766px);
   }
   to {
-    transform: translateY(0px);
+    transform: translateY(0%);
   }
 }
 
@@ -231,7 +224,7 @@ a {
 .app-aside {
   border-radius: 2vmin 2vmin 0vmin 0vmin;
   padding: 2vw;
-  margin-top: 105px;
+  margin-top: var(--below-header);
 }
 
 main section {
@@ -247,8 +240,8 @@ main section {
 }
 
 .aside-main {
-  margin: 2%;
   display: grid;
+  margin: 0px 10px 10px 10px;
   color: var(--font-color-1);
 }
 
@@ -350,24 +343,23 @@ main section {
 /*--------------------------------------QUIERIES(RESPONSIVITY)--------------------------------------*/
 @media(min-width: 768px) {
   .app-main {
-    margin-top: 105px;
+    margin-top: var(--below-header);
   }
   .main-section-style {
-    border-radius: 13px;
+    border-radius: 10px;
   }
   .app-aside {
-    border-radius: 13px;
+    border-radius: 10px;
     border: 0px;
   }
   .aside-main {
     grid-template-columns: 1fr 4fr;
-    gap: 8px;
-    margin: .66%;
+    gap: 10px;
     border-bottom: 0px;
   }
   .top-link-style {
     width: 98.80%;
-    margin: 0px .66% 8px .66%;
+    margin: 0px 2px 8px 2px;
   }
   .section-lists div {
     display: grid;
@@ -382,16 +374,16 @@ main section {
     margin-bottom: 25px;
   }
   .profile-photo {
-    margin-left: 0vw;
+    margin-left: 0px;
   }
   .border-left {
     margin-top: 75px;
-    margin-left: 0rem;
+    margin-left: 0px;
   }
   .shadow-behind {
-    -moz-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-    -webkit-box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
-    box-shadow: 0rem 0rem .3rem .001rem var(--color-shadow);
+    -moz-box-box-shadow: 0px 0px 3px .1px var(--color-shadow);
+     -webkit-box-shadow: 0px 0px 3px .1px var(--color-shadow);
+             box-shadow: 0px 0px 3px .1px var(--color-shadow);
   }
 }
 

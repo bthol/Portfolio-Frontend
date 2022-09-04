@@ -305,7 +305,7 @@ function App() {
   return (
     <div id="root-react" className={`App color ${theme}`}>
       <div className={`modal modal-container-${modal} flex-center`}>
-        <div className={`modal modal-content-${modal}`}>
+        <div className={`modal modal-content-${modal} shadow-behind`}>
           <h2>Inactive</h2>
           <p>Are you still there?</p>
           <div>
