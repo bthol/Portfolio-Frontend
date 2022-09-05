@@ -134,7 +134,7 @@ function App() {
           <ul>
               <li tabIndex={0}>Libraries: Pip</li>
               <li tabIndex={0}>Frameworks: Django</li>
-              <li tabIndex={0}>Debugging: Pylint</li>
+              <li tabIndex={0}>Debugging: Pylint, Pyflakes</li>
           </ul>
           <p></p>
           <li className="text-large" tabIndex={0}>CSS3</li>
@@ -147,6 +147,7 @@ function App() {
               <ul>
                   <li tabIndex={0}>markdown content</li>
                   <li tabIndex={0}>modals and forms</li>
+                  <li tabIndex={0}>Audio and player controls</li>
                   <li tabIndex={0}>raster images & vector graphics</li>
               </ul>
           <p></p>
@@ -262,10 +263,20 @@ function App() {
         workPeriod: "Jan 2012 - Present",
         list: <ul className="exp-list">
           <li tabIndex={0}>Composed 400+ songs at 25+ hours using a variety of digital audio workstations(DAWs) accross multiple genres</li>
-          <li tabIndex={0}>Involved in all phases of music production (i.e. music concept and sound design, composition, performance and recording, mix engineering, and mastering)</li>
+          <li tabIndex={0}>Involved in all phases of music production (i.e. music concept, theory, and sound design, composition, performance and recording, mix engineering, and mastering)</li>
           <li tabIndex={0}>General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
           <li tabIndex={0}>Created audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, granular)</li>
         </ul>,
+      },
+      {
+        jobTitle: "Runner",
+        employer: "Albany Sauanas",
+        workPeriod: "Aug 2022 - Present",
+        list: <ul className="exp-list">
+          <li tabIndex={0}>Troubleshot to resolve technical problems with software and hardware, setup and managed account in relevant application with secured login credentials, and granted remote access to system on desired devices for the building's video surveillance system</li>
+          <li tabIndex={0}>Matematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
+          <li tabIndex={0}>Primary responsibilities included cleaning and preparing massage rooms for therapists before their session starts, preparing hot tubs and saunas before customer use and cleaning afterward, and collecting, cleaning, drying, folding and putting away laundry as time permits</li>
+        </ul>
       },
       {
         jobTitle: "Kitchen Steward",
@@ -307,6 +318,7 @@ function App() {
       <div className={`modal modal-container-${modal} flex-center`}>
         <div className={`modal modal-content-${modal} shadow-behind`}>
           <h2>Inactive</h2>
+          <hr />
           <p>Are you still there?</p>
           <div>
             <button onClick={() => {setModal("closed")}} className="buttons modal-button">Yes</button>
@@ -404,6 +416,13 @@ function App() {
                 employer={contentProps.experience[1].employer}
                 workPeriod={contentProps.experience[1].workPeriod}
                 list={contentProps.experience[1].list}
+              ></Section3>
+              <br />
+              <Section3
+                jobTitle={contentProps.experience[2].jobTitle}
+                employer={contentProps.experience[2].employer}
+                workPeriod={contentProps.experience[2].workPeriod}
+                list={contentProps.experience[2].list}
               ></Section3>
               <br />
             </section>
