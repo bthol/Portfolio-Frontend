@@ -34,6 +34,15 @@ function App() {
     return () => clearInterval(counter);
   }, []);
 
+  // SET USABLE SCREEN HEIGHT (adjust for bottom bar in mobile environments)
+  if (navigator.userAgent.indexOf('MSIE') > - 1 || navigator.userAgent.indexOf('Trident') > - 1) {
+    // Internet Explorer
+    document.querySelector(`#root`).style.height = document.documentElement.clientHeight;
+  } else {
+    // All other browsers
+    document.querySelector(`#root`).style.height = window.innerHeight;
+  }
+
   // THEME LOGIC
   const [btnText, setBtnText] = useState("Night Theme");
   const [btnClass, setBtnClass] = useState("buttons");
@@ -109,7 +118,7 @@ function App() {
     {
       name: "Game Apps",
       links: <div className="nav-menu-style">
-        <button onClick={() => {window.open("https://bthol.github.io/Space-Battle/")}} className="nav-buttons link-desat">Space Battle</button>
+        <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat">Space Battle</a>
         <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat">Magic 8 Ball</a>
         <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat">Retro Toe</a>
       </div>,
