@@ -119,7 +119,7 @@ a {
   border: 1.5px solid var(--color-gray);
 }
 
-.nav-root-buttons {
+.nav-buttons {
   cursor: pointer;
   padding: 1px;
   margin: 0px;
@@ -192,7 +192,7 @@ a {
   flex-wrap: nowrap;
 }
 
-.nav-root-buttons {
+.nav-buttons {
   padding: 3px 0px;
 }
 
@@ -200,9 +200,9 @@ a {
   z-index: -1;
   position: absolute;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 15px;
+  padding: 15px;
   white-space: nowrap;
-  padding: 20px;
   top: 0px;
 }
 

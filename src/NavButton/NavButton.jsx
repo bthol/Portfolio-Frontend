@@ -4,7 +4,7 @@ import { React } from 'react';
 const NavButton = (props) => {
     return (
         <div>
-            <button className="nav-root-buttons link-desat no-select"
+            <button className="nav-buttons link-desat no-select"
                 onClick={(e) => {
                     e.preventDefault();
                     props.closeNav();

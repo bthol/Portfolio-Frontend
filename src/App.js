@@ -103,15 +103,15 @@ function App() {
     {
       name: "Utility Apps",
       links: <div className="nav-menu-style">
-        <a href="https://github.com/bthol/Calculo/" target="_blank" rel="noreferrer" className="link-desat">Calculo</a>
+        <a href="https://github.com/bthol/Calculo/" target="_blank" className="link-desat">Calculo</a>
       </div>,
     },
     {
       name: "Game Apps",
       links: <div className="nav-menu-style">
-        <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat">Space Battle</a> 
-        <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer" className="link-desat">Magic 8 Ball</a>
-        <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer" className="link-desat">Retro Toe</a>
+        <button onClick={() => {window.open("https://bthol.github.io/Space-Battle/")}} className="nav-buttons link-desat">Space Battle</button>
+        <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat">Magic 8 Ball</a>
+        <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat">Retro Toe</a>
       </div>,
     },
   ];
@@ -218,7 +218,7 @@ function App() {
           <p tabIndex={0}><b>Description</b>: Fight off the alien horde for a new high score in this arcade-style battle game!</p>
         </div>,
         list: <ul>
-          <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
+          <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
           <li tabIndex={0}>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
           <li tabIndex={0}>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
@@ -233,7 +233,7 @@ function App() {
           <p tabIndex={0}><b>Description</b>: Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
         </div>,
         list: <ul>
-          <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
+          <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
           <li tabIndex={0}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
           <li tabIndex={0}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
@@ -248,7 +248,7 @@ function App() {
           <p tabIndex={0}><b>Description</b>: Tic Tac Toe. Retro style.</p>
         </div>,
         list: <ul>
-          <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank" rel="noreferrer">Live Link</a></li>
+          <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
           <li tabIndex={0}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
           <li tabIndex={0}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
@@ -274,8 +274,9 @@ function App() {
         workPeriod: "Aug 2022 - Present",
         list: <ul className="exp-list">
           <li tabIndex={0}>Troubleshot to resolve technical problems with software and hardware, setup and managed account in relevant application with secured login credentials, and granted remote access to system on desired devices for the building's video surveillance system</li>
+          <li tabIndex={0}>Mathematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
           <li tabIndex={0}>Matematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
-          <li tabIndex={0}>Primary responsibilities included cleaning and preparing massage rooms for therapists before their session starts, preparing hot tubs and saunas before customer use and cleaning afterward, and collecting, cleaning, drying, folding and putting away laundry as time permits</li>
+          <li tabIndex={0}>Primary responsibilities included preparing massage rooms for therapists before their session starts, hot tubs and saunas before customer use and cleaning afterward, and collecting, cleaning, drying, folding and putting away laundry as time permits.</li>
         </ul>
       },
       {
