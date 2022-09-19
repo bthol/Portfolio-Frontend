@@ -266,17 +266,15 @@ function App() {
         </ul>,
       },
       {
-        title: "Retro Toe",
+        title: "Calculo",
         text: <div>
-          <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
-          <p tabIndex={0}><b>Description</b>: Tic Tac Toe. Retro style.</p>
+          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
+          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
         </div>,
         list: <ul>
-          <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank">Live Link</a></li>
-          <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
-          <li tabIndex={0}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
-          <li tabIndex={0}>Deployed the application using GitHub Pages.</li>
+          <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
+          <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
+          <li tabIndex={0}>Statement about what makes this project a highlight</li>
         </ul>,
       },
     ],
@@ -405,8 +403,8 @@ function App() {
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
-              <div className="carousel-container">
-                <div className={`projects-carousel carPos${carPos}`}>
+              {mobile
+                ? <div>
                   <Section2
                     projectTitle={contentProps.projects[0].title}
                     projectText={contentProps.projects[0].text}
@@ -423,26 +421,43 @@ function App() {
                     projectList={contentProps.projects[2].list}
                   ></Section2>
                 </div>
-                {!mobile &&
-                  <div className="carButs flex-center">
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(0);
-                      setCarBtn0("carPos0");
-                    }} className={`${carBtn0}`}></button>
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(1);
-                      setCarBtn1("carPos1");
-                    }} className={`${carBtn1}`}></button>
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(2);
-                      setCarBtn2("carPos2");
-                    }} className={`${carBtn2}`}></button>
+                : <div className="carousel-container">
+                    <div className={`projects-carousel carPos${carPos}`}>
+                      <Section2
+                        projectTitle={contentProps.projects[0].title}
+                        projectText={contentProps.projects[0].text}
+                        projectList={contentProps.projects[0].list}
+                      ></Section2>
+                      <Section2
+                        projectTitle={contentProps.projects[1].title}
+                        projectText={contentProps.projects[1].text}
+                        projectList={contentProps.projects[1].list}
+                      ></Section2>
+                      <Section2
+                        projectTitle={contentProps.projects[2].title}
+                        projectText={contentProps.projects[2].text}
+                        projectList={contentProps.projects[2].list}
+                      ></Section2>
+                    </div>
+                    <div className="carButs flex-center">
+                      <button onClick={() => {
+                        resetCarBtn();
+                        setCarPos(0);
+                        setCarBtn0("carPos0");
+                      }} className={`${carBtn0}`}></button>
+                      <button onClick={() => {
+                        resetCarBtn();
+                        setCarPos(1);
+                        setCarBtn1("carPos1");
+                      }} className={`${carBtn1}`}></button>
+                      <button onClick={() => {
+                        resetCarBtn();
+                        setCarPos(2);
+                        setCarBtn2("carPos2");
+                      }} className={`${carBtn2}`}></button>
+                    </div>
                   </div>
-                }
-              </div>
+              }
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
