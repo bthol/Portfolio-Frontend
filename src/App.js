@@ -10,6 +10,21 @@ import { ProfilePhoto } from './Images/ProfilePhoto';
 
 function App() {
   
+  // SCREEN AREA
+  if (navigator.userAgent.indexOf('MSIE') > - 1 || navigator.userAgent.indexOf('Trident') > - 1) {
+    // Internet Explorer
+    document.body.style.height = document.documentElement.clientHeight;
+  } else {
+    // All other browsers
+    document.body.style.height = window.innerHeight;
+  }
+  
+  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
+  const [mobile, setMobile] = useState(false);
+  if (window.document.body.offsetWidth < 768) {
+    setMobile(true);
+  }
+
   // ERROR ALERTS
   const featureAlert = (e) => {
     e.preventDefault();
@@ -34,30 +49,21 @@ function App() {
     return () => clearInterval(counter);
   }, []);
 
-  // SET USABLE SCREEN HEIGHT (adjust for bottom bar in mobile environments)
-  if (navigator.userAgent.indexOf('MSIE') > - 1 || navigator.userAgent.indexOf('Trident') > - 1) {
-    // Internet Explorer
-    document.querySelector(`#root`).style.height = document.documentElement.clientHeight;
-  } else {
-    // All other browsers
-    document.querySelector(`#root`).style.height = window.innerHeight;
-  }
-
   // THEME LOGIC
   const [btnText, setBtnText] = useState("Night Theme");
   const [btnClass, setBtnClass] = useState("buttons");
   const [theme, setTheme] = useState("color-theme-day");
   
   const setThemeNight = () => {
-    setBtnText("Day Theme")
-    setTheme("color-theme-night")
-    setBtnClass("buttons dark-button")
+    setBtnText("Day Theme");
+    setTheme("color-theme-night");
+    setBtnClass("buttons dark-button");
   };
   
   const setThemeDay = () => {
-    setBtnText("Night Theme")
-    setTheme("color-theme-day")
-    setBtnClass("buttons")
+    setBtnText("Night Theme");
+    setTheme("color-theme-day");
+    setBtnClass("buttons");
   };
   
   const [togTheme, setTogTheme] = useState(false);
@@ -70,9 +76,21 @@ function App() {
     }
   };
 
+  // PROJECT CAROUSEL
+  const [carPos, setCarPos] = useState(0);
+  const [carBtn0, setCarBtn0] = useState("carPos0");
+  const [carBtn1, setCarBtn1] = useState("");
+  const [carBtn2, setCarBtn2] = useState("");
+
+  const resetCarBtn = () => {
+    setCarBtn0("");
+    setCarBtn1("");
+    setCarBtn2("");
+  }
+
   // NAV LOGIC
   // 1
-  const [drop1, setDrop1] = useState("");
+  const [drop1, setDrop1] = useState("menu-close");
   const [navState1, setNavState1] = useState(false);
   const toggleNavState1 = () => {
     setNavState1(!navState1);
@@ -86,7 +104,7 @@ function App() {
     }
   }
   // 2
-  const [drop2, setDrop2] = useState("");
+  const [drop2, setDrop2] = useState("menu-close");
   const [navState2, setNavState2] = useState(false);
   const toggleNavState2 = () => {
     setNavState2(!navState2);
@@ -221,9 +239,8 @@ function App() {
     projects: [
       {
         title: "Space Battle",
-        carousel: <img src="" alt="project carousel"></img>,
         text: <div>
-          <p tabIndex={0}><b>Technologies</b>: JavaScript, JQuery, Express.js, MongoDB Atlas, Mongoose ODM, HTML, CSS</p>
+          <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
           <p tabIndex={0}><b>Description</b>: Fight off the alien horde for a new high score in this arcade-style battle game!</p>
         </div>,
         list: <ul>
@@ -236,7 +253,6 @@ function App() {
       },
       {
         title: "Magic 8 Ball",
-        carousel: <img src="" alt="project carousel"></img>,
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
           <p tabIndex={0}><b>Description</b>: Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
@@ -251,7 +267,6 @@ function App() {
       },
       {
         title: "Retro Toe",
-        carousel: <img src="" alt="project carousel"></img>,
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
           <p tabIndex={0}><b>Description</b>: Tic Tac Toe. Retro style.</p>
@@ -390,27 +405,44 @@ function App() {
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
-              <Section2
-                projectTitle={contentProps.projects[0].title}
-                projectCarousel={contentProps.projects[0].carousel}
-                projectText={contentProps.projects[0].text}
-                projectList={contentProps.projects[0].list}
-              ></Section2>
-              <br />
-              <Section2
-                projectTitle={contentProps.projects[1].title}
-                projectCarousel={contentProps.projects[1].carousel}
-                projectText={contentProps.projects[1].text}
-                projectList={contentProps.projects[1].list}
-              ></Section2>
-              <br />
-              <Section2
-                projectTitle={contentProps.projects[2].title}
-                projectCarousel={contentProps.projects[2].carousel}
-                projectText={contentProps.projects[2].text}
-                projectList={contentProps.projects[2].list}
-              ></Section2>
-              <br />
+              <div className="carousel-container">
+                <div className={`projects-carousel carPos${carPos}`}>
+                  <Section2
+                    projectTitle={contentProps.projects[0].title}
+                    projectText={contentProps.projects[0].text}
+                    projectList={contentProps.projects[0].list}
+                  ></Section2>
+                  <Section2
+                    projectTitle={contentProps.projects[1].title}
+                    projectText={contentProps.projects[1].text}
+                    projectList={contentProps.projects[1].list}
+                  ></Section2>
+                  <Section2
+                    projectTitle={contentProps.projects[2].title}
+                    projectText={contentProps.projects[2].text}
+                    projectList={contentProps.projects[2].list}
+                  ></Section2>
+                </div>
+                {!mobile &&
+                  <div className="carButs flex-center">
+                    <button onClick={() => {
+                      resetCarBtn();
+                      setCarPos(0);
+                      setCarBtn0("carPos0");
+                    }} className={`${carBtn0}`}></button>
+                    <button onClick={() => {
+                      resetCarBtn();
+                      setCarPos(1);
+                      setCarBtn1("carPos1");
+                    }} className={`${carBtn1}`}></button>
+                    <button onClick={() => {
+                      resetCarBtn();
+                      setCarPos(2);
+                      setCarBtn2("carPos2");
+                    }} className={`${carBtn2}`}></button>
+                  </div>
+                }
+              </div>
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>

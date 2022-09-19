@@ -1,4 +1,4 @@
-/* --------------------------------------STYLE-------------------------------------- */
+/*                       STYLE                       */
 
 /* COLOR THEMES */
 .color-theme-day {
@@ -163,7 +163,7 @@ a {
   box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
 }
 
-/* --------------------------------------LAYOUT-------------------------------------- */
+/*                       LAYOUT                       */
 * {
   --below-header: 112px;
 }
@@ -206,13 +206,28 @@ a {
   top: 0px;
 }
 
+.nav-arrow {
+  position: relative;
+  top: 2px;
+  font-size: large;
+  color: var(--font-color-1);
+}
+.nav-arrow.menu-close {
+  transform: rotate(360deg) translateY(2px);
+  transition: transform 180ms ease-out;
+}
+.nav-arrow.menu-open {
+  transform: rotate(0deg) translateY(2px);
+  transition: transform 180ms ease-out;
+}
+
 .menu-open > div {
-  animation: dropdown 180ms linear;
+  animation: dropdown 180ms ease-out;
   top: 100px;
 }
 @keyframes dropdown {
   from {
-    transform: translateY(-87.766px);
+    transform: translateY(-100px);
   }
   to {
     transform: translateY(0%);
@@ -235,7 +250,7 @@ main section {
   margin-bottom: 8px;
 }
 #main-section-style-last {
-  margin-bottom: 0%;
+  margin-bottom: 0px;
 }
 
 .aside-main {
@@ -292,7 +307,7 @@ main section {
   box-shadow: -5px 0px 4px -5px var(--color-gray);
 }
 
-/*----------------------------------------------MODALS----------------------------------------------*/
+/*                       MODALS                       */
 .modal {
   position: fixed;
   z-index: -1;
@@ -315,7 +330,7 @@ main section {
   color: var(--font-color-1);
 }
 
-/*--------------------------------------QUIERIES(INTERACTIVITY)--------------------------------------*/
+/*                       QUIERIES(INTERACTIVITY)                       */
 
 /* laptop */
 @media(hover: hover) and (pointer: fine) {
@@ -339,7 +354,7 @@ main section {
   }
 }
 
-/*--------------------------------------QUIERIES(RESPONSIVITY)--------------------------------------*/
+/*                       QUIERIES(RESPONSIVITY)                       */
 @media(min-width: 768px) {
   .app-main {
     margin-top: var(--below-header);
@@ -355,6 +370,9 @@ main section {
     grid-template-columns: 1fr 4fr;
     gap: 10px;
     border-bottom: 0px;
+  }
+  .carousel-container {
+    width: 100%;
   }
   .top-link-style {
     width: 98.80%;
@@ -383,6 +401,44 @@ main section {
     -moz-box-box-shadow: 0px 0px 3px .1px var(--color-shadow);
      -webkit-box-shadow: 0px 0px 3px .1px var(--color-shadow);
              box-shadow: 0px 0px 3px .1px var(--color-shadow);
+  }
+  /* Carousel */
+  .carPos0 {
+    --carPos: 0;
+    background-color: var(--color-gray);
+  }
+  .carPos1 {
+    --carPos: 1;
+    background-color: var(--color-gray);
+  }
+  .carPos2 {
+    --carPos: 2;
+    background-color: var(--color-gray);
+  }
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  .projects-carousel {
+    position: relative;
+    right: calc(var(--carPos) * 100%);
+    transition: right 400ms ease-in;
+    width: calc(3 * 100%);
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .carousel-item {
+    width: 100%;
+    padding: 3vmin;
+    border-radius: 50px;
+  }
+  .carButs button {
+    width: calc(30% / 3);
+    margin: 15px 5px;
+  }
+  .carousel-item {
+    background: var(--color-background-3);
+    border: 1.3px solid var(--color-gray);
   }
 }
 
