@@ -208,21 +208,20 @@ a {
 
 .nav-arrow {
   position: relative;
-  top: 2px;
-  font-size: large;
+  top: 4px;
   color: var(--font-color-1);
 }
 .nav-arrow.menu-close {
-  transform: rotate(360deg) translateY(2px);
-  transition: transform 180ms ease-out;
+  transform: rotate(360deg);
+  transition: transform 200ms ease-out;
 }
 .nav-arrow.menu-open {
-  transform: rotate(0deg) translateY(2px);
-  transition: transform 180ms ease-out;
+  transform: rotate(0deg);
+  transition: transform 200ms ease-out;
 }
 
 .menu-open > div {
-  animation: dropdown 180ms ease-out;
+  animation: dropdown 200ms ease-out;
   top: 100px;
 }
 @keyframes dropdown {
