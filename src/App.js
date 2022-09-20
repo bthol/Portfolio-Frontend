@@ -18,14 +18,6 @@ function App() {
     // All other browsers
     document.querySelector(`#root`).style.height = window.innerHeight;
   }
-  
-  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
-  const [mobile, setMobile] = useState(false);
-  const [mobBool, setMobBool] = useState(true);
-  if (window.innerWidth < 768 && mobBool) {
-    setMobBool(false);
-    setMobile(true);
-  }
 
   // ERROR ALERTS
   const featureAlert = (e) => {
@@ -77,18 +69,6 @@ function App() {
       setThemeNight();
     }
   };
-
-  // PROJECT CAROUSEL
-  const [carPos, setCarPos] = useState(0);
-  const [carBtn0, setCarBtn0] = useState("carPos0");
-  const [carBtn1, setCarBtn1] = useState("");
-  const [carBtn2, setCarBtn2] = useState("");
-
-  const resetCarBtn = () => {
-    setCarBtn0("");
-    setCarBtn1("");
-    setCarBtn2("");
-  }
 
   // NAV LOGIC
   // 1
@@ -256,20 +236,6 @@ function App() {
         </ul>,
       },
       {
-        title: "Calculo",
-        text: <div>
-          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
-          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
-        </div>,
-        list: <ul>
-          <li><a onClick={(e) => {
-            featureAlert(e);
-          }} href="" className="link-desat" target="_blank">Live Link</a></li>
-          <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Statement about what makes this project a highlight</li>
-        </ul>,
-      },
-      {
         title: "Magic 8 Ball",
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
@@ -281,6 +247,33 @@ function App() {
           <li tabIndex={0}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
           <li tabIndex={0}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
           <li tabIndex={0}>Implemented a polychromatic animated background gradient.</li>
+        </ul>,
+      },
+      {
+        title: "Retro Toe",
+        carousel: <img src="" alt="project carousel"></img>,
+        text: <div>
+          <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
+          <p tabIndex={0}><b>Description</b>: Tic Tac Toe. Retro style.</p>
+        </div>,
+        list: <ul>
+          <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank">Live Link</a></li>
+          <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
+          <li tabIndex={0}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
+          <li tabIndex={0}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+          <li tabIndex={0}>Deployed the application using GitHub Pages.</li>
+        </ul>,
+      },
+      {
+        title: "Calculo",
+        text: <div>
+          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
+          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
+        </div>,
+        list: <ul>
+          <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
+          <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
+          <li tabIndex={0}>Statement about what makes this project a highlight</li>
         </ul>,
       },
     ],
@@ -408,63 +401,23 @@ function App() {
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
-              {mobile
-                ? <div>
-                  <div>
-                    <Section2
-                      projectTitle={contentProps.projects[0].title}
-                      projectText={contentProps.projects[0].text}
-                      projectList={contentProps.projects[0].list}
-                    ></Section2>
-                    <Section2
-                      projectTitle={contentProps.projects[1].title}
-                      projectText={contentProps.projects[1].text}
-                      projectList={contentProps.projects[1].list}
-                    ></Section2>
-                    <Section2
-                      projectTitle={contentProps.projects[2].title}
-                      projectText={contentProps.projects[2].text}
-                      projectList={contentProps.projects[2].list}
-                    ></Section2>
-                  </div>
+                <div>
+                  <Section2
+                    projectTitle={contentProps.projects[0].title}
+                    projectText={contentProps.projects[0].text}
+                    projectList={contentProps.projects[0].list}
+                  ></Section2>
+                  <Section2
+                    projectTitle={contentProps.projects[1].title}
+                    projectText={contentProps.projects[1].text}
+                    projectList={contentProps.projects[1].list}
+                  ></Section2>
+                  <Section2
+                    projectTitle={contentProps.projects[2].title}
+                    projectText={contentProps.projects[2].text}
+                    projectList={contentProps.projects[2].list}
+                  ></Section2>
                 </div>
-                : <div className="carousel-container">
-                  <div className={`projects-carousel carPos${carPos}`}>
-                    <Section2
-                      projectTitle={contentProps.projects[0].title}
-                      projectText={contentProps.projects[0].text}
-                      projectList={contentProps.projects[0].list}
-                    ></Section2>
-                    <Section2
-                      projectTitle={contentProps.projects[1].title}
-                      projectText={contentProps.projects[1].text}
-                      projectList={contentProps.projects[1].list}
-                    ></Section2>
-                    <Section2
-                      projectTitle={contentProps.projects[2].title}
-                      projectText={contentProps.projects[2].text}
-                      projectList={contentProps.projects[2].list}
-                    ></Section2>
-                  </div>
-                  <div className="carButs flex-center">
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(0);
-                      setCarBtn0("carPos0");
-                    }} className={`${carBtn0}`}></button>
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(1);
-                      setCarBtn1("carPos1");
-                    }} className={`${carBtn1}`}></button>
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(2);
-                      setCarBtn2("carPos2");
-                    }} className={`${carBtn2}`}></button>
-                  </div>
-                </div>
-              }
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
