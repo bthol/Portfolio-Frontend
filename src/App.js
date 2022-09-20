@@ -21,7 +21,9 @@ function App() {
   
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
   const [mobile, setMobile] = useState(false);
-  if (window.document.body.offsetWidth < 768) {
+  const [mobBool, setMobBool] = useState(true);
+  if (window.innerWidth < 768 && mobBool) {
+    setMobBool(false);
     setMobile(true);
   }
 
@@ -252,6 +254,18 @@ function App() {
         </ul>,
       },
       {
+        title: "Calculo",
+        text: <div>
+          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
+          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
+        </div>,
+        list: <ul>
+          <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
+          <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
+          <li tabIndex={0}>Statement about what makes this project a highlight</li>
+        </ul>,
+      },
+      {
         title: "Magic 8 Ball",
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
@@ -263,18 +277,6 @@ function App() {
           <li tabIndex={0}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
           <li tabIndex={0}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
           <li tabIndex={0}>Implemented a polychromatic animated background gradient.</li>
-        </ul>,
-      },
-      {
-        title: "Calculo",
-        text: <div>
-          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
-          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
-        </div>,
-        list: <ul>
-          <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
-          <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Statement about what makes this project a highlight</li>
         </ul>,
       },
     ],
