@@ -13,10 +13,10 @@ function App() {
   // SCREEN AREA
   if (navigator.userAgent.indexOf('MSIE') > - 1 || navigator.userAgent.indexOf('Trident') > - 1) {
     // Internet Explorer
-    document.body.style.height = document.documentElement.clientHeight;
+    document.querySelector(`#root`).style.height = document.documentElement.clientHeight;
   } else {
     // All other browsers
-    document.body.style.height = window.innerHeight;
+    document.querySelector(`#root`).style.height = window.innerHeight;
   }
   
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
