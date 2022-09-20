@@ -206,6 +206,20 @@ a {
   top: 0px;
 }
 
+.nav-arrow {
+  position: relative;
+  top: 3px;
+  color: var(--font-color-1);
+}
+.nav-arrow.menu-close {
+  transform: rotate(360deg);
+  transition: transform 300ms ease-in-out;
+}
+.nav-arrow.menu-open {
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
+}
+
 .menu-open > div {
   animation: dropdown 300ms linear;
   top: 100px;

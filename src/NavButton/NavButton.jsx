@@ -1,24 +1,25 @@
 import { useState } from 'react';
 import { React } from 'react';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
-const NavButton = (props) => {
-    return (
-        <div>
+class NavButton extends React.Component {
+    render() {
+        return <div>
             <button className="nav-buttons link-desat no-select"
                 onClick={(e) => {
                     e.preventDefault();
-                    props.closeNav();
-                    props.toggleNavState();
+                    this.props.closeNav();
+                    this.props.toggleNavState();
                 }}
-                >{props.name}
+                >{this.props.name} <MdKeyboardArrowDown className={`nav-arrow ${this.props.drop}`} />
             </button>
-            {props.navState &&
-                <div className={`nav-menu-style ${props.drop}`}>
-                    {props.links}
+            {this.props.navState &&
+                <div className={`nav-menu-style ${this.props.drop}`}>
+                    {this.props.links}
                 </div>
             }
         </div>
-    )
+    }
 }
 
 export { NavButton };
