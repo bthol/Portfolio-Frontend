@@ -9,7 +9,9 @@ import { AugiumIcon } from './Images/AugiumIcon';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 
 function App() {
-  
+  // FontAwesome icons used in nav violate CORS policy on deploy in Heroku environment
+  // the resources need to be imported using a URL
+
   // SCREEN AREA
   if (navigator.userAgent.indexOf('MSIE') > - 1 || navigator.userAgent.indexOf('Trident') > - 1) {
     // Internet Explorer
