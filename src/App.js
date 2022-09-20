@@ -256,20 +256,6 @@ function App() {
         </ul>,
       },
       {
-        title: "Calculo",
-        text: <div>
-          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
-          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
-        </div>,
-        list: <ul>
-          <li><a onClick={(e) => {
-            featureAlert(e);
-          }} href="" className="link-desat" target="_blank">Live Link</a></li>
-          <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Statement about what makes this project a highlight</li>
-        </ul>,
-      },
-      {
         title: "Magic 8 Ball",
         text: <div>
           <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
@@ -281,6 +267,33 @@ function App() {
           <li tabIndex={0}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
           <li tabIndex={0}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
           <li tabIndex={0}>Implemented a polychromatic animated background gradient.</li>
+        </ul>,
+      },
+      {
+        title: "Retro Toe",
+        carousel: <img src="" alt="project carousel"></img>,
+        text: <div>
+          <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
+          <p tabIndex={0}><b>Description</b>: Tic Tac Toe. Retro style.</p>
+        </div>,
+        list: <ul>
+          <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank">Live Link</a></li>
+          <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
+          <li tabIndex={0}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
+          <li tabIndex={0}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+          <li tabIndex={0}>Deployed the application using GitHub Pages.</li>
+        </ul>,
+      },
+      {
+        title: "Calculo",
+        text: <div>
+          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
+          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
+        </div>,
+        list: <ul>
+          <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
+          <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
+          <li tabIndex={0}>Statement about what makes this project a highlight</li>
         </ul>,
       },
     ],
