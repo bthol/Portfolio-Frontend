@@ -245,7 +245,7 @@ main section {
 }
 
 .carousel-item {
-  padding: 3vmin;
+  padding: 0vmin 3vmin 3vmin 3vmin;
 }
 
 .main-section-style {
@@ -419,6 +419,7 @@ main section {
   }
   .carousel-item {
     width: var(--wide);
+    padding: 3vmin;
     border-radius: 50px;
     background: var(--color-background-3);
     border: 1.3px solid var(--color-gray);

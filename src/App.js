@@ -301,10 +301,9 @@ function App() {
         employer: "Albany Sauanas",
         workPeriod: "Aug 2022 - Present",
         list: <ul className="exp-list">
-          <li tabIndex={0}>Troubleshot to resolve technical problems with software and hardware, setup and managed account in relevant application with secured login credentials, and granted remote access to system on desired devices for the building's video surveillance system</li>
+          <li tabIndex={0}>Troubleshot to resolve technical problems for both software and hardware, setup and managed account in relevant application with secured login credentials, and granted remote access to system for desired devices for the building's video surveillance system</li>
           <li tabIndex={0}>Mathematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
-          <li tabIndex={0}>Matematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
-          <li tabIndex={0}>Primary responsibilities included preparing massage rooms for therapists before their session starts, hot tubs and saunas before customer use and cleaning afterward, and collecting, cleaning, drying, folding and putting away laundry as time permits.</li>
+          <li tabIndex={0}>Primary responsibilities included preparing massage rooms, hot tubs and saunas, and collecting, cleaning, drying, folding and putting away laundry.</li>
         </ul>
       },
       {
@@ -409,42 +408,63 @@ function App() {
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
-              <div className="carousel-container">
-                <div className={`projects-carousel carPos${carPos}`}>
-                  <Section2
-                    projectTitle={contentProps.projects[0].title}
-                    projectText={contentProps.projects[0].text}
-                    projectList={contentProps.projects[0].list}
-                  ></Section2>
-                  <Section2
-                    projectTitle={contentProps.projects[1].title}
-                    projectText={contentProps.projects[1].text}
-                    projectList={contentProps.projects[1].list}
-                  ></Section2>
-                  <Section2
-                    projectTitle={contentProps.projects[2].title}
-                    projectText={contentProps.projects[2].text}
-                    projectList={contentProps.projects[2].list}
-                  ></Section2>
+              {mobile
+                ? <div>
+                  <div>
+                    <Section2
+                      projectTitle={contentProps.projects[0].title}
+                      projectText={contentProps.projects[0].text}
+                      projectList={contentProps.projects[0].list}
+                    ></Section2>
+                    <Section2
+                      projectTitle={contentProps.projects[1].title}
+                      projectText={contentProps.projects[1].text}
+                      projectList={contentProps.projects[1].list}
+                    ></Section2>
+                    <Section2
+                      projectTitle={contentProps.projects[2].title}
+                      projectText={contentProps.projects[2].text}
+                      projectList={contentProps.projects[2].list}
+                    ></Section2>
+                  </div>
                 </div>
-                <div className="carButs flex-center">
-                  <button onClick={() => {
-                    resetCarBtn();
-                    setCarPos(0);
-                    setCarBtn0("carPos0");
-                  }} className={`${carBtn0}`}></button>
-                  <button onClick={() => {
-                    resetCarBtn();
-                    setCarPos(1);
-                    setCarBtn1("carPos1");
-                  }} className={`${carBtn1}`}></button>
-                  <button onClick={() => {
-                    resetCarBtn();
-                    setCarPos(2);
-                    setCarBtn2("carPos2");
-                  }} className={`${carBtn2}`}></button>
+                : <div className="carousel-container">
+                  <div className={`projects-carousel carPos${carPos}`}>
+                    <Section2
+                      projectTitle={contentProps.projects[0].title}
+                      projectText={contentProps.projects[0].text}
+                      projectList={contentProps.projects[0].list}
+                    ></Section2>
+                    <Section2
+                      projectTitle={contentProps.projects[1].title}
+                      projectText={contentProps.projects[1].text}
+                      projectList={contentProps.projects[1].list}
+                    ></Section2>
+                    <Section2
+                      projectTitle={contentProps.projects[2].title}
+                      projectText={contentProps.projects[2].text}
+                      projectList={contentProps.projects[2].list}
+                    ></Section2>
+                  </div>
+                  <div className="carButs flex-center">
+                    <button onClick={() => {
+                      resetCarBtn();
+                      setCarPos(0);
+                      setCarBtn0("carPos0");
+                    }} className={`${carBtn0}`}></button>
+                    <button onClick={() => {
+                      resetCarBtn();
+                      setCarPos(1);
+                      setCarBtn1("carPos1");
+                    }} className={`${carBtn1}`}></button>
+                    <button onClick={() => {
+                      resetCarBtn();
+                      setCarPos(2);
+                      setCarBtn2("carPos2");
+                    }} className={`${carBtn2}`}></button>
+                  </div>
                 </div>
-              </div>
+              }
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
