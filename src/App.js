@@ -9,8 +9,6 @@ import { AugiumIcon } from './Images/AugiumIcon';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 
 function App() {
-  // FontAwesome icons used in nav violate CORS policy on deploy in Heroku environment
-  // the resources need to be imported using a URL
 
   // SCREEN AREA
   if (navigator.userAgent.indexOf('MSIE') > - 1 || navigator.userAgent.indexOf('Trident') > - 1) {
@@ -246,56 +244,56 @@ function App() {
       {
         title: "Space Battle",
         text: <div>
-          <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
-          <p tabIndex={0}><b>Description</b>: Fight off the alien horde for a new high score in this arcade-style battle game!</p>
+          <p><b>Technologies</b>: JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
+          <p><b>Description</b>: Fight off the alien horde for a new high score in this arcade-style battle game!</p>
         </div>,
         list: <ul>
           <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
-          <li tabIndex={0}>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
-          <li tabIndex={0}>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
+          <li>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
+          <li>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
+          <li>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
         </ul>,
       },
       {
         title: "Magic 8 Ball",
         text: <div>
-          <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
-          <p tabIndex={0}><b>Description</b>: Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
+          <p><b>Technologies</b>: JavaScript, HTML, CSS</p>
+          <p><b>Description</b>: Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
         </div>,
         list: <ul>
           <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
-          <li tabIndex={0}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
-          <li tabIndex={0}>Implemented a polychromatic animated background gradient.</li>
+          <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
+          <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
+          <li>Implemented a polychromatic animated background gradient.</li>
         </ul>,
       },
       {
         title: "Retro Toe",
         carousel: <img src="" alt="project carousel"></img>,
         text: <div>
-          <p tabIndex={0}><b>Technologies</b>: JavaScript, HTML, CSS</p>
-          <p tabIndex={0}><b>Description</b>: Tic Tac Toe. Retro style.</p>
+          <p><b>Technologies</b>: JavaScript, HTML, CSS</p>
+          <p><b>Description</b>: Tic Tac Toe. Retro style.</p>
         </div>,
         list: <ul>
           <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
-          <li tabIndex={0}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
-          <li tabIndex={0}>Deployed the application using GitHub Pages.</li>
+          <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
+          <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+          <li>Deployed the application using GitHub Pages.</li>
         </ul>,
       },
       {
         title: "Calculo",
         text: <div>
-          <p tabIndex={0}><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
-          <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
+          <p><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
+          <p><b>Description</b>: Calculo is a fully functional calculator application.</p>
         </div>,
         list: <ul>
           <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Statement about what makes this project a highlight</li>
+          <li>Statement about what makes this project a highlight</li>
         </ul>,
       },
     ],
