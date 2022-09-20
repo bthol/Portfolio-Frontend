@@ -132,7 +132,9 @@ function App() {
     {
       name: "Utility Apps",
       links: <div className="nav-menu-style">
-        <a href="https://github.com/bthol/Calculo/" target="_blank" className="link-desat">Calculo</a>
+        <a onClick={(e) => {
+            featureAlert(e);
+          }} href="" target="_blank" className="link-desat">Calculo</a>
       </div>,
     },
     {
@@ -260,7 +262,9 @@ function App() {
           <p tabIndex={0}><b>Description</b>: Calculo is a fully functional calculator application.</p>
         </div>,
         list: <ul>
-          <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
+          <li><a onClick={(e) => {
+            featureAlert(e);
+          }} href="" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Calculo" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
           <li tabIndex={0}>Statement about what makes this project a highlight</li>
         </ul>,
