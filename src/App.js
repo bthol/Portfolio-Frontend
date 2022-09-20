@@ -250,7 +250,7 @@ function App() {
         list: <ul>
           <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank">Live Link</a></li>
           <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer">GitHub Page</a></li>
-          <li tabIndex={0}>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
+          <li tabIndex={0}>Connected a custom REST API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
           <li tabIndex={0}>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
           <li tabIndex={0}>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
         </ul>,
@@ -409,8 +409,8 @@ function App() {
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
-              {mobile
-                ? <div>
+              <div className="carousel-container">
+                <div className={`projects-carousel carPos${carPos}`}>
                   <Section2
                     projectTitle={contentProps.projects[0].title}
                     projectText={contentProps.projects[0].text}
@@ -427,43 +427,24 @@ function App() {
                     projectList={contentProps.projects[2].list}
                   ></Section2>
                 </div>
-                : <div className="carousel-container">
-                    <div className={`projects-carousel carPos${carPos}`}>
-                      <Section2
-                        projectTitle={contentProps.projects[0].title}
-                        projectText={contentProps.projects[0].text}
-                        projectList={contentProps.projects[0].list}
-                      ></Section2>
-                      <Section2
-                        projectTitle={contentProps.projects[1].title}
-                        projectText={contentProps.projects[1].text}
-                        projectList={contentProps.projects[1].list}
-                      ></Section2>
-                      <Section2
-                        projectTitle={contentProps.projects[2].title}
-                        projectText={contentProps.projects[2].text}
-                        projectList={contentProps.projects[2].list}
-                      ></Section2>
-                    </div>
-                    <div className="carButs flex-center">
-                      <button onClick={() => {
-                        resetCarBtn();
-                        setCarPos(0);
-                        setCarBtn0("carPos0");
-                      }} className={`${carBtn0}`}></button>
-                      <button onClick={() => {
-                        resetCarBtn();
-                        setCarPos(1);
-                        setCarBtn1("carPos1");
-                      }} className={`${carBtn1}`}></button>
-                      <button onClick={() => {
-                        resetCarBtn();
-                        setCarPos(2);
-                        setCarBtn2("carPos2");
-                      }} className={`${carBtn2}`}></button>
-                    </div>
-                  </div>
-              }
+                <div className="carButs flex-center">
+                  <button onClick={() => {
+                    resetCarBtn();
+                    setCarPos(0);
+                    setCarBtn0("carPos0");
+                  }} className={`${carBtn0}`}></button>
+                  <button onClick={() => {
+                    resetCarBtn();
+                    setCarPos(1);
+                    setCarBtn1("carPos1");
+                  }} className={`${carBtn1}`}></button>
+                  <button onClick={() => {
+                    resetCarBtn();
+                    setCarPos(2);
+                    setCarBtn2("carPos2");
+                  }} className={`${carBtn2}`}></button>
+                </div>
+              </div>
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
