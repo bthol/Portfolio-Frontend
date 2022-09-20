@@ -207,16 +207,21 @@ a {
 }
 
 .nav-arrow {
+  margin-left: 8px;
+  height: 5px;
+  width: 5px;
+  top: 4px;
   position: relative;
-  top: 3px;
-  color: var(--font-color-1);
+  border: 1.5px solid var(--font-color-1);
+  border-top: hidden;
+  border-left: hidden;
 }
 .nav-arrow.menu-close {
-  transform: rotate(360deg);
+  transform: rotate(405deg);
   transition: transform 300ms ease-in-out;
 }
 .nav-arrow.menu-open {
-  transform: rotate(0deg);
+  transform: rotate(45deg);
   transition: transform 300ms ease-in-out;
 }
 

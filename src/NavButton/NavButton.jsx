@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { React } from 'react';
-import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const NavButton = (props) => {
     return (
@@ -11,7 +9,7 @@ const NavButton = (props) => {
                     props.closeNav();
                     props.toggleNavState();
                 }}
-                >{props.name} <MdKeyboardArrowDown className={`nav-arrow ${props.drop}`} />
+                ><div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>
             </button>
             {props.navState &&
                 <div className={`nav-menu-style ${props.drop}`}>
