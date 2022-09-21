@@ -310,13 +310,12 @@ function App() {
         </ul>,
       },
       {
-        jobTitle: "Runner",
+        jobTitle: "General Assistant",
         employer: "Albany Sauanas",
         workPeriod: "Aug 2022 - Present",
         list: <ul className="exp-list">
           <li tabIndex={0}>Troubleshot to resolve technical problems with software and hardware, setup and managed account in relevant application with secured login credentials, and granted remote access to system on desired devices for the building's video surveillance system</li>
           <li tabIndex={0}>Mathematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
-          <li tabIndex={0}>Matematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
           <li tabIndex={0}>Primary responsibilities included preparing massage rooms for therapists before their session starts, hot tubs and saunas before customer use and cleaning afterward, and collecting, cleaning, drying, folding and putting away laundry as time permits.</li>
         </ul>
       },
