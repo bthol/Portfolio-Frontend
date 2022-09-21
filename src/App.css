@@ -203,7 +203,7 @@ a {
   grid-gap: 15px;
   padding: 15px;
   white-space: nowrap;
-  top: 0px;
+  top: 0vh;
 }
 
 .nav-arrow {
@@ -227,7 +227,7 @@ a {
 
 .menu-open > div {
   animation: dropdown 300ms linear;
-  top: 100px;
+  top: 12vh;
 }
 @keyframes dropdown {
   from {
