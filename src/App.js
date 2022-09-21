@@ -342,13 +342,8 @@ function App() {
         description: "General Assembly is a full-stack software engineering coding bootcamp, which places students in an intensive, twelve-week course requiring 400+ hours of hands on experience with product development fundamentals, e.g. object-oriented programming, simple algorithms, front-end styling and layout technologies, responsive and interactive design, the MVC development model, the MERN stack, test-based development, web-application deployment, and team collaboration strategies.",
       },
       {
-        name: "Berkeley City College",
-        period: "March 2021 - Dec 2021",
-        description: "Studied biological sciences",
-      },
-      {
-        name: "Diablo Valley College",
-        period: "June 2015 - May 2016",
+        name: "Diablo Valley College, Berkeley City College",
+        period: "June 2015 - Dec 2021",
         description: "Studied biological sciences",
       },
     ],
@@ -519,12 +514,6 @@ function App() {
                 school={contentProps.education[2].name}
                 schoolPeriod={contentProps.education[2].period}
                 schoolDescription={contentProps.education[2].description}
-              ></Section4>
-              <br />
-              <Section4
-                school={contentProps.education[3].name}
-                schoolPeriod={contentProps.education[3].period}
-                schoolDescription={contentProps.education[3].description}
               ></Section4>
               <br />
             </section>
