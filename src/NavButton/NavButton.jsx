@@ -6,7 +6,7 @@ const NavButton = (props) => {
             <button className="nav-buttons link-desat no-select"
                 onClick={(e) => {
                     e.preventDefault();
-                    props.closeNav();
+                    props.initNav();
                     props.toggleNavState();
                 }}
                 ><div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>

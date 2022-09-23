@@ -120,7 +120,7 @@ function App() {
     }
   }
   
-  const closeNav = () => {
+  const initNav = () => {
     setNavState1(false);
     setDrop1("menu-close");
     setNavState2(false);
@@ -373,7 +373,7 @@ function App() {
             navState={navState1}
             drop={drop1}
             toggleNavState={toggleNavState1}
-            closeNav={closeNav}
+            initNav={initNav}
             ></NavButton>
           <NavButton
             name={navData[1].name}
@@ -381,7 +381,7 @@ function App() {
             navState={navState2}
             drop={drop2}
             toggleNavState={toggleNavState2}
-            closeNav={closeNav}
+            initNav={initNav}
           ></NavButton>
         </nav>
       </header>
@@ -393,6 +393,7 @@ function App() {
                 <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
             </div>
             <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
+            <p tabIndex={0}><b>About Website</b>: This website was created from scratch using the JavaScript, React, HTML and CSS technologies.</p>
             <br />
           </aside>
           <main className="app-main">

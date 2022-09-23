@@ -207,12 +207,12 @@ a {
 
 .menu-close > div {
   top: -100%;
-  transition: top 300ms linear;
+  transition: top 300ms ease-in;
 }
 
 .menu-open > div {
   top: 99%;
-  transition: top 300ms linear;
+  transition: top 300ms ease-out;
 }
 
 .nav-arrow {
