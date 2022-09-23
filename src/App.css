@@ -203,20 +203,16 @@ a {
   grid-gap: 15px;
   padding: 15px;
   white-space: nowrap;
-  top: 0%;
+}
+
+.menu-close > div {
+  top: -100%;
+  transition: top 300ms linear;
 }
 
 .menu-open > div {
-  animation: dropdown 300ms linear;
   top: 99%;
-}
-@keyframes dropdown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
+  transition: top 300ms linear;
 }
 
 .nav-arrow {

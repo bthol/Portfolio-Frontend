@@ -11,11 +11,9 @@ const NavButton = (props) => {
                 }}
                 ><div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>
             </button>
-            {props.navState &&
                 <div className={`nav-menu-style ${props.drop}`}>
                     {props.links}
                 </div>
-            }
         </div>
     )
 }

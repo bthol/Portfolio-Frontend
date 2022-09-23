@@ -121,10 +121,10 @@ function App() {
   }
   
   const closeNav = () => {
-    setDrop1("menu-close");
-    setDrop2("menu-close");
     setNavState1(false);
+    setDrop1("menu-close");
     setNavState2(false);
+    setDrop2("menu-close");
   }
 
   // NAV PROPS
