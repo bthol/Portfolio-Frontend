@@ -203,7 +203,20 @@ a {
   grid-gap: 15px;
   padding: 15px;
   white-space: nowrap;
-  top: 0vh;
+  top: 0%;
+}
+
+.menu-open > div {
+  animation: dropdown 300ms linear;
+  top: 99%;
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 .nav-arrow {
@@ -223,19 +236,6 @@ a {
 .nav-arrow.menu-open {
   transform: rotate(45deg);
   transition: transform 300ms ease-in-out;
-}
-
-.menu-open > div {
-  animation: dropdown 300ms linear;
-  top: 12vh;
-}
-@keyframes dropdown {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0%);
-  }
 }
 
 /* ASIDE + MAIN */
