@@ -389,7 +389,7 @@ function App() {
           <aside className="app-aside shadow-behind">
             <ProfilePhoto></ProfilePhoto>
             <div className="flex-around">
-                <button className={btnClass} onClick={featureAlert}>Contact Me</button>
+                <button className={btnClass}><a href="mailto:bthollaug@gmail.com" target="_blank">Send Email</a></button>
                 <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
             </div>
             <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
