@@ -217,12 +217,13 @@ function App() {
           <p></p>
           <li className="text-large" tabIndex={0}>Audio Processors</li>
           <ul>
-              <li tabIndex={0}>Equilzers (parameteric, stereographic, linear phase and adaptive)</li>
+              <li tabIndex={0}>Equalzers (parameteric, stereographic, linear phase and adaptive)</li>
               <li tabIndex={0}>Compressors (tube, analog emulation, graphical, Automatic Gain Consideration(AGC))</li>
               <li tabIndex={0}>Limiters (0dB Peak, brickwall, soft clip)</li>
               <li tabIndex={0}>Stereo Processors (limit, spread, merge, position, and modulate)</li>
               <li tabIndex={0}>Reverberation (Plate, Room, Hall, Shimmer, Low gravity, reflectionless Pitch tracking)</li>
               <li tabIndex={0}>Phasers (monophazer, biphaser, tempo syncable)</li>
+              <li tabIndex={0}>Transient Processors (ASDR, Graphical Envelope Mapping, Evelope Following)</li>
               <li tabIndex={0}>Chorus/flanger Effect</li>
               <li tabIndex={0}>Saturation/Distortion</li>
           </ul>
