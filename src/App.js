@@ -300,6 +300,30 @@ function App() {
     ],
     experience: [
       {
+        jobTitle: "General Assistant",
+        employer: "Albany Sauanas",
+        workPeriod: "Aug 2022 - Present",
+        list: <div className="exp-list">
+          <p>Accomplishments</p>
+          <ul>
+            <li tabIndex={0}>Troubleshot video surveillance system problems with software and hardware</li>
+            <li tabIndex={0}>Setup and managed account information using the relevant applications with secured login credentials</li>
+            <li tabIndex={0}>Granted remote access to the system on desired cellular devices</li>
+            <li tabIndex={0}>Navigated system interface to display appropriate layout for the system</li>
+            <li tabIndex={0}>Mathematically modelled sweeping process for generating time optimized algorithms for more effective and efficient sweeping practices</li>
+          </ul>
+          <p>Responsibilities</p>
+          <ul tabIndex={0}>
+            <li>preparing massage rooms per the needs of the message therapist on schedule</li>
+            <li>setting up hot tubs and saunas before customer use and cleaning after each use</li>
+            <li>sanitizing and wiping down bins for safe customer use</li>
+            <li>reading and recording the temperature when turning on/off the furnace for the saunas</li>
+            <li>measuring and recording the hot tub chemistry</li>
+            <li>collecting, cleaning, drying, folding and putting away laundry as time permits</li>
+          </ul>
+        </div>
+      },
+      {
         jobTitle: "Music Composer/Audio Engineer",
         employer: "Augium Productions",
         workPeriod: "Jan 2012 - Present",
@@ -309,16 +333,6 @@ function App() {
           <li tabIndex={0}>General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
           <li tabIndex={0}>Created audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, granular)</li>
         </ul>,
-      },
-      {
-        jobTitle: "General Assistant",
-        employer: "Albany Sauanas",
-        workPeriod: "Aug 2022 - Present",
-        list: <ul className="exp-list">
-          <li tabIndex={0}>Troubleshot to resolve technical problems with software and hardware, setup and managed account in relevant application with secured login credentials, and granted remote access to system on desired devices for the building's video surveillance system</li>
-          <li tabIndex={0}>Mathematically modelled sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
-          <li tabIndex={0}>Primary responsibilities included preparing massage rooms for therapists before their session starts, hot tubs and saunas before customer use and cleaning afterward, and collecting, cleaning, drying, folding and putting away laundry as time permits.</li>
-        </ul>
       },
       {
         jobTitle: "Kitchen Steward",
@@ -525,7 +539,11 @@ function App() {
         <a href="#" className="flex-center top-link-style shadow-behind">back to top</a>
       </div>
       <footer className="app-footer">
-            <AugiumIcon></AugiumIcon>
+            <div>
+              <div>
+                
+              </div>
+            </div>
             <div className="app-footer-link-grid flex-around">
                 <ul>
                     <li tabIndex={0}><p><b>Coding</b></p></li>
