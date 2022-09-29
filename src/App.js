@@ -301,7 +301,7 @@ function App() {
     experience: [
       {
         jobTitle: "General Assistant",
-        employer: "Albany Sauanas",
+        employer: "Albany Saunas",
         workPeriod: "Aug 2022 - Present",
         list: <div className="exp-list">
           <p>Accomplishments</p>
