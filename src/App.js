@@ -349,7 +349,7 @@ function App() {
       {
         name: "BitWise Industries",
         period: "May 2022 - June 2022",
-        description: "BitWise industry has courses on computer programming and web development, offering a learning community to support its members in their journey to learning to code.",
+        description: "BitWise industry has courses on computer programming and web development, offering a learning community to support its members in their journey toward learning how to code.",
       },
       {
         name: "General Assembly",
