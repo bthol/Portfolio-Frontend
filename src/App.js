@@ -335,12 +335,12 @@ function App() {
           </ul>
           <p>Responsibilities</p>
           <ul tabIndex={0}>
-            <li>preparing massage rooms per the needs of the message therapist on schedule</li>
-            <li>setting up hot tubs and saunas before customer use and cleaning afterwards</li>
-            <li>sanitizing and wiping down bins for safe customer use</li>
-            <li>reading and recording the temperature when turning on/off the furnace for the saunas</li>
-            <li>measuring and recording the hot tub chemistry using machine values and chemistry kit</li>
-            <li>collecting, sorting, cleaning, drying, folding and putting away laundry as time permits</li>
+            <li>Preparing massage rooms per the needs of the message therapist on schedule</li>
+            <li>Setting up hot tubs and saunas before customer use and cleaning afterwards</li>
+            <li>Sanitizing and wiping down bins for safe customer use</li>
+            <li>Reading and recording the temperature when turning on/off the furnace for the saunas</li>
+            <li>Measuring and recording the hot tub chemistry using machine values and chemistry kit</li>
+            <li>Collecting, sorting, cleaning, drying, folding and putting away laundry as time permits</li>
           </ul>
         </div>
       },
