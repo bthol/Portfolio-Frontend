@@ -77,8 +77,26 @@ function App() {
       setThemeNight();
     }
   };
+  
+  // SHOW MORE/LESS (for mobile especially)
+  const [showMSG, setShowMSG] = useState("show more");
+  const [show, setShow] = useState("show-n");
+  const [shown, setShown] = useState("down-arrow");
+  const [togshow, setTogshow] = useState(false);
+  const toggleShown = () => {
+    setTogshow(!togshow);
+    if (!togshow) {
+      setShow("show-y");
+      setShowMSG("show less");
+      setShown("up-arrow");
+    } else {
+      setShow("show-n");
+      setShowMSG("show more");
+      setShown("down-arrow");
+    }
+  }
 
-  // PROJECT CAROUSEL
+  // PROJECT CAROUSEL (for tablet and larger)
   const [carPos, setCarPos] = useState(0);
   const [carBtn0, setCarBtn0] = useState("carPos0");
   const [carBtn1, setCarBtn1] = useState("");
@@ -152,6 +170,7 @@ function App() {
   const contentProps = {
     skills: [
       {
+        id: "section1-1",
         title: "Full Stack Web and App Development",
         list: <ul className="remove-bullet-list border-left">
           <li className="text-large" tabIndex={0}>JavaScript</li>
@@ -185,6 +204,7 @@ function App() {
         </ul>,
       },
       {
+        id: "section1-2",
         title: "Graphic Design",
         list: <ul className="remove-bullet-list border-left">
           <li className="text-large" tabIndex={0}>User Experience (UX) and User Interface (UI) Design</li>
@@ -206,6 +226,7 @@ function App() {
         </ul>,
       },
       {
+        id: "section1-3",
         title: "Music Production",
         list: <ul className="remove-bullet-list border-left">
           <li className="text-large" tabIndex={0}>Audio Engineering</li>
@@ -315,11 +336,11 @@ function App() {
           <p>Responsibilities</p>
           <ul tabIndex={0}>
             <li>preparing massage rooms per the needs of the message therapist on schedule</li>
-            <li>setting up hot tubs and saunas before customer use and cleaning after each use</li>
+            <li>setting up hot tubs and saunas before customer use and cleaning afterwards</li>
             <li>sanitizing and wiping down bins for safe customer use</li>
             <li>reading and recording the temperature when turning on/off the furnace for the saunas</li>
-            <li>measuring and recording the hot tub chemistry</li>
-            <li>collecting, cleaning, drying, folding and putting away laundry as time permits</li>
+            <li>measuring and recording the hot tub chemistry using machine values and chemistry kit</li>
+            <li>collecting, sorting, cleaning, drying, folding and putting away laundry as time permits</li>
           </ul>
         </div>
       },
@@ -408,27 +429,31 @@ function App() {
                 <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
             </div>
             <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
-            <p tabIndex={0}><b>About Website</b>: This website was created from scratch using the JavaScript, React, HTML and CSS technologies.</p>
             <br />
           </aside>
           <main className="app-main">
-            <section className="section-lists main-section-style shadow-behind">
+            <section className={`main-section-style shadow-behind`}>
               <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
+              <div className={`section-lists ${show}`}>
                 <Section1
                   skillsTitle={contentProps.skills[0].title}
                   skillsList={contentProps.skills[0].list}
-                ></Section1>
+                  id={contentProps.skills[0].id}
+                  ></Section1>
                 <br />
                 <Section1
                   skillsTitle={contentProps.skills[1].title}
                   skillsList={contentProps.skills[1].list}
-                ></Section1>
+                  id={contentProps.skills[1].id}
+                  ></Section1>
                 <br />
                 <Section1
                   skillsTitle={contentProps.skills[2].title}
                   skillsList={contentProps.skills[2].list}
-                ></Section1>
-                <br />
+                  id={contentProps.skills[2].id}
+                  ></Section1>
+              </div>
+              <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
             </section>
             <section className="main-section-style">
               <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
@@ -473,17 +498,17 @@ function App() {
                       resetCarBtn();
                       setCarPos(0);
                       setCarBtn0("carPos0");
-                    }} className={`${carBtn0}`}></button>
+                    }} className={`cursor-pointer ${carBtn0}`}></button>
                     <button onClick={() => {
                       resetCarBtn();
                       setCarPos(1);
                       setCarBtn1("carPos1");
-                    }} className={`${carBtn1}`}></button>
+                    }} className={`cursor-pointer ${carBtn1}`}></button>
                     <button onClick={() => {
                       resetCarBtn();
                       setCarPos(2);
                       setCarBtn2("carPos2");
-                    }} className={`${carBtn2}`}></button>
+                    }} className={`cursor-pointer ${carBtn2}`}></button>
                   </div>
                 </div>
               }
@@ -539,11 +564,6 @@ function App() {
         <a href="#" className="flex-center top-link-style shadow-behind">back to top</a>
       </div>
       <footer className="app-footer">
-            <div>
-              <div>
-                
-              </div>
-            </div>
             <div className="app-footer-link-grid flex-around">
                 <ul>
                     <li tabIndex={0}><p><b>Coding</b></p></li>
@@ -560,6 +580,11 @@ function App() {
                     <li tabIndex={0}><p><b>Follow</b></p></li>
                     <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
                 </ul>
+            </div>
+            <div>
+              <div>
+                <p tabIndex={0} className="flex-center">Made with JavaScript, Node, React, HTML and CSS.</p>
+              </div>
             </div>
             <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
             <br />

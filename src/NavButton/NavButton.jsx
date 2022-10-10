@@ -3,7 +3,7 @@ import { React } from 'react';
 const NavButton = (props) => {
     return (
         <div>
-            <button className="nav-buttons link-desat no-select"
+            <button className="nav-buttons link-desat"
                 onClick={(e) => {
                     e.preventDefault();
                     props.initNav();
@@ -11,9 +11,9 @@ const NavButton = (props) => {
                 }}
                 ><div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>
             </button>
-                <div className={`nav-menu-style ${props.drop}`}>
-                    {props.links}
-                </div>
+            <div className={`nav-menu-style ${props.drop}`}>
+                {props.links}
+            </div>
         </div>
     )
 }
