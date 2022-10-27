@@ -25,7 +25,7 @@
   --color-background-3: #1e1e24;
   
   --color-gray: #525252;
-  --color-white: #212121;
+  --color-white: hsl(0, 0%, 10%);
   
   --font-color-1: #ffffff;
   --font-color-2: #999999;
@@ -65,7 +65,14 @@
 }
 
 .main-section-style {
+  background: var(--color-background-3);
+}
+
+.main-section-style-content {
+  padding: 1vmin 2vmin;
+  border-radius: 12px;
   background: var(--color-white);
+  border: 1.2px solid var(--color-gray);
 }
 
 /*    LINK    */
@@ -447,7 +454,7 @@ main section {
     width: var(--wide);
     padding: 3vmin;
     border-radius: 50px;
-    background: var(--color-background-3);
+    background: var(--color-white);
     border: 1.3px solid var(--color-gray);
   }
   .carPos0 {
