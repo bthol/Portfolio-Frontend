@@ -482,16 +482,19 @@ function App() {
                       projectText={contentProps.projects[0].text}
                       projectList={contentProps.projects[0].list}
                     ></Section2>
+                    <br />
                     <Section2
                       projectTitle={contentProps.projects[1].title}
                       projectText={contentProps.projects[1].text}
                       projectList={contentProps.projects[1].list}
                     ></Section2>
+                    <br />
                     <Section2
                       projectTitle={contentProps.projects[2].title}
                       projectText={contentProps.projects[2].text}
                       projectList={contentProps.projects[2].list}
                     ></Section2>
+                    <br />
                   </div>
                   <div className="carButs flex-center">
                     <button onClick={() => {
