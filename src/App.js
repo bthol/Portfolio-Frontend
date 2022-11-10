@@ -80,17 +80,17 @@ function App() {
   
   // SHOW MORE/LESS (for mobile especially)
   const [showMSG, setShowMSG] = useState("show more");
-  const [show, setShow] = useState("show-n");
+  const [show, setShow] = useState(false);
   const [shown, setShown] = useState("down-arrow");
   const [togshow, setTogshow] = useState(false);
   const toggleShown = () => {
     setTogshow(!togshow);
     if (!togshow) {
-      setShow("show-y");
+      setShow(true);
       setShowMSG("show less");
       setShown("up-arrow");
     } else {
-      setShow("show-n");
+      setShow(false);
       setShowMSG("show more");
       setShown("down-arrow");
     }
@@ -434,25 +434,30 @@ function App() {
           <main className="app-main">
             <section className={`main-section-style shadow-behind`}>
               <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
-              <div className={`section-lists ${show}`}>
+              <div className={`section-lists`}>
                 <Section1
                   skillsTitle={contentProps.skills[0].title}
                   skillsList={contentProps.skills[0].list}
                   id={contentProps.skills[0].id}
-                  ></Section1>
-                <br />
-                <Section1
-                  skillsTitle={contentProps.skills[1].title}
-                  skillsList={contentProps.skills[1].list}
-                  id={contentProps.skills[1].id}
-                  ></Section1>
-                <br />
-                <Section1
-                  skillsTitle={contentProps.skills[2].title}
-                  skillsList={contentProps.skills[2].list}
-                  id={contentProps.skills[2].id}
-                  ></Section1>
+                ></Section1>
               </div>
+              {
+                show &&
+                <div className={`section-lists`}>
+                  <br />
+                  <Section1
+                    skillsTitle={contentProps.skills[1].title}
+                    skillsList={contentProps.skills[1].list}
+                    id={contentProps.skills[1].id}
+                  ></Section1>
+                  <br />
+                  <Section1
+                    skillsTitle={contentProps.skills[2].title}
+                    skillsList={contentProps.skills[2].list}
+                    id={contentProps.skills[2].id}
+                  ></Section1>
+                </div>
+              }
               <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
             </section>
             <section className="main-section-style">

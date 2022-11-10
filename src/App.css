@@ -163,16 +163,6 @@ a {
 .nav-arrow.up-arrow {
   transform: rotate(225deg);
 }
-#section1-1 {
-  height: 500px;
-}
-.show-n {
-  height: 500px;
-  overflow: hidden;
-}
-.show-y {
-  height: max-content;
-}
 
 /*    TITLE    */
 #website-title {
@@ -430,7 +420,7 @@ main section {
     margin-left: 0px;
   }
   .border-left {
-    margin-top: 75px;
+    margin-top: 10px;
     margin-left: 0px;
   }
   .shadow-behind {
