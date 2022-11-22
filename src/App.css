@@ -222,7 +222,7 @@ a {
 
 /*    NAVIGATION    */
 .app-nav {
-  padding: 8px 0px;
+  padding: 8px 0px 3px 0px;
   font-size: .9em;
   align-items: center;
   flex-wrap: nowrap;
@@ -250,6 +250,13 @@ a {
 .menu-open > div {
   top: 99%;
   transition: top 300ms ease-out;
+}
+
+.scroll-track-bar {
+  z-index: 1;
+  height: 3px;
+  margin: 0px;
+  background: var(--color-gray);
 }
 
 /* ASIDE + MAIN */

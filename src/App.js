@@ -9,16 +9,48 @@ import { AugiumIcon } from './Images/AugiumIcon';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 
 function App() {
+  // TRACKLENGTH BAR LOGIC
+  const [docScroll, setDocScroll] = useState(0);
 
-  // SCREEN AREA
-  if (navigator.userAgent.indexOf('MSIE') > - 1 || navigator.userAgent.indexOf('Trident') > - 1) {
-    // Internet Explorer
-    document.body.style.height = document.documentElement.clientHeight;
-  } else {
-    // All other browsers
-    document.body.style.height = window.innerHeight;
-  }
+  let winHeight, trackLength
+
+  const getHeight = () => {
+    return Math.max(
+      document.body.clientHeight,
+      document.documentElement.clientHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    )
+  };
+ 
+  let docheight = getHeight()
+
+  const getInfo = () => {
+    winHeight= window.innerHeight || (document.documentElement || document.body).clientHeight;
+    docheight = getHeight();
+    trackLength = docheight - winHeight;
+  };
+  getInfo();
   
+  const scrollAmmount = () => {
+    let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    let pctScrolled = Math.floor(scrollTop/trackLength * 100);
+    if (pctScrolled > 0) {
+      setDocScroll(pctScrolled)
+    }
+  };
+  
+  window.addEventListener("resize", function(){
+    getInfo();
+  }, false)
+  
+  window.addEventListener("scroll", function(){
+    scrollAmmount();
+  }, false)
+
+
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
   const [mobile, setMobile] = useState(false);
   const [mobBool, setMobBool] = useState(true);
@@ -402,23 +434,26 @@ function App() {
           <AugiumIcon></AugiumIcon>
           <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
         </div>
-        <nav className="app-nav flex-around">
-          <NavButton
-            name={navData[0].name}
-            links={navData[0].links}
-            navState={navState1}
-            drop={drop1}
-            toggleNavState={toggleNavState1}
-            initNav={initNav}
+        <nav className="app-nav">
+          <div className="flex-around">
+            <NavButton
+              name={navData[0].name}
+              links={navData[0].links}
+              navState={navState1}
+              drop={drop1}
+              toggleNavState={toggleNavState1}
+              initNav={initNav}
+              ></NavButton>
+            <NavButton
+              name={navData[1].name}
+              links={navData[1].links}
+              navState={navState2}
+              drop={drop2}
+              toggleNavState={toggleNavState2}
+              initNav={initNav}
             ></NavButton>
-          <NavButton
-            name={navData[1].name}
-            links={navData[1].links}
-            navState={navState2}
-            drop={drop2}
-            toggleNavState={toggleNavState2}
-            initNav={initNav}
-          ></NavButton>
+          </div>
+          <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
         </nav>
       </header>
       <span className="aside-main">
