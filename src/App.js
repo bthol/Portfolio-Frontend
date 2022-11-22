@@ -359,19 +359,20 @@ function App() {
         list: <div className="exp-list">
           <p>Accomplishments</p>
           <ul>
-            <li tabIndex={0}>Troubleshot video surveillance system problems with software and hardware</li>
-            <li tabIndex={0}>Setup and managed account information using the relevant applications with secured login credentials</li>
-            <li tabIndex={0}>Granted remote access to the system on desired cellular devices</li>
-            <li tabIndex={0}>Navigated system interface to display appropriate layout for the system</li>
-            <li tabIndex={0}>Mathematically modelled sweeping process for generating time optimized algorithms for more effective and efficient sweeping practices</li>
+            <li tabIndex={0}>Troubleshot video surveillance system software and hardware problems to identify technical solutions</li>
+            <li tabIndex={0}>Setup and managed account information with a security application for the hardware system</li>
+            <li tabIndex={0}>Granted remote access to the system through application using safely secured login credentials on desired cellular devices</li>
+            <li tabIndex={0}>Navigated system interface to display the layout specific to the particular system model</li>
+            <li tabIndex={0}>Programatically modelled sweeping process for generating time optimized algorithms for more effective and efficient sweeping practices</li>
           </ul>
           <p>Responsibilities</p>
           <ul tabIndex={0}>
-            <li>Preparing massage rooms per the needs of the message therapist on schedule</li>
+            <li>Measuring and recording the hot tub chemistry using machine reading and chemistry kit, and balancing tub chemistry accordingly</li>
             <li>Setting up hot tubs and saunas before customer use and cleaning afterwards</li>
+            <li>Preparing massage rooms per the needs of the message therapist on schedule</li>
             <li>Sanitizing and wiping down bins for safe customer use</li>
-            <li>Reading and recording the temperature when turning on/off the furnace for the saunas</li>
-            <li>Measuring and recording the hot tub chemistry using machine values and chemistry kit</li>
+            <li>Sweeping and swiffering floors throughout the premises each week</li>
+            <li>Reading and recording the temperature when turning on/off the sauna furnace</li>
             <li>Collecting, sorting, cleaning, drying, folding and putting away laundry as time permits</li>
           </ul>
         </div>
