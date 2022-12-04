@@ -13,7 +13,7 @@
   --font-color-2: #808080;
   --font-color-3: #ffffff;
   
-  --color-shadow: #808080;
+  --color-shadow: #9e9e9e;
   --color-header-detail-1: #80b9ff;
   --color-photo-detail-1: #73739b80;
   --button-dark-detail: #000000;
@@ -25,14 +25,14 @@
   --color-background-3: #1e1e24;
   
   --color-gray: #525252;
-  --color-white: hsl(0, 0%, 10%);
+  --color-white: #1a1a1a;
   
   --font-color-1: #ffffff;
   --font-color-2: #999999;
   --font-color-3: #808080;
   
   
-  --color-shadow: #808080;
+  --color-shadow: #666666;
   --color-header-detail-1: #103b70;
   --color-photo-detail-1: #ffffff80;
   --button-dark-detail: #000000;
@@ -223,7 +223,7 @@ a {
 
 /*    NAVIGATION    */
 .app-nav {
-  padding: 8px 0px 3px 0px;
+  padding: 8px 0px;
   font-size: .9em;
   align-items: center;
   flex-wrap: nowrap;
@@ -255,7 +255,7 @@ a {
 
 .scroll-track-bar {
   z-index: 1;
-  height: 3px;
+  height: 5px;
   margin: 0px;
   background: var(--color-gray);
 }
@@ -364,6 +364,36 @@ main section {
   color: var(--font-color-1);
 }
 
+/*                       LOADERS                       */
+
+.loading-container {
+  height: 10vmin;
+  width: 10vmin;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+.loading-container div {
+  z-index: -1;
+  position: absolute;
+  height: 12vmin;
+  width: 12vmin;
+  background: conic-gradient( #4596b8, #e49e36, #055b85);
+  border-radius: 100%;
+  animation: spinner2 3s linear infinite;
+}
+
+@keyframes spinner2 {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(315deg);
+  }
+}
+
 /*                       QUIERIES(INTERACTIVITY)                       */
 
 /* laptop */
@@ -387,9 +417,9 @@ main section {
     background: var(--color-gray);
   }
   .hover-effect:hover {
-    -moz-box-box-shadow: 0px 0px 3px .1px var(--color-shadow);
-     -webkit-box-shadow: 0px 0px 3px .1px var(--color-shadow);
-             box-shadow: 0px 0px 1px 1px var(--color-shadow);
+    -moz-box-box-shadow: 0px 0px 1px .5px var(--color-shadow);
+     -webkit-box-shadow: 0px 0px 1px .5px var(--color-shadow);
+             box-shadow: 0px 0px 1px .5px var(--color-shadow);
   }
 }
 
@@ -437,9 +467,9 @@ main section {
     margin-left: 0px;
   }
   .shadow-behind {
-    -moz-box-box-shadow: 0px 0px 3px .1px var(--color-shadow);
-     -webkit-box-shadow: 0px 0px 3px .1px var(--color-shadow);
-             box-shadow: 0px 0px 3px .1px var(--color-shadow);
+    -moz-box-box-shadow: 0px 0px 2px .1px var(--color-shadow);
+     -webkit-box-shadow: 0px 0px 2px .1px var(--color-shadow);
+             box-shadow: 0px 0px 2px .1px var(--color-shadow);
   }
   /* Carousel */
   .carousel-container {

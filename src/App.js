@@ -9,11 +9,36 @@ import { AugiumIcon } from './Images/AugiumIcon';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 
 function App() {
+
+  // ERROR ALERTS
+  const featureAlert = (e) => {
+    e.preventDefault();
+    alert("Feature still in development");
+  };
+  
+  // IDLE MODAL
+  const [modal, setModal] = useState("closed");
+  useEffect(() => {
+    let seconds = 0;
+    // listners reset the count
+    document.addEventListener("mousemove", () => {seconds = 0});
+    document.addEventListener("keydown", () => {seconds = 0});
+    const counter = setInterval(() => {
+      seconds += 1;
+      if (seconds === 1) { // use 300
+        // display modal
+        setModal("open")
+        seconds = 0;
+      }
+    }, 1000);
+    return () => clearInterval(counter);
+  }, []);
+
   // TRACKLENGTH BAR LOGIC
   const [docScroll, setDocScroll] = useState(0);
-
+  
   let winHeight, trackLength
-
+  
   const getHeight = () => {
     return Math.max(
       document.body.clientHeight,
@@ -22,13 +47,13 @@ function App() {
       document.documentElement.offsetHeight,
       document.body.scrollHeight,
       document.documentElement.scrollHeight
-    )
-  };
- 
-  let docheight = getHeight()
-
-  const getInfo = () => {
-    winHeight= window.innerHeight || (document.documentElement || document.body).clientHeight;
+      )
+    };
+    
+    let docheight = getHeight()
+    
+    const getInfo = () => {
+      winHeight= window.innerHeight || (document.documentElement || document.body).clientHeight;
     docheight = getHeight();
     trackLength = docheight - winHeight;
   };
@@ -50,7 +75,6 @@ function App() {
     scrollAmmount();
   }, false)
 
-
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
   const [mobile, setMobile] = useState(false);
   const [mobBool, setMobBool] = useState(true);
@@ -58,30 +82,6 @@ function App() {
     setMobBool(false);
     setMobile(true);
   }
-
-  // ERROR ALERTS
-  const featureAlert = (e) => {
-    e.preventDefault();
-    alert("Feature still in development");
-  };
-
-  // IDLE MODAL
-  const [modal, setModal] = useState("closed");
-  useEffect(() => {
-    let seconds = 0;
-    // listners reset the count
-    document.addEventListener("mousemove", () => {seconds = 0});
-    document.addEventListener("keydown", () => {seconds = 0});
-    const counter = setInterval(() => {
-      seconds += 1;
-      if (seconds === 300) {
-        // display modal
-        setModal("open")
-        seconds = 0;
-      }
-    }, 1000);
-    return () => clearInterval(counter);
-  }, []);
 
   // THEME LOGIC
   const [btnText, setBtnText] = useState("Night Theme");
@@ -422,6 +422,9 @@ function App() {
     <div id="root-react" className={`App color ${theme}`}>
       <div className={`modal modal-container-${modal} flex-center`}>
         <div className={`modal modal-content-${modal} shadow-behind`}>
+          {/* <div className="loading-container">
+            <div></div>
+          </div> */}
           <h2>Inactive</h2>
           <hr />
           <p>Are you still there?</p>
@@ -605,7 +608,7 @@ function App() {
           </main>
       </span>
       <div className="flex-center">
-        <a href="#" className="flex-center top-link-style shadow-behind">back to top</a>
+        <a href="#" className="flex-center top-link-style">back to top</a>
       </div>
       <footer className="app-footer">
             <div className="app-footer-link-grid flex-around">
