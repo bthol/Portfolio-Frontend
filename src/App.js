@@ -25,7 +25,7 @@ function App() {
     document.addEventListener("keydown", () => {seconds = 0});
     const counter = setInterval(() => {
       seconds += 1;
-      if (seconds === 1) { // use 300
+      if (seconds === 300) {
         // display modal
         setModal("open")
         seconds = 0;
@@ -422,9 +422,6 @@ function App() {
     <div id="root-react" className={`App color ${theme}`}>
       <div className={`modal modal-container-${modal} flex-center`}>
         <div className={`modal modal-content-${modal} shadow-behind`}>
-          {/* <div className="loading-container">
-            <div></div>
-          </div> */}
           <h2>Inactive</h2>
           <hr />
           <p>Are you still there?</p>
