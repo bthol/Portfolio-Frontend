@@ -289,7 +289,9 @@ a {
 }
 
 .scroll-track-bar {
-  z-index: 1;
+  z-index: -2;
+  position: relative;
+  top: 5px;
   height: 5px;
   margin: 0px;
   background: var(--color-gray);

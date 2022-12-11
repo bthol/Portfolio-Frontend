@@ -447,54 +447,75 @@ function App() {
               initNav={initNav}
             ></NavButton>
           </div>
-          <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
+        <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
         </nav>
       </header>
       <span className="aside-main">
-          <aside className="app-aside shadow-behind">
-            <div className="flex-center">
-              <ProfilePhoto></ProfilePhoto>
+        <aside className="app-aside shadow-behind">
+          <div className="flex-center">
+            <ProfilePhoto></ProfilePhoto>
+          </div>
+          <div className="flex-around">
+              <button className={btnClass}><a href="mailto:bthollaug@gmail.com" target="_blank">Send Email</a></button>
+              <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
+          </div>
+          <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
+          <br />
+        </aside>
+        <main className="app-main">
+          <section className={`main-section-style shadow-behind`}>
+            <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
+            <div className={`section-lists`}>
+              <Section1
+                skillsTitle={contentProps.skills[0].title}
+                skillsList={contentProps.skills[0].list}
+                id={contentProps.skills[0].id}
+              ></Section1>
             </div>
-            <div className="flex-around">
-                <button className={btnClass}><a href="mailto:bthollaug@gmail.com" target="_blank">Send Email</a></button>
-                <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
-            </div>
-            <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
-            <br />
-          </aside>
-          <main className="app-main">
-            <section className={`main-section-style shadow-behind`}>
-              <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
+            {
+              show &&
               <div className={`section-lists`}>
+                <br />
                 <Section1
-                  skillsTitle={contentProps.skills[0].title}
-                  skillsList={contentProps.skills[0].list}
-                  id={contentProps.skills[0].id}
+                  skillsTitle={contentProps.skills[1].title}
+                  skillsList={contentProps.skills[1].list}
+                  id={contentProps.skills[1].id}
+                ></Section1>
+                <br />
+                <Section1
+                  skillsTitle={contentProps.skills[2].title}
+                  skillsList={contentProps.skills[2].list}
+                  id={contentProps.skills[2].id}
                 ></Section1>
               </div>
-              {
-                show &&
-                <div className={`section-lists`}>
-                  <br />
-                  <Section1
-                    skillsTitle={contentProps.skills[1].title}
-                    skillsList={contentProps.skills[1].list}
-                    id={contentProps.skills[1].id}
-                  ></Section1>
-                  <br />
-                  <Section1
-                    skillsTitle={contentProps.skills[2].title}
-                    skillsList={contentProps.skills[2].list}
-                    id={contentProps.skills[2].id}
-                  ></Section1>
-                </div>
-              }
-              <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
-            </section>
-            <section className="main-section-style">
-              <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
-              {mobile
-                ? <div>
+            }
+            <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
+          </section>
+          <section className="main-section-style">
+            <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
+            {mobile
+              ? <div>
+                <Section2
+                  projectTitle={contentProps.projects[0].title}
+                  projectText={contentProps.projects[0].text}
+                  projectList={contentProps.projects[0].list}
+                ></Section2>
+                <br />
+                <Section2
+                  projectTitle={contentProps.projects[1].title}
+                  projectText={contentProps.projects[1].text}
+                  projectList={contentProps.projects[1].list}
+                ></Section2>
+                <br />
+                <Section2
+                  projectTitle={contentProps.projects[2].title}
+                  projectText={contentProps.projects[2].text}
+                  projectList={contentProps.projects[2].list}
+                ></Section2>
+                <br />
+              </div>
+              : <div className="carousel-container">
+                <div className={`projects-carousel carPos${carPos}`}>
                   <Section2
                     projectTitle={contentProps.projects[0].title}
                     projectText={contentProps.projects[0].text}
@@ -514,93 +535,72 @@ function App() {
                   ></Section2>
                   <br />
                 </div>
-                : <div className="carousel-container">
-                  <div className={`projects-carousel carPos${carPos}`}>
-                    <Section2
-                      projectTitle={contentProps.projects[0].title}
-                      projectText={contentProps.projects[0].text}
-                      projectList={contentProps.projects[0].list}
-                    ></Section2>
-                    <br />
-                    <Section2
-                      projectTitle={contentProps.projects[1].title}
-                      projectText={contentProps.projects[1].text}
-                      projectList={contentProps.projects[1].list}
-                    ></Section2>
-                    <br />
-                    <Section2
-                      projectTitle={contentProps.projects[2].title}
-                      projectText={contentProps.projects[2].text}
-                      projectList={contentProps.projects[2].list}
-                    ></Section2>
-                    <br />
-                  </div>
-                  <div className="carButs flex-center">
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(0);
-                      setCarBtn0("carPos0");
-                    }} className={`cursor-pointer ${carBtn0}`}></button>
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(1);
-                      setCarBtn1("carPos1");
-                    }} className={`cursor-pointer ${carBtn1}`}></button>
-                    <button onClick={() => {
-                      resetCarBtn();
-                      setCarPos(2);
-                      setCarBtn2("carPos2");
-                    }} className={`cursor-pointer ${carBtn2}`}></button>
-                  </div>
+                <div className="carButs flex-center">
+                  <button onClick={() => {
+                    resetCarBtn();
+                    setCarPos(0);
+                    setCarBtn0("carPos0");
+                  }} className={`cursor-pointer ${carBtn0}`}></button>
+                  <button onClick={() => {
+                    resetCarBtn();
+                    setCarPos(1);
+                    setCarBtn1("carPos1");
+                  }} className={`cursor-pointer ${carBtn1}`}></button>
+                  <button onClick={() => {
+                    resetCarBtn();
+                    setCarPos(2);
+                    setCarBtn2("carPos2");
+                  }} className={`cursor-pointer ${carBtn2}`}></button>
                 </div>
-              }
-            </section>
-            <section className="main-section-style">
-              <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
-              <Section3
-                jobTitle={contentProps.experience[0].jobTitle}
-                employer={contentProps.experience[0].employer}
-                workPeriod={contentProps.experience[0].workPeriod}
-                list={contentProps.experience[0].list}
-              ></Section3>
-              <br />
-              <Section3
-                jobTitle={contentProps.experience[1].jobTitle}
-                employer={contentProps.experience[1].employer}
-                workPeriod={contentProps.experience[1].workPeriod}
-                list={contentProps.experience[1].list}
-              ></Section3>
-              <br />
-              <Section3
-                jobTitle={contentProps.experience[2].jobTitle}
-                employer={contentProps.experience[2].employer}
-                workPeriod={contentProps.experience[2].workPeriod}
-                list={contentProps.experience[2].list}
-              ></Section3>
-              <br />
-            </section>
-            <section className="main-section-style" id="main-section-style-last">
-              <h3 className="title-line text-x-large" tabIndex={0}>Education</h3>
-              <Section4
-                school={contentProps.education[0].name}
-                schoolPeriod={contentProps.education[0].period}
-                schoolDescription={contentProps.education[0].description}
-              ></Section4>
-              <br />
-              <Section4
-                school={contentProps.education[1].name}
-                schoolPeriod={contentProps.education[1].period}
-                schoolDescription={contentProps.education[1].description}
-              ></Section4>
-              <br />
-              <Section4
-                school={contentProps.education[2].name}
-                schoolPeriod={contentProps.education[2].period}
-                schoolDescription={contentProps.education[2].description}
-              ></Section4>
-              <br />
-            </section>
-          </main>
+              </div>
+            }
+          </section>
+          <section className="main-section-style">
+            <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
+            <Section3
+              jobTitle={contentProps.experience[0].jobTitle}
+              employer={contentProps.experience[0].employer}
+              workPeriod={contentProps.experience[0].workPeriod}
+              list={contentProps.experience[0].list}
+            ></Section3>
+            <br />
+            <Section3
+              jobTitle={contentProps.experience[1].jobTitle}
+              employer={contentProps.experience[1].employer}
+              workPeriod={contentProps.experience[1].workPeriod}
+              list={contentProps.experience[1].list}
+            ></Section3>
+            <br />
+            <Section3
+              jobTitle={contentProps.experience[2].jobTitle}
+              employer={contentProps.experience[2].employer}
+              workPeriod={contentProps.experience[2].workPeriod}
+              list={contentProps.experience[2].list}
+            ></Section3>
+            <br />
+          </section>
+          <section className="main-section-style" id="main-section-style-last">
+            <h3 className="title-line text-x-large" tabIndex={0}>Education</h3>
+            <Section4
+              school={contentProps.education[0].name}
+              schoolPeriod={contentProps.education[0].period}
+              schoolDescription={contentProps.education[0].description}
+            ></Section4>
+            <br />
+            <Section4
+              school={contentProps.education[1].name}
+              schoolPeriod={contentProps.education[1].period}
+              schoolDescription={contentProps.education[1].description}
+            ></Section4>
+            <br />
+            <Section4
+              school={contentProps.education[2].name}
+              schoolPeriod={contentProps.education[2].period}
+              schoolDescription={contentProps.education[2].description}
+            ></Section4>
+            <br />
+          </section>
+        </main>
       </span>
       <div className="flex-center">
         <a href="#" className="flex-center top-link-style">back to top</a>
