@@ -7,6 +7,7 @@ import { Section3 } from './Content/Section3';
 import { Section4 } from './Content/Section4';
 import { AugiumIcon } from './Images/AugiumIcon';
 import { ProfilePhoto } from './Images/ProfilePhoto';
+import { Timeout } from './Modals/Timeout'
 
 function App() {
 
@@ -33,6 +34,10 @@ function App() {
     }, 1000);
     return () => clearInterval(counter);
   }, []);
+
+  const setModalFunct = (str) => {
+    setModal(str)
+  }
 
   // TRACKLENGTH BAR LOGIC
   const [docScroll, setDocScroll] = useState(0);
@@ -411,18 +416,12 @@ function App() {
     ],
   };
 
-  return (
+  let mainPage = true;
+  let genericPage = false;
+
+  if (mainPage) { return (
     <div id="root-react" className={`App color ${theme}`}>
-      <div className={`modal modal-container-${modal} flex-center`}>
-        <div className={`modal modal-content-${modal} shadow-behind`}>
-          <h2>Inactive</h2>
-          <hr />
-          <p>Are you still there?</p>
-          <div>
-            <button onClick={() => {setModal("closed")}} className="buttons modal-button">Yes</button>
-          </div>
-        </div>
-      </div>
+      <Timeout modal={modal} setModal={setModalFunct}></Timeout>
       <header className="app-header">
         <div className="no-select">
           <AugiumIcon></AugiumIcon>
@@ -463,7 +462,7 @@ function App() {
           <br />
         </aside>
         <main className="app-main">
-          <section className={`main-section-style shadow-behind`}>
+          <section className="main-section-style shadow-behind">
             <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
             <div className={`section-lists`}>
               <Section1
@@ -606,33 +605,111 @@ function App() {
         <a href="#" className="flex-center top-link-style">back to top</a>
       </div>
       <footer className="app-footer">
-            <div className="app-footer-link-grid flex-around">
-                <ul>
-                    <li tabIndex={0}><p><b>Coding</b></p></li>
-                    <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
-                    <li><a href="https://replit.com/@BlakeThollaug" target="_blank" rel="noreferrer" className="link-highlight">Replit</a></li>
-                    <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
-                </ul>
-                <ul>
-                    <li tabIndex={0}><p><b>Music</b></p></li>
-                    <li><a href="https://augium.bandcamp.com/" target="_blank" rel="noreferrer" className="link-highlight">Bandcamp</a></li>
-                    <li><a href="https://soundcloud.com/augium" target="_blank" rel="noreferrer" className="link-highlight">SoundCloud</a></li>
-                </ul>
-                <ul>
-                    <li tabIndex={0}><p><b>Follow</b></p></li>
-                    <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
-                </ul>
-            </div>
-            <div>
-              <div>
-                <p tabIndex={0} className="flex-center">Made with JavaScript, Node, React, HTML and CSS.</p>
-              </div>
-            </div>
-            <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
-            <br />
+        <div className="app-footer-link-grid flex-around">
+          <ul>
+            <li tabIndex={0}><p><b>Coding</b></p></li>
+            <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
+            <li><a href="https://replit.com/@BlakeThollaug" target="_blank" rel="noreferrer" className="link-highlight">Replit</a></li>
+            <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
+          </ul>
+          <ul>
+            <li tabIndex={0}><p><b>Music</b></p></li>
+            <li><a href="https://augium.bandcamp.com/" target="_blank" rel="noreferrer" className="link-highlight">Bandcamp</a></li>
+            <li><a href="https://soundcloud.com/augium" target="_blank" rel="noreferrer" className="link-highlight">SoundCloud</a></li>
+          </ul>
+            <ul>
+              <li tabIndex={0}><p><b>Follow</b></p></li>
+              <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div>
+          <div>
+            <p tabIndex={0} className="flex-center">Made with JavaScript, Node, React, HTML and CSS.</p>
+          </div>
+        </div>
+        <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
+        <br />
       </footer>
     </div>
-  );
+  )};
+  
+  if (genericPage) {return(
+    <div id="root-react" className={`App color ${theme}`}>
+      <header className="app-header">
+        <div className="no-select">
+          <AugiumIcon></AugiumIcon>
+          <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
+        </div>
+        <nav className="app-nav">
+          <div className="flex-around">
+            <NavButton
+              name={navData[0].name}
+              links={navData[0].links}
+              navState={navState1}
+              drop={drop1}
+              toggleNavState={toggleNavState1}
+              initNav={initNav}
+              ></NavButton>
+            <NavButton
+              name={navData[1].name}
+              links={navData[1].links}
+              navState={navState2}
+              drop={drop2}
+              toggleNavState={toggleNavState2}
+              initNav={initNav}
+            ></NavButton>
+          </div>
+        <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
+        </nav>
+      </header>
+      <span className="aside-main">
+        <aside className="app-aside shadow-behind">
+          <div>text</div>
+        </aside>
+        <main className="app-main">
+          <section className="main-section-style shadow-behind">
+            <div>text</div>
+            <br />
+          </section>
+          <section className="main-section-style shadow-behind">
+            <div>text</div>
+            <br />
+          </section>
+          <section className="main-section-style shadow-behind">
+            <div>text</div>
+            <br />
+          </section>
+        </main>
+      </span>
+      <footer className="app-footer">
+        <div className="app-footer-link-grid flex-around">
+          <ul>
+            <li tabIndex={0}><p><b>Coding</b></p></li>
+            <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
+            <li><a href="https://replit.com/@BlakeThollaug" target="_blank" rel="noreferrer" className="link-highlight">Replit</a></li>
+            <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
+          </ul>
+          <ul>
+            <li tabIndex={0}><p><b>Music</b></p></li>
+            <li><a href="https://augium.bandcamp.com/" target="_blank" rel="noreferrer" className="link-highlight">Bandcamp</a></li>
+            <li><a href="https://soundcloud.com/augium" target="_blank" rel="noreferrer" className="link-highlight">SoundCloud</a></li>
+          </ul>
+            <ul>
+              <li tabIndex={0}><p><b>Follow</b></p></li>
+              <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div>
+          <div>
+            <p tabIndex={0} className="flex-center">Made with JavaScript, Node, React, HTML and CSS.</p>
+          </div>
+        </div>
+        <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
+        <br />
+      </footer>
+    </div>
+  )};
+
 };
 
 export default App;
