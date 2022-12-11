@@ -87,8 +87,8 @@ const Header = (props) => {
         {
         name: "Utility Apps",
         links: <div className="nav-menu-style">
-            <a onClick={() => {
-                props.featureAlert();
+            <a onClick={(e) => {
+                props.featureAlertFunct(e);
             }} href="" target="_blank" className="link-desat">Calculo</a>
         </div>,
         },
