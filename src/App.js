@@ -456,7 +456,7 @@ function App() {
             <ProfilePhoto></ProfilePhoto>
           </div>
           <div className="flex-around">
-              <button className={btnClass}><a href="mailto:bthollaug@gmail.com" target="_blank">Send Email</a></button>
+              <a href="mailto:bthollaug@gmail.com" target="_blank"><button className={btnClass}>Send Email</button></a>
               <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
           </div>
           <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
