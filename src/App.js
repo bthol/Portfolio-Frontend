@@ -5,6 +5,7 @@ import { Section1 } from './Content/Section1';
 import { Section2 } from './Content/Section2';
 import { Section3 } from './Content/Section3';
 import { Section4 } from './Content/Section4';
+import { Footer } from './Template/Footer';
 import { ProfilePhoto } from './Images/ProfilePhoto';
 import { Timeout } from './Modals/Timeout'
 
@@ -104,7 +105,6 @@ function App() {
   }
 
   // CONTENT PROPS //
-
   const contentProps = {
     skills: [
       {
@@ -479,32 +479,7 @@ function App() {
       <div className="flex-center">
         <a href="#" className="flex-center top-link-style">back to top</a>
       </div>
-      <footer className="app-footer">
-        <div className="app-footer-link-grid flex-around">
-          <ul>
-            <li tabIndex={0}><p><b>Coding</b></p></li>
-            <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
-            <li><a href="https://replit.com/@BlakeThollaug" target="_blank" rel="noreferrer" className="link-highlight">Replit</a></li>
-            <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
-          </ul>
-          <ul>
-            <li tabIndex={0}><p><b>Music</b></p></li>
-            <li><a href="https://augium.bandcamp.com/" target="_blank" rel="noreferrer" className="link-highlight">Bandcamp</a></li>
-            <li><a href="https://soundcloud.com/augium" target="_blank" rel="noreferrer" className="link-highlight">SoundCloud</a></li>
-          </ul>
-            <ul>
-              <li tabIndex={0}><p><b>Follow</b></p></li>
-              <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
-            </ul>
-        </div>
-        <div>
-          <div>
-            <p tabIndex={0} className="flex-center">Made with JavaScript, Node, React, HTML and CSS.</p>
-          </div>
-        </div>
-        <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
-        <br />
-      </footer>
+      <Footer />
     </div>
   )};
   
@@ -518,45 +493,34 @@ function App() {
         </aside>
         <main className="app-main">
           <section className="main-section-style shadow-behind">
-            <div>text</div>
+            <h3 className="title-line text-x-large" tabIndex={0}>Title</h3>
+            <div className="main-section-style-content">
+              <p>text</p>
+              <p>text</p>
+            </div>
+            <br />
+            <div className="main-section-style-content">
+              <p>text</p>
+              <p>text</p>
+            </div>
             <br />
           </section>
           <section className="main-section-style shadow-behind">
-            <div>text</div>
+            <h3 className="title-line text-x-large" tabIndex={0}>Title</h3>
+            <div className="main-section-style-content">
+              <p>text</p>
+              <p>text</p>
+            </div>
             <br />
-          </section>
-          <section className="main-section-style shadow-behind">
-            <div>text</div>
+            <div className="main-section-style-content">
+              <p>text</p>
+              <p>text</p>
+            </div>
             <br />
           </section>
         </main>
       </span>
-      <footer className="app-footer">
-        <div className="app-footer-link-grid flex-around">
-          <ul>
-            <li tabIndex={0}><p><b>Coding</b></p></li>
-            <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
-            <li><a href="https://replit.com/@BlakeThollaug" target="_blank" rel="noreferrer" className="link-highlight">Replit</a></li>
-            <li><a href="https://codepen.io/Bthol/pens/public" target="_blank" rel="noreferrer" className="link-highlight">CodePen</a></li>
-          </ul>
-          <ul>
-            <li tabIndex={0}><p><b>Music</b></p></li>
-            <li><a href="https://augium.bandcamp.com/" target="_blank" rel="noreferrer" className="link-highlight">Bandcamp</a></li>
-            <li><a href="https://soundcloud.com/augium" target="_blank" rel="noreferrer" className="link-highlight">SoundCloud</a></li>
-          </ul>
-            <ul>
-              <li tabIndex={0}><p><b>Follow</b></p></li>
-              <li><a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer" className="link-highlight">LinkedIn</a></li>
-            </ul>
-        </div>
-        <div>
-          <div>
-            <p tabIndex={0} className="flex-center">Made with JavaScript, Node, React, HTML and CSS.</p>
-          </div>
-        </div>
-        <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
-        <br />
-      </footer>
+      <Footer />
     </div>
   )};
 
