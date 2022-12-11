@@ -357,25 +357,28 @@ function App() {
         employer: "Albany Saunas",
         workPeriod: "Aug 2022 - Present",
         list: <div className="exp-list">
-          <p>Accomplishments</p>
           <ul>
             <li tabIndex={0}>Troubleshot video surveillance system software and hardware problems to identify technical solutions</li>
-            <li tabIndex={0}>Setup and managed account information with a security application for the hardware system</li>
-            <li tabIndex={0}>Granted remote access to the system through application using safely secured login credentials on desired cellular devices</li>
-            <li tabIndex={0}>Navigated system interface to display the layout specific to the particular system model</li>
-            <li tabIndex={0}>Programatically modelled sweeping process for generating time optimized algorithms for more effective and efficient sweeping practices</li>
-          </ul>
-          <p>Responsibilities</p>
-          <ul tabIndex={0}>
-            <li>Measuring and recording the hot tub chemistry using machine reading and chemistry kit, and balancing tub chemistry accordingly</li>
-            <li>Setting up hot tubs and saunas before customer use and cleaning afterwards</li>
-            <li>Preparing massage rooms per the needs of the message therapist on schedule</li>
-            <li>Sanitizing and wiping down bins for safe customer use</li>
-            <li>Sweeping and swiffering floors throughout the premises each week</li>
-            <li>Reading and recording the temperature when turning on/off the sauna furnace</li>
-            <li>Collecting, sorting, cleaning, drying, folding and putting away laundry as time permits</li>
+            <li tabIndex={0}>Programatically modelled floor sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
+            <li tabIndex={0}>Measuring, recording, and restoring hot tub chemistry using machine and chemistry kit</li>
+            <li tabIndex={0}>Reading and recording the furnace temperature when turning on/off the sauna furnace</li>
+            <li tabIndex={0}>Setting up hot tub and sauna rooms before customer use and cleaning afterwards</li>
+            <li tabIndex={0}>Preparing massage rooms per the needs of the message therapist on schedule</li>
+            <li tabIndex={0}>Sanitizing and wiping down bins for safe customer use</li>
+            <li tabIndex={0}>Maintaining clean floors throughout the premises</li>
+            <li tabIndex={0}>Collecting, sorting, cleaning, drying, folding and putting away laundry as time permits</li>
           </ul>
         </div>
+      },
+      {
+        jobTitle: "Kitchen Steward",
+        employer: "Canyon Ranch Woodside",
+        workPeriod: "Jan 2020 - Oct 2020",
+        list: <ul className="exp-list">
+          <li tabIndex={0}>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
+          <li tabIndex={0}>Managed a food inventory, where I consolidated food resources to optimize use of storage area, and processed incoming shipments by testing for quality and allocating the shipment contents into appropriate storage areas in compliance with company and legal standards.</li>
+          <li tabIndex={0}>Received preliminary training in food preparation to further assist the kitchen staff after receiving food handlers certification.</li>
+        </ul>,
       },
       {
         jobTitle: "Music Composer/Audio Engineer",
@@ -386,16 +389,6 @@ function App() {
           <li tabIndex={0}>Involved in all phases of music production (i.e. music concept, theory, and sound design, composition, performance and recording, mix engineering, and mastering)</li>
           <li tabIndex={0}>General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
           <li tabIndex={0}>Created audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, granular)</li>
-        </ul>,
-      },
-      {
-        jobTitle: "Kitchen Steward",
-        employer: "Canyon Ranch Woodside",
-        workPeriod: "Jan 2020 - Oct 2020",
-        list: <ul className="exp-list">
-          <li tabIndex={0}>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
-          <li tabIndex={0}>Managed a food inventory, where I consolidated food resources to optimize use of storage area, and processed incoming shipments by testing for quality and allocating the shipment contents into appropriate storage areas in compliance with company and legal standards.</li>
-          <li tabIndex={0}>Received preliminary training in food preparation to further assist the kitchen staff after receiving food handlers certification.</li>
         </ul>,
       },
     ],
@@ -459,7 +452,9 @@ function App() {
       </header>
       <span className="aside-main">
           <aside className="app-aside shadow-behind">
-            <ProfilePhoto></ProfilePhoto>
+            <div className="flex-center">
+              <ProfilePhoto></ProfilePhoto>
+            </div>
             <div className="flex-around">
                 <button className={btnClass}><a href="mailto:bthollaug@gmail.com" target="_blank">Send Email</a></button>
                 <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
@@ -505,16 +500,19 @@ function App() {
                     projectText={contentProps.projects[0].text}
                     projectList={contentProps.projects[0].list}
                   ></Section2>
+                  <br />
                   <Section2
                     projectTitle={contentProps.projects[1].title}
                     projectText={contentProps.projects[1].text}
                     projectList={contentProps.projects[1].list}
                   ></Section2>
+                  <br />
                   <Section2
                     projectTitle={contentProps.projects[2].title}
                     projectText={contentProps.projects[2].text}
                     projectList={contentProps.projects[2].list}
                   ></Section2>
+                  <br />
                 </div>
                 : <div className="carousel-container">
                   <div className={`projects-carousel carPos${carPos}`}>
