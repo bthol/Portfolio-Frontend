@@ -1,4 +1,3 @@
-// CONTENT PROPS //
 const ContentProps = {
     skills: [
       {
@@ -32,6 +31,12 @@ const ContentProps = {
                   <li tabIndex={0}>Audio and player controls</li>
                   <li tabIndex={0}>raster images & vector graphics</li>
               </ul>
+          <p></p>
+          <li className="text-large" tabIndex={0}>C++</li>
+          <ul>
+              <li tabIndex={0}>Compiler: Clang</li>
+              <li tabIndex={0}>Debugging: C/C++ VS Code extension</li>
+          </ul>
           <p></p>
         </ul>,
       },
