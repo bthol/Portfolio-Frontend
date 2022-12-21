@@ -75,30 +75,48 @@ const Header = (props) => {
         }
     }
     
+    // 3
+    const [drop3, setDrop3] = useState("menu-close");
+    const [navState3, setNavState3] = useState(false);
+    const toggleNavState3 = () => {
+        setNavState3(!navState2);
+        menuDisplay3();
+    }
+    const menuDisplay3 = () => {
+        if (!navState2) {
+        setDrop3("menu-open");
+        } else {
+        setDrop3("menu-close");
+        }
+    }
+    
     const initNav = () => {
         setNavState1(false);
         setDrop1("menu-close");
         setNavState2(false);
         setDrop2("menu-close");
+        setNavState3(false);
+        setDrop3("menu-close");
     }
 
     // NAV PROPS
     const navData = [
         {
-        name: "Utility Apps",
-        links: <div className="nav-menu-style">
-            <a onClick={(e) => {
-                props.featureAlertFunct(e);
-            }} href="" target="_blank" className="link-desat">Calculo</a>
-        </div>,
+            name: "Utility Apps",
+            links: <div className="nav-menu-style">
+                <a onClick={(e) => {
+                    props.featureAlertFunct(e);
+                }} href="" target="_blank" className="link-desat">Calculo</a>
+            </div>,
         },
         {
-        name: "Game Apps",
-        links: <div className="nav-menu-style">
-            <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat">Space Battle</a>
-            <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat">Magic 8 Ball</a>
-            <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat">Retro Toe</a>
-        </div>,
+            name: "Fun Apps",
+            links: <div className="nav-menu-style">
+                <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat">Space Battle</a>
+                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat">Magic 8 Ball</a>
+                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat">Retro Toe</a>
+                <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat">Holiday Tree</a>
+            </div>,
         },
     ];
 
