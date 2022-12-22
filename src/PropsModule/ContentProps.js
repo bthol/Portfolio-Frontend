@@ -163,10 +163,12 @@ const ContentProps = {
         workPeriod: "Aug 2022 - Present",
         list: <div className="exp-list">
           <ul>
-            <li tabIndex={0}>Troubleshot video surveillance system software and hardware problems to identify technical solutions</li>
-            <li tabIndex={0}>Programatically modelled floor sweeping process for generating time optimized algorithms for more efficient sweeping practices</li>
-            <li tabIndex={0}>Measuring, recording, and restoring hot tub chemistry using machine and chemistry kit</li>
+            <li tabIndex={0}>Updating store website to relfect the most current scheduling information for customers</li>
+            <li tabIndex={0}>Troubleshooting software and hardware problems with video surveillance system and other workplace technologies to identify and impliment technical solutions</li>
+            <li tabIndex={0}>Programatically modelled floor sweeping process for generating time optimized algorithms for more efficient sweeping practices (developed on my own time for use during working hours)</li>
             <li tabIndex={0}>Reading and recording the furnace temperature using the AOPUTTRIVER AP-2732 non-contact infrared thermometer when turning on/off the sauna furnace</li>
+            <li tabIndex={0}>Measuring, recording, and restoring hot tub chemistry using machine and chemistry kit</li>
+            <li tabIndex={0}>Taking inventory, restocking shelves and refrigerator</li>
             <li tabIndex={0}>Setting up hot tub and sauna rooms before customer use and cleaning afterwards</li>
             <li tabIndex={0}>Preparing massage rooms per the needs of the message therapist on schedule</li>
             <li tabIndex={0}>Sanitizing and wiping down bins for safe customer use</li>
