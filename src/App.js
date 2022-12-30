@@ -15,17 +15,13 @@ function App() {
   }
 
   // THEME LOGIC
-  const [btnText, setBtnText] = useState("Night Theme");
   const [theme, setTheme] = useState("color-theme-day");
-  
   const [togTheme, setTogTheme] = useState(false);
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
-      setBtnText("Night Theme");
       setTheme("color-theme-day");
     } else {
-      setBtnText("Day Theme");
       setTheme("color-theme-night");
     }
   };
@@ -41,12 +37,11 @@ function App() {
   if (page == 1) { return (<HomePage
     featureAlertFunct={featureAlertFunct}
     theme={theme}
-    btnText={btnText}
     toggleTheme={toggleTheme}
   />)}
 
   // if (TemplatePage) { return (<TemplatePage />)}
-  
+
 };
 
 export default App;

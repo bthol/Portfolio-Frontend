@@ -23,10 +23,24 @@ const TemplatePage = (props) => {
         return () => clearInterval(counter);
     }, []);
 
+    // THEME-BUTTON LOGIC
+    const [btnText, setBtnText] = useState("Night Theme");
+    const btnTextUpdate = () => {
+        if (props.theme == "color-theme-night") {
+            setBtnText("Night Theme");
+        } else if (props.theme == "color-theme-day") {
+            setBtnText("Day Theme");
+        }
+    }
+
     return (
         <div id="root-react" className={`App color ${props.theme}`}>
             <Timeout modal={modal} setModal={setModalFunct}></Timeout>
-            <Header featureAlert={props.featureAlertFunct}></Header>
+            <Header
+                featureAlert={props.featureAlertFunct}
+                btnText={btnText}
+                btnTextUpdate={btnTextUpdate}
+            ></Header>
             <span className="aside-main">
                 <aside className="app-aside shadow-behind">
                     <div>text</div>

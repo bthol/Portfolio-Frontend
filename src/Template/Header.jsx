@@ -144,6 +144,12 @@ const Header = (props) => {
                 toggleNavState={toggleNavState2}
                 initNav={initNav}
                 ></NavButton>
+                <div className="theme-button-container">
+                    <button className="nav-buttons link-desat" onClick={() => {
+                        props.toggleTheme();
+                        props.btnTextUpdate();
+                    }}>{props.btnText}</button>                     
+                </div>
             </div>
             <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
             </nav>

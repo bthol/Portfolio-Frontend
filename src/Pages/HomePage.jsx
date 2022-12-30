@@ -72,10 +72,25 @@ const HomePage = (props) => {
         setCarBtn2("");
     }
 
+    // THEME-BUTTON LOGIC
+    const [btnText, setBtnText] = useState("Night Theme");
+    const btnTextUpdate = () => {
+        if (props.theme == "color-theme-night") {
+            setBtnText("Night Theme");
+        } else if (props.theme == "color-theme-day") {
+            setBtnText("Day Theme");
+        }
+    }
+
     return (
         <div id="root-react" className={`App color ${props.theme}`}>
             <Timeout modal={modal} setModal={setModalFunct}></Timeout>
-            <Header featureAlertFunct={props.featureAlertFunct}></Header>
+            <Header
+                featureAlertFunct={props.featureAlertFunct}
+                btnText={btnText}
+                btnTextUpdate={btnTextUpdate}
+                toggleTheme={props.toggleTheme}
+            ></Header>
             <span className="aside-main">
             <aside className="app-aside shadow-behind">
                 <div className="flex-center">
@@ -83,7 +98,6 @@ const HomePage = (props) => {
                 </div>
                 <div className="flex-around">
                     <a href="mailto:bthollaug@gmail.com" target="_blank"><button className="buttons">Send Email</button></a>
-                    <button className="buttons" onClick={props.toggleTheme}>{props.btnText}</button>
                 </div>
                 <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
                 <br />
