@@ -69,6 +69,7 @@ function App() {
           btnText={btnText}
           toggleTheme={toggleTheme}
           featureAlertFunct={featureAlertFunct}
+          goPage={goPage}
       ></Header>
 
       {page === 0 && <HomePage

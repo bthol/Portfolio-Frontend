@@ -2,9 +2,35 @@ import React from 'react';
 import { useState } from 'react';
 import { AugiumIcon } from '../Images/AugiumIcon';
 import { NavButton } from '../NavButton/NavButton';
-import { NavData as navData } from '../JSmodules/NavData';
 
 const Header = (props) => {
+
+    const navData = [
+        {
+            name: "Pages",
+            links: <div className="nav-menu-style">
+                <a href="" onClick={(e) => {
+                    e.preventDefault();
+                    props.goPage(1);
+                }} className="link-desat">Template Page</a>
+            </div>,
+        },
+        {
+            name: "Apps",
+            links: <div className="nav-menu-style">
+                <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat">Space Battle</a>
+                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat">Magic 8 Ball</a>
+                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat">Retro Toe</a>
+                <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat">Holiday Tree</a>
+                <a onClick={(e) => {
+                    e.preventDefault();
+                    alert("Feature still in development");
+                }} href="" target="_blank" className="link-desat">Calculo</a>
+            </div>,
+        },
+    ];
+
+
     // TRACKLENGTH BAR LOGIC
     const [docScroll, setDocScroll] = useState(0);
     
@@ -86,40 +112,39 @@ const Header = (props) => {
     return (
         <header className="app-header">
             <div className="no-select">
-            <AugiumIcon></AugiumIcon>
-            <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
+                <AugiumIcon></AugiumIcon>
+                <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
             </div>
             <nav className="app-nav">
-            <div className="flex-around">
-                <div className="home-button-container">
-                    <button className="nav-buttons link-desat" onClick={(e) => {
-                        e.preventDefault();
-                        
-                    }}>Home</button>
+                <div className="flex-around">
+                    <div className="home-button-container">
+                        <button className="nav-buttons link-desat" onClick={(e) => {
+                            props.goPage(0);
+                        }}>Home</button>
+                    </div>
+                    <NavButton
+                        name={navData[0].name}
+                        links={navData[0].links}
+                        navState={navState1}
+                        drop={drop1}
+                        toggleNavState={toggleNavState1}
+                        initNav={initNav}
+                    ></NavButton>
+                    <NavButton
+                        name={navData[1].name}
+                        links={navData[1].links}
+                        navState={navState2}
+                        drop={drop2}
+                        toggleNavState={toggleNavState2}
+                        initNav={initNav}
+                    ></NavButton>
+                    <div className="theme-button-container">
+                        <button className="nav-buttons link-desat" onClick={() => {
+                            props.toggleTheme();
+                        }}>{props.btnText}</button>                     
+                    </div>
                 </div>
-                <NavButton
-                    name={navData[0].name}
-                    links={navData[0].links}
-                    navState={navState1}
-                    drop={drop1}
-                    toggleNavState={toggleNavState1}
-                    initNav={initNav}
-                ></NavButton>
-                <NavButton
-                    name={navData[1].name}
-                    links={navData[1].links}
-                    navState={navState2}
-                    drop={drop2}
-                    toggleNavState={toggleNavState2}
-                    initNav={initNav}
-                ></NavButton>
-                <div className="theme-button-container">
-                    <button className="nav-buttons link-desat" onClick={() => {
-                        props.toggleTheme();
-                    }}>{props.btnText}</button>                     
-                </div>
-            </div>
-            <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
+                <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
             </nav>
         </header>
     )
