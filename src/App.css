@@ -299,7 +299,6 @@ a {
 
 /* ASIDE + MAIN */
 .app-aside {
-  border-radius: 2vmin 2vmin 0vmin 0vmin;
   padding: 2vw;
   margin-top: var(--below-header);
 }
@@ -435,11 +434,7 @@ main section {
   .app-main {
     margin-top: var(--below-header);
   }
-  .main-section-style {
-    border-radius: 10px;
-  }
   .app-aside {
-    border-radius: 10px;
     border: 0px;
   }
   .aside-main {
