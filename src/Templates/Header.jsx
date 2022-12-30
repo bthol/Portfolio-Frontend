@@ -91,31 +91,31 @@ const Header = (props) => {
             </div>
             <nav className="app-nav">
             <div className="flex-around">
-                <div className="home-button">
+                <div className="home-button-container">
                     <button className="nav-buttons link-desat" onClick={(e) => {
                         e.preventDefault();
+                        
                     }}>Home</button>
                 </div>
                 <NavButton
-                name={navData[0].name}
-                links={navData[0].links}
-                navState={navState1}
-                drop={drop1}
-                toggleNavState={toggleNavState1}
-                initNav={initNav}
+                    name={navData[0].name}
+                    links={navData[0].links}
+                    navState={navState1}
+                    drop={drop1}
+                    toggleNavState={toggleNavState1}
+                    initNav={initNav}
                 ></NavButton>
                 <NavButton
-                name={navData[1].name}
-                links={navData[1].links}
-                navState={navState2}
-                drop={drop2}
-                toggleNavState={toggleNavState2}
-                initNav={initNav}
+                    name={navData[1].name}
+                    links={navData[1].links}
+                    navState={navState2}
+                    drop={drop2}
+                    toggleNavState={toggleNavState2}
+                    initNav={initNav}
                 ></NavButton>
                 <div className="theme-button-container">
                     <button className="nav-buttons link-desat" onClick={() => {
                         props.toggleTheme();
-                        props.btnTextUpdate();
                     }}>{props.btnText}</button>                     
                 </div>
             </div>

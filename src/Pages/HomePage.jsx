@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Header } from '../Templates/Header';
-import { Footer } from '../Templates/Footer';
-import { Timeout } from '../Modals/Timeout';
+import React, { useState} from 'react';
 import { Section1 } from '../Templates/Section1';
 import { Section2 } from '../Templates/Section2';
 import { Section3 } from '../Templates/Section3';
@@ -9,30 +6,7 @@ import { Section4 } from '../Templates/Section4';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { ContentProps as contentProps} from '../JSmodules/ContentProps';
 
-const HomePage = (props) => {
-    
-    // IDLE MODAL
-    const [modal, setModal] = useState("closed");
-    useEffect(() => {
-        let seconds = 0;
-        // listners reset the count
-        document.addEventListener("touchmove", () => {seconds = 0});
-        document.addEventListener("mousemove", () => {seconds = 0});
-        document.addEventListener("keydown", () => {seconds = 0});
-        const counter = setInterval(() => {
-        seconds += 1;
-        if (seconds === 300) {
-            // display modal
-            setModal("open")
-            seconds = 0;
-        }
-        }, 1000);
-        return () => clearInterval(counter);
-    }, []);
-
-    const setModalFunct = (str) => {
-        setModal(str)
-    };
+const HomePage = () => {
 
     // BOOLEAN STATE FOR MOBILE ENVIRONMENT
     const [mobile, setMobile] = useState(false);
@@ -72,25 +46,8 @@ const HomePage = (props) => {
         setCarBtn2("");
     }
 
-    // THEME-BUTTON LOGIC
-    const [btnText, setBtnText] = useState("Night Theme");
-    const btnTextUpdate = () => {
-        if (props.theme == "color-theme-night") {
-            setBtnText("Night Theme");
-        } else if (props.theme == "color-theme-day") {
-            setBtnText("Day Theme");
-        }
-    }
-
     return (
-        <div id="root-react" className={`App color ${props.theme}`}>
-            <Timeout modal={modal} setModal={setModalFunct}></Timeout>
-            <Header
-                featureAlertFunct={props.featureAlertFunct}
-                btnText={btnText}
-                btnTextUpdate={btnTextUpdate}
-                toggleTheme={props.toggleTheme}
-            ></Header>
+        <div>
             <span className="aside-main">
             <aside className="app-aside shadow-behind">
                 <div className="flex-center">
@@ -242,10 +199,6 @@ const HomePage = (props) => {
                 </section>
             </main>
             </span>
-            <div className="flex-center">
-                <a href="#" className="flex-center top-link-style">back to top</a>
-            </div>
-            <Footer />
         </div>
     )
 }

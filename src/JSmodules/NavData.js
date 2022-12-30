@@ -2,7 +2,7 @@ const NavData = [
     {
         name: "Pages",
         links: <div className="nav-menu-style">
-            <a href="">Template Page</a>
+            <a href="" className="link-desat">Template Page</a>
         </div>,
     },
     {
