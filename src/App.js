@@ -3,6 +3,34 @@ import './App.css';
 import { HomePage } from './Pages/HomePage';
 
 function App() {
+
+  // ERROR ALERTS
+  const featureAlert = (e) => {
+    e.preventDefault();
+    alert("Feature still in development");
+  };
+
+  const featureAlertFunct = (e) => {
+    featureAlert(e);
+  }
+
+  // THEME LOGIC
+  const [btnText, setBtnText] = useState("Night Theme");
+  const [theme, setTheme] = useState("color-theme-day");
+  
+  const [togTheme, setTogTheme] = useState(false);
+  const toggleTheme = () => {
+    setTogTheme(!togTheme)
+    if (togTheme) {
+      setBtnText("Night Theme");
+      setTheme("color-theme-day");
+    } else {
+      setBtnText("Day Theme");
+      setTheme("color-theme-night");
+    }
+  };
+
+  
   const pageInfo = [
     {name: "HomePage"},
     {name: "TemplatePage"},
@@ -10,8 +38,15 @@ function App() {
   
   const [page, setPage] = useState(1);
   
-  if (page == 1) { return (<HomePage />)}
+  if (page == 1) { return (<HomePage
+    featureAlertFunct={featureAlertFunct}
+    theme={theme}
+    btnText={btnText}
+    toggleTheme={toggleTheme}
+  />)}
+
   // if (TemplatePage) { return (<TemplatePage />)}
+  
 };
 
 export default App;

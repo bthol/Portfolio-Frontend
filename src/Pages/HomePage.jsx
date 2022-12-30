@@ -9,23 +9,14 @@ import { Section4 } from '../Template/Section4';
 import { ContentProps as contentProps} from '../PropsModule/ContentProps';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 
-const HomePage = () => {
-
-    // ERROR ALERTS
-    const featureAlert = (e) => {
-        e.preventDefault();
-        alert("Feature still in development");
-    };
-
-    const featureAlertFunct = (e) => {
-        featureAlert(e);
-    }
+const HomePage = (props) => {
     
     // IDLE MODAL
     const [modal, setModal] = useState("closed");
     useEffect(() => {
         let seconds = 0;
         // listners reset the count
+        document.addEventListener("touchmove", () => {seconds = 0});
         document.addEventListener("mousemove", () => {seconds = 0});
         document.addEventListener("keydown", () => {seconds = 0});
         const counter = setInterval(() => {
@@ -50,33 +41,6 @@ const HomePage = () => {
         setMobBool(false);
         setMobile(true);
     }
-
-    // THEME LOGIC
-    const [btnText, setBtnText] = useState("Night Theme");
-    const [btnClass, setBtnClass] = useState("buttons");
-    const [theme, setTheme] = useState("color-theme-day");
-    
-    const setThemeNight = () => {
-        setBtnText("Day Theme");
-        setTheme("color-theme-night");
-        setBtnClass("buttons dark-button");
-    };
-    
-    const setThemeDay = () => {
-        setBtnText("Night Theme");
-        setTheme("color-theme-day");
-        setBtnClass("buttons");
-    };
-    
-    const [togTheme, setTogTheme] = useState(false);
-    const toggleTheme = () => {
-        setTogTheme(!togTheme)
-        if (togTheme) {
-        setThemeDay();
-        } else {
-        setThemeNight();
-        }
-    };
     
     // SHOW MORE/LESS
     const [showMSG, setShowMSG] = useState("show more");
@@ -109,17 +73,17 @@ const HomePage = () => {
     }
 
     return (
-        <div id="root-react" className={`App color ${theme}`}>
+        <div id="root-react" className={`App color ${props.theme}`}>
             <Timeout modal={modal} setModal={setModalFunct}></Timeout>
-            <Header featureAlertFunct={featureAlertFunct}></Header>
+            <Header featureAlertFunct={props.featureAlertFunct}></Header>
             <span className="aside-main">
             <aside className="app-aside shadow-behind">
                 <div className="flex-center">
                 <ProfilePhoto></ProfilePhoto>
                 </div>
                 <div className="flex-around">
-                    <a href="mailto:bthollaug@gmail.com" target="_blank"><button className={btnClass}>Send Email</button></a>
-                    <button className={btnClass} onClick={toggleTheme}>{btnText}</button>
+                    <a href="mailto:bthollaug@gmail.com" target="_blank"><button className="buttons">Send Email</button></a>
+                    <button className="buttons" onClick={props.toggleTheme}>{props.btnText}</button>
                 </div>
                 <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
                 <br />
