@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from '../Template/Header';
-import { Footer } from '../Template/Footer';
+import { Header } from '../Templates/Header';
+import { Footer } from '../Templates/Footer';
 import { Timeout } from '../Modals/Timeout';
-import { Section1 } from '../Template/Section1';
-import { Section2 } from '../Template/Section2';
-import { Section3 } from '../Template/Section3';
-import { Section4 } from '../Template/Section4';
-import { ContentProps as contentProps} from '../PropsModule/ContentProps';
+import { Section1 } from '../Templates/Section1';
+import { Section2 } from '../Templates/Section2';
+import { Section3 } from '../Templates/Section3';
+import { Section4 } from '../Templates/Section4';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
+import { ContentProps as contentProps} from '../JSmodules/ContentProps';
 
 const HomePage = (props) => {
     

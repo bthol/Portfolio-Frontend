@@ -28,8 +28,8 @@ function App() {
 
   
   const pageInfo = [
-    {name: "HomePage"},
-    {name: "TemplatePage"},
+    "HomePage",
+    "TemplatePage",
   ];
   
   const [page, setPage] = useState(1);

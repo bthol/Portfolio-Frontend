@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from '../Template/Header';
-import { Footer } from '../Template/Footer';
+import { Header } from '../Templates/Header';
+import { Footer } from '../Templates/Footer';
 import { Timeout } from '../Modals/Timeout';
 
 const TemplatePage = (props) => {
