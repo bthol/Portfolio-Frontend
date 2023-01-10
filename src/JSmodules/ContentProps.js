@@ -163,8 +163,8 @@ const ContentProps = {
         workPeriod: "Aug 2022 - Present",
         list: <div className="exp-list">
           <ul>
-            <li tabIndex={0}>Updating store website to relfect the most current scheduling information for customers</li>
-            <li tabIndex={0}>Troubleshooting software and hardware problems with video surveillance system and other workplace technologies to identify and impliment technical solutions</li>
+            <li tabIndex={0}>Updating store website to reflect the most current scheduling information for customers</li>
+            <li tabIndex={0}>Troubleshooting software and hardware problems with video surveillance system and other workplace technologies to identify and implement technical solutions</li>
             <li tabIndex={0}>Programatically modelled floor sweeping process for generating time optimized algorithms for more efficient sweeping practices (developed on my own time for use during working hours)</li>
             <li tabIndex={0}>Reading and recording the furnace temperature using the AOPUTTRIVER AP-2732 non-contact infrared thermometer when turning on/off the sauna furnace</li>
             <li tabIndex={0}>Measuring, recording, and restoring hot tub chemistry using machine and chemistry kit</li>
