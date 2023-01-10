@@ -56,7 +56,7 @@ const HomePage = () => {
                 <div className="flex-around">
                     <a href="mailto:bthollaug@gmail.com" target="_blank"><button className="buttons">Send Email</button></a>
                 </div>
-                <p tabIndex={0}><b>About Me</b>: I am a Full Stack Web and App Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
+                <p tabIndex={0}><b>About Me</b>: I am a Full Stack Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
                 <br />
             </aside>
             <main className="app-main">
