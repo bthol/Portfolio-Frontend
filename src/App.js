@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Timeout } from './Modals/Timeout';
 import { Header } from './Templates/Header';
 import { Footer } from './Templates/Footer';
 import { HomePage } from './Pages/HomePage';
 import { TemplatePage } from './Pages/TemplatePage';
-import { Timeout } from './Modals/Timeout';
+import { ProjectsPage } from './Pages/ProjectsPage';
 
 function App() {
 
@@ -57,7 +58,7 @@ function App() {
   };
   
   // PAGE LOGIC
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const goPage = (p) => {
     setPage(p)
   }
@@ -72,11 +73,16 @@ function App() {
           goPage={goPage}
       ></Header>
 
-      {page === 0 && <HomePage
+        
+      {page === 0 && <TemplatePage
         featureAlertFunct={featureAlertFunct}
       />}
-        
-      {page === 1 && <TemplatePage
+
+      {page === 1 && <HomePage
+        featureAlertFunct={featureAlertFunct}
+      />}
+
+      {page === 2 && <ProjectsPage
         featureAlertFunct={featureAlertFunct}
       />}
 

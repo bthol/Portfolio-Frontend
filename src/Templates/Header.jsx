@@ -10,9 +10,10 @@ const Header = (props) => {
             name: "Pages",
             links: <div className="nav-menu-style">
                 <a href="" onClick={(e) => {
-                    e.preventDefault();
-                    props.goPage(1);
-                }} className="link-desat">Template Page</a>
+                    props.featureAlertFunct(e);
+                    // e.preventDefault();
+                    // props.goPage(2);
+                }} className="link-desat">Projects</a>
             </div>,
         },
         {
@@ -23,8 +24,7 @@ const Header = (props) => {
                 <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat">Retro Toe</a>
                 <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat">Holiday Tree</a>
                 <a onClick={(e) => {
-                    e.preventDefault();
-                    alert("Feature still in development");
+                    props.featureAlertFunct(e);
                 }} href="" target="_blank" className="link-desat">Calculo</a>
             </div>,
         },
@@ -119,7 +119,7 @@ const Header = (props) => {
                 <div className="flex-around">
                     <div className="home-button-container">
                         <button className="nav-buttons link-desat" onClick={(e) => {
-                            props.goPage(0);
+                            props.goPage(1);
                         }}>Home</button>
                     </div>
                     <NavButton
