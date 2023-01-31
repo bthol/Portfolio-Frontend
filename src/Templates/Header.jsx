@@ -7,17 +7,17 @@ const Header = (props) => {
 
     const navData = [
         {
-            name: "Pages",
+            name: "Pages ",
             links: <div className="nav-menu-style">
                 <a href="" onClick={(e) => {
-                    props.featureAlertFunct(e);
-                    // e.preventDefault();
-                    // props.goPage(2);
+                    // props.featureAlertFunct(e);
+                    e.preventDefault();
+                    props.goPage(2);
                 }} className="link-desat">Projects</a>
             </div>,
         },
         {
-            name: "Apps",
+            name: "Apps ",
             links: <div className="nav-menu-style">
                 <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat">Space Battle</a>
                 <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat">Magic 8 Ball</a>

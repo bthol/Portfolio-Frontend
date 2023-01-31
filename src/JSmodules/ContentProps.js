@@ -34,8 +34,8 @@ const ContentProps = {
           <p></p>
           <li className="text-large" tabIndex={0}>C++</li>
           <ul>
-              <li tabIndex={0}>Compiler: Clang</li>
-              <li tabIndex={0}>Debugging: C/C++ VS Code extension</li>
+              <li tabIndex={0}>Compiler: Clang, GCC</li>
+              <li tabIndex={0}>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
           </ul>
           <p></p>
         </ul>,
@@ -47,7 +47,7 @@ const ContentProps = {
           <li className="text-large" tabIndex={0}>User Experience (UX) and User Interface (UI) Design</li>
           <ul>
               <li tabIndex={0}>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
-              <li tabIndex={0}>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so user features don't go unnoticed.</li>
+              <li tabIndex={0}>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
               <li tabIndex={0}>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
               <li tabIndex={0}>WAI ARIA Acessibility standard: provides interoperability with assistive technologies to enable user accessibility.</li>
           </ul>
@@ -78,7 +78,7 @@ const ContentProps = {
               <li tabIndex={0}>Equalzers (parameteric, stereographic, linear phase and adaptive)</li>
               <li tabIndex={0}>Compressors (tube, analog emulation, graphical, Automatic Gain Consideration(AGC))</li>
               <li tabIndex={0}>Limiters (0dB Peak, brickwall, soft clip)</li>
-              <li tabIndex={0}>Stereo Processors (limit, spread, merge, position, and modulate)</li>
+              <li tabIndex={0}>Stereo Processors (limit, spread, merge, position, generate, and modulate)</li>
               <li tabIndex={0}>Reverberation (Plate, Room, Hall, Shimmer, Low gravity, reflectionless Pitch tracking)</li>
               <li tabIndex={0}>Phasers (monophazer, biphaser, tempo syncable)</li>
               <li tabIndex={0}>Transient Processors (ASDR, Graphical Envelope Mapping, Evelope Following)</li>

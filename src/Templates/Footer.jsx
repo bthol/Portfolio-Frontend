@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <div>
             <div>
-                <p tabIndex={0} className="flex-center">Made with JavaScript, Node, React, HTML and CSS.</p>
+                <p tabIndex={0} className="flex-center">This site was made with MERN stack technologies.</p>
             </div>
             </div>
             <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
