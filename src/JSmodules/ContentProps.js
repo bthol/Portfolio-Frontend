@@ -56,6 +56,7 @@ const ContentProps = {
           <ul>
               <li tabIndex={0}>Affinity Photo</li>
               <li tabIndex={0}>Affinity Designer</li>
+              <li tabIndex={0}>Canva</li>
               <li tabIndex={0}>Paint.net</li>
               <li tabIndex={0}>MS Paint</li>
           </ul>

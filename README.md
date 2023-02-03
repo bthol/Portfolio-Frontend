@@ -1,9 +1,4 @@
 # Portfolio-Frontend
 Developer: Blake Thollaug
 
-Description: This is my portfolio website front-end.
-
-Dependencies (listed in install order):
--nodemon (globally installed)
--default react packages
--IdleTimer
+Description: I developed a portfolio website using the JavaScript, React, HTML, and CSS technologies that is as easy on the eye as its development environment is easily manageable.
