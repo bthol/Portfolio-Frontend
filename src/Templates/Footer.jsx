@@ -25,7 +25,7 @@ const Footer = () => {
                 <p tabIndex={0} className="flex-center">This site was made with MERN stack technologies.</p>
             </div>
             </div>
-            <small className="flex-around" tabIndex={0}>&copy; 2022, Blake Thollaug. All rights reserved.</small>
+            <small className="flex-around" tabIndex={0}>&copy; 2023, Blake Thollaug. All rights reserved.</small>
             <br />
         </footer>
     )

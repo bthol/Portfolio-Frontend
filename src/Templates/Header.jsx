@@ -10,7 +10,6 @@ const Header = (props) => {
             name: "Pages ",
             links: <div className="nav-menu-style">
                 <a href="" onClick={(e) => {
-                    // props.featureAlertFunct(e);
                     e.preventDefault();
                     props.goPage(2);
                 }} className="link-desat">Projects</a>
@@ -72,6 +71,7 @@ const Header = (props) => {
         scrollAmmount();
     }, false)
 
+
     // NAV LOGIC
     // 1
     const [drop1, setDrop1] = useState("menu-close");
@@ -82,9 +82,9 @@ const Header = (props) => {
     }
     const menuDisplay1 = () => {
         if (!navState1) {
-        setDrop1("menu-open");
+            setDrop1("menu-open");
         } else {
-        setDrop1("menu-close");
+            setDrop1("menu-close");
         }
     }
     // 2
@@ -96,9 +96,9 @@ const Header = (props) => {
     }
     const menuDisplay2 = () => {
         if (!navState2) {
-        setDrop2("menu-open");
+            setDrop2("menu-open");
         } else {
-        setDrop2("menu-close");
+            setDrop2("menu-close");
         }
     }
     
@@ -120,6 +120,7 @@ const Header = (props) => {
                     <div className="home-button-container">
                         <button className="nav-buttons link-desat" onClick={(e) => {
                             props.goPage(1);
+                            initNav();
                         }}>Home</button>
                     </div>
                     <NavButton

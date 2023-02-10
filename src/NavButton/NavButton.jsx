@@ -9,11 +9,13 @@ const NavButton = (props) => {
                     props.initNav();
                     props.toggleNavState();
                 }}
-                ><div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>
+            ><div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>
             </button>
-            <div className={`nav-menu-style ${props.drop}`}>
-                {props.links}
-            </div>
+            <div className={`nav-menu-style ${props.drop}`}
+                onClick={(e) => {
+                    props.initNav();
+                }}
+            >{props.links}</div>
         </div>
     )
 }
