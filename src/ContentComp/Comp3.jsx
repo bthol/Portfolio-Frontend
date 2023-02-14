@@ -1,8 +1,8 @@
 import React from "react";
 
-const Section3 = (props) => {
+const Comp3 = (props) => {
     return (
-        <div className="main-section-style-content">
+        <div className="main-section-content">
             <div className="text-large" tabIndex={0}><b>{props.jobTitle}</b></div>
             <div className="flex-between" tabIndex={0}><p className="text-large">{props.employer}</p><p>{props.workPeriod}</p></div>
             {props.list}
@@ -10,4 +10,4 @@ const Section3 = (props) => {
     )
 };
 
-export { Section3 };
+export { Comp3 };

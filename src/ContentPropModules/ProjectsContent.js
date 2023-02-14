@@ -1,0 +1,2 @@
+const ProjectsContent = {};
+export { ProjectsContent };

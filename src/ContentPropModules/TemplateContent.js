@@ -1,0 +1,2 @@
+const TemplateContent = {};
+export { TemplateContent };

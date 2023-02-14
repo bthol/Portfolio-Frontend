@@ -1,4 +1,4 @@
-const ContentProps = {
+const HomePageContent = {
     skills: [
       {
         id: "section1-1",
@@ -219,4 +219,4 @@ const ContentProps = {
     ],
 };
 
-export { ContentProps }
+export { HomePageContent };

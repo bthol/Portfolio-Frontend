@@ -1,10 +1,10 @@
 import React, { useState} from 'react';
-import { Section1 } from '../Templates/Section1';
-import { Section2 } from '../Templates/Section2';
-import { Section3 } from '../Templates/Section3';
-import { Section4 } from '../Templates/Section4';
+import { Comp1 } from '../ContentComp/Comp1';
+import { Comp2 } from '../ContentComp/Comp2';
+import { Comp3 } from '../ContentComp/Comp3';
+import { Comp4 } from '../ContentComp/Comp4';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
-import { ContentProps as contentProps} from '../JSmodules/ContentProps';
+import { HomePageContent as Content } from '../ContentPropModules/HomePageContent';
 
 const HomePage = () => {
 
@@ -47,8 +47,7 @@ const HomePage = () => {
     }
 
     return (
-        <div>
-            <span className="aside-main">
+        <div className="page-content">
             <aside className="app-aside shadow-behind">
                 <div className="flex-center">
                 <ProfilePhoto></ProfilePhoto>
@@ -60,76 +59,76 @@ const HomePage = () => {
                 <br />
             </aside>
             <main className="app-main">
-                <section className="main-section-style shadow-behind">
+                <section className="main-section shadow-behind">
                 <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
                 <div className={`section-lists`}>
-                    <Section1
-                        skillsTitle={contentProps.skills[0].title}
-                        skillsList={contentProps.skills[0].list}
-                        id={contentProps.skills[0].id}
-                    ></Section1>
+                    <Comp1
+                        skillsTitle={Content.skills[0].title}
+                        skillsList={Content.skills[0].list}
+                        id={Content.skills[0].id}
+                    ></Comp1>
                 </div>
                 {
                     show &&
                     <div className={`section-lists`}>
                     <br />
-                    <Section1
-                        skillsTitle={contentProps.skills[1].title}
-                        skillsList={contentProps.skills[1].list}
-                        id={contentProps.skills[1].id}
-                    ></Section1>
+                    <Comp1
+                        skillsTitle={Content.skills[1].title}
+                        skillsList={Content.skills[1].list}
+                        id={Content.skills[1].id}
+                    ></Comp1>
                     <br />
-                    <Section1
-                        skillsTitle={contentProps.skills[2].title}
-                        skillsList={contentProps.skills[2].list}
-                        id={contentProps.skills[2].id}
-                    ></Section1>
+                    <Comp1
+                        skillsTitle={Content.skills[2].title}
+                        skillsList={Content.skills[2].list}
+                        id={Content.skills[2].id}
+                    ></Comp1>
                     </div>
                 }
                 <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
                 </section>
-                <section className="main-section-style">
+                <section className="main-section">
                 <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
                 {mobile
                     ? <div>
-                    <Section2
-                        projectTitle={contentProps.projects[0].title}
-                        projectText={contentProps.projects[0].text}
-                        projectList={contentProps.projects[0].list}
-                    ></Section2>
+                    <Comp2
+                        projectTitle={Content.projects[0].title}
+                        projectText={Content.projects[0].text}
+                        projectList={Content.projects[0].list}
+                    ></Comp2>
                     <br />
-                    <Section2
-                        projectTitle={contentProps.projects[1].title}
-                        projectText={contentProps.projects[1].text}
-                        projectList={contentProps.projects[1].list}
-                    ></Section2>
+                    <Comp2
+                        projectTitle={Content.projects[1].title}
+                        projectText={Content.projects[1].text}
+                        projectList={Content.projects[1].list}
+                    ></Comp2>
                     <br />
-                    <Section2
-                        projectTitle={contentProps.projects[2].title}
-                        projectText={contentProps.projects[2].text}
-                        projectList={contentProps.projects[2].list}
-                    ></Section2>
+                    <Comp2
+                        projectTitle={Content.projects[2].title}
+                        projectText={Content.projects[2].text}
+                        projectList={Content.projects[2].list}
+                    ></Comp2>
                     <br />
                     </div>
                     : <div className="carousel-container">
                     <div className={`projects-carousel carPos${carPos}`}>
-                        <Section2
-                            projectTitle={contentProps.projects[0].title}
-                            projectText={contentProps.projects[0].text}
-                            projectList={contentProps.projects[0].list}
-                        ></Section2>
+                        <Comp2
+                            projectTitle={Content.projects[0].title}
+                            projectText={Content.projects[0].text}
+                            projectList={Content.projects[0].list}
+                        ></Comp2>
                         <br />
-                        <Section2
-                            projectTitle={contentProps.projects[1].title}
-                            projectText={contentProps.projects[1].text}
-                            projectList={contentProps.projects[1].list}
-                        ></Section2>
+                        <Comp2
+                            projectTitle={Content.projects[1].title}
+                            projectText={Content.projects[1].text}
+                            projectList={Content.projects[1].list}
+                        ></Comp2>
                         <br />
-                        <Section2
-                            projectTitle={contentProps.projects[2].title}
-                            projectText={contentProps.projects[2].text}
-                            projectList={contentProps.projects[2].list}
-                        ></Section2>
+                        <Comp2
+                            projectTitle={Content.projects[2].title}
+                            projectText={Content.projects[2].text}
+                            projectList={Content.projects[2].list}
+                        ></Comp2>
                         <br />
                     </div>
                     <div className="carButs flex-center">
@@ -152,53 +151,52 @@ const HomePage = () => {
                     </div>
                 }
                 </section>
-                <section className="main-section-style">
+                <section className="main-section">
                 <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
-                <Section3
-                    jobTitle={contentProps.experience[0].jobTitle}
-                    employer={contentProps.experience[0].employer}
-                    workPeriod={contentProps.experience[0].workPeriod}
-                    list={contentProps.experience[0].list}
-                ></Section3>
+                <Comp3
+                    jobTitle={Content.experience[0].jobTitle}
+                    employer={Content.experience[0].employer}
+                    workPeriod={Content.experience[0].workPeriod}
+                    list={Content.experience[0].list}
+                ></Comp3>
                 <br />
-                <Section3
-                    jobTitle={contentProps.experience[1].jobTitle}
-                    employer={contentProps.experience[1].employer}
-                    workPeriod={contentProps.experience[1].workPeriod}
-                    list={contentProps.experience[1].list}
-                ></Section3>
+                <Comp3
+                    jobTitle={Content.experience[1].jobTitle}
+                    employer={Content.experience[1].employer}
+                    workPeriod={Content.experience[1].workPeriod}
+                    list={Content.experience[1].list}
+                ></Comp3>
                 <br />
-                <Section3
-                    jobTitle={contentProps.experience[2].jobTitle}
-                    employer={contentProps.experience[2].employer}
-                    workPeriod={contentProps.experience[2].workPeriod}
-                    list={contentProps.experience[2].list}
-                ></Section3>
+                <Comp3
+                    jobTitle={Content.experience[2].jobTitle}
+                    employer={Content.experience[2].employer}
+                    workPeriod={Content.experience[2].workPeriod}
+                    list={Content.experience[2].list}
+                ></Comp3>
                 <br />
                 </section>
-                <section className="main-section-style" id="main-section-style-last">
+                <section className="main-section" id="main-section-last">
                 <h3 className="title-line text-x-large" tabIndex={0}>Education</h3>
-                <Section4
-                    school={contentProps.education[0].name}
-                    schoolPeriod={contentProps.education[0].period}
-                    schoolDescription={contentProps.education[0].description}
-                ></Section4>
+                <Comp4
+                    school={Content.education[0].name}
+                    schoolPeriod={Content.education[0].period}
+                    schoolDescription={Content.education[0].description}
+                ></Comp4>
                 <br />
-                <Section4
-                    school={contentProps.education[1].name}
-                    schoolPeriod={contentProps.education[1].period}
-                    schoolDescription={contentProps.education[1].description}
-                ></Section4>
+                <Comp4
+                    school={Content.education[1].name}
+                    schoolPeriod={Content.education[1].period}
+                    schoolDescription={Content.education[1].description}
+                ></Comp4>
                 <br />
-                <Section4
-                    school={contentProps.education[2].name}
-                    schoolPeriod={contentProps.education[2].period}
-                    schoolDescription={contentProps.education[2].description}
-                ></Section4>
+                <Comp4
+                    school={Content.education[2].name}
+                    schoolPeriod={Content.education[2].period}
+                    schoolDescription={Content.education[2].description}
+                ></Comp4>
                 <br />
                 </section>
             </main>
-            </span>
         </div>
     )
 }
