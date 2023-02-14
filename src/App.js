@@ -19,6 +19,14 @@ function App() {
     featureAlert(e);
   }
 
+  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
+  const [mobile, setMobile] = useState(false);
+  const [mobBool, setMobBool] = useState(true);
+  if (window.innerWidth < 768 && mobBool) {
+      setMobBool(false);
+      setMobile(true);
+  }
+
   // IDLE MODAL
   const [modal, setModal] = useState("closed");
   useEffect(() => {
@@ -64,7 +72,6 @@ function App() {
   }
   return (
     <div id="root-react" className={`App color ${theme}`}>
-      <Timeout modal={modal} setModal={setModalFunct}></Timeout>
 
       <Header
           btnText={btnText}
@@ -73,24 +80,28 @@ function App() {
           goPage={goPage}
       ></Header>
 
-        
       {page === 0 && <TemplatePage
         featureAlertFunct={featureAlertFunct}
-      />}
+        mobile={mobile}
+        />}
 
       {page === 1 && <HomePage
         featureAlertFunct={featureAlertFunct}
-      />}
+        mobile={mobile}
+        />}
 
       {page === 2 && <ProjectsPage
         featureAlertFunct={featureAlertFunct}
-      />}
+        mobile={mobile}
+        />}
 
       <div className="flex-center">
         <a href="#" className="flex-center top-link-style">back to top</a>
       </div>
 
       <Footer />
+
+      <Timeout modal={modal} setModal={setModalFunct}></Timeout>
     </div>
   )
 };

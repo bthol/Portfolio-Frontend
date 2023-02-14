@@ -1,40 +1,29 @@
 import React from 'react';
 
-const TemplatePage = () => {
+const TemplatePage = (props) => {
 
     return (
         <div className="page-content">
-            <aside className="app-aside shadow-behind">
-                <div>text</div>
-            </aside>
-            <main className="app-main">
-            <section className="main-section-style shadow-behind">
-                <h3 className="title-line text-x-large" tabIndex={0}>Title</h3>
-                <div className="main-section-style-content">
-                    <p>text</p>
-                    <p>text</p>
+            <div className="content-container shadow-behind" id="container-first">
+                <div>
+                    <p>First Container Content</p>
                 </div>
-                <br />
-                <div className="main-section-style-content">
-                    <p>text</p>
-                    <p>text</p>
             </div>
-            <br />
-            </section>
-            <section className="main-section-style shadow-behind">
-                <h3 className="title-line text-x-large" tabIndex={0}>Title</h3>
-                <div className="main-section-style-content">
-                    <p>text</p>
-                    <p>text</p>
+            <div className="content-container">
+                <div>
+                    <p>Mobile Enviro Test</p>
+                    {
+                        props.mobile
+                        ? <p>Is Mobile</p>
+                        : <p>Isn't Mobile</p>
+                    }
                 </div>
-                <br />
-                <div className="main-section-style-content">
-                    <p>text</p>
-                    <p>text</p>
+            </div>
+            <div className="content-container" id="container-last">
+                <div>
+                    <p>Last Container Content</p>
                 </div>
-                <br />
-            </section>
-            </main>
+            </div>
         </div>
     )
 }

@@ -1,24 +1,31 @@
 import React from 'react';
 
-const ProjectsPage = () => {
+const ProjectsPage = (props) => {
     return (
-        <div>
-            <span className="aside-main">
-                <aside className="app-aside shadow-behind">
-                    <div>This block will be removed in future versions.</div>
-                </aside>
-                <main className="app-main">
-                    <section className="main-section shadow-behind">
-                        <h3 className="title-line text-x-large" tabIndex={0}>Projects Page To-Be</h3>
-                        <div className="main-section-content">
-                            <p>This page exists for now to illustrate the sucess of a scalable render-based page handling system.</p>
-                            <p>In future versions, this will be a page with unique content layout within a generic page template.</p>
-                            <p>Problems like the inconsistent spacing at the bottom and the need for the useless block will be resolved by a flexible grid layout in the generic page template that is still in development at the moment.</p>
-                        </div>
-                        <br />
-                    </section>
-                </main>
-            </span>
+        <div className="page-content">
+            <div className="content-container shadow-behind" id="container-first">
+                <div>
+                    <p>First Container Content</p>
+                </div>
+            </div>
+            <div className="content-container">
+                <div>
+                    <p>Joshua</p>
+                </div>
+                <div>
+                    <p>Mobile Rendering</p>
+                    {
+                        props.mobile
+                        ? <p>Is Mobile</p>
+                        : <p>Isn't Mobile</p>
+                    }
+                </div>
+            </div>
+            <div className="content-container" id="container-last">
+                <div>
+                    <p>Last Container Content</p>
+                </div>
+            </div>
         </div>
     )
 }
