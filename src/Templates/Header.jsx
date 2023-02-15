@@ -29,49 +29,6 @@ const Header = (props) => {
         },
     ];
 
-
-    // TRACKLENGTH BAR LOGIC
-    const [docScroll, setDocScroll] = useState(0);
-    
-    let winHeight, trackLength;
-    
-    const getHeight = () => {
-        return Math.max(
-        document.body.clientHeight,
-        document.documentElement.clientHeight,
-        document.body.offsetHeight,
-        document.documentElement.offsetHeight,
-        document.body.scrollHeight,
-        document.documentElement.scrollHeight
-        )
-        };
-        
-        let docheight = getHeight();
-        
-        const getInfo = () => {
-        winHeight= window.innerHeight || (document.documentElement || document.body).clientHeight;
-        docheight = getHeight();
-        trackLength = docheight - winHeight;
-    };
-    getInfo();
-    
-    const scrollAmmount = () => {
-        let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        let pctScrolled = Math.floor(scrollTop/trackLength * 100);
-        if (pctScrolled > 0) {
-        setDocScroll(pctScrolled)
-        }
-    };
-    
-    window.addEventListener("resize", function(){
-        getInfo();
-    }, false)
-    
-    window.addEventListener("scroll", function(){
-        scrollAmmount();
-    }, false)
-
-
     // NAV LOGIC
     // 1
     const [drop1, setDrop1] = useState("menu-close");
@@ -145,7 +102,7 @@ const Header = (props) => {
                         }}>{props.btnText}</button>                     
                     </div>
                 </div>
-                <div className="scroll-track-bar" style={{width: `${docScroll}%`}}></div>
+                <div className="scroll-track-bar" style={{width: `${props.docScroll}%`}}></div>
             </nav>
         </header>
     )
