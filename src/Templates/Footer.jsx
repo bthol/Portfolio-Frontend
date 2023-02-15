@@ -22,10 +22,10 @@ const Footer = () => {
             </div>
             <div>
             <div>
-                <p tabIndex={0} className="flex-center">This site was made with MERN stack technologies.</p>
+                <p tabIndex={0} className="flex-center text-no-wrap">This site was made with MERN stack technologies.</p>
             </div>
             </div>
-            <small className="flex-around" tabIndex={0}>&copy; 2023, Blake Thollaug. All rights reserved.</small>
+            <small className="flex-around text-no-wrap" tabIndex={0}>&copy; 2023, Blake Thollaug. All rights reserved.</small>
             <br />
         </footer>
     )

@@ -38,6 +38,7 @@
 * {
   --header-height: 60px;
   --nav-height: 20px;
+  --footer-height: 250px;
   --below-header: calc(var(--header-height) + var(--nav-height) + 33px);
 }
 
@@ -92,7 +93,7 @@
 .scroll-track-bar {
   z-index: -2;
   position: relative;
-  top: 5px;
+  top: 10px;
   height: 5px;
   margin: 0px;
   background: var(--color-gray);
@@ -100,6 +101,7 @@
 
 /* FOOTER */
 .app-footer {
+  height: var(--footer-height);
   font-size: .9em;
   color: var(--font-color-1);
 }
@@ -190,6 +192,10 @@ a {
 
 .text-large {
   font-size: large;
+}
+
+.text-no-wrap {
+  white-space: nowrap;
 }
 
 .title-line {
@@ -292,7 +298,7 @@ a {
   border-radius: 100%;
   position: relative;
   width: 180px;
-  padding: 1px;
+  padding: 2px;
   left: 50%;
   transform: translateX(-50%);
   -moz-box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
