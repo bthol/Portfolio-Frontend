@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
-import { Comp1 } from '../ContentComp/Comp1';
-import { Comp2 } from '../ContentComp/Comp2';
-import { Comp3 } from '../ContentComp/Comp3';
-import { Comp4 } from '../ContentComp/Comp4';
+import { Comp1 } from '../RenderComp/Comp1';
+import { Comp2 } from '../RenderComp/Comp2';
+import { Comp3 } from '../RenderComp/Comp3';
+import { Comp4 } from '../RenderComp/Comp4';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { HomePageContent as Content } from '../ContentPropModules/HomePageContent';
 

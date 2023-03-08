@@ -1,6 +1,7 @@
 import React from 'react';
+import { GenericContent as Content } from '../ContentPropModules/GenericContent';
 
-const TemplatePage = (props) => {
+const GenericPage = (props) => {
 
     return (
         <div className="page-content">
@@ -23,4 +24,4 @@ const TemplatePage = (props) => {
     )
 }
 
-export { TemplatePage }
+export { GenericPage }

@@ -3,8 +3,8 @@ import './App.css';
 import { Timeout } from './Modals/Timeout';
 import { Header } from './Templates/Header';
 import { Footer } from './Templates/Footer';
+import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
-import { TemplatePage } from './Pages/TemplatePage';
 import { ProjectsPage } from './Pages/ProjectsPage';
 
 function App() {
@@ -104,7 +104,7 @@ function App() {
   };
   
   // PAGE LOGIC
-  const [back, setBack] = useState("100vh");
+  const [back, setBack] = useState("max-height");
   const [page, setPage] = useState(1);
   const goPage = (p) => {
     setPage(p);
@@ -124,7 +124,7 @@ function App() {
           goPage={goPage}
       ></Header>
 
-      {page === 0 && <TemplatePage
+      {page === 0 && <GenericPage
         featureAlertFunct={featureAlertFunct}
         mobile={mobile}
       />}
