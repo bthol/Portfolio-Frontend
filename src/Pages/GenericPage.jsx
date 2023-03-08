@@ -5,7 +5,7 @@ const GenericPage = (props) => {
 
     return (
         <div className="page-content">
-            <div className="content-container shadow-behind" id="container-first">
+            <div className="content-container shadow-behind container-first">
                 <div>
                     <p>First Container Content</p>
                 </div>
@@ -15,7 +15,7 @@ const GenericPage = (props) => {
                     <p>Middle Container Content</p>
                 </div>
             </div>
-            <div className="content-container shadow-behind" id="container-last">
+            <div className="content-container shadow-behind container-last">
                 <div>
                     <p>Last Container Content</p>
                 </div>

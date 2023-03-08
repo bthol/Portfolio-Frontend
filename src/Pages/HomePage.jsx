@@ -39,8 +39,8 @@ const HomePage = (props) => {
     }
 
     return (
-        <div className="page-content">
-            <div className="content-container shadow-behind" id="container-first">
+        <div id="homepage" className="page-content">
+            <div className="content-container shadow-behind container-first hometop">
                 <div className="flex-center">
                     <ProfilePhoto></ProfilePhoto>
                 </div>
@@ -171,7 +171,7 @@ const HomePage = (props) => {
                 }
                 <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
             </div>
-            <div className="content-container shadow-behind" id="container-last">
+            <div className="content-container shadow-behind container-last">
                 <h3 className="title-line text-x-large" tabIndex={0}>Education</h3>
                 <Comp4
                     school={Content.education[0].name}

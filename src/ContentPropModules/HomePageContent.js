@@ -4,8 +4,8 @@ const HomePageContent = {
       id: "projects-1",
       title: "Space Battle",
       text: <div>
-            <p><b>Technologies</b>: JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
-            <p><b>Description</b>: Fight off the alien horde for a new high score in this arcade-style battle game!</p>
+            <p><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
+            <p><b>Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
           </div>,
           list: <ul>
             <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank">Live Link</a></li>
@@ -19,8 +19,8 @@ const HomePageContent = {
           id: "projects-2",
           title: "Magic 8 Ball",
           text: <div>
-            <p><b>Technologies</b>: JavaScript, HTML, CSS</p>
-            <p><b>Description</b>: Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
+            <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
+            <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
           </div>,
           list: <ul>
             <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank">Live Link</a></li>
@@ -35,8 +35,8 @@ const HomePageContent = {
           title: "Retro Toe",
           carousel: <img src="" alt="project carousel"></img>,
           text: <div>
-            <p><b>Technologies</b>: JavaScript, HTML, CSS</p>
-            <p><b>Description</b>: Tic Tac Toe. Retro style.</p>
+            <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
+            <p><b>Description:</b> Tic Tac Toe. Retro style.</p>
           </div>,
           list: <ul>
             <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank">Live Link</a></li>
@@ -50,8 +50,8 @@ const HomePageContent = {
           id: "projects-3",
           title: "Calculo",
           text: <div>
-            <p><b>Technologies</b>: Python, Django, JavaScript, HTML, CSS</p>
-            <p><b>Description</b>: Calculo is a fully functional calculator application.</p>
+            <p><b>Technologies:</b> Python, Django, JavaScript, HTML, CSS</p>
+            <p><b>Description:</b> Calculo is a fully functional calculator application.</p>
           </div>,
           list: <ul>
             <li><a href="" className="link-desat" target="_blank">Live Link</a></li>
@@ -172,7 +172,7 @@ const HomePageContent = {
       {
         jobTitle: "General Assistant",
         employer: "Albany Saunas",
-        workPeriod: "Aug 2022 - Present",
+        workPeriod: "Aug 2022 - Jan 2023",
         list: <div className="exp-list">
           <ul>
             <li tabIndex={0}>Updating store website to reflect the most current scheduling information for customers</li>
