@@ -104,10 +104,10 @@ function App() {
   };
   
   // PAGE LOGIC
-  const [back, setBack] = useState("max-content");
+  const [back, setBack] = useState("100vh");
   if (getHeight() < window.innerHeight) {
     setBack("100vh");
-  } else if (back != "max-content") {
+  } else if (back !== "max-content") {
     setBack("max-content");
   }
   const [page, setPage] = useState(1);

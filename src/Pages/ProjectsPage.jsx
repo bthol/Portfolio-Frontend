@@ -10,9 +10,6 @@ const ProjectsPage = (props) => {
             </div>
             <div className="content-container">
                 <div>
-                    <p>Joshua</p>
-                </div>
-                <div>
                     <p>Mobile Rendering</p>
                     {
                         props.mobile

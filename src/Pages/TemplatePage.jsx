@@ -9,17 +9,12 @@ const TemplatePage = (props) => {
                     <p>First Container Content</p>
                 </div>
             </div>
-            <div className="content-container">
+            <div className="content-container shadow-behind">
                 <div>
-                    <p>Mobile Enviro Test</p>
-                    {
-                        props.mobile
-                        ? <p>Is Mobile</p>
-                        : <p>Isn't Mobile</p>
-                    }
+                    <p>Middle Container Content</p>
                 </div>
             </div>
-            <div className="content-container" id="container-last">
+            <div className="content-container shadow-behind" id="container-last">
                 <div>
                     <p>Last Container Content</p>
                 </div>

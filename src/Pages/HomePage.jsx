@@ -40,50 +40,20 @@ const HomePage = (props) => {
 
     return (
         <div className="page-content">
-            <div className="content-container" id="container-first">
+            <div className="content-container shadow-behind" id="container-first">
                 <div className="flex-center">
                     <ProfilePhoto></ProfilePhoto>
                 </div>
-                <div className="flex-center">
-                    <b><p>Contact Me</p></b>
-                </div>
                 <div className="flex-around">
                     <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={0}>LinkedIn</button></a>
-                    <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={0}>Email</button></a>
+                    <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={0}>Gmail</button></a>
                 </div>
-                <div className="flex-center">
-                    <p tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and further grow my creative and technological skillset.</p>
+                <br />
+                <div className="flex-center content-highlight">
+                    <div tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and further grow my creative and technological skillset.</div>
                 </div>
             </div>
             <div className="content-container shadow-behind">
-                <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
-                <div className={`section-lists`}>
-                    <Comp1
-                        skillsTitle={Content.skills[0].title}
-                        skillsList={Content.skills[0].list}
-                        id={Content.skills[0].id}
-                    ></Comp1>
-                </div>
-                {
-                    show &&
-                    <div className={`section-lists`}>
-                    <br />
-                    <Comp1
-                        skillsTitle={Content.skills[1].title}
-                        skillsList={Content.skills[1].list}
-                        id={Content.skills[1].id}
-                    ></Comp1>
-                    <br />
-                    <Comp1
-                        skillsTitle={Content.skills[2].title}
-                        skillsList={Content.skills[2].list}
-                        id={Content.skills[2].id}
-                    ></Comp1>
-                    </div>
-                }
-                <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
-            </div>
-            <div className="content-container">
                 <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
                 {
                     props.mobile
@@ -148,7 +118,35 @@ const HomePage = (props) => {
                     </div>
                 }
             </div>
-            <div className="content-container">
+            <div className="content-container shadow-behind">
+                <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
+                <div className={`section-lists`}>
+                    <Comp1
+                        skillsTitle={Content.skills[0].title}
+                        skillsList={Content.skills[0].list}
+                        id={Content.skills[0].id}
+                    ></Comp1>
+                </div>
+                {
+                    show &&
+                    <div className={`section-lists`}>
+                    <br />
+                    <Comp1
+                        skillsTitle={Content.skills[1].title}
+                        skillsList={Content.skills[1].list}
+                        id={Content.skills[1].id}
+                    ></Comp1>
+                    <br />
+                    <Comp1
+                        skillsTitle={Content.skills[2].title}
+                        skillsList={Content.skills[2].list}
+                        id={Content.skills[2].id}
+                    ></Comp1>
+                    </div>
+                }
+                <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
+            </div>
+            <div className="content-container shadow-behind">
                 <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
                 <Comp3
                     jobTitle={Content.experience[0].jobTitle}
@@ -172,7 +170,7 @@ const HomePage = (props) => {
                 ></Comp3>
                 <br />
             </div>
-            <div className="content-container" id="container-last">
+            <div className="content-container shadow-behind" id="container-last">
                 <h3 className="title-line text-x-large" tabIndex={0}>Education</h3>
                 <Comp4
                     school={Content.education[0].name}

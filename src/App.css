@@ -156,7 +156,7 @@
 
 .content-highlight {
   padding: 2vmin;
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--color-white);
   border: 1.2px solid var(--color-gray);
 }
@@ -169,6 +169,10 @@
   -moz-box-shadow: -5px 0px 4px -5px var(--color-gray);
   -webkit-box-shadow: -5px 0px 4px -5px var(--color-gray);
   box-shadow: -5px 0px 4px -5px var(--color-gray);
+}
+
+.carousel-item {
+  padding: 0vmin 3vmin 3vmin 3vmin;
 }
 
 /*    LINK    */
@@ -378,15 +382,10 @@ a {
   color: var(--font-color-1);
 }
 
-/*                       MAIN PAGE                              */
+/*                       TEMPLATE CONTENT                              */
 
-/* First Container */
 #container-first {
   margin-top: var(--below-header);
-}
-
-.carousel-item {
-  padding: 0vmin 3vmin 3vmin 3vmin;
 }
 
 .content-container {
@@ -400,47 +399,20 @@ a {
   color: var(--font-color-1);
 }
 
-/*                       QUIERIES(INTERACTIVITY)                       */
-
-/* laptop */
-@media(hover: hover) and (pointer: fine) {
-  .buttons:hover {
-    background-color: var(--color-gray);
-  }
-  .dark-button:hover {
-    background-color: var(--button-dark-detail);
-    color: var(--font-color-3);
-  }
-  .link-desat:hover {
-    transition: all 100ms ease;
-    color: var(--font-color-2);
-  }
-  .link-highlight:hover {
-    transition: all 100ms ease;
-    color: var(--font-color-3);
-  }
-  .top-link-style:hover {
-    background: var(--color-gray);
-  }
-  .hover-effect:hover {
-    -moz-box-box-shadow: 0px 0px 1px .5px var(--color-shadow);
-     -webkit-box-shadow: 0px 0px 1px .5px var(--color-shadow);
-             box-shadow: 0px 0px 1px .5px var(--color-shadow);
-  }
-}
-
 /*                       QUIERIES(RESPONSIVITY)                       */
 @media(min-width: 768px) {
   
-  /* #container-first {
+  #container-first {
     margin-top: 0px;
+    border-top: 0px;
+    grid-row: 1/5;
   }
 
   .page-content {
-    margin-top: var(--below-header);
-    grid-template-columns: 1fr 4fr 1fr;
+    padding-top: var(--below-header);
+    grid-template-columns: 1fr 4fr;
     gap: 10px;
-  } */
+  }
 
   .top-link-style {
     width: 98.80%;
@@ -513,5 +485,34 @@ a {
   }
   .profile-photo {
     width: 300px;
+  }
+}
+
+/*                       QUIERIES(INTERACTIVITY)                       */
+
+/* laptop */
+@media(hover: hover) and (pointer: fine) {
+  .buttons:hover {
+    background-color: var(--color-gray);
+  }
+  .dark-button:hover {
+    background-color: var(--button-dark-detail);
+    color: var(--font-color-3);
+  }
+  .link-desat:hover {
+    transition: all 100ms ease;
+    color: var(--font-color-2);
+  }
+  .link-highlight:hover {
+    transition: all 100ms ease;
+    color: var(--font-color-3);
+  }
+  .top-link-style:hover {
+    background: var(--color-gray);
+  }
+  .hover-effect:hover {
+    -moz-box-box-shadow: 0px 0px 1px .5px var(--color-shadow);
+     -webkit-box-shadow: 0px 0px 1px .5px var(--color-shadow);
+             box-shadow: 0px 0px 1px .5px var(--color-shadow);
   }
 }
