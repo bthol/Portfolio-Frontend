@@ -8,7 +8,7 @@ const ProjectsPage = (props) => {
                     <p>First Container Content</p>
                 </div>
             </div>
-            <div className="content-container">
+            <div className="content-container shadow-behind">
                 <div>
                     <p>Mobile Rendering</p>
                     {
@@ -18,7 +18,7 @@ const ProjectsPage = (props) => {
                     }
                 </div>
             </div>
-            <div className="content-container" id="container-last">
+            <div className="content-container shadow-behind" id="container-last">
                 <div>
                     <p>Last Container Content</p>
                 </div>

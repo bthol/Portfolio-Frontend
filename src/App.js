@@ -105,14 +105,14 @@ function App() {
   
   // PAGE LOGIC
   const [back, setBack] = useState("100vh");
-  if (getHeight() < window.innerHeight) {
-    setBack("100vh");
-  } else if (back !== "max-content") {
-    setBack("max-content");
-  }
   const [page, setPage] = useState(1);
   const goPage = (p) => {
     setPage(p);
+    if (getHeight() < window.innerHeight) {
+      setBack("100vh");
+    } else if (back !== "max-content") {
+      setBack("max-content");
+    }
   }
   return (
     <div id="root-react" className={`App color ${theme}`} style={{height: back}}>

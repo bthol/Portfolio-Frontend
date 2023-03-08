@@ -1,4 +1,4 @@
-/* THEMES */
+/*-----------------------------------------------THEMES-----------------------------------------------*/
 .color-theme-day {
   --color-background-1: #6694cc;
   --color-background-2: #c4edf7;
@@ -34,7 +34,7 @@
   --button-dark-detail: #000000;
 }
 
-/*                    TEMPLATE LAYOUT                       */
+/*-----------------------------------------------TEMPLATE LAYOUT-----------------------------------------------*/
 * {
   --header-height: 60px;
   --nav-height: 20px;
@@ -42,7 +42,7 @@
   --below-header: calc(var(--header-height) + var(--nav-height) + 33px);
 }
 
-/*    HEADER    */
+/*-----------------------------------------------HEADER-----------------------------------------------*/
 .app-header {
   position: fixed;
   width: 100%;
@@ -58,7 +58,7 @@
   height: var(--header-height);
 }
 
-/*    NAVIGATION    */
+/*-----------------------------------------------NAVIGATION-----------------------------------------------*/
 .app-nav {
   padding: 8px 0px;
   font-size: .9em;
@@ -99,7 +99,7 @@
   background: var(--color-gray);
 }
 
-/* FOOTER */
+/*-----------------------------------------------FOOTER-----------------------------------------------*/
 .app-footer {
   height: var(--footer-height);
   font-size: .9em;
@@ -121,9 +121,30 @@
   padding: 0px;
 }
 
-/*                    TEMPLATE STYLE                       */
+/*-----------------------------------------------GENERAL LAYOUT-----------------------------------------------*/
+.flex-between { 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
 
-/* BACKGROUND + BORDER */
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*-----------------------------------------------TEMPLATE STYLE-----------------------------------------------*/
+
+/*-----------------------------------------------BACKGROUND + BORDER-----------------------------------------------*/
 #root-react {
   background: var(--color-background-1);
   background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
@@ -175,7 +196,7 @@
   padding: 0vmin 3vmin 3vmin 3vmin;
 }
 
-/*    LINK    */
+/*-----------------------------------------------LINK-----------------------------------------------*/
 a {
   text-decoration: none;
   color: var(--font-color-1);
@@ -189,7 +210,7 @@ a {
   background: var(--color-background-3);
 }
 
-/*    TEXT    */
+/*-----------------------------------------------TEXT-----------------------------------------------*/
 .text-x-large {
   font-size: x-large;
 }
@@ -215,13 +236,13 @@ a {
             user-select: none;
 }
 
-/*    LIST    */
+/*-----------------------------------------------LIST-----------------------------------------------*/
 .remove-bullet-list {
   margin-bottom: 0px;
   list-style-type: none;
 }
 
-/*    BUTTON    */
+/*-----------------------------------------------BUTTON-----------------------------------------------*/
 .buttons {
   cursor: pointer;
   padding: 3px 5px;
@@ -241,7 +262,7 @@ a {
   color: var(--font-color-1);
 }
 
-/*    ARROWS    */
+/*-----------------------------------------------ARROWS-----------------------------------------------*/
 .nav-arrow {
   margin-left: 8px;
   height: 5px;
@@ -268,7 +289,7 @@ a {
   transform: rotate(225deg);
 }
 
-/*    TITLE    */
+/*-----------------------------------------------TITLE-----------------------------------------------*/
 #website-title {
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
@@ -279,13 +300,16 @@ a {
   pointer-events: none;
 }
 
-/*    LOGO    */
+/*-----------------------------------------------ICON-----------------------------------------------*/
 .augium-web-icon {
   width: 3em;
   margin: 0px 10px;
 }
 
-/* PROFILE IMAGE */
+/*-----------------------------------------------PROFILE IMAGE-----------------------------------------------*/
+.profile-container {
+  margin-top: 8px;
+}
 
 .profile-border {
   position: relative;
@@ -310,6 +334,7 @@ a {
   box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
 }
 
+/*-----------------------------------------------ANIMATIONS-----------------------------------------------*/
 @keyframes colorShift {
   0% {
     background-position: 100% 100%;
@@ -338,28 +363,7 @@ a {
   }
 }
 
-/* GENERAL USE */
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
-.flex-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-/*                       MODALS                       */
+/*-----------------------------------------------MODALS-----------------------------------------------*/
 .modal {
   position: fixed;
   z-index: -1;
@@ -382,8 +386,7 @@ a {
   color: var(--font-color-1);
 }
 
-/*                       TEMPLATE CONTENT                              */
-
+/*-----------------------------------------------CONTENT TEMPLATE STYLE-----------------------------------------------*/
 #container-first {
   margin-top: var(--below-header);
 }
@@ -399,28 +402,28 @@ a {
   color: var(--font-color-1);
 }
 
-/*                       QUIERIES(RESPONSIVITY)                       */
 @media(min-width: 768px) {
-  
   #container-first {
     margin-top: 0px;
     border-top: 0px;
     grid-row: 1/5;
   }
-
   .page-content {
     padding-top: var(--below-header);
     grid-template-columns: 1fr 4fr;
     gap: 10px;
   }
+}
 
+/*-----------------------------------------------QUIERIES(RESPONSIVITY)-----------------------------------------------*/
+@media(min-width: 768px) {
   .top-link-style {
     width: 98.80%;
     margin: 0px 2px 8px 2px;
   }
   .section-lists div {
     display: grid;
-    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-columns: 2fr 4fr 1fr;
   }
   .exp-list {
     width: 40vw;
@@ -488,9 +491,7 @@ a {
   }
 }
 
-/*                       QUIERIES(INTERACTIVITY)                       */
-
-/* laptop */
+/*-----------------------------------------------QUIERIES(INTERACTIVITY)-----------------------------------------------*/
 @media(hover: hover) and (pointer: fine) {
   .buttons:hover {
     background-color: var(--color-gray);

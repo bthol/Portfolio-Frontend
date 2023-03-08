@@ -104,7 +104,6 @@ const HomePageContent = {
           <ul>
             <li tabIndex={0}>Used for statistical programming</li>
             <li tabIndex={0}>Excellent for science applications</li>
-            <li tabIndex={0}></li>
           </ul>
           <p></p>
         </ul>,

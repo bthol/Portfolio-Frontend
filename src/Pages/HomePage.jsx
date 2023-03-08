@@ -120,16 +120,12 @@ const HomePage = (props) => {
             </div>
             <div className="content-container shadow-behind">
                 <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
-                <div className={`section-lists`}>
+                <div className="section-lists">
                     <Comp1
                         skillsTitle={Content.skills[0].title}
                         skillsList={Content.skills[0].list}
                         id={Content.skills[0].id}
                     ></Comp1>
-                </div>
-                {
-                    show &&
-                    <div className={`section-lists`}>
                     <br />
                     <Comp1
                         skillsTitle={Content.skills[1].title}
@@ -142,9 +138,8 @@ const HomePage = (props) => {
                         skillsList={Content.skills[2].list}
                         id={Content.skills[2].id}
                     ></Comp1>
-                    </div>
-                }
-                <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
+                    <br />
+                </div>
             </div>
             <div className="content-container shadow-behind">
                 <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
@@ -154,21 +149,27 @@ const HomePage = (props) => {
                     workPeriod={Content.experience[0].workPeriod}
                     list={Content.experience[0].list}
                 ></Comp3>
-                <br />
-                <Comp3
-                    jobTitle={Content.experience[1].jobTitle}
-                    employer={Content.experience[1].employer}
-                    workPeriod={Content.experience[1].workPeriod}
-                    list={Content.experience[1].list}
-                ></Comp3>
-                <br />
-                <Comp3
-                    jobTitle={Content.experience[2].jobTitle}
-                    employer={Content.experience[2].employer}
-                    workPeriod={Content.experience[2].workPeriod}
-                    list={Content.experience[2].list}
-                ></Comp3>
-                <br />
+                {
+                    show &&
+                    <div>
+                        <br />
+                        <Comp3
+                            jobTitle={Content.experience[1].jobTitle}
+                            employer={Content.experience[1].employer}
+                            workPeriod={Content.experience[1].workPeriod}
+                            list={Content.experience[1].list}
+                        ></Comp3>
+                        <br />
+                        <Comp3
+                            jobTitle={Content.experience[2].jobTitle}
+                            employer={Content.experience[2].employer}
+                            workPeriod={Content.experience[2].workPeriod}
+                            list={Content.experience[2].list}
+                        ></Comp3>
+                        <br />
+                    </div>
+                }
+                <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
             </div>
             <div className="content-container shadow-behind" id="container-last">
                 <h3 className="title-line text-x-large" tabIndex={0}>Education</h3>
