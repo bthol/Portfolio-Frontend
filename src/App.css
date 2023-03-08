@@ -374,12 +374,12 @@ a {
   top: 0%;
   width: 100vw;
   height: 100vh;
-  background: #00000060;
+  background: #00000066;
 }
 
 .modal-content-open {
   top: 25%;
-  padding: 10vmin 14vmin 20vmin 14vmin;
+  padding: 7% 9.5% 12% 9.5%;
   text-align: center;
   background: var(--color-background-3);
   border: 1.3px solid var(--button-dark-detail);

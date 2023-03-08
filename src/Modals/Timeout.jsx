@@ -4,11 +4,12 @@ const Timeout = (props) => {
     return (
         <div className={`modal modal-container-${props.modal} flex-center`}>
             <div className={`modal modal-content-${props.modal} shadow-behind`}>
-            <h2>Inactive</h2>
+            <h1>Inactive</h1>
             <hr />
-            <p>Are you still there?</p>
+            <p className="text-xlarge">Are you still there?</p>
+            <br />
             <div>
-                <button onClick={() => {props.setModal("closed")}} className="buttons modal-button">Yes</button>
+                <button onClick={() => {props.setModal("closed")}} className="buttons modal-button">Yes, I'm still here</button>
             </div>
             </div>
         </div>
