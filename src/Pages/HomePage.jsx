@@ -40,7 +40,7 @@ const HomePage = (props) => {
 
     return (
         <div id="homepage" className="page-content">
-            <div className="content-container shadow-behind container-first hometop">
+            <div id="hometop" className="content-container shadow-behind container-first">
                 <div className="flex-center">
                     <ProfilePhoto></ProfilePhoto>
                 </div>
@@ -52,9 +52,12 @@ const HomePage = (props) => {
                 <div className="flex-center content-highlight">
                     <div tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and further grow my creative and technological skillset.</div>
                 </div>
+                <br />
             </div>
-            <div className="content-container shadow-behind">
-                <h3 className="title-line text-x-large" tabIndex={0}>Project Highlights</h3>
+            <div id="homepage-mid-1" className="content-container shadow-behind">
+                <div className="flex-center">
+                    <h3 className="text-x-large" tabIndex={0}>Project Highlights</h3>
+                </div>
                 {
                     props.mobile
                     ? <div>
@@ -77,48 +80,50 @@ const HomePage = (props) => {
                         ></Comp2>
                         <br />
                         </div>
-                    : <div className="carousel-container">
-                        <div className={`projects-carousel carPos${carPos}`}>
-                            <Comp2
-                                projectTitle={Content.projects[0].title}
-                                projectText={Content.projects[0].text}
-                                projectList={Content.projects[0].list}
-                            ></Comp2>
-                            <br />
-                            <Comp2
-                                projectTitle={Content.projects[1].title}
-                                projectText={Content.projects[1].text}
-                                projectList={Content.projects[1].list}
-                            ></Comp2>
-                            <br />
-                            <Comp2
-                                projectTitle={Content.projects[2].title}
-                                projectText={Content.projects[2].text}
-                                projectList={Content.projects[2].list}
-                            ></Comp2>
-                            <br />
-                        </div>
-                        <div className="carButs flex-center">
-                            <button onClick={() => {
-                            resetCarBtn();
-                            setCarPos(0);
-                            setCarBtn0("carPos0");
-                            }} className={`cursor-pointer ${carBtn0}`}></button>
-                            <button onClick={() => {
-                            resetCarBtn();
-                            setCarPos(1);
-                            setCarBtn1("carPos1");
-                            }} className={`cursor-pointer ${carBtn1}`}></button>
-                            <button onClick={() => {
-                            resetCarBtn();
-                            setCarPos(2);
-                            setCarBtn2("carPos2");
-                            }} className={`cursor-pointer ${carBtn2}`}></button>
+                    : <div className="flex-center">
+                        <div className="carousel-container">
+                            <div className={`projects-carousel carPos${carPos}`}>
+                                <Comp2
+                                    projectTitle={Content.projects[0].title}
+                                    projectText={Content.projects[0].text}
+                                    projectList={Content.projects[0].list}
+                                ></Comp2>
+                                <br />
+                                <Comp2
+                                    projectTitle={Content.projects[1].title}
+                                    projectText={Content.projects[1].text}
+                                    projectList={Content.projects[1].list}
+                                ></Comp2>
+                                <br />
+                                <Comp2
+                                    projectTitle={Content.projects[2].title}
+                                    projectText={Content.projects[2].text}
+                                    projectList={Content.projects[2].list}
+                                ></Comp2>
+                                <br />
+                            </div>
+                            <div className="carButs flex-center">
+                                <button onClick={() => {
+                                resetCarBtn();
+                                setCarPos(0);
+                                setCarBtn0("carPos0");
+                                }} className={`cursor-pointer ${carBtn0}`}></button>
+                                <button onClick={() => {
+                                resetCarBtn();
+                                setCarPos(1);
+                                setCarBtn1("carPos1");
+                                }} className={`cursor-pointer ${carBtn1}`}></button>
+                                <button onClick={() => {
+                                resetCarBtn();
+                                setCarPos(2);
+                                setCarBtn2("carPos2");
+                                }} className={`cursor-pointer ${carBtn2}`}></button>
+                            </div>
                         </div>
                     </div>
                 }
             </div>
-            <div className="content-container shadow-behind">
+            <div id="homepage-mid-2" className="content-container shadow-behind">
                 <h3 className="title-line text-x-large" tabIndex={0}>Skills and Knowledge</h3>
                 <div className="section-lists">
                     <Comp1
@@ -141,7 +146,7 @@ const HomePage = (props) => {
                     <br />
                 </div>
             </div>
-            <div className="content-container shadow-behind">
+            <div id="homepage-mid-3" className="content-container shadow-behind">
                 <h3 className="title-line text-x-large" tabIndex={0}>Work Experience</h3>
                 <Comp3
                     jobTitle={Content.experience[0].jobTitle}
@@ -171,7 +176,7 @@ const HomePage = (props) => {
                 }
                 <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
             </div>
-            <div className="content-container shadow-behind container-last">
+            <div id="homepage-mid-4" className="content-container shadow-behind container-last">
                 <h3 className="title-line text-x-large" tabIndex={0}>Education</h3>
                 <Comp4
                     school={Content.education[0].name}

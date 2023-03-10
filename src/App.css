@@ -501,23 +501,38 @@ a {
   }
 }
 
-/*-----------------------------------------------HOMEPAGE CONTENT-----------------------------------------------*/
+/*-----------------------------------------------HOMEPAGE CONTENT LAYOUT-----------------------------------------------*/
 @media(min-width: 768px) {
   #homepage.page-content {
     padding-top: var(--below-header);
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
+  }
+  #hometop {
+    margin-top: 0px;
   }
   .container-first {
     border-top: 0px;
-    grid-row: 1/5;
   }
-  .hometop {
-    margin-top: 0px;
+  #homepage-mid-1 {
+    grid-column: 2 / 6;
+  }
+  #homepage-mid-2 {
+    /* Space for Parallax effect */
+    /* margin-bottom: 100vh; */
+    grid-column: 1 / 6;
+  }
+  #homepage-mid-3 {
+    grid-column: 1 / 6;
+  }
+  #homepage-mid-4 {
+    grid-column: 1 / 6;
   }
   #homepage .section-lists div {
     display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
-
+    grid-template-columns: 1fr 2.9fr;
+  }
+  .carousel-container {
+    width: 60vw;
   }
 }

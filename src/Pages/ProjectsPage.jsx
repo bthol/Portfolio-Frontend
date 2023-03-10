@@ -3,22 +3,22 @@ import React from 'react';
 const ProjectsPage = (props) => {
     return (
         <div className="page-content">
-            <div className="content-container shadow-behind container-first">
+            <div id="section-1" className="content-container shadow-behind container-first">
                 <div>
                     <p>First Container Content</p>
                 </div>
             </div>
-            <div className="content-container shadow-behind">
+            <div id="section-2" className="content-container shadow-behind">
+                {
+                    props.mobile
+                    ? <p>Is Mobile</p>
+                    : <p>Isn't Mobile</p>
+                }
                 <div>
-                    <p>Middle Content</p>
-                    {
-                        props.mobile
-                        ? <p>Is Mobile</p>
-                        : <p>Isn't Mobile</p>
-                    }
+                    <p>Middle Container Content</p>
                 </div>
             </div>
-            <div className="content-container shadow-behind container-last">
+            <div id="section-3" className="content-container shadow-behind container-last">
                 <div>
                     <p>Last Container Content</p>
                 </div>

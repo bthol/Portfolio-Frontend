@@ -91,15 +91,15 @@ function App() {
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-day");
   const [togTheme, setTogTheme] = useState(false);
-  const [btnText, setBtnText] = useState("Night Theme");
+  const [btnText, setBtnText] = useState("Night");
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
       setTheme("color-theme-day");
-      setBtnText("Night Theme");
+      setBtnText("Night");
     } else {
       setTheme("color-theme-night");
-      setBtnText("Day Theme");
+      setBtnText("Day");
     }
   };
   
