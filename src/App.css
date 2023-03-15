@@ -40,6 +40,7 @@
   --nav-height: 20px;
   --footer-height: 250px;
   --below-header: calc(var(--header-height) + var(--nav-height) + 33px);
+  --anim-rate: 250ms;
 }
 
 /*-----------------------------------------------HEADER-----------------------------------------------*/
@@ -82,12 +83,12 @@
 
 .menu-close > div {
   top: -100%;
-  transition: top 300ms ease-in;
+  transition: top var(--anim-rate) ease-in;
 }
 
 .menu-open > div {
   top: 99%;
-  transition: top 300ms ease-out;
+  transition: top var(--anim-rate) ease-out;
 }
 
 .scroll-track-bar {
@@ -196,6 +197,33 @@
   padding: 0vmin 3vmin 3vmin 3vmin;
 }
 
+/*-----------------------------------------------ARROWS-----------------------------------------------*/
+.nav-arrow {
+  margin-left: 8px;
+  height: 5px;
+  width: 5px;
+  top: 5px;
+  position: relative;
+  border: 1.5px solid var(--font-color-1);
+  border-top: hidden;
+  border-left: hidden;
+}
+.nav-arrow.menu-close {
+  transform: rotate(405deg);
+  transition: transform var(--anim-rate) ease-in-out;
+}
+.nav-arrow.menu-open {
+  transform: rotate(45deg);
+  transition: transform var(--anim-rate) ease-in-out;
+}
+
+.nav-arrow.down-arrow {
+  transform: rotate(45deg);
+}
+.nav-arrow.up-arrow {
+  transform: rotate(225deg);
+}
+
 /*-----------------------------------------------LINK-----------------------------------------------*/
 a {
   text-decoration: none;
@@ -260,33 +288,6 @@ a {
   background: none;
   border: none;
   color: var(--font-color-1);
-}
-
-/*-----------------------------------------------ARROWS-----------------------------------------------*/
-.nav-arrow {
-  margin-left: 8px;
-  height: 5px;
-  width: 5px;
-  top: 5px;
-  position: relative;
-  border: 1.5px solid var(--font-color-1);
-  border-top: hidden;
-  border-left: hidden;
-}
-.nav-arrow.menu-close {
-  transform: rotate(405deg);
-  transition: transform 300ms ease-in-out;
-}
-.nav-arrow.menu-open {
-  transform: rotate(45deg);
-  transition: transform 300ms ease-in-out;
-}
-
-.nav-arrow.down-arrow {
-  transform: rotate(45deg);
-}
-.nav-arrow.up-arrow {
-  transform: rotate(225deg);
 }
 
 /*-----------------------------------------------TITLE-----------------------------------------------*/
