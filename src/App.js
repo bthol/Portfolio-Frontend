@@ -108,7 +108,7 @@ function App() {
   const [page, setPage] = useState(1);
   const goPage = (p) => {
     setPage(p);
-    if (getHeight() < window.innerHeight) {
+    if (getHeight() > window.innerHeight) {
       setBack("100vh");
     } else if (back !== "max-content") {
       setBack("max-content");

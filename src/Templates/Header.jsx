@@ -11,8 +11,8 @@ const Header = (props) => {
             links: <div className="nav-menu-style">
                 <a href="" onClick={(e) => {
                     e.preventDefault();
-                    props.goPage(2);
-                }} className="link-desat">Projects</a>
+                    props.goPage(0);
+                }} className="link-desat">Generic</a>
             </div>,
         },
         {
