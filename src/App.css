@@ -1,3 +1,42 @@
+/*-----------------------------------------------TABLE OF CONTENTS-----------------------------------------------*/
+
+/* VARIABLES */
+  /* GENERAL VARS */
+  /* THEMES */
+/* TEMPLATE LAYOUT */
+  /* HEADER TEMPLATE */
+  /* NAVIGATION TEMPLATE */
+  /* FOOTER TEMPLATE */
+  /* GENERAL LAYOUT */
+/* TEMPLATE STYLE */
+  /* BACKGROUND + BORDER */
+  /* ARROWS STYLE TEMPLATE */
+  /* LINK STYLE TEMPLATE*/
+  /* TEXT STYLE TEMPLATE */
+  /* LIST STYLE TEMPLATE */
+  /* BUTTON STYLE TEMPLATE */
+  /* CONTENT STYLE TEMPLATE*/
+  /* WEBSITE TITLE */
+  /* ICON */
+  /* PROFILE IMAGE */
+  /* ANIMATIONS */
+  /* MODALS */
+/* QUERIES */
+  /* RESPONSIVITY */
+  /* INTERACTIVITY */
+/* CUSTOM CONTENT */
+  /* HOMEPAGE CONTENT*/
+
+/*-----------------------------------------------VARIABLES-----------------------------------------------*/
+
+/*-----------------------------------------------GENERAL VARS-----------------------------------------------*/
+* {
+  --header-height: 60px;
+  --nav-height: 20px;
+  --footer-height: 250px;
+  --below-header: calc(var(--header-height) + var(--nav-height) + 33px);
+  --anim-rate: 250ms;
+}
 /*-----------------------------------------------THEMES-----------------------------------------------*/
 .color-theme-day {
   --color-background-1: #6694cc;
@@ -35,15 +74,8 @@
 }
 
 /*-----------------------------------------------TEMPLATE LAYOUT-----------------------------------------------*/
-* {
-  --header-height: 60px;
-  --nav-height: 20px;
-  --footer-height: 250px;
-  --below-header: calc(var(--header-height) + var(--nav-height) + 33px);
-  --anim-rate: 250ms;
-}
 
-/*-----------------------------------------------HEADER-----------------------------------------------*/
+/*-----------------------------------------------HEADER TEMPLATE-----------------------------------------------*/
 .app-header {
   position: fixed;
   width: 100%;
@@ -59,7 +91,7 @@
   height: var(--header-height);
 }
 
-/*-----------------------------------------------NAVIGATION-----------------------------------------------*/
+/*-----------------------------------------------NAVIGATION TEMPLATE-----------------------------------------------*/
 .app-nav {
   padding: 8px 0px;
   font-size: .9em;
@@ -100,7 +132,7 @@
   background: var(--color-gray);
 }
 
-/*-----------------------------------------------FOOTER-----------------------------------------------*/
+/*-----------------------------------------------FOOTER TEMPLATE-----------------------------------------------*/
 .app-footer {
   height: var(--footer-height);
   font-size: .9em;
@@ -197,7 +229,7 @@
   padding: 0vmin 3vmin 3vmin 3vmin;
 }
 
-/*-----------------------------------------------ARROWS-----------------------------------------------*/
+/*-----------------------------------------------ARROWS STYLE TEMPLATE-----------------------------------------------*/
 .nav-arrow {
   margin-left: 8px;
   height: 5px;
@@ -224,7 +256,7 @@
   transform: rotate(225deg);
 }
 
-/*-----------------------------------------------LINK-----------------------------------------------*/
+/*-----------------------------------------------LINK STYLE TEMPLATE-----------------------------------------------*/
 a {
   text-decoration: none;
   color: var(--font-color-1);
@@ -238,7 +270,7 @@ a {
   background: var(--color-background-3);
 }
 
-/*-----------------------------------------------TEXT-----------------------------------------------*/
+/*-----------------------------------------------TEXT STYLE TEMPLATE-----------------------------------------------*/
 .text-x-large {
   font-size: x-large;
 }
@@ -264,13 +296,13 @@ a {
             user-select: none;
 }
 
-/*-----------------------------------------------LIST-----------------------------------------------*/
+/*-----------------------------------------------LIST STYLE TEMPLATE-----------------------------------------------*/
 .remove-bullet-list {
   margin-bottom: 0px;
   list-style-type: none;
 }
 
-/*-----------------------------------------------BUTTON-----------------------------------------------*/
+/*-----------------------------------------------BUTTON STYLE TEMPLATE-----------------------------------------------*/
 .buttons {
   cursor: pointer;
   padding: 3px 5px;
@@ -290,7 +322,23 @@ a {
   color: var(--font-color-1);
 }
 
-/*-----------------------------------------------TITLE-----------------------------------------------*/
+/*-----------------------------------------------CONTENT STYLE TEMPLATE-----------------------------------------------*/
+.container-first {
+  margin-top: var(--below-header);
+}
+
+.content-container {
+  padding: 0vw 2vw;
+  padding-top: 8px;
+}
+
+.page-content {
+  display: grid;
+  margin: 0px 10px 10px 10px;
+  color: var(--font-color-1);
+}
+
+/*-----------------------------------------------WEBSITE TITLE-----------------------------------------------*/
 #website-title {
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
@@ -387,23 +435,8 @@ a {
   color: var(--font-color-1);
 }
 
-/*-----------------------------------------------CONTENT TEMPLATE STYLE-----------------------------------------------*/
-.container-first {
-  margin-top: var(--below-header);
-}
-
-.content-container {
-  padding: 0vw 2vw;
-  padding-top: 8px;
-}
-
-.page-content {
-  display: grid;
-  margin: 0px 10px 10px 10px;
-  color: var(--font-color-1);
-}
-
-/*-----------------------------------------------QUIERIES(RESPONSIVITY)-----------------------------------------------*/
+/*-----------------------------------------------QUERIES-----------------------------------------------*/
+/*-----------------------------------------------RESPONSIVITY-----------------------------------------------*/
 @media(min-width: 768px) {
   .top-link-style {
     width: 98.80%;
@@ -475,7 +508,7 @@ a {
   }
 }
 
-/*-----------------------------------------------QUIERIES(INTERACTIVITY)-----------------------------------------------*/
+/*-----------------------------------------------INTERACTIVITY-----------------------------------------------*/
 @media(hover: hover) and (pointer: fine) {
   .buttons:hover {
     background-color: var(--color-gray);
@@ -502,7 +535,8 @@ a {
   }
 }
 
-/*-----------------------------------------------HOMEPAGE CONTENT LAYOUT-----------------------------------------------*/
+/*-----------------------------------------------CUSTOM CONTENT-----------------------------------------------*/
+/*-----------------------------------------------HOMEPAGE CONTENT-----------------------------------------------*/
 @media(min-width: 768px) {
   #homepage.page-content {
     padding-top: var(--below-header);
