@@ -45,9 +45,10 @@ const HomePage = (props) => {
                     <ProfilePhoto></ProfilePhoto>
                 </div>
                 <div className="flex-around">
-                    <div>views: {props.views}</div>
+                    <div>views : {props.portfolioViews}</div>
+                    <div><button className="buttons">Likes</button> : {props.portfolioLikes}</div>
                 </div>
-                <br />
+                <hr />
                 <div className="flex-around">
                     <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={0}>LinkedIn</button></a>
                     |

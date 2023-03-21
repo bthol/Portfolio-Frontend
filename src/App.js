@@ -104,30 +104,48 @@ function App() {
   };
   
   // PAGE LOGIC
-  const pages = [0, 1, 2];
-  const [page, setPage] = useState(1);
-  const [back, setBack] = useState("max-height");
-  const goPage = (p) => {
-    // pageData(p);
+  const [page, setPage] = useState(1); // sets default page
+  const goPage = (p) => { // function for page navigation
     setPage(p);
+    pageDisplay();
+  }
+
+  // state for page properties
+  const [back, setBack] = useState("max-height");
+  // function that adjusts layout by page properties
+  const pageDisplay = () => {
     if (getHeight() > window.innerHeight) {
       setBack("100vh");
     } else if (back !== "max-content") {
       setBack("max-content");
     }
   }
-
-  // DATA FOR PAGES
-  const [views, setViews] = useState(0);
-  const getPageData = async (e) => {
-    const data = await fetch(`https://bthol-portfolio-backend.herokuapp.com/test/`)
-      .then(res => res.json())
-      .catch(error => console.log(error))
-    // e.preventDefault();
-    // console.log(data.data[0]);
-    // setViews(data.data[0].numVal);
+  
+  // wrapper function for network diagnostic purposes
+  const gotData = (promise) => {
+    const gotData = new Promise((resolve) => {
+      resolve(promise);
+    })
+    console.log(gotData);
   }
-  getPageData();
+
+  // Page Data State
+  const [portfolioViews, setPortfolioViews] = useState(1);
+  const [portfolioLikes, setPortfolioLikes] = useState(1);
+  
+  useEffect(() => {
+    let ignore = false;
+    fetch(`https://bthol-portfolio-backend.herokuapp.com/test/`)
+    .then(res => res.json())
+    .then((data) => {
+      if (!ignore) {
+        setPortfolioViews(data.data[0].numVal)
+        setPortfolioLikes(data.data[0].numVal)
+      }
+    })
+    .catch(error => console.log(error))
+    return () => {ignore = true};
+  }, [])
 
   return (
     <div id="root-react" className={`App color ${theme}`} style={{height: back}}>
@@ -139,23 +157,26 @@ function App() {
           goPage={goPage}
       ></Header>
 
-      {page === pages[0] &&
+      {
+        page === 0 &&
         <GenericPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
-        />}
-      {
-
-      }
-      {page === pages[1] &&
-        <HomePage
-          featureAlertFunct={featureAlertFunct}
-          mobile={mobile}
-          views={views}
         />
       }
 
-      {page === pages[2] &&
+      {
+        page === 1 && 
+        <HomePage
+          featureAlertFunct={featureAlertFunct}
+          mobile={mobile}
+          portfolioViews={portfolioViews}
+          portfolioLikes={portfolioLikes}
+        />
+      }
+
+      {
+        page === 2 &&
         <ProjectsPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
