@@ -44,25 +44,27 @@ const HomePage = (props) => {
                 <div className="flex-center">
                     <ProfilePhoto></ProfilePhoto>
                 </div>
-                <div >
-                    <div className="flex-around">
-                        <div>views: {props.portfolioViews}</div>
-                        <div><button className="round-btn" onClick={props.featureAlertFunct}>Likes</button> : {props.portfolioLikes}</div>
+                <div className="flex-around">
+                    <div className="dashboard-container">
+                        <div className="flex-around">
+                            <div>views : {props.portfolioViews}</div>
+                            <div><button className="like-btn" onClick={props.featureAlertFunct}>Likes</button> : {props.portfolioLikes}</div>
+                        </div>
+                        <hr />
+                        <div className="flex-around">
+                            <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={0}>LinkedIn</button></a>
+                            |
+                            <a href="https://github.com/bthol" target="_blank"><button type="button" className="buttons" tabIndex={0}>GitHub</button></a>
+                            |
+                            <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={0}>Gmail</button></a>
+                        </div>
                     </div>
-                    <hr />
-                    <div className="flex-around">
-                        <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={0}>LinkedIn</button></a>
-                        |
-                        <a href="https://github.com/bthol" target="_blank"><button type="button" className="buttons" tabIndex={0}>GitHub</button></a>
-                        |
-                        <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={0}>Gmail</button></a>
-                    </div>
-                    <br />
-                    <div className="flex-center content-highlight">
-                        <div tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and further grow my creative and technological skillset.</div>
-                    </div>
-                    <br />
                 </div>
+                <br />
+                <div className="flex-center content-highlight">
+                    <div tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and further grow my creative and technological skillset.</div>
+                </div>
+                <br />
             </div>
             <div id="homepage-mid-1" className="content-container shadow-behind">
                 <div className="flex-center">
