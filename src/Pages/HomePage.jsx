@@ -45,7 +45,14 @@ const HomePage = (props) => {
                     <ProfilePhoto></ProfilePhoto>
                 </div>
                 <div className="flex-around">
+                    <div>views: {props.views}</div>
+                </div>
+                <br />
+                <div className="flex-around">
                     <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={0}>LinkedIn</button></a>
+                    |
+                    <a href="https://github.com/bthol" target="_blank"><button type="button" className="buttons" tabIndex={0}>GitHub</button></a>
+                    |
                     <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={0}>Gmail</button></a>
                 </div>
                 <br />

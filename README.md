@@ -9,10 +9,12 @@ Import the new content component to App.js by adding an import statement to the 
 import { NewPage } from './Pages/NewPage';
 
 and add rendering code around line 127:
-{page === 4 && <NewPage
-    featureAlertFunct={featureAlertFunct}
-    mobile={mobile}
-/>}
+{page === 4 &&
+    <NewPage
+        featureAlertFunct={featureAlertFunct}
+        mobile={mobile}
+    />
+}
 
 Ensure that the added code has the same name as the new page's content component in the filename within the path for the import statement, and the same name in the rendering code, and a unique page number. The default page number is 1, and you can set your new page's number to that and comment out the HomePage rending code, so that your new page renders by default while you are working on it. At this point, navigate back to the content component for the new page, and import display components and a content module for use in creating the page using the same import statement syntax as before. Now, you have set everything up for creating a whole new page!
 

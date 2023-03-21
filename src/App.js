@@ -104,9 +104,11 @@ function App() {
   };
   
   // PAGE LOGIC
-  const [back, setBack] = useState("max-height");
+  const pages = [0, 1, 2];
   const [page, setPage] = useState(1);
+  const [back, setBack] = useState("max-height");
   const goPage = (p) => {
+    // pageData(p);
     setPage(p);
     if (getHeight() > window.innerHeight) {
       setBack("100vh");
@@ -114,6 +116,19 @@ function App() {
       setBack("max-content");
     }
   }
+
+  // DATA FOR PAGES
+  const [views, setViews] = useState(0);
+  const getPageData = async (e) => {
+    const data = await fetch(`https://bthol-portfolio-backend.herokuapp.com/test/`)
+      .then(res => res.json())
+      .catch(error => console.log(error))
+    // e.preventDefault();
+    // console.log(data.data[0]);
+    // setViews(data.data[0].numVal);
+  }
+  getPageData();
+
   return (
     <div id="root-react" className={`App color ${theme}`} style={{height: back}}>
       <Header
@@ -124,20 +139,28 @@ function App() {
           goPage={goPage}
       ></Header>
 
-      {page === 0 && <GenericPage
-        featureAlertFunct={featureAlertFunct}
-        mobile={mobile}
-      />}
+      {page === pages[0] &&
+        <GenericPage
+          featureAlertFunct={featureAlertFunct}
+          mobile={mobile}
+        />}
+      {
 
-      {page === 1 && <HomePage
-        featureAlertFunct={featureAlertFunct}
-        mobile={mobile}
-      />}
+      }
+      {page === pages[1] &&
+        <HomePage
+          featureAlertFunct={featureAlertFunct}
+          mobile={mobile}
+          views={views}
+        />
+      }
 
-      {page === 2 && <ProjectsPage
-        featureAlertFunct={featureAlertFunct}
-        mobile={mobile}
-      />}
+      {page === pages[2] &&
+        <ProjectsPage
+          featureAlertFunct={featureAlertFunct}
+          mobile={mobile}
+        />
+      }
 
       <div className="flex-center">
         <a href="#" className="flex-center top-link-style">back to top</a>
