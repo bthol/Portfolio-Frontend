@@ -130,17 +130,18 @@ function App() {
   }
 
   // Page Data State
-  const [portfolioViews, setPortfolioViews] = useState(1);
-  const [portfolioLikes, setPortfolioLikes] = useState(1);
+  const [portfolioViews, setPortfolioViews] = useState(0);
+  const [portfolioLikes, setPortfolioLikes] = useState(0);
   
+  // fetch on render
   useEffect(() => {
     let ignore = false;
-    fetch(`https://bthol-portfolio-backend.herokuapp.com/test/`)
+    fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
     .then(res => res.json())
     .then((data) => {
       if (!ignore) {
-        setPortfolioViews(data.data[0].numVal)
-        setPortfolioLikes(data.data[0].numVal)
+        setPortfolioViews(data.data[0].portfolioViews)
+        setPortfolioLikes(data.data[0].portfolioLikes)
       }
     })
     .catch(error => console.log(error))
