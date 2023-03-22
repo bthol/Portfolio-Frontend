@@ -107,16 +107,16 @@ function App() {
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
-    pageDisplay();
+    setTimeout(() => {pageDisplay()}, 1)
   }
 
   // state for page properties
   const [back, setBack] = useState("max-height");
   // function that adjusts layout by page properties
   const pageDisplay = () => {
-    if (getHeight() > window.innerHeight) {
+    if (document.body.clientHeight < (window.innerHeight || (document.documentElement || document.body).clientHeight)) {
       setBack("100vh");
-    } else if (back !== "max-content") {
+    } else {
       setBack("max-content");
     }
   }
@@ -188,9 +188,10 @@ function App() {
         <a href="#" className="flex-center top-link-style">back to top</a>
       </div>
 
+      <Timeout modal={modal} setModal={setModalFunct}></Timeout>
+
       <Footer />
 
-      <Timeout modal={modal} setModal={setModalFunct}></Timeout>
     </div>
   )
 };
