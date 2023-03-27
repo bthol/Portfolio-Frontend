@@ -137,15 +137,23 @@ function App() {
   useEffect(() => {
     let ignore = false;
     fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-    .then(res => res.json())
-    .then((data) => {
-      if (!ignore) {
-        setPortfolioViews(data.data[0].portfolioViews + 1)
-        setPortfolioLikes(data.data[0].portfolioLikes)
-      }
-    })
-    .catch(error => console.log(error))
-    return () => {ignore = true};
+      .then(res => res.json())
+      .then((data) => {
+        if (!ignore) {
+          setPortfolioViews(data.data[0].portfolioViews + 1)
+          setPortfolioLikes(data.data[0].portfolioLikes)
+          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/641a287287cc03f4312cd457`, {
+            method: 'PATCH',
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+              portfolioViews: data.data[0].portfolioViews + 1,
+            })
+          })
+        }
+      })
+    return () => {ignore = true}
   }, [])
 
   // Like Button
@@ -161,7 +169,6 @@ function App() {
           portfolioLikes: portfolioLikes + 1
         })
       });
-      console.log("pass");
     } catch (err) {
       console.error(err);
     }

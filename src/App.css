@@ -261,6 +261,9 @@
 .nav-arrow.up-arrow {
   transform: rotate(225deg);
 }
+.nav-arrow.left-arrow {
+  transform: rotate(315deg);
+}
 
 /*-----------------------------------------------LINK STYLE TEMPLATE-----------------------------------------------*/
 a {
@@ -499,10 +502,9 @@ a {
   }
   .projects-carousel {
     position: relative;
-    transition: right 400ms ease-in;
+    transition: right 300ms ease-in;
     width: calc(3 * var(--wide));
     display: flex;
-    justify-content: space-evenly;
   }
   .carousel-item {
     width: var(--wide);
@@ -613,7 +615,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 2.9fr;
   }
-  .carousel-container {
+  /* .carousel-container {
     width: 60vw;
-  }
+  } */
 }
