@@ -140,7 +140,7 @@ function App() {
     .then(res => res.json())
     .then((data) => {
       if (!ignore) {
-        setPortfolioViews(data.data[0].portfolioViews)
+        setPortfolioViews(data.data[0].portfolioViews + 1)
         setPortfolioLikes(data.data[0].portfolioLikes)
       }
     })
@@ -151,6 +151,20 @@ function App() {
   // Like Button
   const likePortfolio = () => {
     setPortfolioLikes(portfolioLikes + 1);
+    try {
+      fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/641a287287cc03f4312cd457`, {
+        method: 'PATCH',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+          portfolioLikes: portfolioLikes + 1
+        })
+      });
+      console.log("pass");
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   return (
