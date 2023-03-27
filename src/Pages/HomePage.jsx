@@ -46,12 +46,12 @@ const HomePage = (props) => {
                 </div>
                 <div className="flex-around">
                     <div className="dashboard-container">
-                        <div className="flex-between">
+                        <div className="flex-around">
                             <div>
-                                <div>views {props.portfolioViews}</div>
+                                <div>views : {props.portfolioViews}</div>
                             </div>
                             <div>
-                                <div><button className="like-btn" onClick={props.likePortfolio}>Likes</button>{props.portfolioLikes}</div>
+                                <div><button className="like-btn" onClick={props.likePortfolio}>Likes</button> : {props.portfolioLikes}</div>
                             </div>
                         </div>
                         <hr />
