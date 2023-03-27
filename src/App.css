@@ -161,7 +161,7 @@
 }
 
 /*-----------------------------------------------GENERAL LAYOUT-----------------------------------------------*/
-.flex-between { 
+.flex-between {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -289,8 +289,12 @@ a {
   white-space: nowrap;
 }
 
-.title-line {
+.underline {
   border-bottom: 1.5px solid var(--color-gray);
+}
+
+.overline {
+  border-top: 1.5px solid var(--color-gray);
 }
 
 .no-select {

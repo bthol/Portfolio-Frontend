@@ -148,6 +148,11 @@ function App() {
     return () => {ignore = true};
   }, [])
 
+  // Like Button
+  const likePortfolio = () => {
+    setPortfolioLikes(portfolioLikes + 1);
+  }
+
   return (
     <div id="root-react" className={`App color ${theme}`} style={{height: back}}>
       <Header
@@ -173,6 +178,7 @@ function App() {
           mobile={mobile}
           portfolioViews={portfolioViews}
           portfolioLikes={portfolioLikes}
+          likePortfolio={likePortfolio}
         />
       }
 
