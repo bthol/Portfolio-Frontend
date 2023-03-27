@@ -575,6 +575,10 @@ a {
   width: 220px;
 }
 
+#hometop {
+  margin-bottom: 10px;
+}
+
 @media(min-width: 768px) {
   .dashboard-container {
     width: 100%;
@@ -586,6 +590,7 @@ a {
   }
   #hometop {
     margin-top: 0px;
+    margin-bottom: 0px;
   }
   .container-first {
     border-top: 0px;
