@@ -66,7 +66,7 @@ const HomePage = (props) => {
                 </div>
                 <br />
                 <div className="flex-center content-highlight">
-                    <div tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and further grow my creative and technological skillset.</div>
+                    <div tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and develop my creative and technological skillset.</div>
                 </div>
                 <br />
             </div>
