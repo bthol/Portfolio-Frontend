@@ -34,10 +34,14 @@ function App() {
   const scrollAmmount = () => {
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
     let pctScrolled = Math.floor(scrollTop/trackLength * 100);
-    if (pctScrolled > 0) {
+    if (pctScrolled >= 0) {
       setDocScroll(pctScrolled)
     }
   };
+
+  const resetScrollTrackBar = () => {
+    setDocScroll(0)
+  }
   
   window.addEventListener("resize", () => {
     getInfo();
@@ -212,7 +216,7 @@ function App() {
       }
 
       <div className="flex-center">
-        <a href="#" className="flex-center top-link-style">back to top</a>
+        <a href="#" onClick={resetScrollTrackBar} className="flex-center top-link-style">back to top</a>
       </div>
 
       <Timeout modal={modal} setModal={setModalFunct}></Timeout>
