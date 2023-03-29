@@ -96,8 +96,7 @@ const HomePage = (props) => {
                         ></Comp2>
                         <br />
                         </div>
-                    : <div className="flex-center">
-                        <div className="carousel-container">
+                    : <div className="carousel-container">
                             <div className={`projects-carousel carPos${carPos}`}>
                                 <Comp2
                                     projectTitle={Content.projects[0].title}
@@ -136,7 +135,6 @@ const HomePage = (props) => {
                                 }} className={`cursor-pointer ${carBtn2}`}></button>
                             </div>
                         </div>
-                    </div>
                 }
             </div>
             <div id="homepage-mid-2" className="content-container shadow-behind">
