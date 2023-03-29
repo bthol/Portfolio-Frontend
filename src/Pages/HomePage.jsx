@@ -28,14 +28,21 @@ const HomePage = (props) => {
 
     // PROJECT CAROUSEL (for tablet and larger)
     const [carPos, setCarPos] = useState(0);
-    const [carBtn0, setCarBtn0] = useState("carPos0");
-    const [carBtn1, setCarBtn1] = useState("");
-    const [carBtn2, setCarBtn2] = useState("");
+    const [carBut0, setCarBut0] = useState("highlight-carBut");
+    const [carBut1, setCarBut1] = useState("");
+    const [carBut2, setCarBut2] = useState("");
 
-    const resetCarBtn = () => {
-        setCarBtn0("");
-        setCarBtn1("");
-        setCarBtn2("");
+    const highlightButton = (pos) => {
+        setCarBut0("");
+        setCarBut1("");
+        setCarBut2("");
+        if (pos === 0) {
+            setCarBut0("highlight-carBut")
+        } else if (pos === 1) {
+            setCarBut1("highlight-carBut")
+        } else if (pos === 2) {
+            setCarBut2("highlight-carBut")
+        }
     }
 
     return (
@@ -72,7 +79,7 @@ const HomePage = (props) => {
             </div>
             <div id="homepage-mid-1" className="content-container shadow-behind">
                 <div className="flex-center">
-                    <h3 className="text-x-large" tabIndex={0}>Project Highlights</h3>
+                    <h3 className="text-x-large underline" tabIndex={0}>Project Highlights</h3>
                 </div>
                 {
                     props.mobile
@@ -119,20 +126,17 @@ const HomePage = (props) => {
                             </div>
                             <div className="carButs flex-center">
                                 <button onClick={() => {
-                                resetCarBtn();
-                                setCarPos(0);
-                                setCarBtn0("carPos0");
-                                }} className={`cursor-pointer ${carBtn0}`}></button>
+                                    setCarPos(0);
+                                    highlightButton(0);
+                            }} className={`cursor-pointer ${carBut0}`}></button>
                                 <button onClick={() => {
-                                resetCarBtn();
-                                setCarPos(1);
-                                setCarBtn1("carPos1");
-                                }} className={`cursor-pointer ${carBtn1}`}></button>
+                                    setCarPos(1);
+                                    highlightButton(1);
+                                }} className={`cursor-pointer ${carBut1}`}></button>
                                 <button onClick={() => {
-                                resetCarBtn();
-                                setCarPos(2);
-                                setCarBtn2("carPos2");
-                                }} className={`cursor-pointer ${carBtn2}`}></button>
+                                    setCarPos(2);
+                                    highlightButton(2);
+                                }} className={`cursor-pointer ${carBut2}`}></button>
                             </div>
                         </div>
                 }

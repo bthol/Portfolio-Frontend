@@ -21,6 +21,8 @@
   /* PROFILE IMAGE */
   /* ANIMATIONS */
   /* MODALS */
+/* COMPONENTS */
+  /* CAROUSEL */
 /* QUERIES */
   /* RESPONSIVITY */
   /* INTERACTIVITY */
@@ -44,7 +46,7 @@
   --color-background-3: #f7f7f7;
   
   --color-gray: #b5b5b5;
-  --color-white: #ffffff;
+  --background-polar: #ffffff;
   
   --font-color-1: #000000;
   --font-color-2: #808080;
@@ -64,7 +66,7 @@
   --color-background-3: #1e1e24;
   
   --color-gray: #525252;
-  --color-white: #1a1a1a;
+  --background-polar: #1a1a1a;
   
   --font-color-1: #ffffff;
   --font-color-2: #999999;
@@ -194,14 +196,14 @@
 }
 
 .app-nav {
-  background: var(--color-white);
-  background: linear-gradient(270deg, var(--color-gray) 0%, var(--color-white) 10%, var(--color-white) 90%, var(--color-gray) 100%);
+  background: var(--background-polar);
+  background: linear-gradient(270deg, var(--color-gray) 0%, var(--background-polar) 10%, var(--background-polar) 90%, var(--color-gray) 100%);
   border-top: 8px solid var(--color-header-detail-1);
   border-bottom: 1.3px solid var(--color-gray);
 }
 
 .nav-menu-style > div {
-  background: var(--color-white);
+  background: var(--background-polar);
   border: 1.3px solid var(--color-gray);
 }
 
@@ -217,7 +219,7 @@
 .content-highlight {
   padding: 2vmin;
   border-radius: 10px;
-  background: var(--color-white);
+  background: var(--background-polar);
   border: 1.2px solid var(--color-gray);
 }
 
@@ -320,7 +322,7 @@ a {
   cursor: pointer;
   padding: 3px 5px;
   color: var(--font-color-1);
-  background-color: var(--color-white);
+  background-color: var(--background-polar);
   border: 1.5px solid var(--color-gray);
 }
 
@@ -328,7 +330,7 @@ a {
   cursor: pointer;
   padding: 3px 5px;
   color: var(--font-color-1);
-  background-color: var(--color-white);
+  background-color: var(--background-polar);
   border: 1.6px groove var(--color-gray);
   border-radius: 3vmin;
 }
@@ -500,7 +502,11 @@ a {
   .carButs button {
     height: 25%;
     width: calc(30% / 3);
-    margin: 15px 5px;
+    margin: 15px 3%;
+  }
+  .highlight-carBut {
+    border: 1px ridge var(--button-dark-detail);
+    background-color: var(--color-shadow);
   }
 }
 
