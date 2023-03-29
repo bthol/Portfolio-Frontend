@@ -134,8 +134,8 @@ function App() {
   }
 
   // Page Data State
-  const [portfolioViews, setPortfolioViews] = useState(0);
-  const [portfolioLikes, setPortfolioLikes] = useState(0);
+  const [portfolioViews, setPortfolioViews] = useState("loading...");
+  const [portfolioLikes, setPortfolioLikes] = useState("loading...");
   
   // fetch on render
   useEffect(() => {
