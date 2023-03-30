@@ -462,7 +462,7 @@ a {
 
 .modal-content-open {
   top: 25%;
-  padding: 7% 9.5% 12% 9.5%;
+  padding: 3% 6% 8% 6%;
   text-align: center;
   background: var(--color-background-3);
   border: 1.3px solid var(--button-dark-detail);
