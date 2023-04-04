@@ -63,17 +63,17 @@ const HomePage = (props) => {
                         </div>
                         <hr />
                         <div className="flex-around">
-                            <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={0}>LinkedIn</button></a>
+                            <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={-1}>LinkedIn</button></a>
                             |
-                            <a href="https://github.com/bthol" target="_blank"><button type="button" className="buttons" tabIndex={0}>GitHub</button></a>
+                            <a href="https://github.com/bthol" target="_blank"><button type="button" className="buttons" tabIndex={-1}>GitHub</button></a>
                             |
-                            <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={0}>Gmail</button></a>
+                            <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={-1}>Gmail</button></a>
                         </div>
                     </div>
                 </div>
                 <br />
-                <div className="flex-center content-highlight">
-                    <div tabIndex={0}><b>About</b>: I am a Full Stack Developer searching for a position to utilize and develop my creative and technological skillset.</div>
+                <div className="flex-center content-highlight" tabIndex={0}>
+                    <div><b>About</b>: I am a Full Stack Developer searching for a position to utilize and develop my creative and technological skillset.</div>
                 </div>
                 <br />
             </div>

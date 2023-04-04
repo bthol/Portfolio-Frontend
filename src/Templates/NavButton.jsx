@@ -12,7 +12,7 @@ const NavButton = (props) => {
             ><div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>
             </button>
             <div className={`nav-menu-style ${props.drop}`}
-                onClick={(e) => {
+                onClick={() => {
                     props.initNav();
                 }}
             >{props.links}</div>

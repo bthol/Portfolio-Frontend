@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { AugiumIcon } from '../Images/AugiumIcon';
 import { NavButton } from './NavButton';
 
@@ -65,12 +65,14 @@ const Header = (props) => {
         setNavState2(false);
         setDrop2("menu-close");
     }
+    const siteTitleRef = useRef(null);
+    // siteTitleRef.focus();
 
     return (
         <header className="app-header">
             <div className="no-select">
                 <AugiumIcon></AugiumIcon>
-                <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
+                <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0} ref={siteTitleRef}>Blake Thollaug's Portfolio Website</h3>
             </div>
             <nav className="app-nav">
                 <div className="flex-around">
