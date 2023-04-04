@@ -31,19 +31,80 @@ const HomePage = (props) => {
     const [carBut0, setCarBut0] = useState("highlight-carBut");
     const [carBut1, setCarBut1] = useState("");
     const [carBut2, setCarBut2] = useState("");
+    const [slideTabIdx0, setSlideTabIdx0] = useState(0);
+    const [slideTabIdx1, setSlideTabIdx1] = useState(-1);
+    const [slideTabIdx2, setSlideTabIdx2] = useState(-1);
 
     const highlightButton = (pos) => {
         setCarBut0("");
         setCarBut1("");
         setCarBut2("");
         if (pos === 0) {
+            setSlideTabIdx0(0);
+            setSlideTabIdx1(-1);
+            setSlideTabIdx2(-1);
             setCarBut0("highlight-carBut")
         } else if (pos === 1) {
+            setSlideTabIdx0(-1);
+            setSlideTabIdx1(0);
+            setSlideTabIdx2(-1);
             setCarBut1("highlight-carBut")
         } else if (pos === 2) {
+            setSlideTabIdx0(-1);
+            setSlideTabIdx1(-1);
+            setSlideTabIdx2(0);
             setCarBut2("highlight-carBut")
         }
     }
+
+    let carouselData = [
+        {
+          id: "projects-1",
+          title: <b><div tabIndex={slideTabIdx0} className="text-large flex-center">Space Battle</div></b>,
+          text: <div>
+                <p tabIndex={slideTabIdx0}><b>Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
+                <p tabIndex={slideTabIdx0}><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
+              </div>,
+          list: <ul>
+            <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a></li>
+            <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a></li>
+            <li tabIndex={slideTabIdx0}>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
+            <li tabIndex={slideTabIdx0}>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
+            <li tabIndex={slideTabIdx0}>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
+          </ul>,
+        },
+        {
+          id: "projects-2",
+          title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Magic 8 Ball</div></b>,
+          text: <div>
+            <p tabIndex={slideTabIdx1}><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
+            <p tabIndex={slideTabIdx1}><b>Technologies:</b> JavaScript, HTML, CSS</p>
+          </div>,
+          list: <ul>
+            <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
+            <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
+            <li tabIndex={slideTabIdx1}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
+            <li tabIndex={slideTabIdx1}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
+            <li tabIndex={slideTabIdx1}>Implemented a polychromatic animated background gradient.</li>
+          </ul>,
+        },
+        {
+          id: "projects-3",
+          title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Retro Toe</div></b>,
+          carousel: <img src="" alt="project carousel"></img>,
+          text: <div>
+            <p tabIndex={slideTabIdx2}><b>Description:</b> Tic Tac Toe. Retro style.</p>
+            <p tabIndex={slideTabIdx2}><b>Technologies:</b> JavaScript, HTML, CSS</p>
+          </div>,
+          list: <ul>
+            <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
+            <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
+            <li tabIndex={slideTabIdx2}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
+            <li tabIndex={slideTabIdx2}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+            <li tabIndex={slideTabIdx2}>Deployed the application using GitHub Pages.</li>
+          </ul>,
+        },
+    ]
 
     return (
         <div id="homepage" className="page-content">
@@ -63,11 +124,11 @@ const HomePage = (props) => {
                         </div>
                         <hr />
                         <div className="flex-around">
-                            <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank"><button type="button" className="buttons" tabIndex={-1}>LinkedIn</button></a>
+                            <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>LinkedIn</button></a>
                             |
-                            <a href="https://github.com/bthol" target="_blank"><button type="button" className="buttons" tabIndex={-1}>GitHub</button></a>
+                            <a href="https://github.com/bthol" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>GitHub</button></a>
                             |
-                            <a href="mailto:bthollaug@gmail.com" target="_blank"><button type="button" className="buttons" tabIndex={-1}>Gmail</button></a>
+                            <a href="mailto:bthollaug@gmail.com" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>Gmail</button></a>
                         </div>
                     </div>
                 </div>
@@ -85,42 +146,42 @@ const HomePage = (props) => {
                     props.mobile
                     ? <div>
                         <Comp2
-                            projectTitle={Content.projects[0].title}
-                            projectText={Content.projects[0].text}
-                            projectList={Content.projects[0].list}
+                            projectTitle={carouselData[0].title}
+                            projectText={carouselData[0].text}
+                            projectList={carouselData[0].list}
                         ></Comp2>
                         <br />
                         <Comp2
-                            projectTitle={Content.projects[1].title}
-                            projectText={Content.projects[1].text}
-                            projectList={Content.projects[1].list}
+                            projectTitle={carouselData[1].title}
+                            projectText={carouselData[1].text}
+                            projectList={carouselData[1].list}
                         ></Comp2>
                         <br />
                         <Comp2
-                            projectTitle={Content.projects[2].title}
-                            projectText={Content.projects[2].text}
-                            projectList={Content.projects[2].list}
+                            projectTitle={carouselData[2].title}
+                            projectText={carouselData[2].text}
+                            projectList={carouselData[2].list}
                         ></Comp2>
                         <br />
                         </div>
                     : <div className="carousel-container">
                             <div className={`projects-carousel carPos${carPos}`}>
                                 <Comp2
-                                    projectTitle={Content.projects[0].title}
-                                    projectText={Content.projects[0].text}
-                                    projectList={Content.projects[0].list}
+                                    projectTitle={carouselData[0].title}
+                                    projectText={carouselData[0].text}
+                                    projectList={carouselData[0].list}
                                 ></Comp2>
                                 <br />
                                 <Comp2
-                                    projectTitle={Content.projects[1].title}
-                                    projectText={Content.projects[1].text}
-                                    projectList={Content.projects[1].list}
+                                    projectTitle={carouselData[1].title}
+                                    projectText={carouselData[1].text}
+                                    projectList={carouselData[1].list}
                                 ></Comp2>
                                 <br />
                                 <Comp2
-                                    projectTitle={Content.projects[2].title}
-                                    projectText={Content.projects[2].text}
-                                    projectList={Content.projects[2].list}
+                                    projectTitle={carouselData[2].title}
+                                    projectText={carouselData[2].text}
+                                    projectList={carouselData[2].list}
                                 ></Comp2>
                                 <br />
                             </div>
