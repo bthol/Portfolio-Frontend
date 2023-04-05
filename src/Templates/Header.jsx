@@ -42,8 +42,10 @@ const Header = (props) => {
     const initNav = () => {
         setNavState1(false);
         setDrop1("menu-close");
+        setNavTabIdx1(-1)
         setNavState2(false);
         setDrop2("menu-close");
+        setNavTabIdx2(-1)
     }
 
     const navData = [
@@ -70,14 +72,11 @@ const Header = (props) => {
         },
     ];
 
-    const siteTitleRef = useRef(null);
-    // siteTitleRef.focus();
-
     return (
         <header className="app-header">
             <div className="no-select">
                 <AugiumIcon></AugiumIcon>
-                <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0} ref={siteTitleRef}>Blake Thollaug's Portfolio Website</h3>
+                <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
             </div>
             <nav className="app-nav">
                 <div className="flex-around">
@@ -85,7 +84,7 @@ const Header = (props) => {
                         <button className="nav-buttons link-desat" onClick={(e) => {
                             props.goPage(1);
                             initNav();
-                        }}>Home</button>
+                        }} autoFocus>Home</button>
                     </div>
                     <NavButton
                         name={navData[0].name}
