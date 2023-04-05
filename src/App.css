@@ -400,7 +400,7 @@ a {
   border-radius: 100%;
   background: conic-gradient(#4596b8, #055b85, #e49e36);
   background-size: 1000px;
-  animation: colorShift 8s linear infinite;
+  animation: colorShift 20s linear infinite;
 }
 
 .profile-photo {
@@ -420,14 +420,8 @@ a {
   0% {
     background-position: 100% 100%;
   }
-  20% {
-    background-position: 0% 100%;
-  }
   50% {
-    background-position: 0% 0%;
-  }
-  80% {
-    background-position: 100% 0%;
+    background-position: 0% 100%;
   }
   100% {
     background-position: 100% 100%;
