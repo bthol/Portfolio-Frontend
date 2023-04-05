@@ -482,6 +482,7 @@ a {
 @media(min-width: 768px) {
   .carousel-container { /* use padding to see nearby slides */
     --wide: 100%;
+    padding: -1%;
     overflow: hidden;
     height: 88%;
     display: flex;
@@ -499,7 +500,7 @@ a {
     margin-left: 1%;
     -moz-box-shadow: -.1vw -1vw 0vw 0vw var(--color-gray);
     -webkit-box-shadow: -.1vw -1vw 0vw 0vw var(--color-gray);
-    box-shadow: -.1vw -1vw 0vw 0vw var(--color-gray);
+    box-shadow: -.2vw 0vw 0vw -.1vw var(--color-gray);
   }
   .carPos0 {
     right: calc(0 * var(--wide));
@@ -639,6 +640,6 @@ a {
   }
   #homepage .section-lists div {
     display: grid;
-    grid-template-columns: 1fr 2.9fr;
+    grid-template-columns: 1fr 2.99fr;
   }
 }
