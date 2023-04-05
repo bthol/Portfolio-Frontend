@@ -179,6 +179,13 @@
   justify-content: center;
 }
 
+.flex-center-vert {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -353,7 +360,7 @@ a {
 
 .content-container {
   padding: 0vw 2vw;
-  padding-top: 8px;
+  padding-top: 1vh;
 }
 
 .page-content {
@@ -475,11 +482,12 @@ a {
 @media(min-width: 768px) {
   .carousel-container {
     --wide: 100%;
+    padding: 0% 5%;
     overflow: hidden;
-    height: 85%;
+    height: 88%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   .projects-carousel {
     position: relative;
