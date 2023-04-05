@@ -522,7 +522,7 @@ a {
   }
 }
 @media(hover: hover) and (pointer: fine) {
-  .carbuts,button:hover {
+  .carBut:hover {
     height: 35%;
   }
 }

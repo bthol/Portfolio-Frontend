@@ -190,15 +190,15 @@ const HomePage = (props) => {
                                 <button onClick={() => {
                                     setCarPos(0);
                                     highlightButton(0);
-                            }} className={`cursor-pointer ${carBut0}`}></button>
+                                }} className={`cursor-pointer carBut ${carBut0}`}></button>
                                 <button onClick={() => {
                                     setCarPos(1);
                                     highlightButton(1);
-                                }} className={`cursor-pointer ${carBut1}`}></button>
+                                }} className={`cursor-pointer carBut ${carBut1}`}></button>
                                 <button onClick={() => {
                                     setCarPos(2);
                                     highlightButton(2);
-                                }} className={`cursor-pointer ${carBut2}`}></button>
+                                }} className={`cursor-pointer carBut ${carBut2}`}></button>
                             </div>
                         </div>
                         <br />
