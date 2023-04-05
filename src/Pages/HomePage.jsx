@@ -201,7 +201,7 @@ const HomePage = (props) => {
                                 }} className={`cursor-pointer ${carBut2}`}></button>
                             </div>
                         </div>
-                        {/* <br /> */}
+                        <br />
                     </div>
                 }
             </div>

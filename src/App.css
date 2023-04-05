@@ -480,9 +480,8 @@ a {
 
 /*-----------------------------------------------CAROUSEL-----------------------------------------------*/
 @media(min-width: 768px) {
-  .carousel-container {
+  .carousel-container { /* use padding to see nearby slides */
     --wide: 100%;
-    padding: 0% 5%;
     overflow: hidden;
     height: 88%;
     display: flex;
@@ -497,6 +496,10 @@ a {
   }
   .carousel-item {
     width: var(--wide);
+    margin-left: .1%;
+    -moz-box-shadow: -1px -2px 1px 1px var(--color-gray);
+    -webkit-box-shadow: -1px -2px 1px 1px var(--color-gray);
+    box-shadow: -2px -2px 1px 0px var(--color-gray);
   }
   .carPos0 {
     right: calc(0 * var(--wide));
@@ -515,6 +518,11 @@ a {
   .highlight-carBut {
     border: 1px ridge var(--button-dark-detail);
     background-color: var(--color-shadow);
+  }
+}
+@media(hover: hover) and (pointer: fine) {
+  .carbuts,button:hover {
+    height: 35%;
   }
 }
 
