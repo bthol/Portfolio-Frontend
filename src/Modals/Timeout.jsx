@@ -9,7 +9,7 @@ const Timeout = (props) => {
             <p className="text-xlarge">Are you still there?</p>
             <br />
             <div>
-                <button onClick={() => {props.setModal("closed")}} className="buttons modal-button" autoFocus>Yes, I'm still here</button>
+                <button onClick={() => {props.setModal(false)}} className="buttons modal-button" autoFocus>Yes, I'm still here</button>
             </div>
             </div>
         </div>

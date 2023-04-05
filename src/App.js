@@ -41,7 +41,7 @@ function App() {
 
   const resetScrollTrackBar = () => {
     setDocScroll(0)
-  }
+  };
   
   window.addEventListener("resize", () => {
     getInfo();
@@ -71,7 +71,6 @@ function App() {
   
   // IDLE MODAL
   const [modal, setModal] = useState(false);
-  const [modalTabIdx, setModalTabIdx] = useState(-1);
   useEffect(() => {
     let seconds = 0;
     // listners reset the count
@@ -81,7 +80,7 @@ function App() {
     const counter = setInterval(() => {
       seconds += 1;
       if (seconds === 300) {
-        setModal(true)
+        setModal(true);
         seconds = 0;
       }
     }, 1000);
@@ -221,9 +220,7 @@ function App() {
 
       {
         modal &&
-        <Timeout
-          setModal={setModalFunct}
-        />
+        <Timeout setModal={setModalFunct}/>
       }
       <Footer />
 
