@@ -454,7 +454,7 @@ a {
   z-index: -1;
 }
 
-.modal-container-open {
+.modal-container {
   z-index: 3;
   top: 0%;
   width: 100vw;
@@ -462,7 +462,7 @@ a {
   background: #00000066;
 }
 
-.modal-content-open {
+.modal-content {
   top: 25%;
   padding: 3% 6% 8% 6%;
   text-align: center;

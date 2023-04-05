@@ -59,7 +59,7 @@ function App() {
   
   const featureAlertFunct = (e) => {
     featureAlert(e);
-  }
+  };
   
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
   const [mobile, setMobile] = useState(false);
@@ -67,10 +67,10 @@ function App() {
   if (window.innerWidth < 768 && mobBool) {
     setMobBool(false);
     setMobile(true);
-  }
+  };
   
   // IDLE MODAL
-  const [modal, setModal] = useState("closed");
+  const [modal, setModal] = useState(false);
   const [modalTabIdx, setModalTabIdx] = useState(-1);
   useEffect(() => {
     let seconds = 0;
@@ -81,20 +81,15 @@ function App() {
     const counter = setInterval(() => {
       seconds += 1;
       if (seconds === 300) {
-        setModal("open")
+        setModal(true)
         seconds = 0;
       }
     }, 1000);
     return () => clearInterval(counter);
   }, []);
   
-  const setModalFunct = (str) => {
-    setModal(str)
-    if (str === "open") {
-      setModalTabIdx(0);
-    } else {
-      setModalTabIdx(-1);
-    }
+  const setModalFunct = (bool) => {
+    setModal(bool)
   };
   
   // THEME LOGIC
@@ -224,8 +219,12 @@ function App() {
         <a href="#" onClick={resetScrollTrackBar} className="flex-center top-link-style">back to top</a>
       </div>
 
-      <Timeout modal={modal} setModal={setModalFunct} modalTabIdx={modalTabIdx}></Timeout>
-
+      {
+        modal &&
+        <Timeout
+          setModal={setModalFunct}
+        />
+      }
       <Footer />
 
     </div>
