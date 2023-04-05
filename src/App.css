@@ -39,6 +39,7 @@
   --below-header: calc(var(--header-height) + var(--nav-height) + 33px);
   --anim-rate: 250ms;
 }
+
 /*-----------------------------------------------THEMES-----------------------------------------------*/
 .color-theme-day {
   --color-background-1: #6694cc;
@@ -109,7 +110,7 @@
 }
 
 .nav-buttons {
-  padding: 3px 0px;
+  padding: 3px 5px;
 }
 
 .nav-menu-style > div {

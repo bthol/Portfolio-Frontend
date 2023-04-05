@@ -71,6 +71,7 @@ function App() {
   
   // IDLE MODAL
   const [modal, setModal] = useState("closed");
+  const [modalTabIdx, setModalTabIdx] = useState(-1);
   useEffect(() => {
     let seconds = 0;
     // listners reset the count
@@ -80,7 +81,6 @@ function App() {
     const counter = setInterval(() => {
       seconds += 1;
       if (seconds === 300) {
-        // display modal
         setModal("open")
         seconds = 0;
       }
@@ -90,6 +90,11 @@ function App() {
   
   const setModalFunct = (str) => {
     setModal(str)
+    if (str === "open") {
+      setModalTabIdx(0);
+    } else {
+      setModalTabIdx(-1);
+    }
   };
   
   // THEME LOGIC
@@ -219,7 +224,7 @@ function App() {
         <a href="#" onClick={resetScrollTrackBar} className="flex-center top-link-style">back to top</a>
       </div>
 
-      <Timeout modal={modal} setModal={setModalFunct}></Timeout>
+      <Timeout modal={modal} setModal={setModalFunct} modalTabIdx={modalTabIdx}></Timeout>
 
       <Footer />
 

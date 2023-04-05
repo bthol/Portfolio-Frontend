@@ -278,7 +278,7 @@ const HomePage = (props) => {
                         <br />
                     </div>
                 }
-                <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer">{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
+                <div onClick={toggleShown} className="flex-center"><p className="cursor-pointer" tabIndex={0}>{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
             </div>
             <div id="homepage-mid-4" className="content-container shadow-behind container-last">
                 <h3 className="underline text-x-large" tabIndex={0}>Education</h3>

@@ -84,7 +84,7 @@ const Header = (props) => {
                         <button className="nav-buttons link-desat" onClick={(e) => {
                             props.goPage(1);
                             initNav();
-                        }} autoFocus>Home</button>
+                        }}>Home</button>
                     </div>
                     <NavButton
                         name={navData[0].name}
