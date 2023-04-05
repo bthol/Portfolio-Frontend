@@ -68,6 +68,15 @@ function App() {
     setMobBool(false);
     setMobile(true);
   };
+
+  // KEYSTROKE TESTING
+  const enter = (e) => {
+    if (e.key === 'Enter') {
+      return true;
+    } else {
+      return false;
+    }
+  }
   
   // IDLE MODAL
   const [modal, setModal] = useState(false);
@@ -203,6 +212,7 @@ function App() {
           portfolioViews={portfolioViews}
           portfolioLikes={portfolioLikes}
           likePortfolio={likePortfolio}
+          enter={enter}
         />
       }
 
