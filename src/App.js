@@ -225,7 +225,9 @@ function App() {
       }
 
       <div className="flex-center">
-        <a href="#" onClick={resetScrollTrackBar} className="flex-center top-link-style">back to top</a>
+        <a href="#" className="flex-center top-link-style" onClick={() => {
+          resetScrollTrackBar();
+        }}>back to top</a>
       </div>
 
       {
