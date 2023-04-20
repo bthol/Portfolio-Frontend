@@ -38,10 +38,6 @@ function App() {
       setDocScroll(pctScrolled)
     }
   };
-
-  const resetScrollTrackBar = () => {
-    setDocScroll(0)
-  };
   
   window.addEventListener("resize", () => {
     getInfo();
@@ -225,9 +221,7 @@ function App() {
       }
 
       <div className="flex-center">
-        <a href="#" className="flex-center top-link-style" onClick={() => {
-          resetScrollTrackBar();
-        }}>back to top</a>
+        <a href="#" className="flex-center top-link-style">back to top</a>
       </div>
 
       {
