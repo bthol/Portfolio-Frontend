@@ -1,0 +1,2 @@
+const GraphicsContent = {};
+export { GraphicsContent };

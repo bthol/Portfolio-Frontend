@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { AugiumIcon } from '../Images/AugiumIcon';
 import { NavButton } from './NavButton';
 
@@ -54,8 +54,12 @@ const Header = (props) => {
             links: <div className="nav-menu-style">
                 <a href="" onClick={(e) => {
                     e.preventDefault();
-                    props.goPage(0);
-                }} className="link-desat" tabIndex={navTabIdx1}>Generic</a>
+                    props.goPage(2);
+                }} className="link-desat" tabIndex={navTabIdx1}>Projects</a>
+                <a href="" onClick={(e) => {
+                    e.preventDefault();
+                    props.goPage(3);
+                }} className="link-desat" tabIndex={navTabIdx1}>Graphics</a>
             </div>,
         },
         {

@@ -5,6 +5,7 @@ import { Header } from './Templates/Header';
 import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
+import { GraphicsPage } from './Pages/GraphicsPage';
 import { ProjectsPage } from './Pages/ProjectsPage';
 
 function App() {
@@ -115,6 +116,8 @@ function App() {
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
+    console.log((window.innerHeight || (document.documentElement || document.body).clientHeight));
+    console.log((document.documentElement || document.body).clientHeight);
     setTimeout(() => {pageDisplay()}, 1)
   }
 
@@ -122,7 +125,7 @@ function App() {
   const [back, setBack] = useState("max-height");
   // function that adjusts layout by page properties
   const pageDisplay = () => {
-    if (document.body.clientHeight < (window.innerHeight || (document.documentElement || document.body).clientHeight)) {
+    if (document.body.clientHeight <= window.innerHeight) {
       setBack("100vh");
     } else {
       setBack("max-content");
@@ -215,6 +218,14 @@ function App() {
       {
         page === 2 &&
         <ProjectsPage
+          featureAlertFunct={featureAlertFunct}
+          mobile={mobile}
+        />
+      }
+      
+      {
+        page === 3 &&
+        <GraphicsPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
         />
