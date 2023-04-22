@@ -1,14 +1,17 @@
 const ArtContent = {
     origami: [
         {
-            image: <div>
+            image1: <div>
                 <img src="" alt="img-origami-octopus" />
+            </div>,
+            image2: <div>
+                <img src="" alt="img-origami-octopus-crease-pattern" />
             </div>,
             name: <div>
                 <p><b>Octopus</b></p>
             </div>,
             describe: <div>
-                <p>The octopus isn't something you might of thought to make out of paper, because paper is rigid and octopuses are charactaristically flexible to the extant that they are nearly amorphous, but that just makes designing the model all the more interesting!</p>
+                <p>The octopus isn't something you might of thought to make out of paper, because paper is rigid and octopuses are charactaristically flexible to the extant that they are nearly amorphous, but that just makes designing the model all the more interesting! The technique which did the trick is called box-pleating, which is really efective at </p>
             </div>
         },
         {

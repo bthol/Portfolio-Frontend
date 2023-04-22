@@ -43,8 +43,9 @@ const ArtPage = (props) => {
             </div>
 
             <div className="art-origami-model artpage-layout-width flex-center">
-                <div className="gallery-image">
-                    {Content.origami[0].image}
+                <div>
+                    {Content.origami[0].image1}
+                    {Content.origami[0].image2}
                 </div>
                 <div className="content-container">
                     {Content.origami[0].name}
