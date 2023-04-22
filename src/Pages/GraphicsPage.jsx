@@ -5,7 +5,7 @@ const GraphicsPage = (props) => {
 
     return (
         <div className="page-content">
-            <div id="generic-section-1" className="content-container shadow-behind container-first">
+            <div id="graphics-section-1" className="content-container shadow-behind container-first">
                 <h3 className="underline text-x-large">Section Title</h3>
                 {
                     props.mobile
@@ -19,7 +19,7 @@ const GraphicsPage = (props) => {
                     </div>
                 }
             </div>
-            <div id="generic-section-2" className="content-container shadow-behind">
+            <div id="graphics-section-2" className="content-container shadow-behind">
                 <h3 className="underline text-x-large">Section Title</h3>
                 {
                     props.mobile
@@ -33,7 +33,7 @@ const GraphicsPage = (props) => {
                     </div>
                 }
             </div>
-            <div id="generic-section-3" className="content-container shadow-behind container-last">
+            <div id="graphics-section-3" className="content-container shadow-behind container-last">
                 <h3 className="underline text-x-large">Section Title</h3>
                 {
                     props.mobile
