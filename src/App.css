@@ -19,18 +19,20 @@
   /* WEBSITE-TITLE */
   /* ICON */
   /* PROFILE-IMAGE */
-  /* ANIMATIONS */
-  /* MODALS */
 /* COMPONENTS */
+  /* MODALS */
   /* CAROUSEL */
 /* QUERIES */
   /* RESPONSIVITY */
   /* INTERACTIVITY */
     /* SCROLL-BEHAVIOR */
     /* HOVER-EFFECTS */
+/* EMBELLISHMENT */
+  /* VISUAL-FX */
+  /* ANIMATIONS */
 /* CUSTOM CONTENT */
   /* HOMEPAGE-CONTENT*/
-  /* GRAPHICSPAGE-CONTENT*/
+  /* ARTPAGE-CONTENT*/
 
 /*-----------------------------------------------VARIABLES-----------------------------------------------*/
 
@@ -190,10 +192,6 @@
   justify-content: center;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 /*-----------------------------------------------TEMPLATE-STYLE-----------------------------------------------*/
 
 /*-----------------------------------------------BACKGROUND+BORDER-----------------------------------------------*/
@@ -225,27 +223,6 @@
 
 .content-container {
   background: var(--color-background-3);
-}
-
-.content-highlight {
-  padding: 2vmin;
-  border-radius: 10px;
-  background: var(--background-polar);
-  border: 1.2px solid var(--color-gray);
-}
-
-.border-left {
-  padding-top: 10px;
-  padding-left: 20px;
-  margin-left: 1.5rem;
-  border-left: 1px solid var(--color-gray);
-  -moz-box-shadow: -5px 0px 4px -5px var(--color-gray);
-  -webkit-box-shadow: -5px 0px 4px -5px var(--color-gray);
-  box-shadow: -5px 0px 4px -5px var(--color-gray);
-}
-
-.carousel-item {
-  padding: 3vmin;
 }
 
 /*-----------------------------------------------ARROWS-STYLE-TEMPLATE-----------------------------------------------*/
@@ -422,38 +399,7 @@ a {
   box-shadow: 0 -1px 1px 1px var(--color-photo-detail-1);
 }
 
-/*-----------------------------------------------ANIMATIONS-----------------------------------------------*/
-@keyframes colorShift {
-  0% {
-    background-position: 100% 100%;
-  }
-  50% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-
-@keyframes spinner {
-  from {
-    transform: rotate(-45deg);
-  }
-  to {
-    transform: rotate(135deg);
-
-  }
-}
-
-@keyframes flashy {
-  /* animation: flashy 850ms infinite cubic-bezier(0.01, .5, 0.5, 0.8); */
-  from {
-    background-color: var(--contrast1);
-  }
-  to {
-    background-color: var(--contrast2);
-  }
-}
+/*-----------------------------------------------COMPONENTS-----------------------------------------------*/
 
 /*-----------------------------------------------MODALS-----------------------------------------------*/
 .modal {
@@ -478,9 +424,11 @@ a {
   color: var(--font-color-1);
 }
 
-/*-----------------------------------------------COMPONENTS-----------------------------------------------*/
-
 /*-----------------------------------------------CAROUSEL-----------------------------------------------*/
+.carousel-item {
+  padding: 3vmin;
+}
+
 @media(min-width: 768px) {
   .carousel-container { /* use padding to see nearby slides */
     --wide: 100%;
@@ -548,14 +496,10 @@ a {
   .profile-photo {
     width: 23vw;
   }
-  .border-left {
-    margin-top: 10px;
-    margin-left: 0px;
-  }
   .shadow-behind {
-    -moz-box-box-shadow: 0px 0px 2px .1px var(--color-shadow);
-    -webkit-box-shadow: 0px 0px 2px .1px var(--color-shadow);
-    box-shadow: 0px 0px 2px .1px var(--color-shadow);
+    -moz-box-box-shadow: 0px 0px 4px .1px var(--color-shadow);
+    -webkit-box-shadow: 0px 0px 4px .1px var(--color-shadow);
+    box-shadow: 0px 0px 4px .1px var(--color-shadow);
   }
 }
 
@@ -605,6 +549,72 @@ html {
   }
 }
 
+/*-----------------------------------------------EMBELLISHMENTS-----------------------------------------------*/
+
+/*-----------------------------------------------VISUAL-FX-----------------------------------------------*/
+.content-highlight {
+  padding: 2vmin;
+  border-radius: 10px;
+  background: var(--background-polar);
+  border: 1.2px solid var(--color-gray);
+}
+
+.border-left {
+  border-left: 1px solid var(--color-gray);
+  -moz-box-shadow: -5px 0px 4px -5px var(--color-gray);
+  -webkit-box-shadow: -5px 0px 4px -5px var(--color-gray);
+  box-shadow: -5px 0px 4px -5px var(--color-gray);
+}
+
+.fx3d {
+  -moz-box-shadow: inset 5px 0px 10px var(--color-gray);
+  -webkit-box-shadow: inset 5px 0px 10px var(--color-gray);
+  box-shadow: inset 5px 0px 10px var(--color-gray);
+}
+
+.fade-left {
+  -moz-box-shadow: inset 10px 0px 10px -5px var(--color-gray);
+  -webkit-box-shadow: inset 10px 0px 10px -5px var(--color-gray);
+  box-shadow: inset 10px 0px 10px -5px var(--color-gray);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*-----------------------------------------------ANIMATIONS-----------------------------------------------*/
+@keyframes colorShift {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(135deg);
+
+  }
+}
+
+@keyframes flashy {
+  /* animation: flashy 850ms infinite cubic-bezier(0.01, .5, 0.5, 0.8); */
+  from {
+    background-color: var(--contrast1);
+  }
+  to {
+    background-color: var(--contrast2);
+  }
+}
+
 /*-----------------------------------------------CUSTOM-CONTENT-----------------------------------------------*/
 
 /*-----------------------------------------------HOMEPAGE-CONTENT-----------------------------------------------*/
@@ -615,6 +625,12 @@ html {
 
 #hometop {
   margin-bottom: 10px;
+}
+
+.skills-list {
+  padding-top: 10px;
+  padding-left: 20px;
+  margin-left: 1.5rem;
 }
 
 @media(min-width: 768px) {
@@ -651,18 +667,23 @@ html {
     display: grid;
     grid-template-columns: 1fr 2.99fr;
   }
+  .skills-list {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
 }
 
-/*-----------------------------------------------GRAPHICSPAGE-CONTENT-----------------------------------------------*/
-#graphicspage.page-content {
+/*-----------------------------------------------ARTPAGE-CONTENT-----------------------------------------------*/
+#artpage.page-content {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
 }
 
-.graphicspage-layout-width {
+.artpage-layout-width {
   grid-column: 1/5;
 }
 
 .gallery-image {
   border: 1px solid var(--contrast1);
+  border-radius: 5px;
 }

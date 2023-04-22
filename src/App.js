@@ -5,8 +5,8 @@ import { Header } from './Templates/Header';
 import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
-import { GraphicsPage } from './Pages/GraphicsPage';
 import { ProjectsPage } from './Pages/ProjectsPage';
+import { ArtPage } from './Pages/ArtPage';
 
 function App() {
   // TRACKLENGTH BAR LOGIC
@@ -116,7 +116,7 @@ function App() {
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
-    setTimeout(() => {pageDisplay()}, 1)
+    // setTimeout(() => {pageDisplay()}, 1)
   }
 
   // state for page properties
@@ -223,7 +223,7 @@ function App() {
       
       {
         page === 3 &&
-        <GraphicsPage
+        <ArtPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
         />

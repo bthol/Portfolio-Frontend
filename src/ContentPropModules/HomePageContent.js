@@ -3,7 +3,7 @@ const HomePageContent = {
     {
       id: "skills-1",
       title: "Computer Programming",
-      list: <ul className="remove-bullet-list border-left">
+      list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large" tabIndex={0}>JavaScript</li>
         <ul>
             <li tabIndex={0}>Libraries: Node.js</li>
@@ -50,7 +50,7 @@ const HomePageContent = {
     {
       id: "skills-2",
       title: "Graphic Design",
-      list: <ul className="remove-bullet-list border-left">
+      list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large" tabIndex={0}>User Experience (UX) and User Interface (UI) Design</li>
         <ul>
             <li tabIndex={0}>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
@@ -73,7 +73,7 @@ const HomePageContent = {
     {
       id: "skills-3",
       title: "Music Production",
-      list: <ul className="remove-bullet-list border-left">
+      list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large" tabIndex={0}>Audio Engineering</li>
         <ul>
             <li tabIndex={0}>Self taught</li>
