@@ -116,8 +116,6 @@ function App() {
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
-    console.log((window.innerHeight || (document.documentElement || document.body).clientHeight));
-    console.log((document.documentElement || document.body).clientHeight);
     setTimeout(() => {pageDisplay()}, 1)
   }
 

@@ -1,24 +1,24 @@
 /*-----------------------------------------------TABLE OF CONTENTS-----------------------------------------------*/
 
 /* VARIABLES */
-  /* GENERAL VARS */
+  /* GENERAL-VARS */
   /* THEMES */
-/* TEMPLATE LAYOUT */
-  /* HEADER TEMPLATE */
-  /* NAVIGATION TEMPLATE */
-  /* FOOTER TEMPLATE */
-  /* GENERAL LAYOUT */
-/* TEMPLATE STYLE */
-  /* BACKGROUND + BORDER */
-  /* ARROWS STYLE TEMPLATE */
-  /* LINK STYLE TEMPLATE*/
-  /* TEXT STYLE TEMPLATE */
-  /* LIST STYLE TEMPLATE */
-  /* BUTTON STYLE TEMPLATE */
-  /* CONTENT STYLE TEMPLATE*/
-  /* WEBSITE TITLE */
+/* TEMPLATE-LAYOUT */
+  /* HEADER-TEMPLATE */
+  /* NAVIGATION-TEMPLATE */
+  /* FOOTER-TEMPLATE */
+  /* GENERAL-LAYOUT */
+/* TEMPLATE-STYLE */
+  /* BACKGROUND+BORDER */
+  /* ARROWS-STYLE-TEMPLATE */
+  /* LINK-STYLE-TEMPLATE*/
+  /* TEXT-STYLE-TEMPLATE */
+  /* LIST-STYLE-TEMPLATE */
+  /* BUTTON-STYLE-TEMPLATE */
+  /* CONTENT-STYLE-TEMPLATE*/
+  /* WEBSITE-TITLE */
   /* ICON */
-  /* PROFILE IMAGE */
+  /* PROFILE-IMAGE */
   /* ANIMATIONS */
   /* MODALS */
 /* COMPONENTS */
@@ -29,11 +29,12 @@
     /* SCROLL-BEHAVIOR */
     /* HOVER-EFFECTS */
 /* CUSTOM CONTENT */
-  /* HOMEPAGE CONTENT*/
+  /* HOMEPAGE-CONTENT*/
+  /* GRAPHICSPAGE-CONTENT*/
 
 /*-----------------------------------------------VARIABLES-----------------------------------------------*/
 
-/*-----------------------------------------------GENERAL VARS-----------------------------------------------*/
+/*-----------------------------------------------GENERAL-VARS-----------------------------------------------*/
 * {
   --header-height: 60px;
   --nav-height: 20px;
@@ -84,9 +85,9 @@
   --contrast2: black;
 }
 
-/*-----------------------------------------------TEMPLATE LAYOUT-----------------------------------------------*/
+/*-----------------------------------------------TEMPLATE-LAYOUT-----------------------------------------------*/
 
-/*-----------------------------------------------HEADER TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------HEADER-TEMPLATE-----------------------------------------------*/
 .app-header {
   position: fixed;
   width: 100%;
@@ -102,7 +103,7 @@
   height: var(--header-height);
 }
 
-/*-----------------------------------------------NAVIGATION TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------NAVIGATION-TEMPLATE-----------------------------------------------*/
 .app-nav {
   padding: 8px 0px;
   font-size: .9em;
@@ -143,7 +144,7 @@
   background: var(--color-gray);
 }
 
-/*-----------------------------------------------FOOTER TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------FOOTER-TEMPLATE-----------------------------------------------*/
 .app-footer {
   height: var(--footer-height);
   font-size: .9em;
@@ -165,7 +166,7 @@
   padding: 0px;
 }
 
-/*-----------------------------------------------GENERAL LAYOUT-----------------------------------------------*/
+/*-----------------------------------------------GENERAL-LAYOUT-----------------------------------------------*/
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -193,9 +194,9 @@
   cursor: pointer;
 }
 
-/*-----------------------------------------------TEMPLATE STYLE-----------------------------------------------*/
+/*-----------------------------------------------TEMPLATE-STYLE-----------------------------------------------*/
 
-/*-----------------------------------------------BACKGROUND + BORDER-----------------------------------------------*/
+/*-----------------------------------------------BACKGROUND+BORDER-----------------------------------------------*/
 #root-react {
   background: var(--color-background-1);
   background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
@@ -247,7 +248,7 @@
   padding: 3vmin;
 }
 
-/*-----------------------------------------------ARROWS STYLE TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------ARROWS-STYLE-TEMPLATE-----------------------------------------------*/
 .nav-arrow {
   margin-left: 8px;
   height: 5px;
@@ -277,7 +278,7 @@
   transform: rotate(315deg);
 }
 
-/*-----------------------------------------------LINK STYLE TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------LINK-STYLE-TEMPLATE-----------------------------------------------*/
 a {
   text-decoration: none;
   color: var(--font-color-1);
@@ -291,7 +292,7 @@ a {
   background: var(--color-background-3);
 }
 
-/*-----------------------------------------------TEXT STYLE TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------TEXT-STYLE-TEMPLATE-----------------------------------------------*/
 .text-x-large {
   font-size: x-large;
 }
@@ -312,6 +313,10 @@ a {
   border-top: 1.5px solid var(--color-gray);
 }
 
+.indent {
+  text-indent: 50px;
+}
+
 .no-select {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -321,13 +326,13 @@ a {
             user-select: none;
 }
 
-/*-----------------------------------------------LIST STYLE TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------LIST-STYLE-TEMPLATE-----------------------------------------------*/
 .remove-bullet-list {
   margin-bottom: 0px;
   list-style-type: none;
 }
 
-/*-----------------------------------------------BUTTON STYLE TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------BUTTON-STYLE-TEMPLATE-----------------------------------------------*/
 .buttons {
   cursor: pointer;
   padding: 3px 5px;
@@ -356,7 +361,7 @@ a {
   color: var(--font-color-1);
 }
 
-/*-----------------------------------------------CONTENT STYLE TEMPLATE-----------------------------------------------*/
+/*-----------------------------------------------CONTENT-STYLE-TEMPLATE-----------------------------------------------*/
 .container-first {
   margin-top: var(--below-header);
 }
@@ -372,7 +377,7 @@ a {
   color: var(--font-color-1);
 }
 
-/*-----------------------------------------------WEBSITE TITLE-----------------------------------------------*/
+/*-----------------------------------------------WEBSITE-TITLE-----------------------------------------------*/
 #website-title {
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
@@ -389,7 +394,7 @@ a {
   margin: 0px 10px;
 }
 
-/*-----------------------------------------------PROFILE IMAGE-----------------------------------------------*/
+/*-----------------------------------------------PROFILE-IMAGE-----------------------------------------------*/
 .profile-container {
   margin-top: 8px;
 }
@@ -600,9 +605,9 @@ html {
   }
 }
 
-/*-----------------------------------------------CUSTOM CONTENT-----------------------------------------------*/
+/*-----------------------------------------------CUSTOM-CONTENT-----------------------------------------------*/
 
-/*-----------------------------------------------HOMEPAGE CONTENT-----------------------------------------------*/
+/*-----------------------------------------------HOMEPAGE-CONTENT-----------------------------------------------*/
 
 .dashboard-container {
   width: 220px;
@@ -646,4 +651,18 @@ html {
     display: grid;
     grid-template-columns: 1fr 2.99fr;
   }
+}
+
+/*-----------------------------------------------GRAPHICSPAGE-CONTENT-----------------------------------------------*/
+#graphicspage.page-content {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.graphicspage-layout-width {
+  grid-column: 1/5;
+}
+
+.gallery-image {
+  border: 1px solid var(--contrast1);
 }
