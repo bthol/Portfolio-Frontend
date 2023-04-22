@@ -569,13 +569,13 @@ html {
 .fx3d {
   -moz-box-shadow: inset 5px 0px 10px var(--color-gray);
   -webkit-box-shadow: inset 5px 0px 10px var(--color-gray);
-  box-shadow: inset 5px 0px 10px var(--color-gray);
+  box-shadow: inset 0px 0px 10px var(--color-gray);
 }
 
 .fade-left {
   -moz-box-shadow: inset 10px 0px 10px -5px var(--color-gray);
   -webkit-box-shadow: inset 10px 0px 10px -5px var(--color-gray);
-  box-shadow: inset 10px 0px 10px -5px var(--color-gray);
+  box-shadow: inset 10px 0px 15px -10px var(--color-gray);
 }
 
 .cursor-pointer {
@@ -686,4 +686,8 @@ html {
 .gallery-image {
   border: 1px solid var(--contrast1);
   border-radius: 5px;
+}
+
+.title-layout-pad {
+  padding: 8px;
 }
