@@ -180,6 +180,10 @@
   justify-content: space-around;
 }
 
+.flex-start {
+  display: flex;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -540,9 +544,9 @@ html {
     background: var(--color-gray);
   }
   .hover-effect:hover {
-    -moz-box-box-shadow: 0px 0px 1px .5px var(--color-shadow);
-     -webkit-box-shadow: 0px 0px 1px .5px var(--color-shadow);
-             box-shadow: 0px 0px 1px .5px var(--color-shadow);
+    -moz-box-box-shadow: 0px 0px 4px .5px var(--color-shadow);
+     -webkit-box-shadow: 0px 0px 4px .5px var(--color-shadow);
+             box-shadow: 0px 0px 4px .5px var(--color-shadow);
   }
   .like-btn:hover {
     animation: flashy 850ms infinite cubic-bezier(0.01, .5, 0.5, 0.8);
@@ -690,4 +694,21 @@ html {
 
 .title-layout-pad {
   padding: 8px 0px 12px 0px;
+}
+.img-origami {
+ width: 300px;
+}
+
+.origami-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.middle-text {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.middle-text > div {
+  grid-column-start: 2;
 }
