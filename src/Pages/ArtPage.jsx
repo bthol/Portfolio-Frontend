@@ -1,7 +1,8 @@
 import React from 'react';
 import { ArtContent as Content } from '../ContentPropModules/ArtContent';
 import { Comp5 } from '../RenderComp/Comp5';
-import { Comp6 } from '../RenderComp/Com6';
+import { Comp6 } from '../RenderComp/Comp6';
+import { Comp7 } from '../RenderComp/Comp7';
 
 const ArtPage = () => {
     return (
@@ -9,30 +10,16 @@ const ArtPage = () => {
 
             <Comp6 title={"Gallery"} containerFirst={"container-first"}/>
 
-            <div className="gallery-image gallery-image-column-1 hover-effect">
-                <img src="" alt="img1" />
-            </div>
-            <div className="gallery-image gallery-image-column-2 hover-effect">
-                <img src="" alt="img2" />
-            </div>
-            <div className="gallery-image gallery-image-column-3 hover-effect">
-                <img src="" alt="img3" />
-            </div>
-            <div className="gallery-image gallery-image-column-4 hover-effect">
-                <img src="" alt="img4" />
-            </div>
-            <div className="gallery-image gallery-image-column-1 hover-effect">
-                <img src="" alt="img1" />
-            </div>
-            <div className="gallery-image gallery-image-column-2 hover-effect">
-                <img src="" alt="img2" />
-            </div>
-            <div className="gallery-image gallery-image-column-3 hover-effect">
-                <img src="" alt="img3" />
-            </div>
-            <div className="gallery-image gallery-image-column-4 hover-effect">
-                <img src="" alt="img4" />
-            </div>
+            {/* Row 1 */}
+            <Comp7 image={Content.gallery[0][0]} galleryColumn={"gallery-image-column-0"}/>
+            <Comp7 image={Content.gallery[1][0]} galleryColumn={"gallery-image-column-1"}/>
+            <Comp7 image={Content.gallery[2][0]} galleryColumn={"gallery-image-column-2"}/>
+            <Comp7 image={Content.gallery[3][0]} galleryColumn={"gallery-image-column-3"}/>
+            {/* Row 2 */}
+            <Comp7 image={Content.gallery[0][0]} galleryColumn={"gallery-image-column-0"}/>
+            <Comp7 image={Content.gallery[1][0]} galleryColumn={"gallery-image-column-1"}/>
+            <Comp7 image={Content.gallery[2][0]} galleryColumn={"gallery-image-column-2"}/>
+            <Comp7 image={Content.gallery[3][0]} galleryColumn={"gallery-image-column-3"}/>
 
             <Comp6 title={"Origami"} />
 

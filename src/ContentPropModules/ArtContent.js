@@ -1,9 +1,9 @@
 const ArtContent = {
     gallery: [
-        [<img src="" alt="img-col0" />, <img src="" alt="img-col0" />],
-        [<img src="" alt="img-col1" />, <img src="" alt="img-col1" />],
-        [<img src="" alt="img-col2" />, <img src="" alt="img-col2" />],
-        [<img src="" alt="img-col3" />, <img src="" alt="img-col3" />],
+        [<img src="" alt="img-col-0" />, <img src="" alt="img-col-0" />],
+        [<img src="" alt="img-col-1" />, <img src="" alt="img-col-1" />],
+        [<img src="" alt="img-col-2" />, <img src="" alt="img-col-2" />],
+        [<img src="" alt="img-col-3" />, <img src="" alt="img-col-3" />],
     ],
     origami: [
         {
