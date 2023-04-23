@@ -1,4 +1,10 @@
 const ArtContent = {
+    gallery: [
+        [<img src="" alt="img-col0" />, <img src="" alt="img-col0" />],
+        [<img src="" alt="img-col1" />, <img src="" alt="img-col1" />],
+        [<img src="" alt="img-col2" />, <img src="" alt="img-col2" />],
+        [<img src="" alt="img-col3" />, <img src="" alt="img-col3" />],
+    ],
     origami: [
         {
             name: <div>
@@ -11,7 +17,7 @@ const ArtContent = {
                 <img className="img-origami" src="" alt="origami-octopus-crease-pattern" />
             </div>,
             describe: <div>
-                <p>The octopus isn't something you might have thought to make out of paper, because paper is rigid and octopuses are charactaristically flexible, but that just makes designing the model all the more interesting! The technique that did the trick is called box-pleating, which is really efective at narowing the flat of a section into an extremity for each of the eight arms of the octopus. Essentially, an octopus can be made out of a square by dividing the square into quadrants and box pleating each quadrant a tasteful number of times, where one center box and and its diagonal opposite are halved, so that the arms that end in the corners are equal in length to those that end at the midpoint of the paper's edge, and finally using the remaining two center boxes to make the eyes.</p>
+                <p>The octopus isn't something you might have thought to make out of paper, because paper is rigid and octopuses are charactaristically flexible, but that just makes designing the model all the more interesting! Essentially, an octopus can be made out of a paper square by dividing the square into quadrants and using a technique called box-pleating for each quadrant, where one center box and and its diagonal opposite are halved, so that the arms that end in the corners are equal in length to those that end at the midpoint of the paper's edge, and finally using the remaining two center boxes to make the eyes.</p>
             </div>
         },
         {
@@ -45,7 +51,6 @@ const ArtContent = {
     ],
     discussion: <div>
         <p className="indent">I began creating art when I was a child, as many do, and from the very start I stood out. When asked to draw a tree, I made sure to include roots that submerged into the ground and resurfaced elsewhere and a top with branches upon branches with scraggly details in the leaves. I have always been enamored by details, and, contrary to many people who do art when they are younger, my interest in art hasn't waned a bit. In fact, I get more interested in art the older I get. As I find more techniques and more mediums to express the urge to create, I find more reasons to be creative.</p>
-        <p className="indent">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
     </div>,
 };
 export { ArtContent };
