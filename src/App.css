@@ -701,11 +701,13 @@ html {
   grid-template-rows: 1fr 3fr;
 }
 
-.middle-text {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-}
-
-.middle-text > div {
-  grid-column-start: 2;
+@media(min-width: 768px) {
+  .middle-text {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  
+  .middle-text > div {
+    grid-column-start: 2;
+  }
 }
