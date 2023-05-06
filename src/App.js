@@ -9,6 +9,7 @@ import { ProjectsPage } from './Pages/ProjectsPage';
 import { ArtPage } from './Pages/ArtPage';
 
 function App() {
+
   // TRACKLENGTH BAR LOGIC
   const [docScroll, setDocScroll] = useState(0);
   
@@ -53,7 +54,6 @@ function App() {
     e.preventDefault();
     alert("Feature still in development");
   };
-  
   const featureAlertFunct = (e) => {
     featureAlert(e);
   };
@@ -98,19 +98,33 @@ function App() {
   };
   
   // THEME LOGIC
-  const [theme, setTheme] = useState("color-theme-day");
+  const [theme, setTheme] = useState("color-theme-light");
   const [togTheme, setTogTheme] = useState(false);
-  const [btnText, setBtnText] = useState("Night");
+  const [btnText, setBtnText] = useState("Dark");
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
-      setTheme("color-theme-day");
-      setBtnText("Night");
+      setTheme("color-theme-light");
+      setBtnText("Dark");
     } else {
-      setTheme("color-theme-night");
-      setBtnText("Day");
+      setTheme("color-theme-dark");
+      setBtnText("Light");
     }
   };
+
+  useEffect(() => {
+    // detects and defaults to dark theme on load
+    let ignore = false;
+    if (!ignore) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log("dark")
+        setTheme("color-theme-dark");
+        setTogTheme(true);
+        setBtnText("Light")
+      }
+    }
+    return () => {ignore = true}
+  }, [])
   
   // PAGE LOGIC
   const [page, setPage] = useState(1); // sets default page
