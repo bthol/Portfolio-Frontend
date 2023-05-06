@@ -466,20 +466,21 @@ a {
     right: calc(2 * var(--wide));
   }
   .carButs button {
-    height: 25%;
+    height: 20%;
     width: calc(30% / 3);
     margin: 15px 3%;
   }
   .highlight-carBut {
     border: 1px ridge var(--button-dark-detail);
     background-color: var(--color-shadow);
+    padding: .5% 0%;
   }
 }
 @media(hover: hover) and (pointer: fine) {
-  .carBut:hover {
+  .carBut-hover:hover {
     position: relative;
-    transform: translatey(-18%);
-    height: 36%;
+    transform: translatey(-10%);
+    height: 30%;
   }
 }
 

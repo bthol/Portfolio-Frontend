@@ -29,16 +29,16 @@ const HomePage = (props) => {
     // PROJECT CAROUSEL (for tablet and larger)
     const [carPos, setCarPos] = useState(0);
     const [carBut0, setCarBut0] = useState("highlight-carBut");
-    const [carBut1, setCarBut1] = useState("");
-    const [carBut2, setCarBut2] = useState("");
+    const [carBut1, setCarBut1] = useState("carBut-hover");
+    const [carBut2, setCarBut2] = useState("carBut-hover");
     const [slideTabIdx0, setSlideTabIdx0] = useState(0);
     const [slideTabIdx1, setSlideTabIdx1] = useState(-1);
     const [slideTabIdx2, setSlideTabIdx2] = useState(-1);
 
     const highlightButton = (pos) => {
-        setCarBut0("");
-        setCarBut1("");
-        setCarBut2("");
+        setCarBut0("carBut-hover");
+        setCarBut1("carBut-hover");
+        setCarBut2("carBut-hover");
         if (pos === 0) {
             setSlideTabIdx0(0);
             setSlideTabIdx1(-1);
