@@ -21,7 +21,7 @@
   /* PROFILE-IMAGE */
 /* COMPONENTS */
   /* MODALS */
-  /* CAROUSEL */
+  /* CAROUSELS */
 /* QUERIES */
   /* RESPONSIVITY */
   /* INTERACTIVITY */
@@ -428,7 +428,7 @@ a {
   color: var(--font-color-1);
 }
 
-/*-----------------------------------------------CAROUSEL-----------------------------------------------*/
+/*-----------------------------------------------CAROUSELS-----------------------------------------------*/
 .carousel-item {
   padding: 3vmin;
 }
@@ -674,6 +674,9 @@ html {
   .skills-list {
     margin-top: 10px;
     margin-left: 0px;
+  }
+  .project-highlight-margin {
+    margin-left: 2%;
   }
 }
 

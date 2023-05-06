@@ -140,7 +140,7 @@ const HomePage = (props) => {
             </div>
             <div id="homepage-mid-1" className="content-container shadow-behind">
                 <div className="flex-center">
-                    <h3 className="text-x-large underline" tabIndex={0}>Project Highlights</h3>
+                    <h3 className="text-x-large underline project-highlight-margin" tabIndex={0}>Project Highlights</h3>
                 </div>
                 {
                     props.mobile
