@@ -8,8 +8,8 @@ const Comp5 = (props) => {
                 {props.image2}
             </div>
             <div className="content-container">
-                {props.name}
-                {props.describe}
+                <div tabIndex={0}>{props.name}</div>
+                <div tabIndex={0}>{props.describe}</div>
             </div>
         </div>
     )

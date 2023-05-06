@@ -45,7 +45,7 @@ const ArtPage = () => {
             <Comp6 title={"Discussion"} />
 
             <div id="art-section-card-discussion" className="content-container container-last artpage-layout-width middle-text">
-                {Content.discussion}
+                <div tabIndex={0}>{Content.discussion}</div>
             </div>
         </div>
     )

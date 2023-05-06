@@ -14,7 +14,6 @@ const ArtContent = {
                 <img className="img-origami" src="" alt="origami-octopus" />
             </div>,
             image2: <div>
-                <img className="img-origami" src="" alt="origami-octopus-crease-pattern" />
             </div>,
             describe: <div>
                 <p>The octopus isn't something you might have thought to make out of paper, because paper is rigid and octopuses are charactaristically flexible, but that just makes designing the model all the more interesting! Essentially, an octopus can be made out of a paper square by dividing the square into quadrants and using a technique called box-pleating for each quadrant, where one center box and and its diagonal opposite are halved, so that the arms that end in the corners are equal in length to those that end at the midpoint of the paper's edge, and finally using the remaining two center boxes to make the eyes.</p>
@@ -28,7 +27,6 @@ const ArtContent = {
                 <img className="img-origami" src="" alt="origami-seahorse" />
             </div>,
             image2: <div>
-                <img className="img-origami" src="" alt="origami-seahorse-crease-pattern" />
             </div>,
             describe: <div>
                 <p>The seahorse model is one that is surprisingly simple due to the bilateral symmetry of seahorse morphology. It begins with the triangle base. What is nice about this model is that the basic shape is so simple to create that much of the character in each instance of the model comes from subtler methods like shaping the head, pleating the fins to give them ridges, and angling the tail to give the seahorse some personality.</p>
@@ -42,7 +40,6 @@ const ArtContent = {
                 <img className="img-origami" src="" alt="origami-cuttlefish" />
             </div>,
             image2: <div>
-                <img src="" alt="origami-cuttlefish-crease-pattern" />
             </div>,
             describe: <div>
                 <p>Unlike the real deal, the cuttlefish model has tentacles of differing lengths, yet it meets the basic requirement for a cuttlefish: it has a body, two eyes, a cuttlefin, and the correct number of tentacles. This model was meant as more of conceptual model for cuttlefish than a paper exemplar of some particular species.</p>
