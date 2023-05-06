@@ -477,7 +477,9 @@ a {
 }
 @media(hover: hover) and (pointer: fine) {
   .carBut:hover {
-    height: 35%;
+    position: relative;
+    transform: translatey(-18%);
+    height: 36%;
   }
 }
 
