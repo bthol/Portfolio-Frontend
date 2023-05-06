@@ -5,7 +5,6 @@ import { Header } from './Templates/Header';
 import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
-import { ProjectsPage } from './Pages/ProjectsPage';
 import { ArtPage } from './Pages/ArtPage';
 
 function App() {
@@ -226,17 +225,9 @@ function App() {
           enter={enter}
         />
       }
-
-      {
-        page === 2 &&
-        <ProjectsPage
-          featureAlertFunct={featureAlertFunct}
-          mobile={mobile}
-        />
-      }
       
       {
-        page === 3 &&
+        page === 2 &&
         <ArtPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}

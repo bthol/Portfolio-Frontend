@@ -52,13 +52,9 @@ const Header = (props) => {
         {
             name: "Pages ",
             links: <div className="nav-menu-style">
-                {/* <a href="" onClick={(e) => {
-                    e.preventDefault();
-                    props.goPage(2);
-                }} className="link-desat" tabIndex={navTabIdx1}>Projects</a> */}
                 <a href="" onClick={(e) => {
                     e.preventDefault();
-                    props.goPage(3);
+                    props.goPage(2);
                 }} className="link-desat" tabIndex={navTabIdx1}>Art</a>
             </div>,
         },
