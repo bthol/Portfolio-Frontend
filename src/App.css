@@ -685,18 +685,23 @@ html {
 
 /*-----------------------------------------------ARTPAGE-CONTENT-----------------------------------------------*/
 #artpage.page-content {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
 }
 
 .artpage-layout-width {
-  grid-column: 1/5;
+  grid-column: 1/6;
 }
 
 .gallery-image {
-  border: 1px solid var(--contrast1);
-  border-radius: 5px;
-  grid-column: 1/5;
+  border: 5px ridge var(--background-polar);
+  border-radius: 3px;
+}
+
+.artpage-gallery-row {
+  grid-column: 1/6;
+  display: flex;
+  justify-content: space-around;
 }
 
 .title-layout-pad {
@@ -716,9 +721,5 @@ html {
   
   .middle-text > div {
     grid-column-start: 2;
-  }
-
-  .gallery-image {
-    grid-column: auto;
   }
 }

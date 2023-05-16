@@ -10,16 +10,16 @@ const ArtPage = (text) => {
 
             <Comp6 title={"Gallery"} containerFirst={"container-first"}/>
 
-            {/* Row 0 */}
-            <Comp7 image={Content.gallery[0]} galleryColumn={"gallery-image-column-0"}/>
-            <Comp7 image={Content.gallery[1]} galleryColumn={"gallery-image-column-1"}/>
-            <Comp7 image={Content.gallery[2]} galleryColumn={"gallery-image-column-2"}/>
-            <Comp7 image={Content.gallery[3]} galleryColumn={"gallery-image-column-3"}/>
-            {/* Row 1 */}
-            <Comp7 image={Content.gallery[4]} galleryColumn={"gallery-image-column-0"}/>
-            <Comp7 image={Content.gallery[5]} galleryColumn={"gallery-image-column-1"}/>
-            <Comp7 image={Content.gallery[6]} galleryColumn={"gallery-image-column-2"}/>
-            <Comp7 image={Content.gallery[7]} galleryColumn={"gallery-image-column-3"}/>
+            <div className="artpage-gallery-row">
+                <Comp7 image={Content.gallery[0]} />
+                <Comp7 image={Content.gallery[1]} />
+                <Comp7 image={Content.gallery[2]} />
+            </div>
+            <div className="artpage-gallery-row">
+                <Comp7 image={Content.gallery[3]} />
+                <Comp7 image={Content.gallery[4]} />
+                <Comp7 image={Content.gallery[5]} />
+            </div>
 
             <Comp6 title={"Origami"} />
 
