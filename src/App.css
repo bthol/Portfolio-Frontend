@@ -696,6 +696,7 @@ html {
 .gallery-image {
   border: 1px solid var(--contrast1);
   border-radius: 5px;
+  grid-column: 1/5;
 }
 
 .title-layout-pad {
@@ -715,5 +716,9 @@ html {
   
   .middle-text > div {
     grid-column-start: 2;
+  }
+
+  .gallery-image {
+    grid-column: auto;
   }
 }

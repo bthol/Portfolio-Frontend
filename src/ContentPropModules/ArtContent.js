@@ -1,9 +1,13 @@
 const ArtContent = {
     gallery: [
-        [<img src="" alt="img-col-0" />, <img src="" alt="img-col-0" />],
-        [<img src="" alt="img-col-1" />, <img src="" alt="img-col-1" />],
-        [<img src="" alt="img-col-2" />, <img src="" alt="img-col-2" />],
-        [<img src="" alt="img-col-3" />, <img src="" alt="img-col-3" />],
+        <img src="" alt="img-col-0-row-0" />,
+        <img src="" alt="img-col-1-row-0" />,
+        <img src="" alt="img-col-2-row-0" />,
+        <img src="" alt="img-col-3-row-0" />,
+        <img src="" alt="img-col-0-row-1" />,
+        <img src="" alt="img-col-1-row-1" />,
+        <img src="" alt="img-col-2-row-1" />,
+        <img src="" alt="img-col-3-row-1" />,
     ],
     origami: [
         {
@@ -30,19 +34,6 @@ const ArtContent = {
             </div>,
             describe: <div>
                 <p>The seahorse model is one that is surprisingly simple due to the bilateral symmetry of seahorse morphology. It begins with the triangle base. What is nice about this model is that the basic shape is so simple to create that much of the character in each instance of the model comes from subtler methods like shaping the head, pleating the fins to give them ridges, and angling the tail to give the seahorse some personality.</p>
-            </div>
-        },
-        {
-            name: <div>
-                <p><b>Cuttlefish</b></p>
-            </div>,
-            image1: <div>
-                <img className="img-origami" src="" alt="origami-cuttlefish" />
-            </div>,
-            image2: <div>
-            </div>,
-            describe: <div>
-                <p>Unlike the real deal, the cuttlefish model has tentacles of differing lengths, yet it meets the basic requirement for a cuttlefish: it has a body, two eyes, a cuttlefin, and the correct number of tentacles. This model was meant as more of conceptual model for cuttlefish than a paper exemplar of some particular species.</p>
             </div>
         },
     ],

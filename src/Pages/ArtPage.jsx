@@ -4,22 +4,22 @@ import { Comp5 } from '../RenderComp/Comp5';
 import { Comp6 } from '../RenderComp/Comp6';
 import { Comp7 } from '../RenderComp/Comp7';
 
-const ArtPage = () => {
+const ArtPage = (text) => {
     return (
         <div id="artpage" className="page-content">
 
             <Comp6 title={"Gallery"} containerFirst={"container-first"}/>
 
+            {/* Row 0 */}
+            <Comp7 image={Content.gallery[0]} galleryColumn={"gallery-image-column-0"}/>
+            <Comp7 image={Content.gallery[1]} galleryColumn={"gallery-image-column-1"}/>
+            <Comp7 image={Content.gallery[2]} galleryColumn={"gallery-image-column-2"}/>
+            <Comp7 image={Content.gallery[3]} galleryColumn={"gallery-image-column-3"}/>
             {/* Row 1 */}
-            <Comp7 image={Content.gallery[0][0]} galleryColumn={"gallery-image-column-0"}/>
-            <Comp7 image={Content.gallery[1][0]} galleryColumn={"gallery-image-column-1"}/>
-            <Comp7 image={Content.gallery[2][0]} galleryColumn={"gallery-image-column-2"}/>
-            <Comp7 image={Content.gallery[3][0]} galleryColumn={"gallery-image-column-3"}/>
-            {/* Row 2 */}
-            <Comp7 image={Content.gallery[0][0]} galleryColumn={"gallery-image-column-0"}/>
-            <Comp7 image={Content.gallery[1][0]} galleryColumn={"gallery-image-column-1"}/>
-            <Comp7 image={Content.gallery[2][0]} galleryColumn={"gallery-image-column-2"}/>
-            <Comp7 image={Content.gallery[3][0]} galleryColumn={"gallery-image-column-3"}/>
+            <Comp7 image={Content.gallery[4]} galleryColumn={"gallery-image-column-0"}/>
+            <Comp7 image={Content.gallery[5]} galleryColumn={"gallery-image-column-1"}/>
+            <Comp7 image={Content.gallery[6]} galleryColumn={"gallery-image-column-2"}/>
+            <Comp7 image={Content.gallery[7]} galleryColumn={"gallery-image-column-3"}/>
 
             <Comp6 title={"Origami"} />
 
@@ -34,12 +34,6 @@ const ArtPage = () => {
                 image1={Content.origami[1].image1}
                 image2={Content.origami[1].image2}
                 describe={Content.origami[1].describe}
-            />
-            <Comp5
-                name={Content.origami[2].name}
-                image1={Content.origami[2].image1}
-                image2={Content.origami[2].image2}
-                describe={Content.origami[2].describe}
             />
 
             <Comp6 title={"Discussion"} />

@@ -116,7 +116,6 @@ function App() {
     let ignore = false;
     if (!ignore) {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        console.log("dark")
         setTheme("color-theme-dark");
         setTogTheme(true);
         setBtnText("Light")
