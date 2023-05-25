@@ -1,11 +1,11 @@
 const ArtContent = {
     gallery: [
-        <img src="" alt="img-col-0-row-0" />,
-        <img src="" alt="img-col-1-row-0" />,
-        <img src="" alt="img-col-2-row-0" />,
-        <img src="" alt="img-col-3-row-1" />,
-        <img src="" alt="img-col-0-row-1" />,
-        <img src="" alt="img-col-1-row-1" />,
+        <img src="../Images/ArtPageImages/" alt="img-col-0-row-0" />,
+        <img src="../Images/ArtPageImages/" alt="img-col-1-row-0" />,
+        <img src="../Images/ArtPageImages/" alt="img-col-2-row-0" />,
+        <img src="../Images/ArtPageImages/" alt="img-col-3-row-1" />,
+        <img src="../Images/ArtPageImages/" alt="img-col-0-row-1" />,
+        <img src="../Images/ArtPageImages/" alt="img-col-1-row-1" />,
     ],
     origami: [
         {

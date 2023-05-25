@@ -109,45 +109,60 @@ const HomePageContent = {
   ],
   experience: [
     {
+      jobTitle: "Deli Clerk",
+      employer: "Andronicos",
+      workPeriod: "May 2020 - Current",
+      list: <div className="exp-list">
+        <div>Description</div>
+        <ul className="remove-bullet-list">
+          <li tabIndex={0}>I worked together with the team to make sanwiches, slice meats and vegetables, and serve customers.</li>
+        </ul>
+        <br />
+        <div>Highlights</div>
+        <ul>
+          <li tabIndex={0}>Coordinating with the team to find solutions that work for the whole team</li>
+          <li tabIndex={0}>Attending to customer needs and serving them with a friendly demeanor</li>
+          <li tabIndex={0}>Managing time to fulfill various job responsibilities</li>
+        </ul>
+      </div>,
+    },
+    {
       jobTitle: "General Assistant",
       employer: "Albany Saunas",
       workPeriod: "Aug 2022 - Jan 2023",
       list: <div className="exp-list">
+        <div>Description</div>
+        <ul className="remove-bullet-list">
+          <li tabIndex={0}>I essentially did whatever they needed me to do to the best of my ability, and that typically included setting up / breaking down rooms and maintaining a clean work environment.</li>
+        </ul>
+        <br />
+        <div>Highlights</div>
         <ul>
-          <li tabIndex={0}>Updating store website to reflect the most current scheduling information for customers</li>
+          <li tabIndex={0}>Adapting to changes in work tasks and approaches to task completion</li>
           <li tabIndex={0}>Troubleshooting software and hardware problems with video surveillance system and other workplace technologies to identify and implement technical solutions</li>
-          <li tabIndex={0}>Programatically modelled floor sweeping process for generating time optimized algorithms for more efficient sweeping practices (developed on my own time for use during working hours)</li>
-          <li tabIndex={0}>Reading and recording the furnace temperature using the AOPUTTRIVER AP-2732 non-contact infrared thermometer when turning on/off the sauna furnace</li>
-          <li tabIndex={0}>Measuring, recording, and restoring hot tub chemistry using machine and chemistry kit</li>
-          <li tabIndex={0}>Taking inventory, restocking shelves and refrigerator</li>
-          <li tabIndex={0}>Setting up hot tub and sauna rooms before customer use and cleaning afterwards</li>
-          <li tabIndex={0}>Preparing massage rooms per the needs of the message therapist on schedule</li>
-          <li tabIndex={0}>Sanitizing and wiping down bins for safe customer use</li>
-          <li tabIndex={0}>Maintaining clean floors throughout the premises</li>
-          <li tabIndex={0}>Collecting, sorting, cleaning, drying, folding and putting away laundry as time permits</li>
+          <li tabIndex={0}>Updating store website to reflect the most current scheduling information for customers</li>
+          <li tabIndex={0}>Measuring furnace temperature using the AOPUTTRIVER AP-2732 non-contact infrared thermometer</li>
         </ul>
       </div>
-    },
-    {
-      jobTitle: "Kitchen Steward",
-      employer: "Canyon Ranch Woodside",
-      workPeriod: "Jan 2020 - Oct 2020",
-      list: <ul className="exp-list">
-        <li tabIndex={0}>Organized and maintained kitchen equipment for convenient and sustainable usage.</li>
-        <li tabIndex={0}>Managed a food inventory, where I consolidated food resources to optimize use of storage area, and processed incoming shipments by testing for quality and allocating the shipment contents into appropriate storage areas in compliance with company and legal standards.</li>
-        <li tabIndex={0}>Received preliminary training in food preparation to further assist the kitchen staff after receiving food handlers certification.</li>
-      </ul>,
     },
     {
       jobTitle: "Music Composer/Audio Engineer",
       employer: "Augium Productions",
       workPeriod: "Jan 2012 - Present",
-      list: <ul className="exp-list">
-        <li tabIndex={0}>Composed 400+ songs at 25+ hours using a variety of digital audio workstations(DAWs) accross multiple genres</li>
-        <li tabIndex={0}>Involved in all phases of music production (i.e. music concept, theory, and sound design, composition, performance and recording, mix engineering, and mastering)</li>
-        <li tabIndex={0}>General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
-        <li tabIndex={0}>Created audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, granular)</li>
-      </ul>,
+      list: <div className="exp-list">
+        <div>Description</div>
+        <ul className="remove-bullet-list">
+          <li tabIndex={0}>I make music in my own studio under the pseudonym Augium. <a href="https://augium.bandcamp.com/" className="link-desat" target="_blank" rel="noreferrer">See my music page for more information.</a></li>
+        </ul>
+        <br />
+        <div>Highlights</div>
+        <ul>
+          <li tabIndex={0}>Composed 400+ songs at 25+ hours using a variety of digital audio workstations accross multiple genres</li>
+          <li tabIndex={0}>Involved in all phases of music production (i.e. music concept and theory, sound design, composition, performance and recording, mix engineering, and mastering)</li>
+          <li tabIndex={0}>General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
+          <li tabIndex={0}>Created audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, pitch mapping, granular)</li>
+        </ul>
+      </div>,
     },
   ],
   education: [

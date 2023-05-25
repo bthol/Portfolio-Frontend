@@ -4,7 +4,7 @@ import { Comp5 } from '../RenderComp/Comp5';
 import { Comp6 } from '../RenderComp/Comp6';
 import { Comp7 } from '../RenderComp/Comp7';
 
-const ArtPage = (text) => {
+const ArtPage = () => {
     return (
         <div id="artpage" className="page-content">
 
