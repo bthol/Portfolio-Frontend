@@ -124,9 +124,8 @@ const HomePage = (props) => {
                 <div className="flex-center">
                     <h3 className="text-x-large underline project-highlight-margin" tabIndex={0}>Project Highlights</h3>
                 </div>
-                {
-                    props.mobile
-                    ? <div>
+                <div className="carousel-container">
+                    <div className={`projects-carousel carPos${carPos}`}>
                         <Comp2
                             projectTitle={carouselData[0].title}
                             projectText={carouselData[0].text}
@@ -145,47 +144,25 @@ const HomePage = (props) => {
                             projectList={carouselData[2].list}
                         ></Comp2>
                         <br />
-                        </div>
-                    : <div className="carousel-container">
-                        <div className={`projects-carousel carPos${carPos}`}>
-                            <Comp2
-                                projectTitle={carouselData[0].title}
-                                projectText={carouselData[0].text}
-                                projectList={carouselData[0].list}
-                            ></Comp2>
-                            <br />
-                            <Comp2
-                                projectTitle={carouselData[1].title}
-                                projectText={carouselData[1].text}
-                                projectList={carouselData[1].list}
-                            ></Comp2>
-                            <br />
-                            <Comp2
-                                projectTitle={carouselData[2].title}
-                                projectText={carouselData[2].text}
-                                projectList={carouselData[2].list}
-                            ></Comp2>
-                            <br />
-                        </div>
-                        <div className="flex-center-vert">
-                            <div className="carButs flex-center">
-                                <button onClick={() => {
-                                    setCarPos(0);
-                                    highlightButton(0);
-                                }} className={`cursor-pointer carBut ${carBut0}`}></button>
-                                <button onClick={() => {
-                                    setCarPos(1);
-                                    highlightButton(1);
-                                }} className={`cursor-pointer carBut ${carBut1}`}></button>
-                                <button onClick={() => {
-                                    setCarPos(2);
-                                    highlightButton(2);
-                                }} className={`cursor-pointer carBut ${carBut2}`}></button>
-                            </div>
-                        </div>
-                        <br />
                     </div>
-                }
+                    <div className="flex-center-vert">
+                        <div className="carButs flex-center">
+                            <button onClick={() => {
+                                setCarPos(0);
+                                highlightButton(0);
+                            }} className={`cursor-pointer carBut ${carBut0}`}></button>
+                            <button onClick={() => {
+                                setCarPos(1);
+                                highlightButton(1);
+                            }} className={`cursor-pointer carBut ${carBut1}`}></button>
+                            <button onClick={() => {
+                                setCarPos(2);
+                                highlightButton(2);
+                            }} className={`cursor-pointer carBut ${carBut2}`}></button>
+                        </div>
+                    </div>
+                    <br />
+                </div>
             </div>
             <div id="homepage-mid-2" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>Skills and Knowledge</h3>
