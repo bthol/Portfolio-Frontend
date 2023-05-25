@@ -189,47 +189,29 @@ const HomePage = (props) => {
             </div>
             <div id="homepage-mid-2" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>Skills and Knowledge</h3>
+                <div className="section-lists">
+                    <Comp1
+                        skillsTitle={Content.skills[0].title}
+                        skillsList={Content.skills[0].list}
+                        id={Content.skills[0].id}
+                    ></Comp1>
+                    <br />
+                    <Comp1
+                        skillsTitle={Content.skills[1].title}
+                        skillsList={Content.skills[1].list}
+                        id={Content.skills[1].id}
+                    ></Comp1>
+                    <br />
+                    <Comp1
+                        skillsTitle={Content.skills[2].title}
+                        skillsList={Content.skills[2].list}
+                        id={Content.skills[2].id}
+                    ></Comp1>
+                </div>
                 {
                     props.mobile
-                    ? <div className="section-lists">
-                        <Comp1
-                            skillsTitle={Content.skills[0].title}
-                            skillsList={Content.skills[0].list}
-                            id={Content.skills[0].id}
-                        ></Comp1>
-                        <br />
-                        <Comp1
-                            skillsTitle={Content.skills[1].title}
-                            skillsList={Content.skills[1].list}
-                            id={Content.skills[1].id}
-                        ></Comp1>
-                        <br />
-                        <Comp1
-                            skillsTitle={Content.skills[2].title}
-                            skillsList={Content.skills[2].list}
-                            id={Content.skills[2].id}
-                        ></Comp1>
-                    </div>
-                    : <div className="section-lists">
-                        <Comp1
-                            skillsTitle={Content.skills[0].title}
-                            skillsList={Content.skills[0].list}
-                            id={Content.skills[0].id}
-                        ></Comp1>
-                        <br />
-                        <Comp1
-                            skillsTitle={Content.skills[1].title}
-                            skillsList={Content.skills[1].list}
-                            id={Content.skills[1].id}
-                        ></Comp1>
-                        <br />
-                        <Comp1
-                            skillsTitle={Content.skills[2].title}
-                            skillsList={Content.skills[2].list}
-                            id={Content.skills[2].id}
-                        ></Comp1>
-                        <br />
-                    </div>
+                    ? <div></div>
+                    : <div><br /></div>
                 }
             </div>
             <div id="homepage-mid-3" className="content-container shadow-behind">
