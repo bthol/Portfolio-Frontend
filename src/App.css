@@ -543,7 +543,8 @@ html {
     transition: all 100ms ease;
     color: var(--font-color-3);
   }
-  .top-link-style:hover {
+  .button-hover:hover {
+    cursor: pointer;
     background: var(--color-gray);
   }
   .hover-effect:hover {

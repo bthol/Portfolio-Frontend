@@ -7,24 +7,6 @@ import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { HomePageContent as Content } from '../ContentPropModules/HomePageContent';
 
 const HomePage = (props) => {
-    
-    // SHOW MORE/LESS
-    const [showMSG, setShowMSG] = useState("show more");
-    const [show, setShow] = useState(false);
-    const [shown, setShown] = useState("down-arrow");
-    const [togshow, setTogshow] = useState(false);
-    const toggleShown = () => {
-        setTogshow(!togshow);
-        if (!togshow) {
-        setShow(true);
-        setShowMSG("show less");
-        setShown("up-arrow");
-        } else {
-        setShow(false);
-        setShowMSG("show more");
-        setShown("down-arrow");
-        }
-    }
 
     // PROJECT CAROUSEL (for tablet and larger)
     const [carPos, setCarPos] = useState(0);
@@ -252,37 +234,30 @@ const HomePage = (props) => {
             </div>
             <div id="homepage-mid-3" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>Work Experience</h3>
-                <Comp3
-                    jobTitle={Content.experience[0].jobTitle}
-                    employer={Content.experience[0].employer}
-                    workPeriod={Content.experience[0].workPeriod}
-                    list={Content.experience[0].list}
-                ></Comp3>
-                {
-                    show &&
-                    <div>
-                        <br />
-                        <Comp3
-                            jobTitle={Content.experience[1].jobTitle}
-                            employer={Content.experience[1].employer}
-                            workPeriod={Content.experience[1].workPeriod}
-                            list={Content.experience[1].list}
-                        ></Comp3>
-                        <br />
-                        <Comp3
-                            jobTitle={Content.experience[2].jobTitle}
-                            employer={Content.experience[2].employer}
-                            workPeriod={Content.experience[2].workPeriod}
-                            list={Content.experience[2].list}
-                        ></Comp3>
-                        <br />
-                    </div>
-                }
-                <div onClick={toggleShown} onKeyDown={(e) => {
-                    if (props.enter(e)) {
-                        toggleShown();
-                    }
-                }} className="flex-center"><p className="cursor-pointer" tabIndex={0}>{showMSG}</p><p className={`nav-arrow ${shown}`}></p></div>
+                <div className="content-highlight">
+                    <Comp3
+                        jobTitle={Content.experience[0].jobTitle}
+                        employer={Content.experience[0].employer}
+                        workPeriod={Content.experience[0].workPeriod}
+                        list={Content.experience[0].list}
+                        enter={props.enter}
+                    ></Comp3>
+                    <Comp3
+                        jobTitle={Content.experience[1].jobTitle}
+                        employer={Content.experience[1].employer}
+                        workPeriod={Content.experience[1].workPeriod}
+                        list={Content.experience[1].list}
+                        enter={props.enter}
+                    ></Comp3>
+                    <Comp3
+                        jobTitle={Content.experience[2].jobTitle}
+                        employer={Content.experience[2].employer}
+                        workPeriod={Content.experience[2].workPeriod}
+                        list={Content.experience[2].list}
+                        enter={props.enter}
+                    ></Comp3>
+                </div>
+                <br />
             </div>
             <div id="homepage-mid-4" className="content-container shadow-behind container-last">
                 <h3 className="underline text-x-large" tabIndex={0}>Education</h3>

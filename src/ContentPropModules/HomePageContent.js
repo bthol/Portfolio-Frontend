@@ -115,7 +115,7 @@ const HomePageContent = {
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li tabIndex={0}>I worked together with the team to make sanwiches, slice meats and vegetables, and serve customers.</li>
+          <li tabIndex={0}>I collaborated with the team to make sandwiches, slice meats and vegetables, and serve customers.</li>
         </ul>
         <br />
         <div>Highlights</div>
