@@ -6,6 +6,7 @@ import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
 import { ArtPage } from './Pages/ArtPage';
+import { Comp8 } from './RenderComp/Comp8';
 
 function App() {
 
@@ -151,8 +152,8 @@ function App() {
   }
 
   // Page Data State
-  const [portfolioViews, setPortfolioViews] = useState(". . . ");
-  const [portfolioLikes, setPortfolioLikes] = useState(". . . ");
+  const [portfolioViews, setPortfolioViews] = useState(<Comp8 />);
+  const [portfolioLikes, setPortfolioLikes] = useState(<Comp8 />);
   
   // fetch on render
   useEffect(() => {

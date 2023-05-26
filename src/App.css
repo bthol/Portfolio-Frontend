@@ -180,6 +180,12 @@
   justify-content: space-around;
 }
 
+.flex-around-align {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .flex-start {
   display: flex;
 }
@@ -187,6 +193,12 @@
 .flex-center {
   display: flex;
   justify-content: center;
+}
+
+.flex-center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-center-vert {
@@ -405,6 +417,20 @@ a {
 
 /*-----------------------------------------------COMPONENTS-----------------------------------------------*/
 
+/*-----------------------------------------------LOADERS-----------------------------------------------*/
+.loader-1-container {
+  display: flex;
+}
+
+.loader-1-container div {
+  height: 1vmin;
+  width: 1vmin;
+  margin: .5vmin;
+  border-radius: 50%;
+  background: var(--contrast1);
+  animation: fade-out 1s ease-in infinite;
+}
+
 /*-----------------------------------------------MODALS-----------------------------------------------*/
 .modal {
   position: fixed;
@@ -619,6 +645,15 @@ html {
   }
   to {
     background-color: var(--contrast2);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 

@@ -96,12 +96,12 @@ const HomePage = (props) => {
                 </div>
                 <div className="flex-around">
                     <div className="dashboard-container">
-                        <div className="flex-around">
+                        <div className="flex-around-align">
                             <div>
-                                <div>views : {props.portfolioViews}</div>
+                                <div className="flex-center-align">views : {props.portfolioViews}</div>
                             </div>
                             <div>
-                                <div><button className="like-btn" onClick={props.likePortfolio}>Likes</button> : {props.portfolioLikes}</div>
+                                <div className="flex-center-align"><button className="like-btn" onClick={props.likePortfolio}>Like</button> : {props.portfolioLikes}</div>
                             </div>
                         </div>
                         <hr />
@@ -145,22 +145,26 @@ const HomePage = (props) => {
                         ></Comp2>
                         <br />
                     </div>
-                    <div className="flex-center-vert">
-                        <div className="carButs flex-center">
-                            <button onClick={() => {
-                                setCarPos(0);
-                                highlightButton(0);
-                            }} className={`cursor-pointer carBut ${carBut0}`}></button>
-                            <button onClick={() => {
-                                setCarPos(1);
-                                highlightButton(1);
-                            }} className={`cursor-pointer carBut ${carBut1}`}></button>
-                            <button onClick={() => {
-                                setCarPos(2);
-                                highlightButton(2);
-                            }} className={`cursor-pointer carBut ${carBut2}`}></button>
+                    {
+                        props.mobile
+                        ? <div></div>
+                        : <div className="flex-center-vert">
+                            <div className="carButs flex-center">
+                                <button onClick={() => {
+                                    setCarPos(0);
+                                    highlightButton(0);
+                                }} className={`cursor-pointer carBut ${carBut0}`}></button>
+                                <button onClick={() => {
+                                    setCarPos(1);
+                                    highlightButton(1);
+                                }} className={`cursor-pointer carBut ${carBut1}`}></button>
+                                <button onClick={() => {
+                                    setCarPos(2);
+                                    highlightButton(2);
+                                }} className={`cursor-pointer carBut ${carBut2}`}></button>
+                            </div>
                         </div>
-                    </div>
+                    }
                     <br />
                 </div>
             </div>
