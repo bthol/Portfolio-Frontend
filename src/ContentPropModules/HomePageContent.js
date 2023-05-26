@@ -11,11 +11,12 @@ const HomePageContent = {
             <li tabIndex={0}>Debugging: ESLint</li>
         </ul>
         <p></p>
-        <li className="text-large" tabIndex={0}>Python</li>
+        <li className="text-large" tabIndex={0}>HTML5</li>
         <ul>
-            <li tabIndex={0}>Libraries: Pip</li>
-            <li tabIndex={0}>Frameworks: Django</li>
-            <li tabIndex={0}>Debugging: Pylint, Pyflakes</li>
+            <li tabIndex={0}>markdown content</li>
+            <li tabIndex={0}>modals and forms</li>
+            <li tabIndex={0}>Audio and player controls</li>
+            <li tabIndex={0}>raster images & vector graphics</li>
         </ul>
         <p></p>
         <li className="text-large" tabIndex={0}>CSS3</li>
@@ -25,13 +26,12 @@ const HomePageContent = {
             <li tabIndex={0}>Preprocesor: Sass</li>
         </ul>
         <p></p>
-        <li className="text-large" tabIndex={0}>HTML5</li>
-            <ul>
-                <li tabIndex={0}>markdown content</li>
-                <li tabIndex={0}>modals and forms</li>
-                <li tabIndex={0}>Audio and player controls</li>
-                <li tabIndex={0}>raster images & vector graphics</li>
-            </ul>
+        <li className="text-large" tabIndex={0}>Python</li>
+        <ul>
+            <li tabIndex={0}>Libraries: Pip</li>
+            <li tabIndex={0}>Frameworks: Django</li>
+            <li tabIndex={0}>Debugging: Pylint, Pyflakes</li>
+        </ul>
         <p></p>
         <li className="text-large" tabIndex={0}>C++</li>
         <ul>
