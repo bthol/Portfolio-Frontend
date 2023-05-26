@@ -729,7 +729,7 @@ html {
 }
 
 .gallery-image {
-  border: 5px ridge var(--background-polar);
+  border: 3px ridge var(--background-polar);
   border-radius: 3px;
 }
 
