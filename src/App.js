@@ -129,19 +129,17 @@ function App() {
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
-    // setTimeout(() => {pageDisplay()}, 1)
+    setTimeout(() => {pageDisplay()}, 10)
   }
 
   // state for page properties
   const [back, setBack] = useState("max-height");
   // function that adjusts layout by page properties
   const pageDisplay = () => {
-    console.log(document.body.clientHeight);
-    console.log(window.innerHeight);
-    if (document.body.clientHeight <= window.innerHeight) {
-      setBack("100vh");
-    } else {
+    if (document.body.clientHeight >= window.innerHeight) {
       setBack("max-content");
+    } else {
+      setBack("100vh");
     }
   }
   useEffect(() => {

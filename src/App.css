@@ -10,6 +10,7 @@
   /* GENERAL-LAYOUT */
 /* TEMPLATE-STYLE */
   /* BACKGROUND+BORDER */
+  /* TAG-STYLE-TEMPLATE */
   /* ARROWS-STYLE-TEMPLATE */
   /* LINK-STYLE-TEMPLATE*/
   /* TEXT-STYLE-TEMPLATE */
@@ -241,6 +242,12 @@
   background: var(--color-background-3);
 }
 
+/*-----------------------------------------------TAG-STYLE-TEMPLATE-----------------------------------------------*/
+hr {
+  border: none;
+  border-top: 2px solid var(--color-gray);
+}
+
 /*-----------------------------------------------ARROWS-STYLE-TEMPLATE-----------------------------------------------*/
 .nav-arrow {
   margin-left: 8px;
@@ -299,7 +306,7 @@ a {
 }
 
 .underline {
-  border-bottom: 1.5px solid var(--color-gray);
+  border-bottom: 2px solid var(--color-gray);
 }
 
 .overline {
