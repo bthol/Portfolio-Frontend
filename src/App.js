@@ -136,12 +136,21 @@ function App() {
   const [back, setBack] = useState("max-height");
   // function that adjusts layout by page properties
   const pageDisplay = () => {
+    console.log(document.body.clientHeight);
+    console.log(window.innerHeight);
     if (document.body.clientHeight <= window.innerHeight) {
       setBack("100vh");
     } else {
       setBack("max-content");
     }
   }
+  useEffect(() => {
+    let ignore = false;
+    if (!ignore) {
+      pageDisplay();
+    }
+    return () => {ignore = true}
+  }, [])
   
   // wrapper function for network diagnostic purposes
   const gotData = (promise) => {

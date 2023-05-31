@@ -104,7 +104,7 @@ const HomePage = (props) => {
                                 <div className="flex-center-align"><button className="like-btn" onClick={props.likePortfolio}>Like</button>{props.portfolioLikes}</div>
                             </div>
                         </div>
-                        <hr Size="1px" noshade/>
+                        <hr size="1px" noshade="true"/>
                         <div className="flex-around">
                             <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>LinkedIn</button></a>
                             |
