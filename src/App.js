@@ -162,8 +162,8 @@ function App() {
       .then(res => res.json())
       .then((data) => {
         if (!ignore) {
-          setPortfolioViews(data.data[0].portfolioViews + 1)
-          setPortfolioLikes(data.data[0].portfolioLikes)
+          setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
+          setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
           fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/641a287287cc03f4312cd457`, {
             method: 'PATCH',
             headers: {

@@ -336,7 +336,8 @@ a {
 
 .like-btn {
   cursor: pointer;
-  padding: 3px 5px;
+  padding: 2px 5px;
+  margin-right: 3px;
   color: var(--font-color-1);
   background-color: var(--background-polar);
   border: 1.6px groove var(--color-gray);
@@ -425,7 +426,7 @@ a {
 .loader-1-container div {
   height: 1vmin;
   width: 1vmin;
-  margin: .5vmin;
+  margin: 0vmin .3vmin;
   border-radius: 50%;
   background: var(--contrast1);
   animation: fade-out 1s ease-in infinite;

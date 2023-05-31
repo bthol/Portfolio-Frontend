@@ -98,13 +98,13 @@ const HomePage = (props) => {
                     <div className="dashboard-container">
                         <div className="flex-around-align">
                             <div>
-                                <div className="flex-center-align">views : {props.portfolioViews}</div>
+                                <div className="flex-center-align">views {props.portfolioViews}</div>
                             </div>
                             <div>
-                                <div className="flex-center-align"><button className="like-btn" onClick={props.likePortfolio}>Like</button> : {props.portfolioLikes}</div>
+                                <div className="flex-center-align"><button className="like-btn" onClick={props.likePortfolio}>Like</button>{props.portfolioLikes}</div>
                             </div>
                         </div>
-                        <hr />
+                        <hr Size="1px" noshade/>
                         <div className="flex-around">
                             <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>LinkedIn</button></a>
                             |
@@ -196,7 +196,7 @@ const HomePage = (props) => {
                 }
             </div>
             <div id="homepage-mid-3" className="content-container shadow-behind">
-                <h3 className="underline text-x-large" tabIndex={0}>Work Experience</h3>
+                <h3 className="underline text-x-large" tabIndex={0}>Work Experience Highlights</h3>
                 <div className="content-highlight">
                     <Comp3
                         jobTitle={Content.experience[0].jobTitle}
