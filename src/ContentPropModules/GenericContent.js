@@ -1,2 +1,5 @@
-const TemplateContent = {};
-export { TemplateContent };
+const GenericContent = {
+    general: [],
+    specific: []
+};
+export { GenericContent };

@@ -9,7 +9,8 @@ Import the new content component to App.js by adding an import statement to the 
 import { NewPage } from './Pages/NewPage';
 
 and add rendering code around line 127:
-{page === 4 &&
+{
+    page === 4 &&
     <NewPage
         featureAlertFunct={featureAlertFunct}
         mobile={mobile}
