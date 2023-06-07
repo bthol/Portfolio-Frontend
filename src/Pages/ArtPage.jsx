@@ -11,15 +11,21 @@ const ArtPage = () => {
             <Comp6 title={"Gallery"} containerFirst={"container-first"}/>
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[0]} />
-                <Comp7 image={Content.gallery[1]} />
-            </div>
-            <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[2]} />
             </div>
             <div className="artpage-gallery-row">
+                <Comp7 image={Content.gallery[1]} />
+            </div>
+            <div className="artpage-gallery-row">
+                <Comp7 image={Content.gallery[0]} />
+            </div>
+            <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[3]} />
+            </div>
+            <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[4]} />
+            </div>
+            <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[5]} />
             </div>
 

@@ -1,11 +1,18 @@
+import img1 from '../Images/ArtPageImages/Dream-Point-Scape.jpg';
+import img2 from '../Images/ArtPageImages/Feathered-Plant.jpg';
+import img3 from '../Images/ArtPageImages/Frame-of-Sight.jpg';
+import img4 from '../Images/ArtPageImages/Qua.jpg';
+import img5 from '../Images/ArtPageImages/The-One-with-the-Orange-Band.png';
+import img6 from '../Images/ArtPageImages/err+.jpg';
+
 const ArtContent = {
     gallery: [
-        <img src="../Images/ArtPageImages/" alt="gallery-image" />,
-        <img src="../Images/ArtPageImages/" alt="gallery-image" />,
-        <img src="../Images/ArtPageImages/" alt="gallery-image" />,
-        <img src="../Images/ArtPageImages/" alt="gallery-image" />,
-        <img src="../Images/ArtPageImages/" alt="gallery-image" />,
-        <img src="../Images/ArtPageImages/" alt="gallery-image" />,
+        <img className="gallery-image  hover-effect" src={img1} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image hover-effect" src={img2} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image hover-effect" src={img3} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image hover-effect" src={img4} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image hover-effect" src={img5} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image hover-effect" src={img6} alt="gallery" width={"100%"} tabIndex={0}/>,
     ],
     origami: [
         {
