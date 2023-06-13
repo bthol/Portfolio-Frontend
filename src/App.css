@@ -344,7 +344,6 @@ a {
 .like-btn {
   cursor: pointer;
   padding: 2px 5px;
-  margin-right: 3px;
   color: var(--font-color-1);
   background-color: var(--background-polar);
   border: 1.6px groove var(--color-gray);
@@ -681,6 +680,10 @@ html {
   padding-top: 10px;
   padding-left: 20px;
   margin-left: 1.5rem;
+}
+
+.dashboard-margin {
+  margin-right: 5px;
 }
 
 @media(min-width: 768px) {
