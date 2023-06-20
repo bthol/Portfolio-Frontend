@@ -230,14 +230,15 @@ function App() {
           portfolioLikes={portfolioLikes}
           likePortfolio={likePortfolio}
           enter={enter}
-        />
-      }
+          />
+        }
       
       {
         page === 2 &&
         <ArtPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
+          enter={enter}
         />
       }
 

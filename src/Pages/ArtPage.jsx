@@ -11,17 +11,17 @@ const ArtPage = (props) => {
             <Comp6 title={"Gallery"} containerFirst={"container-first"}/>
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[2]} />
-                <Comp7 image={Content.gallery[1]} />
+                <Comp7 image={Content.gallery[2]} enter={props.enter} />
+                <Comp7 image={Content.gallery[1]} enter={props.enter} />
             </div>
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[5]} />
-                <Comp7 image={Content.gallery[3]} />
+                <Comp7 image={Content.gallery[5]} enter={props.enter} />
+                <Comp7 image={Content.gallery[3]} enter={props.enter} />
             </div>
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[4]} />
-                <Comp7 image={Content.gallery[0]} />
+                <Comp7 image={Content.gallery[4]} enter={props.enter} />
+                <Comp7 image={Content.gallery[0]} enter={props.enter} />
             </div>
 
             <Comp6 title={"Origami"} />

@@ -750,6 +750,13 @@ html {
   cursor: pointer;
 }
 
+.gallery-image-select > img {
+  position: absolute;
+  top: var(--below-header);
+  left: .7vw;
+  width: 85vw;
+}
+
 .artpage-gallery-row {
   grid-column: 1/6;
   display: flex;
