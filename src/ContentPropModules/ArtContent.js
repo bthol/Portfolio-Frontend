@@ -7,12 +7,12 @@ import img6 from '../Images/ArtPageImages/err+.jpg';
 
 const ArtContent = {
     gallery: [
-        <img className="gallery-image  hover-effect" src={img1} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image hover-effect" src={img2} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image hover-effect" src={img3} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image hover-effect" src={img4} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image hover-effect" src={img5} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image hover-effect" src={img6} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image" src={img1} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image" src={img2} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image" src={img3} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image" src={img4} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image" src={img5} alt="gallery" width={"100%"} tabIndex={0}/>,
+        <img className="gallery-image" src={img6} alt="gallery" width={"100%"} tabIndex={0}/>,
     ],
     origami: [
         {

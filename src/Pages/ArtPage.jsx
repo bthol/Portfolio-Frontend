@@ -4,7 +4,7 @@ import { Comp5 } from '../RenderComp/Comp5';
 import { Comp6 } from '../RenderComp/Comp6';
 import { Comp7 } from '../RenderComp/Comp7';
 
-const ArtPage = () => {
+const ArtPage = (props) => {
     return (
         <div id="artpage" className="page-content">
 
@@ -12,21 +12,16 @@ const ArtPage = () => {
 
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[2]} />
-            </div>
-            <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[1]} />
             </div>
+
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[0]} />
-            </div>
-            <div className="artpage-gallery-row">
+                <Comp7 image={Content.gallery[5]} />
                 <Comp7 image={Content.gallery[3]} />
             </div>
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[4]} />
-            </div>
-            <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[5]} />
+                <Comp7 image={Content.gallery[0]} />
             </div>
 
             <Comp6 title={"Origami"} />
