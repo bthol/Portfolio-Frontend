@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 const Comp7 = (props) => {
     const [imgSelect, setImgSelect] = useState("");
-    const [selected, setSelected] = useState(false);
+    const [selected, setSelected] = useState(true);
     const select = () => {
         setImgSelect("gallery-image-select");
+        window.scrollTo(0, 0);
     }
     const deselect = () => {
         setImgSelect("");

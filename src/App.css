@@ -752,9 +752,9 @@ html {
 
 .gallery-image-select > img {
   position: absolute;
-  top: var(--below-header);
+  top: calc(var(--below-header) + 65px);
   left: .7vw;
-  width: 85vw;
+  width: 93.6vw;
 }
 
 .artpage-gallery-row {
