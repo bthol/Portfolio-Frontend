@@ -28,9 +28,9 @@ const HomePageContent = {
         <p></p>
         <li className="text-large" tabIndex={0}>Java</li>
         <ul>
-            <li tabIndex={0}>Libraries: Java Development Kit (JDK)</li>
             <li tabIndex={0}>Frameworks: Spring Boot</li>
-            <li tabIndex={0}>Debugging: Debugger for Java</li>
+            <li tabIndex={0}>Libraries: Java Development Kit (JDK)</li>
+            <li tabIndex={0}>Resources: Language Support for Java by Redhat</li>
         </ul>
         <p></p>
         <li className="text-large" tabIndex={0}>Python</li>

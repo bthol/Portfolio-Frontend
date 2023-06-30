@@ -347,7 +347,7 @@ a {
   color: var(--font-color-1);
   background-color: var(--background-polar);
   border: 1.6px groove var(--color-gray);
-  border-radius: 3vmin;
+  border-radius: 2.5vmin;
 }
 
 .nav-buttons {
@@ -585,7 +585,7 @@ html {
              box-shadow: 0px 0px 4px .5px var(--color-shadow);
   }
   .like-btn:hover {
-    animation: flashy 850ms infinite cubic-bezier(0.01, .5, 0.5, 0.8);
+    animation: flashy 850ms infinite cubic-bezier(0, .5, 0.5, 0.8);
   }
 }
 
@@ -750,11 +750,18 @@ html {
   cursor: pointer;
 }
 
-.gallery-image-select > img {
+.gallery-image-select {
   position: absolute;
+  z-index: 1;
   top: calc(var(--below-header) + 65px);
-  left: .7vw;
-  width: 93.6vw;
+  width: 93.6%;
+  margin: 0px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-image-select > img {
+  width: 86%;
 }
 
 .artpage-gallery-row {
@@ -778,11 +785,9 @@ html {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
   }
-  
   .middle-text > div {
     grid-column-start: 2;
   }
-
   .gallery-image:hover {
     -moz-box-box-shadow: 0px 0px 20px .5px var(--color-shadow);
      -webkit-box-shadow: 0px 0px 20px .5px var(--color-shadow);
