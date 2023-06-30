@@ -718,7 +718,7 @@ html {
   }
   #homepage .section-lists div {
     display: grid;
-    grid-template-columns: 1fr 2.99fr;
+    grid-template-columns: 1fr 4fr;
   }
   .skills-list {
     margin-top: 10px;

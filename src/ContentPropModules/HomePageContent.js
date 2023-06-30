@@ -2,12 +2,12 @@ const HomePageContent = {
   skills: [
     {
       id: "skills-1",
-      title: "Computer Programming",
+      title: "Programming Langauges",
       list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large" tabIndex={0}>JavaScript</li>
         <ul>
             <li tabIndex={0}>Libraries: Node.js</li>
-            <li tabIndex={0}>Frameworks: Express.js, React</li>
+            <li tabIndex={0}>Frameworks: Express.js for REST API, React GUI</li>
             <li tabIndex={0}>Debugging: ESLint</li>
         </ul>
         <p></p>
@@ -24,6 +24,13 @@ const HomePageContent = {
             <li tabIndex={0}>Modules: Flexbox, CSS Grid</li>
             <li tabIndex={0}>Frameworks: Bootstrap</li>
             <li tabIndex={0}>Preprocesor: Sass</li>
+        </ul>
+        <p></p>
+        <li className="text-large" tabIndex={0}>Java</li>
+        <ul>
+            <li tabIndex={0}>Libraries: Java Development Kit (JDK)</li>
+            <li tabIndex={0}>Frameworks: Spring Boot</li>
+            <li tabIndex={0}>Debugging: Debugger for Java</li>
         </ul>
         <p></p>
         <li className="text-large" tabIndex={0}>Python</li>
