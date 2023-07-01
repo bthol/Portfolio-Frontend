@@ -7,11 +7,11 @@ const HomePageContent = {
         <li className="text-large" tabIndex={0}>JavaScript</li>
         <ul>
             <li tabIndex={0}>Libraries: Node.js</li>
-            <li tabIndex={0}>Frameworks: Express.js for REST API, React GUI</li>
+            <li tabIndex={0}>Frameworks: Express.js for REST API, React component GUI</li>
             <li tabIndex={0}>Debugging: ESLint</li>
         </ul>
         <p></p>
-        <li className="text-large" tabIndex={0}>HTML5</li>
+        <li className="text-large" tabIndex={0}>HTML</li>
         <ul>
             <li tabIndex={0}>markdown content</li>
             <li tabIndex={0}>modals and forms</li>
@@ -19,7 +19,7 @@ const HomePageContent = {
             <li tabIndex={0}>raster images & vector graphics</li>
         </ul>
         <p></p>
-        <li className="text-large" tabIndex={0}>CSS3</li>
+        <li className="text-large" tabIndex={0}>CSS</li>
         <ul>
             <li tabIndex={0}>Modules: Flexbox, CSS Grid</li>
             <li tabIndex={0}>Frameworks: Bootstrap</li>
@@ -28,7 +28,7 @@ const HomePageContent = {
         <p></p>
         <li className="text-large" tabIndex={0}>Java</li>
         <ul>
-            <li tabIndex={0}>Frameworks: Spring Boot</li>
+            <li tabIndex={0}>API: REST API with vanilla Java</li>
             <li tabIndex={0}>Libraries: Java Development Kit (JDK)</li>
             <li tabIndex={0}>Resources: Language Support for Java by Redhat</li>
         </ul>
@@ -49,7 +49,7 @@ const HomePageContent = {
         <li className="text-large" tabIndex={0}>R</li>
         <ul>
           <li tabIndex={0}>Used for statistical programming</li>
-          <li tabIndex={0}>Excellent for science applications</li>
+          <li tabIndex={0}>Excellent for small-scale science applications</li>
         </ul>
         <p></p>
       </ul>,
@@ -147,8 +147,9 @@ const HomePageContent = {
         <ul>
           <li tabIndex={0}>Adapting to changes in work tasks and approaches to task completion</li>
           <li tabIndex={0}>Troubleshooting software and hardware problems with video surveillance system and other workplace technologies to identify and implement technical solutions</li>
-          <li tabIndex={0}>Updating store website to reflect the most current scheduling information for customers</li>
+          <li tabIndex={0}>Updating customer data in prototype software database to account for customer and business needs</li>
           <li tabIndex={0}>Measuring furnace temperature using the AOPUTTRIVER AP-2732 non-contact infrared thermometer</li>
+          <li tabIndex={0}>Testing and correcting water ph and clorine levels to be within accepted ranges</li>
         </ul>
       </div>
     },
