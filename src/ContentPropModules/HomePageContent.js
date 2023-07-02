@@ -160,7 +160,7 @@ const HomePageContent = {
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li tabIndex={0}>I make music in my own studio under the pseudonym Augium. <a href="https://augium.bandcamp.com/" className="link-desat" target="_blank" rel="noreferrer">See my music page for more information.</a></li>
+          <li tabIndex={0}>I create music in my own studio under the pseudonym Augium. Augium is a constructed word intended to mean "the element of incriment" or "the tendency toward complexity."<br/><br/><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
         </ul>
         <br />
         <div>Highlights</div>

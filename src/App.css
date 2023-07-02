@@ -9,7 +9,7 @@
   /* FOOTER-TEMPLATE */
   /* GENERAL-LAYOUT */
 /* TEMPLATE-STYLE */
-  /* BACKGROUND+BORDER */
+  /* MAIN-COLORS */
   /* TAG-STYLE-TEMPLATE */
   /* ARROWS-STYLE-TEMPLATE */
   /* LINK-STYLE-TEMPLATE*/
@@ -58,6 +58,8 @@
   --font-color-1: #000000;
   --font-color-2: #808080;
   --font-color-3: #ffffff;
+
+  --font-link-color: hsl(225, 91%, 40%);
   
   --color-shadow: #9e9e9e;
   --color-header-detail-1: #80b9ff;
@@ -78,6 +80,8 @@
   --font-color-1: #ffffff;
   --font-color-2: #999999;
   --font-color-3: #808080;
+
+  --font-link-color: #0985c3;
   
   
   --color-shadow: #666666;
@@ -211,7 +215,7 @@
 
 /*-----------------------------------------------TEMPLATE-STYLE-----------------------------------------------*/
 
-/*-----------------------------------------------BACKGROUND+BORDER-----------------------------------------------*/
+/*-----------------------------------------------MAIN-COLORS-----------------------------------------------*/
 #root-react {
   background: var(--color-background-1);
   background: linear-gradient(to bottom, var(--color-background-2), var(--color-background-1));
@@ -243,6 +247,11 @@
 }
 
 /*-----------------------------------------------TAG-STYLE-TEMPLATE-----------------------------------------------*/
+a {
+  text-decoration: none;
+  color: var(--font-color-1);
+}
+
 hr {
   border: none;
   border-top: 2px solid var(--color-gray);
@@ -279,9 +288,8 @@ hr {
 }
 
 /*-----------------------------------------------LINK-STYLE-TEMPLATE-----------------------------------------------*/
-a {
-  text-decoration: none;
-  color: var(--font-color-1);
+.link-color {
+  color: var(--font-link-color);
 }
 
 .top-link-style {

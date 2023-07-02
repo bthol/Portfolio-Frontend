@@ -48,8 +48,8 @@ const HomePage = (props) => {
                 <p tabIndex={slideTabIdx0}><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
               </div>,
           list: <ul>
-            <li><a href="https://bthol.github.io/Space-Battle/" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a></li>
-            <li><a href="https://github.com/bthol/Space-Battle" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a></li>
+            <li><a href="https://bthol.github.io/Space-Battle/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a></li>
+            <li><a href="https://github.com/bthol/Space-Battle" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a></li>
             <li tabIndex={slideTabIdx0}>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
             <li tabIndex={slideTabIdx0}>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
             <li tabIndex={slideTabIdx0}>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
@@ -63,8 +63,8 @@ const HomePage = (props) => {
             <p tabIndex={slideTabIdx1}><b>Technologies:</b> JavaScript, HTML, CSS</p>
           </div>,
           list: <ul>
-            <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
-            <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
+            <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
+            <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
             <li tabIndex={slideTabIdx1}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
             <li tabIndex={slideTabIdx1}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
             <li tabIndex={slideTabIdx1}>Implemented a polychromatic animated background gradient.</li>
@@ -79,8 +79,8 @@ const HomePage = (props) => {
             <p tabIndex={slideTabIdx2}><b>Technologies:</b> JavaScript, HTML, CSS</p>
           </div>,
           list: <ul>
-            <li><a href="https://bthol.github.io/Retro-Toe/" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
-            <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
+            <li><a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
+            <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
             <li tabIndex={slideTabIdx2}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
             <li tabIndex={slideTabIdx2}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
             <li tabIndex={slideTabIdx2}>Deployed the application using GitHub Pages.</li>
