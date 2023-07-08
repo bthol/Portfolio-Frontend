@@ -277,14 +277,19 @@ hr {
   transition: transform var(--anim-rate) ease-in-out;
 }
 
-.nav-arrow.down-arrow {
+.arrow {
+  height: 10px;
+  width: 10px;
+  position: relative;
+  border: 3px solid var(--font-color-1);
+  border-top: hidden;
+  border-left: hidden;
+}
+.arrow.down-arrow {
   transform: rotate(45deg);
 }
-.nav-arrow.up-arrow {
+.arrow.up-arrow {
   transform: rotate(225deg);
-}
-.nav-arrow.left-arrow {
-  transform: rotate(315deg);
 }
 
 /*-----------------------------------------------LINK-STYLE-TEMPLATE-----------------------------------------------*/
