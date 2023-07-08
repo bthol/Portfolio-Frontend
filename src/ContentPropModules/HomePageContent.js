@@ -122,7 +122,7 @@ const HomePageContent = {
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li tabIndex={0}>I collaborated with the team to make sandwiches, slice meats and vegetables, and serve customers.</li>
+          <li tabIndex={0}>I collaborated with the team to prepare hand-made sandwiches, to cut, label and package meats, cheeses and vegetables, and to deliver an excellent customer experience.</li>
         </ul>
         <br />
         <div>Highlights</div>
@@ -160,7 +160,7 @@ const HomePageContent = {
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li tabIndex={0}>I create music in my own studio under the pseudonym Augium. Augium is a constructed word intended to mean "the element of incriment" or "the tendency toward complexity."<br/><br/><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
+          <li tabIndex={0}>I create music in my own studio under the pseudonym Augium. Augium is a constructed word intended to mean "the element of incriment" or "the proclivity toward complexity."<br/><br/><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
         </ul>
         <br />
         <div>Highlights</div>

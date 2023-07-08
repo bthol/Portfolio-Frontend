@@ -97,11 +97,13 @@ const HomePage = (props) => {
                 <div className="flex-around">
                     <div className="dashboard-container">
                         <div className="flex-around-align">
-                            <div>
-                                <div className="flex-center-align"><div className="dashboard-margin">views</div>{props.portfolioViews}</div>
+                            <div className="flex-center-align">
+                                <div className="dashboard-margin">views</div>
+                                {props.portfolioViews}
                             </div>
-                            <div>
-                                <div className="flex-center-align"><button className="like-btn dashboard-margin" onClick={props.likePortfolio}>Like</button>{props.portfolioLikes}</div>
+                            <div className="flex-center-align">
+                                <button className="like-btn dashboard-margin" onClick={props.likePortfolio}>Like</button>
+                                {props.portfolioLikes}
                             </div>
                         </div>
                         <hr noshade="true" />
