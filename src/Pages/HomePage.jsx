@@ -109,9 +109,9 @@ const HomePage = (props) => {
                         <hr noshade="true" />
                         <div className="flex-around">
                             <a href="https://www.linkedin.com/in/blake-thollaug/" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>LinkedIn</button></a>
-                            |
+                            <div className="inline-divider"></div>
                             <a href="https://github.com/bthol" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>GitHub</button></a>
-                            |
+                            <div className="inline-divider"></div>
                             <a href="mailto:bthollaug@gmail.com" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>Gmail</button></a>
                         </div>
                     </div>

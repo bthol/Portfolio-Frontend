@@ -59,7 +59,7 @@
   --font-color-2: #808080;
   --font-color-3: #ffffff;
 
-  --font-link-color: hsl(225, 91%, 40%);
+  --font-link-color: #0b45f4;
   
   --color-shadow: #9e9e9e;
   --color-header-detail-1: #80b9ff;
@@ -81,7 +81,7 @@
   --font-color-2: #999999;
   --font-color-3: #808080;
 
-  --font-link-color: #0985c3;
+  --font-link-color: #0ba6f4;
   
   
   --color-shadow: #666666;
@@ -325,15 +325,6 @@ hr {
   text-indent: 50px;
 }
 
-.no-select {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-}
-
 /*-----------------------------------------------LIST-STYLE-TEMPLATE-----------------------------------------------*/
 .remove-bullet-list {
   margin-bottom: 0px;
@@ -351,11 +342,11 @@ hr {
 
 .like-btn {
   cursor: pointer;
-  padding: 2px 5px;
+  padding: 4px;
   color: var(--font-color-1);
   background-color: var(--background-polar);
-  border: 1.6px groove var(--color-gray);
-  border-radius: 2.5vmin;
+  border: 1.6px solid var(--color-gray);
+  border-radius: 3vmin;
 }
 
 .nav-buttons {
@@ -626,8 +617,23 @@ html {
   box-shadow: inset 10px 0px 15px -10px var(--color-gray);
 }
 
+.inline-divider {
+  height: 20px;
+  width: 2px;
+  background-color: var(--color-gray);
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
 
 /*-----------------------------------------------ANIMATIONS-----------------------------------------------*/
