@@ -85,7 +85,7 @@ function App() {
     document.addEventListener("keydown", () => {seconds = 0});
     const counter = setInterval(() => {
       seconds += 1;
-      if (seconds === 3) {
+      if (seconds === 300) {
         setModal(true);
         seconds = 0;
       }
