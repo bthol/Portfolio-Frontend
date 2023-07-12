@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Timeout } from './Modals/Timeout';
+import { Modal } from './Modals/Modal';
 import { Header } from './Templates/Header';
 import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
@@ -85,7 +85,7 @@ function App() {
     document.addEventListener("keydown", () => {seconds = 0});
     const counter = setInterval(() => {
       seconds += 1;
-      if (seconds === 300) {
+      if (seconds === 3) {
         setModal(true);
         seconds = 0;
       }
@@ -253,7 +253,7 @@ function App() {
 
       {
         modal &&
-        <Timeout setModal={setModalFunct}/>
+        <Modal setModal={setModalFunct} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes, I am still here"}/>
       }
       <Footer />
 

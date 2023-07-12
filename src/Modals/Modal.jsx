@@ -1,18 +1,18 @@
 import React from "react"
 
-const Timeout = (props) => {
+const Modal = (props) => {
     return (
         <div className={`modal modal-container flex-center`}>
             <div className={`modal modal-content shadow-behind`}>
                 <div>
-                    <h1>Inactive</h1>
+                    <h1>{props.title}</h1>
                     <hr />
                 </div>
                 <div>
-                    <p className="text-xlarge">Are you still there?</p>
+                    <p className="text-xlarge">{props.message}</p>
                     <br />
                     <div>
-                        <button onClick={() => {props.setModal(false)}} className="buttons modal-button" autoFocus>Yes, I'm still here</button>
+                        <button onClick={() => {props.setModal(false)}} className="buttons modal-button" autoFocus>{props.closeBtnText}</button>
                     </div>
                 </div>
             </div>
@@ -20,4 +20,4 @@ const Timeout = (props) => {
     )
 };
 
-export { Timeout }
+export { Modal }
