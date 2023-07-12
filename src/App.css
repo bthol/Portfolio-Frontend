@@ -374,23 +374,25 @@ hr {
 .theme-btn {
   width: 75px;
   margin: 0px 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: var(--color-gray);
-  border: solid var(--color-shadow);
+  border: 1px solid var(--color-shadow);
 }
 .theme-btn-slider {
-  height: 100%;
+  position: relative;
+  border-radius: 3px;
+  height: 90%;
   width: 35%;
   background: var(--contrast2);
 }
 .theme-btn-light .theme-btn-slider {
-  position: relative;
   transform: translateX(-100%);
   transition: var(--anim-rate) cubic-bezier(0, 0.1, 0.4, 1.2);
 }
 .theme-btn-dark .theme-btn-slider {
-  position: relative;
   transform: translateX(100%);
   transition: var(--anim-rate) cubic-bezier(0, 0.1, 0.4, 1.2);
 }
