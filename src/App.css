@@ -474,22 +474,25 @@ hr {
 }
 
 /*-----------------------------------------------MODALS-----------------------------------------------*/
-.modal {
-  position: fixed;
-  z-index: -1;
-}
-
 .modal-container {
-  z-index: 3;
+  position: fixed;
+  z-index: 2;
   top: 0%;
-  width: 100vw;
-  height: 100vh;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #00000066;
 }
 
 .modal-content {
-  top: 25%;
-  padding: 3% 6% 8% 6%;
+  position: absolute;
+  top: var(--below-header);
+  height: max-content;
+  width: 70%;
+  padding: 2% 5% 5% 5%;
   text-align: center;
   background: var(--color-background-3);
   border: 1.3px solid var(--button-dark-detail);
