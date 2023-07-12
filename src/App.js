@@ -100,15 +100,15 @@ function App() {
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-light");
   const [togTheme, setTogTheme] = useState(false);
-  const [btnText, setBtnText] = useState("Dark");
+  const [btnTheme, setBtnTheme] = useState("theme-btn-light");
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
       setTheme("color-theme-light");
-      setBtnText("Dark");
+      setBtnTheme("theme-btn-light");
     } else {
       setTheme("color-theme-dark");
-      setBtnText("Light");
+      setBtnTheme("theme-btn-dark");
     }
   };
 
@@ -119,7 +119,7 @@ function App() {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         setTheme("color-theme-dark");
         setTogTheme(true);
-        setBtnText("Light")
+        setBtnTheme("theme-btn-dark")
       }
     }
     return () => {ignore = true}
@@ -211,11 +211,11 @@ function App() {
   return (
     <div id="root-react" className={`App color ${theme}`} style={{height: back}}>
       <Header
-          btnText={btnText}
           toggleTheme={toggleTheme}
           docScroll={docScroll}
           featureAlertFunct={featureAlertFunct}
           goPage={goPage}
+          btnTheme={btnTheme}
       ></Header>
 
       {

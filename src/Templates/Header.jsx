@@ -103,9 +103,11 @@ const Header = (props) => {
                         initNav={initNav}
                     ></NavButton>
                     <div className="theme-button-container">
-                        <button className="nav-buttons link-desat" onClick={() => {
-                            props.toggleTheme();
-                        }}>{props.btnText}</button>                     
+                        <div className="no-select">L</div>
+                        <button className={`theme-btn ${props.btnTheme}`} onClick={() => {props.toggleTheme()}}>
+                                <div className="theme-btn-slider"></div>
+                        </button>                  
+                        <div className="no-select">D</div>
                     </div>
                 </div>
                 <div className="scroll-track-bar" style={{width: `${props.docScroll}%`}}></div>

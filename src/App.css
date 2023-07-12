@@ -365,6 +365,35 @@ hr {
   color: var(--font-color-1);
 }
 
+.theme-button-container {
+  color: var(--font-color-1);
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.theme-btn {
+  width: 75px;
+  margin: 0px 8px;
+  display: flex;
+  justify-content: center;
+  background: var(--color-gray);
+  border: solid var(--color-shadow);
+}
+.theme-btn-slider {
+  height: 100%;
+  width: 35%;
+  background: var(--contrast2);
+}
+.theme-btn-light .theme-btn-slider {
+  position: relative;
+  transform: translateX(-100%);
+  transition: var(--anim-rate) cubic-bezier(0, 0.1, 0.4, 1.2);
+}
+.theme-btn-dark .theme-btn-slider {
+  position: relative;
+  transform: translateX(100%);
+  transition: var(--anim-rate) cubic-bezier(0, 0.1, 0.4, 1.2);
+}
 /*-----------------------------------------------CONTENT-STYLE-TEMPLATE-----------------------------------------------*/
 .container-first {
   margin-top: var(--below-header);
