@@ -45,6 +45,7 @@ const ArtPage = (props) => {
             <div id="art-section-card-discussion" className="content-container container-last artpage-layout-width middle-text">
                 <div tabIndex={0}>{Content.discussion}</div>
             </div>
+            
         </div>
     )
 }
