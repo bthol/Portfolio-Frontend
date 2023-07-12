@@ -14,6 +14,7 @@ const ArtPage = (props) => {
                 <Comp7 image={Content.gallery[2]} enter={props.enter} />
                 <Comp7 image={Content.gallery[1]} enter={props.enter} />
             </div>
+            <Comp6 title={"Texture Fields"} />
 
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[5]} enter={props.enter} />
