@@ -104,12 +104,17 @@ function App() {
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
-      setTheme("color-theme-light");
       setBtnTheme("theme-btn-light");
     } else {
-      setTheme("color-theme-dark");
       setBtnTheme("theme-btn-dark");
     }
+    setTimeout(() => {
+      if (togTheme) {
+        setTheme("color-theme-light");
+      } else {
+        setTheme("color-theme-dark");
+      }
+    }, 150)
   };
 
   useEffect(() => {
