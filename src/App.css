@@ -367,7 +367,7 @@ hr {
 
 .theme-button-container {
   color: var(--font-color-1);
-  width: 100px;
+  width: 85px;
   display: flex;
   justify-content: space-between;
 }
