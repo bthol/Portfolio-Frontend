@@ -188,8 +188,14 @@ function App() {
           })
         }
       })
+    // Display request timeout to avoid infinite loading
+    setTimeout(() => {
+      setPortfolioViews(`connection timeout`)
+      setPortfolioLikes(`connection timeout`)
+    }, 300000)
     return () => {ignore = true}
   }, [])
+
 
   // Like Button
   const likePortfolio = () => {

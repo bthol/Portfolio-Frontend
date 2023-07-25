@@ -28,7 +28,6 @@ const HomePageContent = {
         <p></p>
         <li className="text-large" tabIndex={0}>Java</li>
         <ul>
-            <li tabIndex={0}>API: REST API with vanilla Java</li>
             <li tabIndex={0}>Libraries: Java Development Kit (JDK)</li>
             <li tabIndex={0}>Resources: Language Support for Java by Redhat</li>
         </ul>
