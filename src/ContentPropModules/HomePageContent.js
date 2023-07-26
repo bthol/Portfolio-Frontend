@@ -1,5 +1,9 @@
 const HomePageContent = {
+  about: <div><b>About</b>: I am a flexible developer that can collaborate with the team to design, build, test, deploy, and maintain backend APIs that CRUD in JSON with cloud databases, create intuitive frontend UI design crafted with UX in mind, and independently engineer full stack features that asynchronously request data from a database for view on the client-side. I am searching for a position to utilize and further grow my creative and technological skills in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [
+    {
+      sectionTitle: "Skills and Knowledge"
+    },
     {
       id: "skills-1",
       title: "Programming Langauges",
@@ -115,9 +119,12 @@ const HomePageContent = {
   ],
   experience: [
     {
+      sectionTitle: "Work Experience Highlights"
+    },
+    {
       jobTitle: "Deli Clerk",
       employer: "Andronicos",
-      workPeriod: "May 2020 - Current",
+      workPeriod: "May 2020 - July 2020",
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
@@ -173,6 +180,9 @@ const HomePageContent = {
     },
   ],
   education: [
+    {
+      sectionTitle: "Education"
+    },
     {
       name: "BitWise Industries",
       period: "May 2022 - June 2022",

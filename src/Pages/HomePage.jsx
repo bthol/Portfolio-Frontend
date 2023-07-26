@@ -118,7 +118,7 @@ const HomePage = (props) => {
                 </div>
                 <br />
                 <div className="flex-center content-highlight" tabIndex={0}>
-                    <div><b>About</b>: I am a Full Stack Developer searching for a position to utilize and develop my creative and technological skillset.</div>
+                    <div>{Content.about}</div>
                 </div>
                 <br />
             </div>
@@ -171,14 +171,8 @@ const HomePage = (props) => {
                 </div>
             </div>
             <div id="homepage-mid-2" className="content-container shadow-behind">
-                <h3 className="underline text-x-large" tabIndex={0}>Skills and Knowledge</h3>
+                <h3 className="underline text-x-large" tabIndex={0}>{Content.skills[0].sectionTitle}</h3>
                 <div className="section-lists">
-                    <Comp1
-                        skillsTitle={Content.skills[0].title}
-                        skillsList={Content.skills[0].list}
-                        id={Content.skills[0].id}
-                    ></Comp1>
-                    <br />
                     <Comp1
                         skillsTitle={Content.skills[1].title}
                         skillsList={Content.skills[1].list}
@@ -190,6 +184,12 @@ const HomePage = (props) => {
                         skillsList={Content.skills[2].list}
                         id={Content.skills[2].id}
                     ></Comp1>
+                    <br />
+                    <Comp1
+                        skillsTitle={Content.skills[3].title}
+                        skillsList={Content.skills[3].list}
+                        id={Content.skills[3].id}
+                    ></Comp1>
                 </div>
                 {
                     props.mobile
@@ -198,15 +198,8 @@ const HomePage = (props) => {
                 }
             </div>
             <div id="homepage-mid-3" className="content-container shadow-behind">
-                <h3 className="underline text-x-large" tabIndex={0}>Work Experience Highlights</h3>
+                <h3 className="underline text-x-large" tabIndex={0}>{Content.experience[0].sectionTitle}</h3>
                 <div className="content-highlight">
-                    <Comp3
-                        jobTitle={Content.experience[0].jobTitle}
-                        employer={Content.experience[0].employer}
-                        workPeriod={Content.experience[0].workPeriod}
-                        list={Content.experience[0].list}
-                        enter={props.enter}
-                    ></Comp3>
                     <Comp3
                         jobTitle={Content.experience[1].jobTitle}
                         employer={Content.experience[1].employer}
@@ -221,17 +214,18 @@ const HomePage = (props) => {
                         list={Content.experience[2].list}
                         enter={props.enter}
                     ></Comp3>
+                    <Comp3
+                        jobTitle={Content.experience[3].jobTitle}
+                        employer={Content.experience[3].employer}
+                        workPeriod={Content.experience[3].workPeriod}
+                        list={Content.experience[3].list}
+                        enter={props.enter}
+                    ></Comp3>
                 </div>
                 <br />
             </div>
             <div id="homepage-mid-4" className="content-container shadow-behind container-last">
-                <h3 className="underline text-x-large" tabIndex={0}>Education</h3>
-                <Comp4
-                    school={Content.education[0].name}
-                    schoolPeriod={Content.education[0].period}
-                    schoolDescription={Content.education[0].description}
-                ></Comp4>
-                <br />
+                <h3 className="underline text-x-large" tabIndex={0}>{Content.education[0].sectionTitle}</h3>
                 <Comp4
                     school={Content.education[1].name}
                     schoolPeriod={Content.education[1].period}
@@ -242,6 +236,12 @@ const HomePage = (props) => {
                     school={Content.education[2].name}
                     schoolPeriod={Content.education[2].period}
                     schoolDescription={Content.education[2].description}
+                ></Comp4>
+                <br />
+                <Comp4
+                    school={Content.education[3].name}
+                    schoolPeriod={Content.education[3].period}
+                    schoolDescription={Content.education[3].description}
                 ></Comp4>
                 <br />
             </div>

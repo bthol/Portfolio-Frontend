@@ -188,10 +188,10 @@ function App() {
           })
         }
       })
-    // Display request timeout to avoid infinite loading
+    // Display request failure to avoid the appearance of infinite loading
     setTimeout(() => {
-      setPortfolioViews(`connection timeout`)
-      setPortfolioLikes(`connection timeout`)
+      setPortfolioViews(`failed to load`)
+      setPortfolioLikes(`failed to load`)
     }, 300000)
     return () => {ignore = true}
   }, [])
