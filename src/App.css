@@ -535,22 +535,21 @@ hr {
     right: calc(2 * var(--wide));
   }
   .carButs button {
-    height: 20%;
     width: calc(30% / 3);
+    height: 10px;
     margin: 15px 3%;
   }
   .highlight-carBut {
     border: 1px ridge var(--button-dark-detail);
     background-color: var(--color-shadow);
-    padding: .5% 0%;
   }
 }
 
 @media(hover: hover) and (pointer: fine) {
   .carBut-hover:hover {
     position: relative;
-    transform: translatey(-10%);
-    height: 30%;
+    transform: translatey(-2.35px);
+    padding: 3.75px 0px;
   }
 }
 
