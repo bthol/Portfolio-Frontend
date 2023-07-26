@@ -506,7 +506,7 @@ hr {
     --wide: 100%;
     padding: -1%;
     overflow: hidden;
-    height: 88%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

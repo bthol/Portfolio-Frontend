@@ -171,28 +171,51 @@ function App() {
   const ID = "64a90dfc4b3042dcaabdf1b4";
   useEffect(() => {
     let ignore = false;
-    fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-      .then(res => res.json())
-      .then((data) => {
-        if (!ignore) {
-          setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
-          setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
-          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-            method: 'PATCH',
-            headers: {
-              'Content-type': 'application/json; charset=UTF-8',
-            },
-            body: JSON.stringify({
-              portfolioViews: data.data[0].portfolioViews + 1,
-            })
+    const getResources = () => {
+      // Test for connection to backend
+      fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`).then(
+        () => {
+          // onFulfilled
+          // Request resources and display them
+          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
+          .then(res => res.json())
+          .then((data) => {
+            if (!ignore) {
+              setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
+              setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
+              fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+                method: 'PATCH',
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+                },
+                body: JSON.stringify({
+                  portfolioViews: data.data[0].portfolioViews + 1,
+                })
+              })
+            }
           })
+        },
+        () => {
+          // onRejected
+          // Display message in place of resources to avoid the appearance of infinite loading
+          setPortfolioLikes("failed to load")
+          setPortfolioViews("failed to load")
+  
+          // trigger a display with a cancellable 30 second countdown for connection retry
+          let cd = 0;
+          const cdCache = setInterval(() => {
+            if (cd === 8) {
+              cd = 0;
+              clearInterval(cdCache);
+              getResources();
+            } else {
+              cd += 1;
+            }
+          }, 1000)
         }
-      })
-    // Display request failure to avoid the appearance of infinite loading
-    setTimeout(() => {
-      setPortfolioViews(`failed to load`)
-      setPortfolioLikes(`failed to load`)
-    }, 300000)
+      );
+    }
+    getResources();
     return () => {ignore = true}
   }, [])
 
