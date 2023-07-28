@@ -8,18 +8,26 @@ const ArtPage = (props) => {
     return (
         <div id="artpage" className="page-content">
 
-            <Comp6 title={"Gallery"} containerFirst={"container-first"}/>
+            <Comp6 title={"Forefront"} containerFirst={"container-first"}/>
 
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[2]} enter={props.enter} />
                 <Comp7 image={Content.gallery[1]} enter={props.enter} />
             </div>
+
+            <Comp6 title={"Machine Error"} containerFirst={"container-first"}/>
+
+            <div className="artpage-gallery-row">
+
+            </div>
+
             <Comp6 title={"Texture Fields"} />
 
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[5]} enter={props.enter} />
                 <Comp7 image={Content.gallery[3]} enter={props.enter} />
             </div>
+
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery[4]} enter={props.enter} />
                 <Comp7 image={Content.gallery[0]} enter={props.enter} />
@@ -39,12 +47,6 @@ const ArtPage = (props) => {
                 image2={Content.origami[1].image2}
                 describe={Content.origami[1].describe}
             />
-
-            <Comp6 title={"Discussion"} />
-
-            <div id="art-section-card-discussion" className="content-container container-last artpage-layout-width middle-text">
-                <div tabIndex={0}>{Content.discussion}</div>
-            </div>
             
         </div>
     )

@@ -42,8 +42,5 @@ const ArtContent = {
             </div>
         },
     ],
-    discussion: <div>
-        <p className="indent">I have always been enamored by details, and, contrary to many people who do art when they are younger, my interest in art hasn't waned a bit. In fact, I get more interested in art the older I get. As I find more techniques and more mediums to express the urge to create, I find more reasons to be creative.</p>
-    </div>,
 };
 export { ArtContent };
