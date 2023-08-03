@@ -1,14 +1,14 @@
-import Forefront1 from '../Images/ArtPageImages/Forefront/Feathered-Plant.jpg';
-import Forefront2 from '../Images/ArtPageImages/Forefront/In-Organic.jpg';
+import Forefront1 from '../Images/ArtPageImages/Forefront/png/Feathered-Plant.png';
+import Forefront2 from '../Images/ArtPageImages/Forefront/png/In-Organic.png';
 
-import MachineError1 from '../Images/ArtPageImages/MachineError/A-Fracture_6.jpg';
-import MachineError2 from '../Images/ArtPageImages/MachineError/C-Fracture_1.jpg';
+import MachineError1 from '../Images/ArtPageImages/MachineError/png/A-Fracture_6.png';
+import MachineError2 from '../Images/ArtPageImages/MachineError/png/C-Fracture_1.png';
 
-import TextureFields1 from '../Images/ArtPageImages/TextureFields/Calc.jpg';
-import TextureFields2 from '../Images/ArtPageImages/TextureFields/Dream-Point-Scape.jpg';
-import TextureFields3 from '../Images/ArtPageImages/TextureFields/Motor-Tome.jpg';
-import TextureFields4 from '../Images/ArtPageImages/TextureFields/Qua.jpg';
-import TextureFields5 from '../Images/ArtPageImages/TextureFields/The-One-with-the-Orange-Band.jpg';
+import TextureFields1 from '../Images/ArtPageImages/TextureFields/png/Calc.png';
+import TextureFields2 from '../Images/ArtPageImages/TextureFields/png/Dream-Point-Scape.png';
+import TextureFields3 from '../Images/ArtPageImages/TextureFields/png/Motor-Tome.png';
+import TextureFields4 from '../Images/ArtPageImages/TextureFields/png/Qua.png';
+import TextureFields5 from '../Images/ArtPageImages/TextureFields/png/The-One-with-the-Orange-Band.png';
 
 
 const ArtContent = {

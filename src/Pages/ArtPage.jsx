@@ -15,7 +15,7 @@ const ArtPage = (props) => {
                 <Comp7 image={Content.gallery.forefront[1]} enter={props.enter} />
             </div>
 
-            <Comp6 title={"Machine Error"} containerFirst={"container-first"}/>
+            <Comp6 title={"Machine Error"} />
 
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.machineError[0]} enter={props.enter} />
