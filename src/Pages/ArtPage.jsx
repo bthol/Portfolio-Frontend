@@ -11,26 +11,31 @@ const ArtPage = (props) => {
             <Comp6 title={"Forefront"} containerFirst={"container-first"}/>
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[2]} enter={props.enter} />
-                <Comp7 image={Content.gallery[1]} enter={props.enter} />
+                <Comp7 image={Content.gallery.forefront[0]} enter={props.enter} />
+                <Comp7 image={Content.gallery.forefront[1]} enter={props.enter} />
             </div>
 
             <Comp6 title={"Machine Error"} containerFirst={"container-first"}/>
 
             <div className="artpage-gallery-row">
-
+                <Comp7 image={Content.gallery.machineError[0]} enter={props.enter} />
+                <Comp7 image={Content.gallery.machineError[1]} enter={props.enter} />
             </div>
 
             <Comp6 title={"Texture Fields"} />
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[5]} enter={props.enter} />
-                <Comp7 image={Content.gallery[3]} enter={props.enter} />
+                <Comp7 image={Content.gallery.textureFields[0]} enter={props.enter} />
+                <Comp7 image={Content.gallery.textureFields[1]} enter={props.enter} />
             </div>
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery[4]} enter={props.enter} />
-                <Comp7 image={Content.gallery[0]} enter={props.enter} />
+                <Comp7 image={Content.gallery.textureFields[2]} enter={props.enter} />
+            </div>
+
+            <div className="artpage-gallery-row">
+                <Comp7 image={Content.gallery.textureFields[3]} enter={props.enter} />
+                <Comp7 image={Content.gallery.textureFields[4]} enter={props.enter} />
             </div>
 
             <Comp6 title={"Origami"} />

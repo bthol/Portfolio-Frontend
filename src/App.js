@@ -213,8 +213,8 @@ function App() {
             }
           }, 1000)
         }
-      );
-    }
+      )
+    };
     getResources();
     return () => {ignore = true}
   }, [])

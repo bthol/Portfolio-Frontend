@@ -1,19 +1,34 @@
-import img1 from '../Images/ArtPageImages/Dream-Point-Scape.jpg';
-import img2 from '../Images/ArtPageImages/Feathered-Plant.jpg';
-import img3 from '../Images/ArtPageImages/Frame-of-Sight.jpg';
-import img4 from '../Images/ArtPageImages/Qua.jpg';
-import img5 from '../Images/ArtPageImages/The-One-with-the-Orange-Band.png';
-import img6 from '../Images/ArtPageImages/err+.jpg';
+import Forefront1 from '../Images/ArtPageImages/Forefront/Feathered-Plant.jpg';
+import Forefront2 from '../Images/ArtPageImages/Forefront/In-Organic.jpg';
+
+import MachineError1 from '../Images/ArtPageImages/MachineError/A-Fracture_6.jpg';
+import MachineError2 from '../Images/ArtPageImages/MachineError/C-Fracture_1.jpg';
+
+import TextureFields1 from '../Images/ArtPageImages/TextureFields/Calc.jpg';
+import TextureFields2 from '../Images/ArtPageImages/TextureFields/Dream-Point-Scape.jpg';
+import TextureFields3 from '../Images/ArtPageImages/TextureFields/Motor-Tome.jpg';
+import TextureFields4 from '../Images/ArtPageImages/TextureFields/Qua.jpg';
+import TextureFields5 from '../Images/ArtPageImages/TextureFields/The-One-with-the-Orange-Band.jpg';
+
 
 const ArtContent = {
-    gallery: [
-        <img className="gallery-image" src={img1} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image" src={img2} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image" src={img3} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image" src={img4} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image" src={img5} alt="gallery" width={"100%"} tabIndex={0}/>,
-        <img className="gallery-image" src={img6} alt="gallery" width={"100%"} tabIndex={0}/>,
-    ],
+    gallery: {
+        forefront: [
+            <img className="gallery-image" src={Forefront1} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={Forefront2} alt="gallery" width={"100%"} tabIndex={0}/>,
+        ],
+        machineError: [
+            <img className="gallery-image" src={MachineError1} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={MachineError2} alt="gallery" width={"100%"} tabIndex={0}/>,
+        ],
+        textureFields: [
+            <img className="gallery-image" src={TextureFields1} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={TextureFields2} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={TextureFields3} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={TextureFields4} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={TextureFields5} alt="gallery" width={"100%"} tabIndex={0}/>,
+        ],
+    },
     origami: [
         {
             name: <div>
@@ -25,7 +40,7 @@ const ArtContent = {
             image2: <div>
             </div>,
             describe: <div>
-                <p>The octopus isn't something you might have thought to make out of paper, because paper is rigid and octopuses are charactaristically flexible, but that just makes designing the model all the more interesting! Essentially, an octopus can be made out of a paper square by dividing the square into quadrants and using a technique called box-pleating for each quadrant, where one center box and and its diagonal opposite are halved, so that the arms that end in the corners are equal in length to those that end at the midpoint of the paper's edge, and finally using the remaining two center boxes to make the eyes.</p>
+                <p>The octopus isn't something you might have thought to make out of paper, because paper is rigid and octopi are charactaristically flexible, but that just makes designing the model all the more interesting! Essentially, an octopus can be made out of a paper square by dividing the square into quadrants and using a technique called box-pleating for each quadrant, where one center box and and its diagonal opposite are halved, so that the arms that end in the corners are equal in length to those that end at the midpoint of the paper's edge, and finally using the remaining two center boxes to make the eyes.</p>
             </div>
         },
         {
