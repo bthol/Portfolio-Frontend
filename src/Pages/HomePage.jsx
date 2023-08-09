@@ -113,7 +113,7 @@ const HomePage = (props) => {
                             <div className="inline-divider"></div>
                             <a href="https://github.com/bthol" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>GitHub</button></a>
                             <div className="inline-divider"></div>
-                            <a href="mailto:bthollaug@gmail.com" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>Gmail</button></a>
+                            <a href="mailto:bthollaug@gmail.com" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>Email</button></a>
                         </div>
                     </div>
                 </div>
