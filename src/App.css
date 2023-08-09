@@ -819,9 +819,8 @@ html {
   background-color: #00000080;
 }
 
-.gallery-image-select > img {
-  /* height: calc(var(--areaHeight) - 15vmin); */
-  width: 33vw;
+.gallery-image-select .gallery-image {
+  width: calc(var(--areaHeight) - 15vw / 2);
 }
 
 .artpage-gallery-row {

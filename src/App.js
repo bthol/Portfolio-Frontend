@@ -204,7 +204,7 @@ function App() {
           // trigger a display with a cancellable 30 second countdown for connection retry
           let cd = 0;
           const cdCache = setInterval(() => {
-            if (cd === 8) {
+            if (cd === 10) {
               cd = 0;
               clearInterval(cdCache);
               getResources();
