@@ -804,7 +804,7 @@ html {
 .gallery-image-select {
   --areaHeight: calc(100vh - var(--below-header) + 10px);
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: var(--areaHeight);
   z-index: 1;
   top: calc(var(--below-header) - 10px);
@@ -813,10 +813,6 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #00000080;
-}
-
-.gallery-image-select .gallery-image {
-  width: calc(var(--areaHeight) - 15vw / 2);
 }
 
 .artpage-gallery-row {
