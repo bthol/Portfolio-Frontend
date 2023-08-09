@@ -608,6 +608,7 @@ html {
   .link-desat:hover {
     transition: all 100ms ease;
     color: var(--font-color-2);
+    cursor: pointer;
   }
   .link-highlight:hover {
     transition: all 100ms ease;
@@ -664,6 +665,10 @@ html {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
 }
 
 .no-select {

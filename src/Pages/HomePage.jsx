@@ -3,6 +3,7 @@ import { Comp1 } from '../RenderComp/Comp1';
 import { Comp2 } from '../RenderComp/Comp2';
 import { Comp3 } from '../RenderComp/Comp3';
 import { Comp4 } from '../RenderComp/Comp4';
+import { Comp9 } from '../RenderComp/Comp9';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { HomePageContent as Content } from '../ContentPropModules/HomePageContent';
 
@@ -117,8 +118,8 @@ const HomePage = (props) => {
                     </div>
                 </div>
                 <br />
-                <div className="flex-center content-highlight" tabIndex={0}>
-                    <div>{Content.about}</div>
+                <div>
+                    <Comp9 title={"About Me"} text={Content.about}/>
                 </div>
                 <br />
             </div>
