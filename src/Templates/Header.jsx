@@ -76,7 +76,7 @@ const Header = (props) => {
         <header className="app-header">
             <div className="no-select">
                 <AugiumIcon></AugiumIcon>
-                <h3 id="website-title" title="Blake Thollaug's Portfolio Website" tabIndex={0}>Blake Thollaug's Portfolio Website</h3>
+                <h3 id="website-title" title="Blake Thollaug's Portfolio Website">Blake Thollaug's Portfolio Website</h3>
             </div>
             <nav className="app-nav">
                 <div className="flex-around">
