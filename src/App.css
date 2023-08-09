@@ -791,10 +791,6 @@ html {
   grid-column: 1/6;
 }
 
-.gallery-image-container {
-  margin: 0px 10px;
-}
-
 .gallery-image {
   width: 33vw;
   border: 2.5vmin ridge var(--background-polar);
