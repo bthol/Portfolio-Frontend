@@ -36,10 +36,10 @@ const Comp7 = (props) => {
                     } else {
                         if (aH > aW) {
                             console.log(2);
-                            newSize = aW / iAR;
+                            newSize = aW;
                         } else {
                             console.log(3);
-                            newSize = (aW - iW) + iW;
+                            newSize = aH / iAR;
                         }
                     }
                     return newSize;
