@@ -793,12 +793,9 @@ html {
 
 .gallery-image {
   width: 33vw;
-  border: 2.5vmin ridge var(--background-polar);
+  border: 2vmin ridge var(--background-polar);
   border-radius: 3px;
   cursor: pointer;
-  -moz-box-box-shadow: 0px 0px 5px .75px var(--color-shadow);
-     -webkit-box-shadow: 0px 0px 5px .75px var(--color-shadow);
-             box-shadow: 0px 0px 5px .75px var(--color-shadow);
 }
 
 .gallery-image-select {

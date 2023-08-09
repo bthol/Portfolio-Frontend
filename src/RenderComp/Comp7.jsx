@@ -22,23 +22,17 @@ const Comp7 = (props) => {
                 // calculate aspect ratios (AR)
                 let aAR = aH / aW;
                 const iAR = iH / iW;
-                // where AR of Area < AR of Image
-                    // (Height of Area / Height of Image) * intial Width of Image = final Width of Image
-                    // assign final Width of Image to image
-                // otherwise
-                    // (Smaller dimension of Area / AR of Image) * intial Width of Image = final Width of Image
-                    // assign final Width of Image to image
                 const getNewSize = (aAR, iAR, aH, aW, iH, iW) => {
                     let newSize;
                     if (aAR < iAR) {
-                        console.log(1);
+                        // console.log(1);
                         newSize = (aH / iH) * iW;
                     } else {
                         if (aH > aW) {
-                            console.log(2);
+                            // console.log(2);
                             newSize = aW;
                         } else {
-                            console.log(3);
+                            // console.log(3);
                             newSize = aH / iAR;
                         }
                     }
@@ -51,7 +45,7 @@ const Comp7 = (props) => {
                     const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
                     a.firstChild.style.width = `${newSize - 55}px`;
                 })
-                document.addEventListener("resize", () => {
+                window.addEventListener("resize", () => {
                     console.log("ran");
                     aH = a.offsetHeight;
                     aW = a.offsetWidth;
