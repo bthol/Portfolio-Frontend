@@ -302,6 +302,7 @@ hr {
   padding: 1vmin 0;
   margin-bottom: 8px;
   width: 96.33%;
+  color: var(--font-color-1);
   background: var(--color-background-3);
 }
 

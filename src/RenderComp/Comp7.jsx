@@ -46,7 +46,6 @@ const Comp7 = (props) => {
                     a.firstChild.style.width = `${newSize - 55}px`;
                 })
                 window.addEventListener("resize", () => {
-                    console.log("ran");
                     aH = a.offsetHeight;
                     aW = a.offsetWidth;
                     aAR = aH / aW;

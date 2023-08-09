@@ -44,30 +44,30 @@ const HomePage = (props) => {
           id: "projects-1",
           title: <b><div tabIndex={slideTabIdx0} className="text-large flex-center">Space Battle</div></b>,
           text: <div>
-                <p tabIndex={slideTabIdx0}><b>Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
-                <p tabIndex={slideTabIdx0}><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
+                <p><b>Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
+                <p><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
               </div>,
           list: <ul>
             <li><a href="https://bthol.github.io/Space-Battle/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a></li>
             <li><a href="https://github.com/bthol/Space-Battle" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a></li>
-            <li tabIndex={slideTabIdx0}>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
-            <li tabIndex={slideTabIdx0}>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
-            <li tabIndex={slideTabIdx0}>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
+            <li>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
+            <li>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
+            <li>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
           </ul>,
         },
         {
           id: "projects-2",
           title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Magic 8 Ball</div></b>,
           text: <div>
-            <p tabIndex={slideTabIdx1}><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
-            <p tabIndex={slideTabIdx1}><b>Technologies:</b> JavaScript, HTML, CSS</p>
+            <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
+            <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
           </div>,
           list: <ul>
             <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
             <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
-            <li tabIndex={slideTabIdx1}>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
-            <li tabIndex={slideTabIdx1}>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
-            <li tabIndex={slideTabIdx1}>Implemented a polychromatic animated background gradient.</li>
+            <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
+            <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
+            <li>Implemented a polychromatic animated background gradient.</li>
           </ul>,
         },
         {
@@ -75,15 +75,15 @@ const HomePage = (props) => {
           title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Retro Toe</div></b>,
           carousel: <img src="" alt="project carousel"></img>,
           text: <div>
-            <p tabIndex={slideTabIdx2}><b>Description:</b> Tic Tac Toe. Retro style.</p>
-            <p tabIndex={slideTabIdx2}><b>Technologies:</b> JavaScript, HTML, CSS</p>
+            <p><b>Description:</b> Tic Tac Toe. Retro style.</p>
+            <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
           </div>,
           list: <ul>
             <li><a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
             <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
-            <li tabIndex={slideTabIdx2}>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
-            <li tabIndex={slideTabIdx2}>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
-            <li tabIndex={slideTabIdx2}>Deployed the application using GitHub Pages.</li>
+            <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
+            <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+            <li>Deployed the application using GitHub Pages.</li>
           </ul>,
         },
     ]

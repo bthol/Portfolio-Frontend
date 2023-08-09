@@ -282,7 +282,7 @@ function App() {
       }
 
       <div className="flex-center">
-        <a href="#" className="flex-center top-link-style button-hover" tabIndex={0}>back to top</a>
+        <div className="flex-center top-link-style button-hover" onClick={() => {window.scrollTo(0, 0)}} >back to top</div>
       </div>
 
       {

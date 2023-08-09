@@ -19,8 +19,8 @@ const Comp3 = (props) => {
     
     return (
         <div id={props.id}>
-            <div className="text-large" tabIndex={0}><b>{props.jobTitle}</b></div>
-            <div className="flex-between" tabIndex={0}><p className="text-large">{props.employer}</p><p>{props.workPeriod}</p></div>
+            <div className="text-large"><b>{props.jobTitle}</b></div>
+            <div className="flex-between"><p className="text-large">{props.employer}</p><p>{props.workPeriod}</p></div>
             {
                 show &&
                 <div>
