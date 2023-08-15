@@ -119,7 +119,7 @@ const HomePage = (props) => {
                 </div>
                 <br />
                 <div>
-                    <Comp9 title={"About Me"} text={Content.about}/>
+                    <Comp9 title={"About Me"} text={Content.about} />
                 </div>
                 <br />
             </div>

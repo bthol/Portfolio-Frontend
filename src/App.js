@@ -171,6 +171,20 @@ function App() {
   const ID = "64a90dfc4b3042dcaabdf1b4";
   useEffect(() => {
     let ignore = false;
+    // Modern Cookies alternatives
+    // console.log(window.sessionStorage);
+    // console.log(window.localStorage);
+
+    // window.localStorage.setItem("been", true);
+    // window.localStorage.getItem("been");
+    // window.localStorage.removeItem("been", true);
+    // window.localStorage.clear();
+
+    // Notify if offline
+    if (!window.navigator.onLine) {
+      alert("The user is not connected to the internet. Please connect to the internet for a fully featured experience.")
+    }
+
     const getResources = () => {
       // Test for connection to backend
       fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`).then(
@@ -201,7 +215,7 @@ function App() {
           setPortfolioLikes("failed to load")
           setPortfolioViews("failed to load")
   
-          // trigger a display with a cancellable 30 second countdown for connection retry
+          // trigger a display with a cancellable 10 second countdown for connection retry
           let cd = 0;
           const cdCache = setInterval(() => {
             if (cd === 10) {

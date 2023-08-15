@@ -1,7 +1,5 @@
 const HomePageContent = {
-  about: [
-    <div>I am a flexible developer that can collaborate with the team to design, build, test, deploy, and maintain backend APIs that CRUD in JSON with cloud databases, create intuitive frontend UI design crafted with UX in mind, and independently engineer full stack features that asynchronously request data from a database for view on the client-side. I am searching for a position to utilize and further grow my creative and technological skills in order to make a valuable contribution to my team, the business, and the world at large.</div>,
-  ],
+  about: <div>I am a flexible developer that can collaborate with the team to design, build, test, deploy, and maintain backend APIs that CRUD in JSON with cloud databases, create intuitive frontend UI design crafted with UX in mind, and independently engineer full stack features that asynchronously request data from a database for view on the client-side. I am searching for a position to utilize and further grow my creative and technological skills in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [
     {
       sectionTitle: "Skills and Knowledge"
@@ -13,7 +11,7 @@ const HomePageContent = {
         <li className="text-large">JavaScript</li>
         <ul>
             <li>Libraries: Node.js</li>
-            <li>Frameworks: Express.js for REST API, React component GUI</li>
+            <li>Frameworks: Express.js for REST API, React for component GUI</li>
             <li>Debugging: ESLint</li>
         </ul>
         <p></p>
@@ -32,12 +30,6 @@ const HomePageContent = {
             <li>Preprocesor: Sass</li>
         </ul>
         <p></p>
-        <li className="text-large">Java</li>
-        <ul>
-            <li>Libraries: Java Development Kit (JDK)</li>
-            <li>Resources: Language Support for Java by Redhat</li>
-        </ul>
-        <p></p>
         <li className="text-large">Python</li>
         <ul>
             <li>Libraries: Pip</li>
@@ -49,6 +41,13 @@ const HomePageContent = {
         <ul>
             <li>Compiler: Clang, GCC</li>
             <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
+            <li>Resources: MSYS environment, pacman package handling</li>
+        </ul>
+        <p></p>
+        <li className="text-large">Java</li>
+        <ul>
+            <li>Libraries: Java Development Kit (JDK)</li>
+            <li>Resources: Language Support for Java by Redhat</li>
         </ul>
         <p></p>
         <li className="text-large">R</li>
