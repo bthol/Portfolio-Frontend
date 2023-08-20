@@ -4,8 +4,8 @@ import { useState } from 'react';
 const NavButton = (props) => {
     const menuOverflow = () => {
         const navMenu = document.querySelectorAll(".nav-menu-list")[props.id];
-        if (navMenu.offsetHeight > 200) {
-            navMenu.style.height = "200px";
+        if (navMenu.offsetHeight > 250) {
+            navMenu.style.height = "250px";
             navMenu.style.overflowY = "scroll"
         }
     }

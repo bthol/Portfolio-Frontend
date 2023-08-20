@@ -65,6 +65,9 @@ const Header = (props) => {
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
                 }} href="" target="_blank" className="link-desat"  tabIndex={navTabIdx2}>Calculo</a>
+                <a onClick={(e) => {
+                    props.featureAlertFunct(e);
+                }} href="" target="_blank" className="link-desat"  tabIndex={navTabIdx2}>Cryptos</a>
                 <p className="cursor-default"><u>Games</u></p>
                 <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
                 <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
