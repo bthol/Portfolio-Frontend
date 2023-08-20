@@ -197,19 +197,22 @@ function App() {
             if (!ignore) {
               setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
               
-              // if new to page (using local storage)
-              // then from here
-              setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
-              fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-                method: 'PATCH',
-                headers: {
-                  'Content-type': 'application/json; charset=UTF-8',
-                },
-                body: JSON.stringify({
-                  portfolioViews: data.data[0].portfolioViews + 1,
+              // if new to page
+              if (localStorage.getItem("been") === null) {
+                setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
+                fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+                  method: 'PATCH',
+                  headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                  },
+                  body: JSON.stringify({
+                    portfolioViews: data.data[0].portfolioViews + 1,
+                  })
                 })
-              })
-              // to here
+                localStorage.setItem("been", true);
+              }
+            } else {
+              setPortfolioViews(`: ${data.data[0].portfolioViews}`)
             }
           })
         },
