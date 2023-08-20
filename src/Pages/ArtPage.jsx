@@ -38,7 +38,7 @@ const ArtPage = (props) => {
                 <Comp7 image={Content.gallery.textureFields[4]} enter={props.enter} />
             </div>
 
-            <Comp6 title={"Origami"} />
+            {/* <Comp6 title={"Origami"} />
 
             <Comp5
                 name={Content.origami[0].name}
@@ -51,7 +51,7 @@ const ArtPage = (props) => {
                 image1={Content.origami[1].image1}
                 image2={Content.origami[1].image2}
                 describe={Content.origami[1].describe}
-            />
+            /> */}
             
         </div>
     )

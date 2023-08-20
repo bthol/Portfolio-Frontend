@@ -195,8 +195,11 @@ function App() {
           .then(res => res.json())
           .then((data) => {
             if (!ignore) {
-              setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
               setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
+              
+              // if new to page (using local storage)
+              // then from here
+              setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
               fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
                 method: 'PATCH',
                 headers: {
@@ -206,6 +209,7 @@ function App() {
                   portfolioViews: data.data[0].portfolioViews + 1,
                 })
               })
+              // to here
             }
           })
         },

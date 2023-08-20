@@ -22,6 +22,7 @@
   /* PROFILE-IMAGE */
 /* COMPONENTS */
   /* MODALS */
+  /* SHOW-TEXT */
   /* CAROUSELS */
 /* QUERIES */
   /* RESPONSIVITY */
@@ -498,6 +499,20 @@ hr {
   background: var(--color-background-3);
   border: 1.3px solid var(--button-dark-detail);
   color: var(--font-color-1);
+}
+
+/*-----------------------------------------------SHOW-TEXT-----------------------------------------------*/
+@media(min-width: 768px) {
+  .expand-text {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    top: var(--below-header);
+    left: 0px;
+  }
+  .expand-text > div {
+    width: 75%;
+  }
 }
 
 /*-----------------------------------------------CAROUSELS-----------------------------------------------*/
