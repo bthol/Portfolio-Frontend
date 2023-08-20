@@ -114,7 +114,7 @@ function App() {
       } else {
         setTheme("color-theme-dark");
       }
-    }, 150)
+    }, 180)
   };
 
   useEffect(() => {

@@ -51,23 +51,26 @@ const Header = (props) => {
     const navData = [
         {
             name: "Pages ",
-            links: <div className="nav-menu-style">
+            links: <div className="nav-menu-list">
                 <a href="" onClick={(e) => {
                     e.preventDefault();
                     props.goPage(2);
-                }} className="link-desat" tabIndex={navTabIdx1}>Art</a>
+                }} className="link-desat" tabIndex={navTabIdx1}>Art Gallery</a>
             </div>,
         },
         {
-            name: "Apps ",
-            links: <div className="nav-menu-style">
-                <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
-                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
-                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
-                <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
+            name: "Projects ",
+            links: <div className="nav-menu-list">
+                <p className="cursor-default"><u>Utility</u></p>
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
                 }} href="" target="_blank" className="link-desat"  tabIndex={navTabIdx2}>Calculo</a>
+                <p className="cursor-default"><u>Games</u></p>
+                <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
+                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
+                <p className="cursor-default"><u>Mini</u></p>
+                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
+                <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
             </div>,
         },
     ];
@@ -87,14 +90,16 @@ const Header = (props) => {
                         }}>Home</button>
                     </div>
                     <NavButton
+                        id={0}
                         name={navData[0].name}
                         links={navData[0].links}
                         navState={navState1}
                         drop={drop1}
                         toggleNavState={toggleNavState1}
                         initNav={initNav}
-                    ></NavButton>
+                        ></NavButton>
                     <NavButton
+                        id={1}
                         name={navData[1].name}
                         links={navData[1].links}
                         navState={navState2}
