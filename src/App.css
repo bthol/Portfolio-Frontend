@@ -22,7 +22,7 @@
   /* PROFILE-IMAGE */
 /* COMPONENTS */
   /* MODALS */
-  /* SHOW-TEXT */
+  /* POPUP-TEXT */
   /* CAROUSELS */
 /* QUERIES */
   /* RESPONSIVITY */
@@ -501,17 +501,19 @@ hr {
   color: var(--font-color-1);
 }
 
-/*-----------------------------------------------SHOW-TEXT-----------------------------------------------*/
+/*-----------------------------------------------POPUP-TEXT-----------------------------------------------*/
 @media(min-width: 768px) {
-  .expand-text {
+  .popup-container {
     position: fixed;
     z-index: 1;
+    height: calc(100vh - var(--below-header));
     width: 100vw;
     top: var(--below-header);
     left: 0px;
   }
-  .expand-text > div {
+  .popup-container > div {
     width: 75%;
+    height: max-content;
   }
 }
 
