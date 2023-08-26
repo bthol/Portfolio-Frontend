@@ -351,11 +351,11 @@ hr {
 
 .like-btn {
   cursor: pointer;
-  padding: 4px;
+  padding: 3px 6px;
   color: var(--font-color-1);
   background-color: var(--background-polar);
   border: 1.6px solid var(--color-gray);
-  border-radius: 3vmin;
+  border-radius: 15px;
 }
 
 .nav-buttons {
@@ -377,6 +377,7 @@ hr {
 }
 .theme-btn {
   width: 75px;
+  padding: 1px 6px;
   margin: 0px 8px;
   border-radius: 3px;
   display: flex;
