@@ -28,7 +28,7 @@ const Header = (props) => {
     const [navTabIdx2, setNavTabIdx2] = useState(-1);
     const toggleNavState2 = () => {
         setNavState2(!navState2);
-        if (!navState2) {setNavTabIdx2(0)} else {setNavTabIdx2(-1)}
+        if (!navState2) {setNavTabIdx2(0)}else{setNavTabIdx2(-1)}
         menuDisplay2();
     }
     const menuDisplay2 = () => {
