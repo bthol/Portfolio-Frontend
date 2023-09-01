@@ -87,7 +87,7 @@ const Header = (props) => {
             <nav className="app-nav">
                 <div className="flex-around">
                     <div className="home-button-container">
-                        <button className="nav-buttons link-desat" onClick={(e) => {
+                        <button className="nav-buttons link-desat" onClick={() => {
                             props.goPage(1);
                             initNav();
                         }}>Home</button>
@@ -112,7 +112,7 @@ const Header = (props) => {
                     ></NavButton>
                     <div className="theme-button-container">
                         <div className="no-select">L</div>
-                        <button className={`theme-btn ${props.btnTheme}`} onClick={() => {props.toggleTheme()}}>
+                        <button className={`theme-btn ${props.btnTheme}`} onClick={props.toggleTheme}>
                                 <div className="theme-btn-slider"></div>
                         </button>                  
                         <div className="no-select">D</div>

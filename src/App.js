@@ -43,11 +43,11 @@ function App() {
   
   window.addEventListener("resize", () => {
     getInfo();
-  }, false)
+  }, {passive: true});
   
   window.addEventListener("scroll", () => {
     scrollAmmount();
-  }, false)
+  }, {passive: true});
   
   // ERROR ALERTS
   const featureAlert = (e) => {
