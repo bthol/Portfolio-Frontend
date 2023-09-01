@@ -198,7 +198,7 @@ function App() {
               setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
               
               // if new to page
-              if (localStorage.getItem("been") === null) {
+              if (localStorage.getItem("viewed") === null) {
                 setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
                 fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
                   method: 'PATCH',
@@ -209,7 +209,7 @@ function App() {
                     portfolioViews: data.data[0].portfolioViews + 1,
                   })
                 })
-                localStorage.setItem("been", true);
+                localStorage.setItem("viewed", true);
               }
             } else {
               setPortfolioViews(`: ${data.data[0].portfolioViews}`)
@@ -243,23 +243,27 @@ function App() {
 
   // Like Button
   const likePortfolio = () => {
-    setPortfolioLikes(`: ${Number(portfolioLikes.slice(1, portfolioLikes.length)) + 1}`);
-    try {
-      fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-      .then(res => res.json())
-      .then((data) => {
-        fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-          method: 'PATCH',
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },
-          body: JSON.stringify({
-            portfolioLikes: data.data[0].portfolioLikes + 1,
+    // if not liked already (using localStorage)
+    if (localStorage.getItem("liked") === null) {
+      setPortfolioLikes(`: ${Number(portfolioLikes.slice(1, portfolioLikes.length)) + 1}`);
+      try {
+        fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
+        .then(res => res.json())
+        .then((data) => {
+          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+              portfolioLikes: data.data[0].portfolioLikes + 1,
+            })
           })
         })
-      })
-    } catch (err) {
-      console.error(err);
+        localStorage.setItem("liked", true);
+      } catch (err) {
+        console.error(err);
+      }
     }
   }
 

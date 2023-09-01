@@ -215,13 +215,6 @@ const HomePage = (props) => {
                         list={Content.experience[2].list}
                         enter={props.enter}
                     ></Comp3>
-                    <Comp3
-                        jobTitle={Content.experience[3].jobTitle}
-                        employer={Content.experience[3].employer}
-                        workPeriod={Content.experience[3].workPeriod}
-                        list={Content.experience[3].list}
-                        enter={props.enter}
-                    ></Comp3>
                 </div>
                 <br />
             </div>

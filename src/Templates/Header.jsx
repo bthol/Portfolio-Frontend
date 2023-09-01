@@ -61,6 +61,12 @@ const Header = (props) => {
         {
             name: "Projects ",
             links: <div className="nav-menu-list">
+                <p className="cursor-default"><u>Games</u></p>
+                <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
+                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
+                <p className="cursor-default"><u>Mini</u></p>
+                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
+                <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
                 <p className="cursor-default"><u>Utility</u></p>
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
@@ -68,12 +74,6 @@ const Header = (props) => {
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
                 }} href="" target="_blank" className="link-desat"  tabIndex={navTabIdx2}>Cryptos</a>
-                <p className="cursor-default"><u>Games</u></p>
-                <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
-                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
-                <p className="cursor-default"><u>Mini</u></p>
-                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
-                <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
             </div>,
         },
     ];

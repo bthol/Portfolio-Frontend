@@ -123,24 +123,6 @@ const HomePageContent = {
       sectionTitle: "Work Experience Highlights"
     },
     {
-      jobTitle: "Deli Clerk",
-      employer: "Andronicos",
-      workPeriod: "May 2020 - July 2020",
-      list: <div className="exp-list">
-        <div>Description</div>
-        <ul className="remove-bullet-list">
-          <li>I collaborated with the team to prepare hand-made sandwiches, to cut, label and package meats, cheeses and vegetables, and to deliver an excellent customer experience.</li>
-        </ul>
-        <br />
-        <div>Highlights</div>
-        <ul>
-          <li>Coordinating with the team to find solutions that work for the whole team</li>
-          <li>Attending to customer needs and serving them with a friendly demeanor</li>
-          <li>Managing time to fulfill various job responsibilities</li>
-        </ul>
-      </div>,
-    },
-    {
       jobTitle: "General Assistant",
       employer: "Albany Saunas",
       workPeriod: "Aug 2022 - Jan 2023",
