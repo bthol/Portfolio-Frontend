@@ -73,30 +73,48 @@ function App() {
     } else {
       return false;
     }
-  }
+  };
   
   // IDLE MODAL
+  // 5 min = 300 secs
+  let idleDelay = 300;
+  let idleCounter;
   const [modal, setModal] = useState(false);
-  useEffect(() => {
-    let seconds = 0;
-    // listners reset the count
-    document.addEventListener("touchmove", () => {seconds = 0});
-    document.addEventListener("mousemove", () => {seconds = 0});
-    document.addEventListener("keydown", () => {seconds = 0});
-    const counter = setInterval(() => {
-      seconds += 1;
-      if (seconds === 300) {
-        setModal(true);
-        seconds = 0;
-      }
-    }, 1000);
-    return () => clearInterval(counter);
-  }, []);
   
   const setModalFunct = (bool) => {
     setModal(bool)
+    if (bool === false) {
+      count();
+    }
   };
   
+  const count = () => {
+    idleCounter = setTimeout(() => {
+      setModalFunct(true)
+    }, idleDelay * 1000)
+  };
+
+  useEffect(() => {
+    // callback starts the count
+    count();
+    // listner restarts count
+    document.addEventListener("touchmove mousemove keydown", () => {
+      clearTimeout(idleCounter)
+      count()
+    });
+    document.addEventListener("visiblitychange", () => {
+      // stop count on nav away
+      if (document.visibilityState === "hidden") {
+        clearTimeout(idleCounter)
+      }
+      // restart count on nav back
+      if (document.visibilityState === "visible") {
+        count()
+      }
+    });
+    return () => clearTimeout(idleCounter);
+  }, []);
+
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-light");
   const [togTheme, setTogTheme] = useState(false);
