@@ -20,10 +20,10 @@ const NavButton = (props) => {
     };
     return (
         <div>
-            <button className="nav-buttons link-desat" onClick={(e) => {click(e)}}>
+            <button className="nav-buttons link-desat" onClick={(e) => { click(e) }}>
                 <div className="flex-between">{props.name} <div className={`nav-arrow ${props.drop}`}></div></div>
             </button>
-            <div className={`nav-menu ${props.drop}`} onClick={() => {props.initNav()}}>{props.links}</div>
+            <div className={`nav-menu ${props.drop}`} onClick={() => { props.initNav() }}>{props.links}</div>
         </div>
     )
 }

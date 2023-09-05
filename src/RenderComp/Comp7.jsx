@@ -50,14 +50,14 @@ const Comp7 = (props) => {
                     aW = a.offsetWidth;
                     aAR = aH / aW;
                     const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
-                    a.firstChild.style.width = `${newSize -100}px`;
+                    a.firstChild.style.width = `${newSize - 100}px`;
                 })
             }
         })
     }
 
-    return(
-        <div className={`gallery-image-container ${props.galleryColumn}`} onClick={(e) => {toggleSelect(e)}} onKeyDown={(e) => {if (props.enter(e)) {toggleSelect(e)}}}>
+    return (
+        <div className={`gallery-image-container ${props.galleryColumn}`} onClick={(e) => { toggleSelect(e) }} onKeyDown={(e) => { if (props.enter(e)) { toggleSelect(e) } }}>
             <div>{props.image}</div>
             {
                 !select && <div className="gallery-image-select">

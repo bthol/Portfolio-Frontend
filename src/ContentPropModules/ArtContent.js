@@ -14,19 +14,19 @@ import TextureFields5 from '../Images/ArtPageImages/TextureFields/png/The-One-wi
 const ArtContent = {
     gallery: {
         forefront: [
-            <img className="gallery-image" src={Forefront1} alt="gallery" width={"100%"} tabIndex={0}/>,
-            <img className="gallery-image" src={Forefront2} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={Forefront1} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={Forefront2} alt="gallery" width={"100%"} tabIndex={0} />,
         ],
         machineError: [
-            <img className="gallery-image" src={MachineError1} alt="gallery" width={"100%"} tabIndex={0}/>,
-            <img className="gallery-image" src={MachineError2} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={MachineError1} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={MachineError2} alt="gallery" width={"100%"} tabIndex={0} />,
         ],
         textureFields: [
-            <img className="gallery-image" src={TextureFields1} alt="gallery" width={"100%"} tabIndex={0}/>,
-            <img className="gallery-image" src={TextureFields2} alt="gallery" width={"100%"} tabIndex={0}/>,
-            <img className="gallery-image" src={TextureFields3} alt="gallery" width={"100%"} tabIndex={0}/>,
-            <img className="gallery-image" src={TextureFields4} alt="gallery" width={"100%"} tabIndex={0}/>,
-            <img className="gallery-image" src={TextureFields5} alt="gallery" width={"100%"} tabIndex={0}/>,
+            <img className="gallery-image" src={TextureFields1} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={TextureFields2} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={TextureFields3} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={TextureFields4} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={TextureFields5} alt="gallery" width={"100%"} tabIndex={0} />,
         ],
     },
     origami: [

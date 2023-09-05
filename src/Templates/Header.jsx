@@ -12,7 +12,7 @@ const Header = (props) => {
     const [navTabIdx1, setNavTabIdx1] = useState(-1);
     const toggleNavState1 = () => {
         setNavState1(!navState1);
-        if (!navState1) {setNavTabIdx1(0)} else {setNavTabIdx1(-1)}
+        if (!navState1) { setNavTabIdx1(0) } else { setNavTabIdx1(-1) }
         menuDisplay1();
     }
     const menuDisplay1 = () => {
@@ -28,7 +28,7 @@ const Header = (props) => {
     const [navTabIdx2, setNavTabIdx2] = useState(-1);
     const toggleNavState2 = () => {
         setNavState2(!navState2);
-        if (!navState2) {setNavTabIdx2(0)}else{setNavTabIdx2(-1)}
+        if (!navState2) { setNavTabIdx2(0) } else { setNavTabIdx2(-1) }
         menuDisplay2();
     }
     const menuDisplay2 = () => {
@@ -38,7 +38,7 @@ const Header = (props) => {
             setDrop2("menu-close");
         }
     }
-    
+
     const initNav = () => {
         setNavState1(false);
         setDrop1("menu-close");
@@ -70,10 +70,10 @@ const Header = (props) => {
                 <p className="cursor-default"><u>Utility</u></p>
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
-                }} href="" target="_blank" className="link-desat"  tabIndex={navTabIdx2}>Calculo</a>
+                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Calculo</a>
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
-                }} href="" target="_blank" className="link-desat"  tabIndex={navTabIdx2}>Cryptos</a>
+                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Cryptos</a>
             </div>,
         },
     ];
@@ -100,7 +100,7 @@ const Header = (props) => {
                         drop={drop1}
                         toggleNavState={toggleNavState1}
                         initNav={initNav}
-                        ></NavButton>
+                    ></NavButton>
                     <NavButton
                         id={1}
                         name={navData[1].name}
@@ -113,12 +113,12 @@ const Header = (props) => {
                     <div className="theme-button-container">
                         <div className="no-select">L</div>
                         <button className={`theme-btn ${props.btnTheme}`} onClick={props.toggleTheme}>
-                                <div className="theme-btn-slider"></div>
-                        </button>                  
+                            <div className="theme-btn-slider"></div>
+                        </button>
                         <div className="no-select">D</div>
                     </div>
                 </div>
-                <div className="scroll-track-bar" style={{width: `${props.docScroll}%`}}></div>
+                <div className="scroll-track-bar" style={{ width: `${props.docScroll}%` }}></div>
             </nav>
         </header>
     )

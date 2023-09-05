@@ -4,7 +4,7 @@ import Photo from './png/ProfileBT.png';
 const ProfilePhoto = () => {
     return <div className="profile-container">
         <div className="profile-border">
-            <img src={Photo} alt="Profile" className="profile-photo" title="Profile Image"/>
+            <img src={Photo} alt="Profile" className="profile-photo" title="Profile Image" />
         </div>
     </div>
 };

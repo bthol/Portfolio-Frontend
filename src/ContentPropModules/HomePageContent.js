@@ -10,44 +10,44 @@ const HomePageContent = {
       list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large">JavaScript</li>
         <ul>
-            <li>Libraries: Node.js</li>
-            <li>Frameworks: Express.js for REST API, React for component GUI</li>
-            <li>Debugging: ESLint</li>
+          <li>Libraries: Node.js</li>
+          <li>Frameworks: Express.js for REST API, React for component GUI</li>
+          <li>Debugging: ESLint</li>
         </ul>
         <p></p>
         <li className="text-large">HTML</li>
         <ul>
-            <li>markdown content</li>
-            <li>modals and forms</li>
-            <li>Audio and player controls</li>
-            <li>raster images & vector graphics</li>
+          <li>markdown content</li>
+          <li>modals and forms</li>
+          <li>Audio and player controls</li>
+          <li>raster images & vector graphics</li>
         </ul>
         <p></p>
         <li className="text-large">CSS</li>
         <ul>
-            <li>Modules: Flexbox, CSS Grid</li>
-            <li>Frameworks: Bootstrap</li>
-            <li>Preprocesor: Sass</li>
+          <li>Modules: Flexbox, CSS Grid</li>
+          <li>Frameworks: Bootstrap</li>
+          <li>Preprocesor: Sass</li>
         </ul>
         <p></p>
         <li className="text-large">Python</li>
         <ul>
-            <li>Libraries: Pip</li>
-            <li>Frameworks: Django</li>
-            <li>Debugging: Pylint, Pyflakes</li>
+          <li>Libraries: Pip</li>
+          <li>Frameworks: Django</li>
+          <li>Debugging: Pylint, Pyflakes</li>
         </ul>
         <p></p>
         <li className="text-large">C++</li>
         <ul>
-            <li>Compiler: Clang, GCC</li>
-            <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
-            <li>Resources: MSYS environment, pacman package handling</li>
+          <li>Compiler: Clang, GCC</li>
+          <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
+          <li>Resources: MSYS environment, pacman package handling</li>
         </ul>
         <p></p>
         <li className="text-large">Java</li>
         <ul>
-            <li>Libraries: Java Development Kit (JDK)</li>
-            <li>Resources: Language Support for Java by Redhat</li>
+          <li>Libraries: Java Development Kit (JDK)</li>
+          <li>Resources: Language Support for Java by Redhat</li>
         </ul>
         <p></p>
         <li className="text-large">R</li>
@@ -64,19 +64,19 @@ const HomePageContent = {
       list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large">User Experience (UX) and User Interface (UI) Design</li>
         <ul>
-            <li>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
-            <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
-            <li>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
-            <li>WAI ARIA Acessibility standard: provides interoperability with assistive technologies to enable user accessibility.</li>
+          <li>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
+          <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
+          <li>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
+          <li>WAI ARIA Acessibility standard: provides interoperability with assistive technologies to enable user accessibility.</li>
         </ul>
         <p></p>
         <li className="text-large">Digital Graphic Technologies</li>
         <ul>
-            <li>Affinity Photo</li>
-            <li>Affinity Designer</li>
-            <li>Canva</li>
-            <li>Paint.net</li>
-            <li>MS Paint</li>
+          <li>Affinity Photo</li>
+          <li>Affinity Designer</li>
+          <li>Canva</li>
+          <li>Paint.net</li>
+          <li>MS Paint</li>
         </ul>
         <p></p>
       </ul>,
@@ -87,32 +87,32 @@ const HomePageContent = {
       list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large">Audio Engineering</li>
         <ul>
-            <li>Self taught</li>
-            <li>Engineered 25+ hours of audio</li>
-            <li>Deep understanding of signal processing</li>
+          <li>Self taught</li>
+          <li>Engineered 25+ hours of audio</li>
+          <li>Deep understanding of signal processing</li>
         </ul>
         <p></p>
         <li className="text-large">Audio Processors</li>
         <ul>
-            <li>Equalzers (parameteric, stereographic, linear phase and adaptive)</li>
-            <li>Compressors (tube, analog emulation, graphical, Automatic Gain Consideration(AGC))</li>
-            <li>Limiters (0dB Peak, brickwall, soft clip)</li>
-            <li>Stereo Processors (limit, spread, merge, position, generate, and modulate)</li>
-            <li>Reverberation (Plate, Room, Hall, Shimmer, Low gravity, reflectionless Pitch tracking)</li>
-            <li>Phasers (monophazer, biphaser, tempo syncable)</li>
-            <li>Transient Processors (ASDR, Graphical Envelope Mapping, Evelope Following)</li>
-            <li>Chorus/flanger Effect</li>
-            <li>Saturation/Distortion</li>
+          <li>Equalzers (parameteric, stereographic, linear phase and adaptive)</li>
+          <li>Compressors (tube, analog emulation, graphical, Automatic Gain Consideration(AGC))</li>
+          <li>Limiters (0dB Peak, brickwall, soft clip)</li>
+          <li>Stereo Processors (limit, spread, merge, position, generate, and modulate)</li>
+          <li>Reverberation (Plate, Room, Hall, Shimmer, Low gravity, reflectionless Pitch tracking)</li>
+          <li>Phasers (monophazer, biphaser, tempo syncable)</li>
+          <li>Transient Processors (ASDR, Graphical Envelope Mapping, Evelope Following)</li>
+          <li>Chorus/flanger Effect</li>
+          <li>Saturation/Distortion</li>
         </ul>
         <p></p>
         <li className="text-large">Audio Synthesis</li>
         <ul>
-            <li>Additive (noise and/or Digitally Controlled Oscillator(DCO) generate signals combined to form one sound through the unison psychoaccoustic effect)</li>
-            <li>Subtractive (hipass, lopass, bandpass, and shelf filters modulated with ASDR, ASD, AD, and graphical envelopes)</li>
-            <li>Frequency Modulation (FM), Amplitude Modulation(AM), Ring Modulation(RM), Pulse Width Modulation(PWM) (properties of a modulator signal acts on properties of a carrier signal)</li>
-            <li>Granular (audio sample spliced into parts looped at high frequency to generate tones)</li>
-            <li>Pitch Mapping (tones are generated relative to a map visually characterizing changes in frequency and amplitude accross time)</li>
-            <li>Spectral (audible frequency spectrum is divided into separately manipulated sections)</li>
+          <li>Additive (noise and/or Digitally Controlled Oscillator(DCO) generate signals combined to form one sound through the unison psychoaccoustic effect)</li>
+          <li>Subtractive (hipass, lopass, bandpass, and shelf filters modulated with ASDR, ASD, AD, and graphical envelopes)</li>
+          <li>Frequency Modulation (FM), Amplitude Modulation(AM), Ring Modulation(RM), Pulse Width Modulation(PWM) (properties of a modulator signal acts on properties of a carrier signal)</li>
+          <li>Granular (audio sample spliced into parts looped at high frequency to generate tones)</li>
+          <li>Pitch Mapping (tones are generated relative to a map visually characterizing changes in frequency and amplitude accross time)</li>
+          <li>Spectral (audible frequency spectrum is divided into separately manipulated sections)</li>
         </ul>
         <p></p>
       </ul>,
@@ -149,7 +149,7 @@ const HomePageContent = {
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li >I create music in my own studio under the pseudonym Augium. Augium is a constructed word intended to mean "the element of incriment" or "the proclivity toward complexity."<br/><br/><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
+          <li >I create music in my own studio under the pseudonym Augium. Augium is a constructed word intended to mean "the element of incriment" or "the proclivity toward complexity."<br /><br /><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
         </ul>
         <br />
         <div>Highlights</div>

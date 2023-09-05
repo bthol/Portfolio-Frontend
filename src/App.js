@@ -12,9 +12,9 @@ function App() {
 
   // TRACKLENGTH BAR LOGIC
   const [docScroll, setDocScroll] = useState(0);
-  
+
   let winHeight, trackLength, docheight;
-  
+
   const getHeight = () => {
     return Math.max(
       document.body.clientHeight,
@@ -25,30 +25,30 @@ function App() {
       document.documentElement.scrollHeight
     )
   };
-    
+
   const getInfo = () => {
-    winHeight= window.innerHeight || (document.documentElement || document.body).clientHeight;
+    winHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
     docheight = getHeight();
     trackLength = docheight - winHeight;
   };
   getInfo();
-    
+
   const scrollAmmount = () => {
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    let pctScrolled = Math.floor(scrollTop/trackLength * 100);
+    let pctScrolled = Math.floor(scrollTop / trackLength * 100);
     if (pctScrolled >= 0) {
       setDocScroll(pctScrolled)
     }
   };
-  
+
   window.addEventListener("resize", () => {
     getInfo();
-  }, {passive: true});
-  
+  }, { passive: true });
+
   window.addEventListener("scroll", () => {
     scrollAmmount();
-  }, {passive: true});
-  
+  }, { passive: true });
+
   // ERROR ALERTS
   const featureAlert = (e) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ function App() {
   const featureAlertFunct = (e) => {
     featureAlert(e);
   };
-  
+
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
   const [mobile, setMobile] = useState(false);
   const [mobBool, setMobBool] = useState(true);
@@ -74,20 +74,20 @@ function App() {
       return false;
     }
   };
-  
+
   // IDLE MODAL
   // 5 min = 300 secs
   let idleDelay = 300;
   let idleCounter;
   const [modal, setModal] = useState(false);
-  
+
   const setModalFunct = (bool) => {
     setModal(bool)
     if (bool === false) {
       count();
     }
   };
-  
+
   const count = () => {
     idleCounter = setTimeout(() => {
       setModalFunct(true)
@@ -145,14 +145,14 @@ function App() {
         setBtnTheme("theme-btn-dark")
       }
     }
-    return () => {ignore = true}
+    return () => { ignore = true }
   }, [])
-  
+
   // PAGE LOGIC
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
-    setTimeout(() => {pageDisplay()}, 10)
+    setTimeout(() => { pageDisplay() }, 10)
   }
 
   // state for page properties
@@ -170,9 +170,9 @@ function App() {
     if (!ignore) {
       pageDisplay();
     }
-    return () => {ignore = true}
+    return () => { ignore = true }
   }, [])
-  
+
   // wrapper function for network diagnostic purposes
   const gotData = (promise) => {
     const gotData = new Promise((resolve) => {
@@ -184,7 +184,7 @@ function App() {
   // Page Data State
   const [portfolioViews, setPortfolioViews] = useState(<Comp8 />);
   const [portfolioLikes, setPortfolioLikes] = useState(<Comp8 />);
-  
+
   // fetch on render
   const ID = "64a90dfc4b3042dcaabdf1b4";
   useEffect(() => {
@@ -210,36 +210,36 @@ function App() {
           // onFulfilled
           // Request resources and display them
           fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-          .then(res => res.json())
-          .then((data) => {
-            if (!ignore) {
-              setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
-              
-              // if new to page
-              if (localStorage.getItem("viewed") === null) {
-                setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
-                fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-                  method: 'PATCH',
-                  headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                  },
-                  body: JSON.stringify({
-                    portfolioViews: data.data[0].portfolioViews + 1,
+            .then(res => res.json())
+            .then((data) => {
+              if (!ignore) {
+                setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
+
+                // if new to page
+                if (localStorage.getItem("viewed") === null) {
+                  setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
+                  fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+                    method: 'PATCH',
+                    headers: {
+                      'Content-type': 'application/json; charset=UTF-8',
+                    },
+                    body: JSON.stringify({
+                      portfolioViews: data.data[0].portfolioViews + 1,
+                    })
                   })
-                })
-                localStorage.setItem("viewed", true);
+                  localStorage.setItem("viewed", true);
+                }
+              } else {
+                setPortfolioViews(`: ${data.data[0].portfolioViews}`)
               }
-            } else {
-              setPortfolioViews(`: ${data.data[0].portfolioViews}`)
-            }
-          })
+            })
         },
         () => {
           // onRejected
           // Display message in place of resources to avoid the appearance of infinite loading
           setPortfolioLikes("failed to load")
           setPortfolioViews("failed to load")
-  
+
           // trigger a display with a cancellable 10 second countdown for connection retry
           let cd = 0;
           const cdCache = setInterval(() => {
@@ -255,7 +255,7 @@ function App() {
       )
     };
     getResources();
-    return () => {ignore = true}
+    return () => { ignore = true }
   }, [])
 
 
@@ -266,18 +266,18 @@ function App() {
       setPortfolioLikes(`: ${Number(portfolioLikes.slice(1, portfolioLikes.length)) + 1}`);
       try {
         fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-        .then(res => res.json())
-        .then((data) => {
-          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-            method: 'PATCH',
-            headers: {
-              'Content-type': 'application/json; charset=UTF-8',
-            },
-            body: JSON.stringify({
-              portfolioLikes: data.data[0].portfolioLikes + 1,
+          .then(res => res.json())
+          .then((data) => {
+            fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+              method: 'PATCH',
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+              body: JSON.stringify({
+                portfolioLikes: data.data[0].portfolioLikes + 1,
+              })
             })
           })
-        })
         localStorage.setItem("liked", true);
       } catch (err) {
         console.error(err);
@@ -286,13 +286,13 @@ function App() {
   }
 
   return (
-    <div id="root-react" className={`App color ${theme}`} style={{height: back}}>
+    <div id="root-react" className={`App color ${theme}`} style={{ height: back }}>
       <Header
-          toggleTheme={toggleTheme}
-          docScroll={docScroll}
-          featureAlertFunct={featureAlertFunct}
-          goPage={goPage}
-          btnTheme={btnTheme}
+        toggleTheme={toggleTheme}
+        docScroll={docScroll}
+        featureAlertFunct={featureAlertFunct}
+        goPage={goPage}
+        btnTheme={btnTheme}
       ></Header>
 
       {
@@ -304,7 +304,7 @@ function App() {
       }
 
       {
-        page === 1 && 
+        page === 1 &&
         <HomePage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
@@ -312,9 +312,9 @@ function App() {
           portfolioLikes={portfolioLikes}
           likePortfolio={likePortfolio}
           enter={enter}
-          />
-        }
-      
+        />
+      }
+
       {
         page === 2 &&
         <ArtPage
@@ -325,12 +325,12 @@ function App() {
       }
 
       <div className="flex-center">
-        <div className="flex-center top-link-style button-hover" onClick={() => {window.scrollTo(0, 0)}}>back to top</div>
+        <div className="flex-center top-link-style button-hover" onClick={() => { window.scrollTo(0, 0) }}>back to top</div>
       </div>
 
       {
         modal &&
-        <Modal setModal={setModalFunct} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes, I am still here"}/>
+        <Modal setModal={setModalFunct} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes, I am still here"} />
       }
       <Footer />
 

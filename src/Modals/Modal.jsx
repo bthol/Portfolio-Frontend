@@ -12,7 +12,7 @@ const Modal = (props) => {
                     <p className="text-xlarge">{props.message}</p>
                     <br />
                     <div>
-                        <button onClick={() => {props.setModal(false)}} className="buttons modal-button" autoFocus>{props.closeBtnText}</button>
+                        <button onClick={() => { props.setModal(false) }} className="buttons modal-button" autoFocus>{props.closeBtnText}</button>
                     </div>
                 </div>
             </div>

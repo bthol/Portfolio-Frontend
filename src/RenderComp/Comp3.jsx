@@ -9,14 +9,14 @@ const Comp3 = (props) => {
     const toggleShown = () => {
         setTogshow(!togshow);
         if (!togshow) {
-        setShow(true);
-        setShown("up-arrow");
+            setShow(true);
+            setShown("up-arrow");
         } else {
-        setShow(false);
-        setShown("down-arrow");
+            setShow(false);
+            setShown("down-arrow");
         }
     }
-    
+
     return (
         <div id={props.id}>
             <div className="text-large"><b>{props.jobTitle}</b></div>

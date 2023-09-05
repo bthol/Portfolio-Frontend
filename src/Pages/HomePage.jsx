@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Comp1 } from '../RenderComp/Comp1';
 import { Comp2 } from '../RenderComp/Comp2';
 import { Comp3 } from '../RenderComp/Comp3';
@@ -42,50 +42,50 @@ const HomePage = (props) => {
 
     let carouselData = [
         {
-          id: "projects-1",
-          title: <b><div tabIndex={slideTabIdx0} className="text-large flex-center">Space Battle</div></b>,
-          text: <div>
+            id: "projects-1",
+            title: <b><div tabIndex={slideTabIdx0} className="text-large flex-center">Space Battle</div></b>,
+            text: <div>
                 <p><b>Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
                 <p><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
-              </div>,
-          list: <ul>
-            <li><a href="https://bthol.github.io/Space-Battle/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a></li>
-            <li><a href="https://github.com/bthol/Space-Battle" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a></li>
-            <li>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
-            <li>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
-            <li>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
-          </ul>,
+            </div>,
+            list: <ul>
+                <li><a href="https://bthol.github.io/Space-Battle/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a></li>
+                <li><a href="https://github.com/bthol/Space-Battle" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a></li>
+                <li>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
+                <li>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
+                <li>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
+            </ul>,
         },
         {
-          id: "projects-2",
-          title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Magic 8 Ball</div></b>,
-          text: <div>
-            <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
-            <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
-          </div>,
-          list: <ul>
-            <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
-            <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
-            <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
-            <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
-            <li>Implemented a polychromatic animated background gradient.</li>
-          </ul>,
+            id: "projects-2",
+            title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Magic 8 Ball</div></b>,
+            text: <div>
+                <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
+                <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
+            </div>,
+            list: <ul>
+                <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
+                <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
+                <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
+                <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
+                <li>Implemented a polychromatic animated background gradient.</li>
+            </ul>,
         },
         {
-          id: "projects-3",
-          title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Retro Toe</div></b>,
-          carousel: <img src="" alt="project carousel"></img>,
-          text: <div>
-            <p><b>Description:</b> Tic Tac Toe. Retro style.</p>
-            <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
-          </div>,
-          list: <ul>
-            <li><a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
-            <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
-            <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
-            <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
-            <li>Deployed the application using GitHub Pages.</li>
-          </ul>,
+            id: "projects-3",
+            title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Retro Toe</div></b>,
+            carousel: <img src="" alt="project carousel"></img>,
+            text: <div>
+                <p><b>Description:</b> Tic Tac Toe. Retro style.</p>
+                <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
+            </div>,
+            list: <ul>
+                <li><a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
+                <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
+                <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
+                <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+                <li>Deployed the application using GitHub Pages.</li>
+            </ul>,
         },
     ]
 
@@ -150,23 +150,23 @@ const HomePage = (props) => {
                     </div>
                     {
                         props.mobile
-                        ? <div></div>
-                        : <div className="flex-center-vert">
-                            <div className="carButs flex-center">
-                                <button onClick={() => {
-                                    setCarPos(0);
-                                    highlightButton(0);
-                                }} className={`cursor-pointer carBut ${carBut0}`}></button>
-                                <button onClick={() => {
-                                    setCarPos(1);
-                                    highlightButton(1);
-                                }} className={`cursor-pointer carBut ${carBut1}`}></button>
-                                <button onClick={() => {
-                                    setCarPos(2);
-                                    highlightButton(2);
-                                }} className={`cursor-pointer carBut ${carBut2}`}></button>
+                            ? <div></div>
+                            : <div className="flex-center-vert">
+                                <div className="carButs flex-center">
+                                    <button onClick={() => {
+                                        setCarPos(0);
+                                        highlightButton(0);
+                                    }} className={`cursor-pointer carBut ${carBut0}`}></button>
+                                    <button onClick={() => {
+                                        setCarPos(1);
+                                        highlightButton(1);
+                                    }} className={`cursor-pointer carBut ${carBut1}`}></button>
+                                    <button onClick={() => {
+                                        setCarPos(2);
+                                        highlightButton(2);
+                                    }} className={`cursor-pointer carBut ${carBut2}`}></button>
+                                </div>
                             </div>
-                        </div>
                     }
                     <br />
                 </div>
@@ -194,8 +194,8 @@ const HomePage = (props) => {
                 </div>
                 {
                     props.mobile
-                    ? <div></div>
-                    : <div><br /></div>
+                        ? <div></div>
+                        : <div><br /></div>
                 }
             </div>
             <div id="homepage-mid-3" className="content-container shadow-behind">
