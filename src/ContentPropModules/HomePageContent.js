@@ -138,7 +138,7 @@ const HomePageContent = {
           <li>Troubleshooting software and hardware problems with video surveillance system and other workplace technologies to identify and implement technical solutions</li>
           <li>Updating customer data in prototype software database to account for customer and business needs</li>
           <li>Measuring furnace temperature using the AOPUTTRIVER AP-2732 non-contact infrared thermometer</li>
-          <li>Testing and correcting water ph and clorine levels to be within accepted ranges</li>
+          <li>Testing and correcting water ph and chlorine levels to be within accepted ranges</li>
         </ul>
       </div>
     },
