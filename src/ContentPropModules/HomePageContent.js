@@ -1,5 +1,5 @@
 const HomePageContent = {
-  about: <div>I am a flexible developer that can collaborate with the team to design, build, test, deploy, and maintain backend APIs that CRUD in JSON with cloud databases, create intuitive frontend UI design crafted with UX in mind, and independently engineer full stack features that asynchronously request data from a database for view on the client-side. I am searching for a position to utilize and further grow my creative and technological skills in order to make a valuable contribution to my team, the business, and the world at large.</div>,
+  about: <div>I am a web developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skills in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [
     {
       sectionTitle: "Skills and Knowledge"
