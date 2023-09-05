@@ -10,6 +10,92 @@ import { Comp8 } from './RenderComp/Comp8';
 
 function App() {
 
+  // ERROR ALERTS
+  const featureAlert = (e) => {
+    e.preventDefault();
+    alert("Feature still in development");
+  };
+  const featureAlertFunct = (e) => {
+    featureAlert(e);
+  };
+  
+  // IDLE MODAL
+  // 5 min = 300 secs
+  let idleDelay = 60;
+  let idleCounter;
+  let idleCount = 0;
+  const [modal, setModal] = useState(false);
+  
+  const setModalFunct = (bool) => {
+    setModal(bool)
+    if (bool === false) {
+      count();
+    }
+  };
+  
+  const count = () => {
+    idleCounter = setInterval(() => {
+      if (idleCount === idleDelay) {
+        setModalFunct(true)
+      } else {
+        console.log(idleCount);
+        idleCount += 1;
+      }
+    }, 1000)
+  };
+  
+  useEffect(() => {
+    // callback starts the count
+    count();
+    // listner restarts count
+    document.addEventListener("mousemove", () => {
+      // console.log("mousemove");
+      idleCount = 0;
+    });
+    document.addEventListener("keydown", () => {
+      // console.log("keydown");
+      idleCount = 0;
+    });
+    document.addEventListener("touchmove", () => {
+      // console.log("touchmove");
+      idleCount = 0;
+    });
+
+    const onVisibilityChange = () => {
+      console.log(document.visibilityState);
+      // stop count on nav away
+      if (document.visibilityState === "hidden") {
+        clearInterval(idleCounter);
+        idleCount = 0;
+      }
+      // restart count on nav back
+      if (document.visibilityState === "visible") {
+        clearInterval(idleCounter);
+        count()
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    return () => clearTimeout(idleCounter);
+  }, []);
+
+  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
+  const [mobile, setMobile] = useState(false);
+  const [mobBool, setMobBool] = useState(true);
+  if (window.innerWidth < 768 && mobBool) {
+    setMobBool(false);
+    setMobile(true);
+  };
+
+  // KEYSTROKE TESTING
+  const enter = (e) => {
+    if (e.key === 'Enter') {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   // TRACKLENGTH BAR LOGIC
   const [docScroll, setDocScroll] = useState(0);
 
@@ -49,71 +135,6 @@ function App() {
     scrollAmmount();
   }, { passive: true });
 
-  // ERROR ALERTS
-  const featureAlert = (e) => {
-    e.preventDefault();
-    alert("Feature still in development");
-  };
-  const featureAlertFunct = (e) => {
-    featureAlert(e);
-  };
-
-  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
-  const [mobile, setMobile] = useState(false);
-  const [mobBool, setMobBool] = useState(true);
-  if (window.innerWidth < 768 && mobBool) {
-    setMobBool(false);
-    setMobile(true);
-  };
-
-  // KEYSTROKE TESTING
-  const enter = (e) => {
-    if (e.key === 'Enter') {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  // IDLE MODAL
-  // 5 min = 300 secs
-  let idleDelay = 300;
-  let idleCounter;
-  const [modal, setModal] = useState(false);
-
-  const setModalFunct = (bool) => {
-    setModal(bool)
-    if (bool === false) {
-      count();
-    }
-  };
-
-  const count = () => {
-    idleCounter = setTimeout(() => {
-      setModalFunct(true)
-    }, idleDelay * 1000)
-  };
-
-  useEffect(() => {
-    // callback starts the count
-    count();
-    // listner restarts count
-    document.addEventListener("touchmove mousemove keydown", () => {
-      clearTimeout(idleCounter)
-      count()
-    });
-    document.addEventListener("visiblitychange", () => {
-      // stop count on nav away
-      if (document.visibilityState === "hidden") {
-        clearTimeout(idleCounter)
-      }
-      // restart count on nav back
-      if (document.visibilityState === "visible") {
-        count()
-      }
-    });
-    return () => clearTimeout(idleCounter);
-  }, []);
 
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-light");
@@ -173,14 +194,6 @@ function App() {
     return () => { ignore = true }
   }, [])
 
-  // wrapper function for network diagnostic purposes
-  const gotData = (promise) => {
-    const gotData = new Promise((resolve) => {
-      resolve(promise);
-    })
-    console.log(gotData);
-  }
-
   // Page Data State
   const [portfolioViews, setPortfolioViews] = useState(<Comp8 />);
   const [portfolioLikes, setPortfolioLikes] = useState(<Comp8 />);
@@ -189,20 +202,6 @@ function App() {
   const ID = "64a90dfc4b3042dcaabdf1b4";
   useEffect(() => {
     let ignore = false;
-    // Modern Cookies alternatives
-    // console.log(window.sessionStorage);
-    // console.log(window.localStorage);
-
-    // window.localStorage.setItem("been", true);
-    // window.localStorage.getItem("been");
-    // window.localStorage.removeItem("been", true);
-    // window.localStorage.clear();
-
-    // Notify if offline
-    if (!window.navigator.onLine) {
-      alert("The user is not connected to the internet. Please connect to the internet for a fully featured experience.")
-    }
-
     const getResources = () => {
       // Test for connection to backend
       fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`).then(
@@ -246,6 +245,10 @@ function App() {
             if (cd === 10) {
               cd = 0;
               clearInterval(cdCache);
+              // Notify if offline
+              if (!window.navigator.onLine) {
+                alert("The user is not connected to the internet. Please connect to the internet for a fully featured experience.")
+              }
               getResources();
             } else {
               cd += 1;
