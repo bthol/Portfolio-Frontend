@@ -38,7 +38,6 @@ function App() {
       if (idleCount === idleDelay) {
         setModalFunct(true)
       } else {
-        console.log(idleCount);
         idleCount += 1;
       }
     }, 1000)
@@ -62,7 +61,6 @@ function App() {
     });
 
     const onVisibilityChange = () => {
-      console.log(document.visibilityState);
       // stop count on nav away
       if (document.visibilityState === "hidden") {
         clearInterval(idleCounter);
