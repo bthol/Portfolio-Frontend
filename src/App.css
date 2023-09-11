@@ -61,11 +61,13 @@
   --font-color-3: #ffffff;
 
   --font-link-color: #0b45f4;
+
+  --like-btn-liked: #cccccc;
   
   --color-shadow: #9e9e9e;
   --color-header-detail-1: #80b9ff;
   --button-dark-detail: #000000;
-
+  
   --contrast1: #595959;
   --contrast2: #ffffff;
 }
@@ -81,9 +83,10 @@
   --font-color-1: #ffffff;
   --font-color-2: #999999;
   --font-color-3: #808080;
-
+  
   --font-link-color: #0ba6f4;
   
+  --like-btn-liked: #333333;
   
   --color-shadow: #666666;
   --color-header-detail-1: #103b70;
@@ -643,7 +646,7 @@ html {
      -webkit-box-shadow: 0px 0px 4px .5px var(--color-shadow);
              box-shadow: 0px 0px 4px .5px var(--color-shadow);
   }
-  .like-btn:hover {
+  .like-btn-animation:hover {
     animation: flashy 850ms infinite cubic-bezier(0, .5, 0.5, 0.8);
   }
 }

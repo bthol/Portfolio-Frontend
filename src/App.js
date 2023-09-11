@@ -21,7 +21,7 @@ function App() {
   
   // IDLE MODAL
   // 5 min = 300 secs
-  let idleDelay = 60;
+  let idleDelay = 300;
   let idleCounter;
   let idleCount = 0;
   const [modal, setModal] = useState(false);
@@ -136,67 +136,71 @@ function App() {
 
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-light");
-  const [togTheme, setTogTheme] = useState(false);
+  const [togTheme, setTogTheme] = useState(true);
   const [btnTheme, setBtnTheme] = useState("theme-btn-light");
+  const themeTransTime = 180;
+  const updateLikeBtn = () => {
+    console.log(localStorage.getItem("liked"));
+    // detects if liked and display accordingly
+    if (localStorage.getItem("liked")) {
+      const likeBtn = document.querySelector('.like-btn');
+      const color = getComputedStyle(likeBtn).getPropertyValue('--like-btn-liked');
+      likeBtn.style.backgroundColor = color;
+      likeBtn.style.cursor = "default";
+      likeBtn.innerText = "Liked";
+      likeBtn.classList.remove('like-btn-animation');
+    }
+  };
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
-      setBtnTheme("theme-btn-light");
-    } else {
       setBtnTheme("theme-btn-dark");
+    } else {
+      setBtnTheme("theme-btn-light");
     }
     setTimeout(() => {
       if (togTheme) {
-        setTheme("color-theme-light");
-      } else {
         setTheme("color-theme-dark");
+      } else {
+        setTheme("color-theme-light");
       }
-    }, 180)
+    }, themeTransTime)
   };
 
   useEffect(() => {
-    // detects and defaults to dark theme on load
-    let ignore = false;
-    if (!ignore) {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setTheme("color-theme-dark");
-        setTogTheme(true);
-        setBtnTheme("theme-btn-dark")
-      }
-    }
-    return () => { ignore = true }
-  }, [])
-
-  // PAGE LOGIC
-  const [page, setPage] = useState(1); // sets default page
-  const goPage = (p) => { // function for page navigation
-    setPage(p);
-    setTimeout(() => { pageDisplay() }, 10)
-  }
-
+    // update style on theme change
+    updateLikeBtn();
+  }, [theme])
+  
   // state for page properties
   const [back, setBack] = useState("max-height");
-  // function that adjusts layout by page properties
   const pageDisplay = () => {
+    // function that adjusts layout by page properties
     if (document.body.clientHeight >= window.innerHeight) {
       setBack("max-content");
     } else {
       setBack("100vh");
     }
   }
+
   useEffect(() => {
     let ignore = false;
     if (!ignore) {
-      pageDisplay();
+      // sets default theme on load
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme("color-theme-dark");
+        setTogTheme(false);
+        setBtnTheme("theme-btn-dark");
+      }
     }
     return () => { ignore = true }
   }, [])
-
+  
   // Page Data State
   const [portfolioViews, setPortfolioViews] = useState(<Comp8 />);
   const [portfolioLikes, setPortfolioLikes] = useState(<Comp8 />);
-
-  // fetch on render
+  
+  // fetch data on load
   const ID = "64a90dfc4b3042dcaabdf1b4";
   useEffect(() => {
     let ignore = false;
@@ -207,46 +211,46 @@ function App() {
           // onFulfilled
           // Request resources and display them
           fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-            .then(res => res.json())
-            .then((data) => {
-              if (!ignore) {
-                setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
-
-                // if new to page
-                if (localStorage.getItem("viewed") === null) {
-                  setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
-                  fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-                    method: 'PATCH',
-                    headers: {
-                      'Content-type': 'application/json; charset=UTF-8',
-                    },
-                    body: JSON.stringify({
-                      portfolioViews: data.data[0].portfolioViews + 1,
-                    })
+          .then(res => res.json())
+          .then((data) => {
+            if (!ignore) {
+              setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
+              
+              // if new to page
+              if (localStorage.getItem("viewed") === null) {
+                setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
+                fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+                  method: 'PATCH',
+                  headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                  },
+                  body: JSON.stringify({
+                    portfolioViews: data.data[0].portfolioViews + 1,
                   })
-                  localStorage.setItem("viewed", true);
-                }
-              } else {
-                setPortfolioViews(`: ${data.data[0].portfolioViews}`)
+                })
+                localStorage.setItem("viewed", true);
               }
-            })
+            } else {
+              setPortfolioViews(`: ${data.data[0].portfolioViews}`)
+            }
+          })
         },
         () => {
           // onRejected
+          // Notify if offline
+          if (!window.navigator.onLine) {
+            alert("The user is not connected to the internet. Please connect to the internet for a fully featured experience.")
+          }
           // Display message in place of resources to avoid the appearance of infinite loading
           setPortfolioLikes("failed to load")
           setPortfolioViews("failed to load")
-
-          // trigger a display with a cancellable 10 second countdown for connection retry
+          
+          // trigger 10 second countdown for connection retry
           let cd = 0;
           const cdCache = setInterval(() => {
             if (cd === 10) {
               cd = 0;
               clearInterval(cdCache);
-              // Notify if offline
-              if (!window.navigator.onLine) {
-                alert("The user is not connected to the internet. Please connect to the internet for a fully featured experience.")
-              }
               getResources();
             } else {
               cd += 1;
@@ -259,7 +263,6 @@ function App() {
     return () => { ignore = true }
   }, [])
 
-
   // Like Button
   const likePortfolio = () => {
     // if not liked already (using localStorage)
@@ -267,25 +270,33 @@ function App() {
       setPortfolioLikes(`: ${Number(portfolioLikes.slice(1, portfolioLikes.length)) + 1}`);
       try {
         fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-          .then(res => res.json())
-          .then((data) => {
-            fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-              method: 'PATCH',
-              headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-              },
-              body: JSON.stringify({
-                portfolioLikes: data.data[0].portfolioLikes + 1,
-              })
+        .then(res => res.json())
+        .then((data) => {
+          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+              portfolioLikes: data.data[0].portfolioLikes + 1,
             })
           })
+        })
         localStorage.setItem("liked", true);
+        updateLikeBtn();
       } catch (err) {
         console.error(err);
       }
     }
   }
-
+    
+  // PAGE NAVIGATION LOGIC
+  const [page, setPage] = useState(1); // sets default page
+  const goPage = (p) => { // function for page navigation
+    setPage(p);
+    setTimeout(() => { pageDisplay() }, 10)
+  }
+  
   return (
     <div id="root-react" className={`App color ${theme}`} style={{ height: back }}>
       <Header

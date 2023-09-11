@@ -103,7 +103,9 @@ const HomePage = (props) => {
                                 {props.portfolioViews}
                             </div>
                             <div className="flex-center-align">
-                                <button className="like-btn dashboard-margin" onClick={props.likePortfolio}>Like</button>
+
+                                <button className="like-btn-animation like-btn dashboard-margin" onClick={props.likePortfolio}>Like</button>
+                                
                                 {props.portfolioLikes}
                             </div>
                         </div>
