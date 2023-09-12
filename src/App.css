@@ -499,7 +499,7 @@ hr {
   position: absolute;
   top: var(--below-header);
   height: max-content;
-  width: 70%;
+  width: 50%;
   padding: 2% 5% 5% 5%;
   text-align: center;
   background: var(--color-background-3);

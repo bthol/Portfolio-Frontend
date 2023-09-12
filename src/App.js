@@ -36,7 +36,8 @@ function App() {
   const count = () => {
     idleCounter = setInterval(() => {
       if (idleCount === idleDelay) {
-        setModalFunct(true)
+        setModalFunct(true);
+        clearInterval(idleCounter);
       } else {
         idleCount += 1;
       }
@@ -140,7 +141,6 @@ function App() {
   const [btnTheme, setBtnTheme] = useState("theme-btn-light");
   const themeTransTime = 180;
   const updateLikeBtn = () => {
-    console.log(localStorage.getItem("liked"));
     // detects if liked and display accordingly
     if (localStorage.getItem("liked")) {
       const likeBtn = document.querySelector('.like-btn');
