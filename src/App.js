@@ -25,7 +25,6 @@ function App() {
   let idleCounter;
   let idleCount = 0;
   const [modal, setModal] = useState(false);
-  
   const setModalFunct = (bool) => {
     setModal(bool)
     if (bool === false) {
@@ -166,11 +165,6 @@ function App() {
       }
     }, themeTransTime)
   };
-
-  useEffect(() => {
-    // update style on theme change
-    updateLikeBtn();
-  }, [theme])
   
   // state for page properties
   const [back, setBack] = useState("max-height");
@@ -324,6 +318,8 @@ function App() {
           portfolioLikes={portfolioLikes}
           likePortfolio={likePortfolio}
           enter={enter}
+          theme={theme}
+          updateLikeBtn={updateLikeBtn}
         />
       }
 

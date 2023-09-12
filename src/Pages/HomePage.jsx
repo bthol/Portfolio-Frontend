@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Comp1 } from '../RenderComp/Comp1';
 import { Comp2 } from '../RenderComp/Comp2';
 import { Comp3 } from '../RenderComp/Comp3';
@@ -8,6 +8,11 @@ import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { HomePageContent as Content } from '../ContentPropModules/HomePageContent';
 
 const HomePage = (props) => {
+    // LIKE BUTTON
+    useEffect(() => {
+        // update style on theme change
+        props.updateLikeBtn();
+    }, [props.theme])
 
     // PROJECT CAROUSEL (for tablet and larger)
     const [carPos, setCarPos] = useState(0);
