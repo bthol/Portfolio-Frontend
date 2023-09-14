@@ -4,7 +4,7 @@ const Comp7 = (props) => {
     const [sized, setSized] = useState(false);
     const [select, setSelect] = useState(true);
     const toggleSelect = (e) => {
-        new Promise((resolve, err) => {
+        new Promise((resolve) => {
             setSelect(!select);
             resolve("resolved")
         }).then(() => {
@@ -43,14 +43,14 @@ const Comp7 = (props) => {
                     resolve("resolved")
                 }).then(() => {
                     const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
-                    a.firstChild.style.width = `${newSize - 55}px`;
+                    a.firstChild.style.width = `${newSize - 60}px`;
                 })
                 window.addEventListener("resize", () => {
                     aH = a.offsetHeight;
                     aW = a.offsetWidth;
                     aAR = aH / aW;
                     const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
-                    a.firstChild.style.width = `${newSize - 100}px`;
+                    a.firstChild.style.width = `${newSize - 60}px`;
                 })
             }
         })
@@ -59,11 +59,10 @@ const Comp7 = (props) => {
     return (
         <div className={`gallery-image-container ${props.galleryColumn}`} onClick={(e) => { toggleSelect(e) }} onKeyDown={(e) => { if (props.enter(e)) { toggleSelect(e) } }}>
             <div>{props.image}</div>
-            {
-                !select && <div className="gallery-image-select">
-                    {sized && props.image}
-                </div>
-            }
+            {!select && <div className="gallery-image-select">
+                {sized && props.image}
+                <div>{`${props.info} `}<small>&copy;</small> by Blake Thollaug </div>
+            </div>}
         </div>
     )
 }
