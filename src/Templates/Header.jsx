@@ -46,6 +46,7 @@ const Header = (props) => {
         setNavState2(false);
         setDrop2("menu-close");
         setNavTabIdx2(-1)
+        document.body.querySelectorAll('.nav-menu-list').forEach((item) => { item.scrollTo(0, 0) });
     }
 
     const navData = [
