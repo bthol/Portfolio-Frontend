@@ -6,7 +6,7 @@ const Verify = (props) => {
             <div className={`modal modal-content shadow-behind`}>
                 <div>
                     <h1>{props.title}</h1>
-                    <hr />
+                    <hr noshade="true" />
                 </div>
                 <div>
                     <p className="text-xlarge">{props.message}</p>

@@ -333,7 +333,7 @@ function App() {
       }
 
       <div className="flex-center">
-        <div className="flex-center top-link-style button-hover" onClick={() => { window.scrollTo(0, 0) }}>back to top</div>
+        <div className="flex-center top-link-style button-hover" onClick={(e) => { window.scrollTo(0, 0); }} >back to top</div>
       </div>
 
       {modalShow && <Notify setModal={setModalFunct} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes, I am still here"} />}

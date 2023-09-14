@@ -136,7 +136,7 @@ const HomePage = (props) => {
                 </div>
                 <br />
                 <div>
-                    <Comp9 title={"About Me"} text={Content.about} />
+                    <Comp9 title={"About Me"} text={Content.about} enter={props.enter} />
                 </div>
                 <br />
             </div>
@@ -256,7 +256,7 @@ const HomePage = (props) => {
                 ></Comp4>
                 <br />
             </div>
-            {modalShow && <Verify setModal={setModalFunct} title={"Email Contact"} message={"Are you sure you want to send an email?"} closeBtnText={"Cancel"} actionBtnText={"Continue"} link={true} href={"mailto:bthollaug@gmail.com?subject=Contact from Portfolio Website"}/>}
+            {modalShow && <Verify setModal={setModalFunct} title={"Send Email"} message={"Are you sure you want to send an email?"} closeBtnText={"Cancel"} actionBtnText={"Continue"} link={true} href={"mailto:bthollaug@gmail.com?subject=Contact from Portfolio Website"}/>}
         </div>
     )
 }
