@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Modal } from './Modals/Modal';
+import { Notify } from './Modals/Notify';
 import { Header } from './Templates/Header';
 import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
@@ -24,9 +24,9 @@ function App() {
   let idleDelay = 300;
   let idleCounter;
   let idleCount = 0;
-  const [modal, setModal] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
   const setModalFunct = (bool) => {
-    setModal(bool)
+    setModalShow(bool)
     if (bool === false) {
       count();
     }
@@ -336,10 +336,7 @@ function App() {
         <div className="flex-center top-link-style button-hover" onClick={() => { window.scrollTo(0, 0) }}>back to top</div>
       </div>
 
-      {
-        modal &&
-        <Modal setModal={setModalFunct} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes, I am still here"} />
-      }
+      {modalShow && <Notify setModal={setModalFunct} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes, I am still here"} />}
       <Footer />
 
     </div>

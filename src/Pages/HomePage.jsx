@@ -4,6 +4,7 @@ import { Comp2 } from '../RenderComp/Comp2';
 import { Comp3 } from '../RenderComp/Comp3';
 import { Comp4 } from '../RenderComp/Comp4';
 import { Comp9 } from '../RenderComp/Comp9';
+import { Verify } from '../Modals/Verify';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { HomePageContent as Content } from '../ContentPropModules/HomePageContent';
 
@@ -13,6 +14,17 @@ const HomePage = (props) => {
         // update style on theme change
         props.updateLikeBtn();
     }, [props.theme])
+
+    // SPAM PROTECTION FOR emailto html scheme
+    const [modalShow, setModalShow] = useState(false);
+    const setModalFunct = (bool) => {
+        setModalShow(bool)
+    };
+
+    const emailSpamProtect = () => {
+        setModalFunct(true);
+        // e.target.setAttribute("href", `mailto:bthollaug@gmail.com?subject=Contact%20from%20Portfolio%20Website`);
+    };
 
     // PROJECT CAROUSEL (for tablet and larger)
     const [carPos, setCarPos] = useState(0);
@@ -108,9 +120,7 @@ const HomePage = (props) => {
                                 {props.portfolioViews}
                             </div>
                             <div className="flex-center-align">
-
                                 <button className="like-btn-animation like-btn dashboard-margin" onClick={props.likePortfolio}>Like</button>
-                                
                                 {props.portfolioLikes}
                             </div>
                         </div>
@@ -120,7 +130,7 @@ const HomePage = (props) => {
                             <div className="inline-divider"></div>
                             <a href="https://github.com/bthol" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>GitHub</button></a>
                             <div className="inline-divider"></div>
-                            <a href="mailto:bthollaug@gmail.com" target="_blank" rel="noreferrer"><button type="button" className="buttons" tabIndex={-1}>Email</button></a>
+                            <button type="button" className="buttons" onClick={emailSpamProtect}>Email</button>
                         </div>
                     </div>
                 </div>
@@ -246,6 +256,7 @@ const HomePage = (props) => {
                 ></Comp4>
                 <br />
             </div>
+            {modalShow && <Verify setModal={setModalFunct} title={"Email Contact"} message={"Are you sure you want to send an email?"} closeBtnText={"Cancel"} actionBtnText={"Continue"} link={true} href={"mailto:bthollaug@gmail.com?subject=Contact from Portfolio Website"}/>}
         </div>
     )
 }

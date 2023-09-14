@@ -1,6 +1,6 @@
 import React from "react"
 
-const Modal = (props) => {
+const Verify = (props) => {
     return (
         <div className={`modal modal-container flex-center`}>
             <div className={`modal modal-content shadow-behind`}>
@@ -12,6 +12,8 @@ const Modal = (props) => {
                     <p className="text-xlarge">{props.message}</p>
                     <br />
                     <div>
+                        {props.link && <a onClick={() => { props.setModal(false) }} href={`${props.href}`} target="_blank" rel="noreferrer"><button className="buttons modal-button" tabIndex={-1}>{props.actionBtnText}</button></a>}
+                        {!props.link && <button onClick={() => { props.action(); props.setModal(false); }} className="buttons modal-button">{props.actionBtnText}</button>}
                         <button onClick={() => { props.setModal(false) }} className="buttons modal-button" autoFocus>{props.closeBtnText}</button>
                     </div>
                 </div>
@@ -20,4 +22,4 @@ const Modal = (props) => {
     )
 };
 
-export { Modal }
+export { Verify }
