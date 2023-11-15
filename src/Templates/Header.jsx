@@ -56,7 +56,11 @@ const Header = (props) => {
                 <a href="" onClick={(e) => {
                     e.preventDefault();
                     props.goPage(2);
-                }} className="link-desat" tabIndex={navTabIdx1}>Gallery</a>
+                }} className="link-desat" tabIndex={navTabIdx1}>Art</a>
+                <a href="" onClick={(e) => {
+                    e.preventDefault();
+                    props.goPage(3);
+                }} className="link-desat" tabIndex={navTabIdx1}>Philosophy</a>
             </div>,
         },
         {

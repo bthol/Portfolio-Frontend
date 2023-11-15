@@ -6,6 +6,7 @@ import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
 import { ArtPage } from './Pages/ArtPage';
+import { PhilosophyPage } from './Pages/PhilosophyPage';
 import { Comp8 } from './RenderComp/Comp8';
 
 function App() {
@@ -326,6 +327,15 @@ function App() {
       {
         page === 2 &&
         <ArtPage
+          featureAlertFunct={featureAlertFunct}
+          mobile={mobile}
+          enter={enter}
+        />
+      }
+      
+      {
+        page === 3 &&
+        <PhilosophyPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
           enter={enter}

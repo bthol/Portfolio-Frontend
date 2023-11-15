@@ -43,14 +43,14 @@ const Comp7 = (props) => {
                     resolve("resolved")
                 }).then(() => {
                     const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
-                    a.firstChild.style.width = `${newSize - 60}px`;
+                    a.firstChild.style.width = `${newSize - 75}px`;
                 })
                 window.addEventListener("resize", () => {
                     aH = a.offsetHeight;
                     aW = a.offsetWidth;
                     aAR = aH / aW;
                     const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
-                    a.firstChild.style.width = `${newSize - 60}px`;
+                    a.firstChild.style.width = `${newSize - 75}px`;
                 })
             }
         })

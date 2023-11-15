@@ -14,9 +14,6 @@ const NavButton = (props) => {
         props.initNav();
         props.toggleNavState();
         menuOverflow();
-        // if (props.navState) {
-        //     document.body.querySelectorAll('.nav-menu-list')[props.id].scrollTo(0, 0);
-        // }
     };
     return (
         <div>
