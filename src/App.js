@@ -6,7 +6,6 @@ import { Footer } from './Templates/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
 import { ArtPage } from './Pages/ArtPage';
-import { PhilosophyPage } from './Pages/PhilosophyPage';
 import { Comp8 } from './RenderComp/Comp8';
 
 function App() {
@@ -166,17 +165,6 @@ function App() {
       }
     }, themeTransTime)
   };
-  
-  // state for page properties
-  const [back, setBack] = useState("max-height");
-  const pageDisplay = () => {
-    // function that adjusts layout by page properties
-    if (document.body.clientHeight >= window.innerHeight) {
-      setBack("max-content");
-    } else {
-      setBack("100vh");
-    }
-  }
 
   useEffect(() => {
     let ignore = false;
@@ -289,11 +277,10 @@ function App() {
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
-    setTimeout(() => { pageDisplay() }, 10)
   }
   
   return (
-    <div id="root-react" className={`App color ${theme}`} style={{ height: back }}>
+    <div id="root-react" className={`App color ${theme}`}>
       <Header
         toggleTheme={toggleTheme}
         docScroll={docScroll}
@@ -327,15 +314,6 @@ function App() {
       {
         page === 2 &&
         <ArtPage
-          featureAlertFunct={featureAlertFunct}
-          mobile={mobile}
-          enter={enter}
-        />
-      }
-      
-      {
-        page === 3 &&
-        <PhilosophyPage
           featureAlertFunct={featureAlertFunct}
           mobile={mobile}
           enter={enter}

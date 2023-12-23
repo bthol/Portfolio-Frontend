@@ -57,10 +57,6 @@ const Header = (props) => {
                     e.preventDefault();
                     props.goPage(2);
                 }} className="link-desat" tabIndex={navTabIdx1}>Art</a>
-                <a href="" onClick={(e) => {
-                    e.preventDefault();
-                    props.goPage(3);
-                }} className="link-desat" tabIndex={navTabIdx1}>Philosophy</a>
             </div>,
         },
         {
@@ -75,10 +71,13 @@ const Header = (props) => {
                 <p className="cursor-default"><u>Utility</u></p>
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
-                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Calculo</a>
+                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>GoodEval</a>
                 <a onClick={(e) => {
                     props.featureAlertFunct(e);
                 }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Cryptos</a>
+                <a onClick={(e) => {
+                    props.featureAlertFunct(e);
+                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Sysmod</a>
             </div>,
         },
     ];
