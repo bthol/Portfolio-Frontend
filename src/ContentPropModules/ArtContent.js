@@ -1,14 +1,19 @@
-import Forefront1 from '../Images/ArtPageImages/Forefront/png/Feathered-Plant.png';
-import Forefront2 from '../Images/ArtPageImages/Forefront/png/In-Organic.png';
+import Forefront1 from '../Images/ArtPageImages/Forefront/jpg/Feathered-Plant.jpg';
+import Forefront2 from '../Images/ArtPageImages/Forefront/jpg/In-Organic.jpg';
 
-import MachineError1 from '../Images/ArtPageImages/MachineError/png/A-Fracture_6.png';
-import MachineError2 from '../Images/ArtPageImages/MachineError/png/C-Fracture_1.png';
+import MachineError1 from '../Images/ArtPageImages/MachineError/jpg/A-Fracture_6.jpg';
+import MachineError2 from '../Images/ArtPageImages/MachineError/jpg/A-Scan_4.jpg';
+import MachineError3 from '../Images/ArtPageImages/MachineError/jpg/B-Structure_4.jpg';
+import MachineError4 from '../Images/ArtPageImages/MachineError/jpg/C-Scan_8.jpg';
 
-import TextureFields1 from '../Images/ArtPageImages/TextureFields/png/Calc.png';
-import TextureFields2 from '../Images/ArtPageImages/TextureFields/png/Dream-Point-Scape.png';
-import TextureFields3 from '../Images/ArtPageImages/TextureFields/png/Motor-Tome.png';
-import TextureFields4 from '../Images/ArtPageImages/TextureFields/png/Qua.png';
-import TextureFields5 from '../Images/ArtPageImages/TextureFields/png/The-One-with-the-Orange-Band.png';
+import TextureFields1 from '../Images/ArtPageImages/TextureFields/jpg/Calc.jpg';
+import TextureFields2 from '../Images/ArtPageImages/TextureFields/jpg/Dream-Point-Scape.jpg';
+import TextureFields3 from '../Images/ArtPageImages/TextureFields/jpg/Err-Sec.jpg';
+import TextureFields4 from '../Images/ArtPageImages/TextureFields/jpg/Motor-Tome.jpg';
+import TextureFields5 from '../Images/ArtPageImages/TextureFields/jpg/Neon-Crust.jpg';
+import TextureFields6 from '../Images/ArtPageImages/TextureFields/jpg/Qua.jpg';
+import TextureFields7 from '../Images/ArtPageImages/TextureFields/jpg/Stone-Dance.jpg';
+import TextureFields8 from '../Images/ArtPageImages/TextureFields/jpg/The-One-with-the-Orange-Band.jpg';
 
 
 const ArtContent = {
@@ -20,6 +25,8 @@ const ArtContent = {
         machineError: [
             <img className="gallery-image" src={MachineError1} alt="gallery" width={"100%"} tabIndex={0} />,
             <img className="gallery-image" src={MachineError2} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={MachineError3} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={MachineError4} alt="gallery" width={"100%"} tabIndex={0} />,
         ],
         textureFields: [
             <img className="gallery-image" src={TextureFields1} alt="gallery" width={"100%"} tabIndex={0} />,
@@ -27,6 +34,9 @@ const ArtContent = {
             <img className="gallery-image" src={TextureFields3} alt="gallery" width={"100%"} tabIndex={0} />,
             <img className="gallery-image" src={TextureFields4} alt="gallery" width={"100%"} tabIndex={0} />,
             <img className="gallery-image" src={TextureFields5} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={TextureFields6} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={TextureFields7} alt="gallery" width={"100%"} tabIndex={0} />,
+            <img className="gallery-image" src={TextureFields8} alt="gallery" width={"100%"} tabIndex={0} />,
         ],
     },
     origami: [

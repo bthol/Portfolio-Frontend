@@ -833,18 +833,18 @@ html {
 
 .gallery-image {
   width: 33vw;
-  border: 2vmin ridge var(--background-polar);
+  border: 1.75vmin ridge hsl(60, 5%, 18%);
   border-radius: 3px;
   cursor: pointer;
 }
 
 .gallery-image-select {
-  --areaHeight: calc(100vh - var(--below-header) + 10px);
+  --areaHeight: calc(100vh - var(--below-header) + 8px);
   position: fixed;
   width: 100%;
   height: var(--areaHeight);
   z-index: 1;
-  top: calc(var(--below-header) - 10px);
+  top: calc(var(--below-header) - 8px);
   left: 0px;
   display: flex;
   flex-direction: column;

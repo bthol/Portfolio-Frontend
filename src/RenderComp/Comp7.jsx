@@ -14,43 +14,51 @@ const Comp7 = (props) => {
                 // get height and width of Area
                 let aH = a.offsetHeight;
                 let aW = a.offsetWidth;
+
                 // select the image
                 const i = e.target;
                 // get height and width of Image
                 const iH = i.offsetHeight;
                 const iW = i.offsetWidth;
-                // calculate aspect ratios (AR)
-                let aAR = aH / aW;
+                // calculate aspect ratio of image (AR)
                 const iAR = iH / iW;
-                const getNewSize = (aAR, iAR, aH, aW, iH, iW) => {
-                    let newSize;
-                    if (aAR < iAR) {
-                        // console.log(1);
-                        newSize = (aH / iH) * iW;
+
+                const getNewWidth = (iAR, iW, aH, aW) => {
+                    let newWidth;
+                    // get difference of area width and image width
+                    const wDiff = aW - iW;
+                    // adjust image width using difference to get new width
+                    newWidth = iW + wDiff;
+                    // get new height using new width and image aspect ratio
+                    let newHeight = newWidth * iAR;
+                    // get difference of area height and new height 
+                    const hDiff = aH - newHeight;
+                    // if new height exceeds area height
+                    if (hDiff < 0) {
+                        // get difference of area height and image height
+                        const hDiff = aH - iH - 93;
+                        // adjust image height using difference to get new height
+                        newHeight = iH + hDiff;
+                        // get new width using new height and image aspect ratio
+                        newWidth = newHeight / iAR;
                     } else {
-                        if (aH > aW) {
-                            // console.log(2);
-                            newSize = aW;
-                        } else {
-                            // console.log(3);
-                            newSize = aH / iAR;
-                        }
+                        newWidth -= 93;
                     }
-                    return newSize;
+                    return newWidth;
                 };
                 new Promise((resolve) => {
                     setSized(true);
                     resolve("resolved")
                 }).then(() => {
-                    const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
-                    a.firstChild.style.width = `${newSize - 75}px`;
+                    const newWidth = getNewWidth(iAR, iW, aH, aW);
+                    a.firstChild.style.width = `${newWidth}px`;
                 })
                 window.addEventListener("resize", () => {
                     aH = a.offsetHeight;
                     aW = a.offsetWidth;
-                    aAR = aH / aW;
-                    const newSize = getNewSize(aAR, iAR, aH, aW, iH, iW);
-                    a.firstChild.style.width = `${newSize - 75}px`;
+                    const newWidth = getNewWidth(iAR, iW, aH, aW);
+                    // 75
+                    a.firstChild.style.width = `${newWidth}px`;
                 })
             }
         })
