@@ -1,5 +1,5 @@
 const HomePageContent = {
-  about: <div>I am a web developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skills in order to make a valuable contribution to my team, the business, and the world at large.</div>,
+  about: <div>I am a web developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skillset in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [
     {
       sectionTitle: "Skills and Knowledge"
@@ -109,7 +109,7 @@ const HomePageContent = {
         <ul>
           <li>Additive (noise and/or Digitally Controlled Oscillator(DCO) generate signals combined to form one sound through the unison psychoaccoustic effect)</li>
           <li>Subtractive (hipass, lopass, bandpass, and shelf filters modulated with ASDR, ASD, AD, and graphical envelopes)</li>
-          <li>Frequency Modulation (FM), Amplitude Modulation(AM), Ring Modulation(RM), Pulse Width Modulation(PWM) (properties of a modulator signal acts on properties of a carrier signal)</li>
+          <li>Frequency Modulation (FM), Amplitude Modulation (AM), Ring Modulation (RM), Pulse Width Modulation (PWM) (properties of a modulator signal acts on properties of a carrier signal)</li>
           <li>Granular (audio sample spliced into parts looped at high frequency to generate tones)</li>
           <li>Pitch Mapping (tones are generated relative to a map visually characterizing changes in frequency and amplitude accross time)</li>
           <li>Spectral (audible frequency spectrum is divided into separately manipulated sections)</li>
@@ -149,15 +149,15 @@ const HomePageContent = {
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li >I create music in my own studio under the pseudonym Augium. Augium is a constructed word intended to mean "the element of incriment" or "the proclivity toward complexity."<br /><br /><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
+          <li >I create music in my own studio under the artist name Augium. Augium is a constructed word intended to mean the element of incriment.<br /><br /><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
         </ul>
         <br />
         <div>Highlights</div>
         <ul>
-          <li >Composed 400+ songs at 25+ hours using a variety of digital audio workstations accross multiple genres</li>
+          <li >Singlehandedly composed 400+ songs measuring 25+ hours in duration accross multiple genres using a variety of digital audio workstations and related technologies</li>
           <li >Involved in all phases of music production (i.e. music concept and theory, sound design, composition, performance and recording, mix engineering, and mastering)</li>
           <li >General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
-          <li >Created audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, pitch mapping, granular)</li>
+          <li >Created countless audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, pitch mapping, granular)</li>
         </ul>
       </div>,
     },
