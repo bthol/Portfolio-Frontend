@@ -26,7 +26,9 @@ const HomePage = (props) => {
         // e.target.setAttribute("href", `mailto:bthollaug@gmail.com?subject=Contact%20from%20Portfolio%20Website`);
     };
 
-    // PROJECT CAROUSEL (for tablet and larger)
+    // CAROUSEL (for tablet and larger)
+    const [leftArrowShow, setLeftArrowShow] = useState(0);
+    const [rightArrowShow, setRightArrowShow] = useState(1);
     const [carPos, setCarPos] = useState(0);
     const [carBut0, setCarBut0] = useState("highlight-carBut");
     const [carBut1, setCarBut1] = useState("carBut-hover");
@@ -44,16 +46,22 @@ const HomePage = (props) => {
             setSlideTabIdx1(-1);
             setSlideTabIdx2(-1);
             setCarBut0("highlight-carBut")
+            setLeftArrowShow(0);
+            setRightArrowShow(1);
         } else if (pos === 1) {
             setSlideTabIdx0(-1);
             setSlideTabIdx1(0);
             setSlideTabIdx2(-1);
             setCarBut1("highlight-carBut")
+            setLeftArrowShow(1);
+            setRightArrowShow(1);
         } else if (pos === 2) {
             setSlideTabIdx0(-1);
             setSlideTabIdx1(-1);
             setSlideTabIdx2(0);
             setCarBut2("highlight-carBut")
+            setLeftArrowShow(1);
+            setRightArrowShow(0);
         }
     }
 
@@ -75,21 +83,6 @@ const HomePage = (props) => {
         },
         {
             id: "projects-2",
-            title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Magic 8 Ball</div></b>,
-            text: <div>
-                <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
-                <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
-            </div>,
-            list: <ul>
-                <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
-                <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
-                <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
-                <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
-                <li>Implemented a polychromatic animated background gradient.</li>
-            </ul>,
-        },
-        {
-            id: "projects-3",
             title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Retro Toe</div></b>,
             carousel: <img src="" alt="project carousel"></img>,
             text: <div>
@@ -102,6 +95,21 @@ const HomePage = (props) => {
                 <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
                 <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
                 <li>Deployed the application using GitHub Pages.</li>
+            </ul>,
+        },
+        {
+            id: "projects-3",
+            title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Magic 8 Ball</div></b>,
+            text: <div>
+                <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
+                <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
+            </div>,
+            list: <ul>
+                <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
+                <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
+                <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
+                <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
+                <li>Implemented a polychromatic animated background gradient.</li>
             </ul>,
         },
     ]
@@ -168,20 +176,24 @@ const HomePage = (props) => {
                     {
                         props.mobile
                             ? <div></div>
-                            : <div className="flex-center-vert">
-                                <div className="carButs flex-center">
-                                    <button onClick={() => {
-                                        setCarPos(0);
-                                        highlightButton(0);
-                                    }} className={`cursor-pointer carBut ${carBut0}`}></button>
-                                    <button onClick={() => {
-                                        setCarPos(1);
-                                        highlightButton(1);
-                                    }} className={`cursor-pointer carBut ${carBut1}`}></button>
-                                    <button onClick={() => {
-                                        setCarPos(2);
-                                        highlightButton(2);
-                                    }} className={`cursor-pointer carBut ${carBut2}`}></button>
+                            : <div className="carousel-control-panel">
+                                <div className="flex-center-vert">
+                                    <div className="carButs flex-center">
+                                        <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
+                                        <button onClick={() => {
+                                            setCarPos(0);
+                                            highlightButton(0);
+                                        }} className={`carBut ${carBut0}`}></button>
+                                        <button onClick={() => {
+                                            setCarPos(1);
+                                            highlightButton(1);
+                                        }} className={`carBut ${carBut1}`}></button>
+                                        <button onClick={() => {
+                                            setCarPos(2);
+                                            highlightButton(2);
+                                        }} className={`carBut ${carBut2}`}></button>
+                                        <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
+                                    </div>
                                 </div>
                             </div>
                     }
