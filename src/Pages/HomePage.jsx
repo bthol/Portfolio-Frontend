@@ -83,15 +83,15 @@ const HomePage = (props) => {
         },
         {
             id: "projects-2",
-            title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Retro Toe</div></b>,
+            title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Retro Toe</div></b>,
             carousel: <img src="" alt="project carousel"></img>,
             text: <div>
                 <p><b>Description:</b> Tic Tac Toe. Retro style.</p>
                 <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
             </div>,
             list: <ul>
-                <li><a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
-                <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
+                <li><a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
+                <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
                 <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
                 <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
                 <li>Deployed the application using GitHub Pages.</li>
@@ -99,14 +99,14 @@ const HomePage = (props) => {
         },
         {
             id: "projects-3",
-            title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Magic 8 Ball</div></b>,
+            title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Magic 8 Ball</div></b>,
             text: <div>
                 <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
                 <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
             </div>,
             list: <ul>
-                <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
-                <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
+                <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
+                <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
                 <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
                 <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
                 <li>Implemented a polychromatic animated background gradient.</li>
@@ -177,23 +177,21 @@ const HomePage = (props) => {
                         props.mobile
                             ? <div></div>
                             : <div className="carousel-control-panel">
-                                <div className="flex-center-vert">
-                                    <div className="carButs flex-center">
-                                        <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
-                                        <button onClick={() => {
-                                            setCarPos(0);
-                                            highlightButton(0);
-                                        }} className={`carBut ${carBut0}`}></button>
-                                        <button onClick={() => {
-                                            setCarPos(1);
-                                            highlightButton(1);
-                                        }} className={`carBut ${carBut1}`}></button>
-                                        <button onClick={() => {
-                                            setCarPos(2);
-                                            highlightButton(2);
-                                        }} className={`carBut ${carBut2}`}></button>
-                                        <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
-                                    </div>
+                                <div className="carButs flex-center">
+                                    <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
+                                    <button onClick={() => {
+                                        setCarPos(0);
+                                        highlightButton(0);
+                                    }} className={`carBut ${carBut0} carBut`}></button>
+                                    <button onClick={() => {
+                                        setCarPos(1);
+                                        highlightButton(1);
+                                    }} className={`carBut ${carBut1}`}></button>
+                                    <button onClick={() => {
+                                        setCarPos(2);
+                                        highlightButton(2);
+                                    }} className={`carBut ${carBut2}`}></button>
+                                    <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
                                 </div>
                             </div>
                     }
