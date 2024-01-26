@@ -3,9 +3,10 @@ import { React } from 'react';
 const NavButton = (props) => {
     const menuOverflow = () => {
         const navMenu = document.querySelectorAll(".nav-menu-list")[props.id];
-        if (navMenu.offsetHeight > 250) {
-            navMenu.style.height = "250px";
-            navMenu.style.overflowY = "scroll"
+        if (navMenu.offsetHeight > 180) {
+            navMenu.style.overflow = "-moz-scrollbars-vertical";
+            navMenu.style.overflowY = "scroll";
+            navMenu.style.height = "180px";
         }
     };
 
@@ -15,6 +16,7 @@ const NavButton = (props) => {
         props.toggleNavState();
         menuOverflow();
     };
+
     return (
         <div>
             <button className="nav-buttons link-desat" onClick={(e) => { click(e) }}>
