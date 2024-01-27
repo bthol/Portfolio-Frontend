@@ -53,7 +53,7 @@ const Header = (props) => {
         {
             name: "Pages ",
             links: <div className="nav-menu-list">
-                <a href="" onClick={(e) => {
+                <a onClick={(e) => {
                     e.preventDefault();
                     props.goPage(2);
                 }} className="link-desat" tabIndex={navTabIdx1}>Art</a>
@@ -90,10 +90,10 @@ const Header = (props) => {
             <nav className="app-nav">
                 <div className="flex-around">
                     <div className="home-button-container">
-                        <button className="nav-buttons link-desat" onClick={() => {
+                        <a rel="scrollPosition" href="#"><button className="nav-buttons link-desat" onClick={() => {
                             props.goPage(1);
                             initNav();
-                        }}>Home</button>
+                        }}>Home</button></a>
                     </div>
                     <NavButton
                         id={0}

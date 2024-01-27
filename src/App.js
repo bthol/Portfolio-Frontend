@@ -283,6 +283,7 @@ function App() {
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
+    window.scrollTo(0, 0);
   }
   
   return (
