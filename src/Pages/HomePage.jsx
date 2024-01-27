@@ -37,6 +37,21 @@ const HomePage = (props) => {
     const [slideTabIdx1, setSlideTabIdx1] = useState(-1);
     const [slideTabIdx2, setSlideTabIdx2] = useState(-1);
 
+    const [carousel, setCarousel] = useState(false);
+    const [carBool, setCarBool] = useState(true);
+    if (carBool && window.innerWidth > 583) {
+        setCarBool(false);
+        setCarousel(true);
+    }
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 583) {
+            setCarousel(true);
+        } else {
+            setCarousel(false);
+        }
+    }, { passive: true });
+
     const highlightButton = (pos) => {
         setCarBut0("carBut-hover");
         setCarBut1("carBut-hover");
@@ -174,28 +189,27 @@ const HomePage = (props) => {
                         <br />
                     </div>
                     {
-                        props.mobile
-                            ? <div></div>
-                            : <div className="carousel-control-panel">
-                                <div className="carButs flex-center">
-                                    <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
-                                    <button onClick={() => {
-                                        setCarPos(0);
-                                        highlightButton(0);
-                                    }} className={`carBut ${carBut0} carBut`}></button>
-                                    <button onClick={() => {
-                                        setCarPos(1);
-                                        highlightButton(1);
-                                    }} className={`carBut ${carBut1}`}></button>
-                                    <button onClick={() => {
-                                        setCarPos(2);
-                                        highlightButton(2);
-                                    }} className={`carBut ${carBut2}`}></button>
-                                    <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
-                                </div>
+                        !carousel
+                        ? <div></div>
+                        : <div className="carousel-control-panel">
+                            <div className="carButs flex-center">
+                                <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
+                                <button onClick={() => {
+                                    setCarPos(0);
+                                    highlightButton(0);
+                                }} className={`carBut ${carBut0} carBut`}></button>
+                                <button onClick={() => {
+                                    setCarPos(1);
+                                    highlightButton(1);
+                                }} className={`carBut ${carBut1}`}></button>
+                                <button onClick={() => {
+                                    setCarPos(2);
+                                    highlightButton(2);
+                                }} className={`carBut ${carBut2}`}></button>
+                                <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
                             </div>
+                        </div>
                     }
-                    <br />
                 </div>
             </div>
             <div id="homepage-mid-2" className="content-container shadow-behind">

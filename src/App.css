@@ -21,8 +21,8 @@
   /* ICON */
   /* PROFILE-IMAGE */
 /* COMPONENTS */
+  /* LOADERS */
   /* MODALS */
-  /* POPUP-TEXT */
   /* CAROUSELS */
 /* QUERIES */
   /* RESPONSIVITY */
@@ -525,25 +525,9 @@ hr {
   }
 }
 
-/*-----------------------------------------------POPUP-TEXT-----------------------------------------------*/
-@media(min-width: 768px) {
-  .popup-container {
-    position: fixed;
-    z-index: 1;
-    height: calc(100vh - var(--below-header));
-    width: 100vw;
-    top: var(--below-header);
-    left: 0px;
-  }
-  .popup-container > div {
-    width: 75%;
-    height: max-content;
-  }
-}
-
 /*-----------------------------------------------CAROUSELS-----------------------------------------------*/
 
-@media(min-width: 768px) {
+@media(min-width: 583px) {
   .carousel-container { /* use padding to see nearby slides */
     --wide: 100%;
     padding: -1%;

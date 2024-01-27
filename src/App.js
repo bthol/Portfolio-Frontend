@@ -22,6 +22,7 @@ function App() {
   // IDLE MODAL
   // 5 min = 300 secs
   let idleDelay = 300;
+  
   let idleCounter;
   let idleCount = 0;
   const [modalShow, setModalShow] = useState(false);
@@ -127,6 +128,11 @@ function App() {
 
   window.addEventListener("resize", () => {
     getInfo();
+    if (window.innerWidth < 768) {
+      setMobile(true);
+    } else {
+      setMobBool(false);
+    }
   }, { passive: true });
 
   window.addEventListener("scroll", () => {
@@ -169,7 +175,7 @@ function App() {
   useEffect(() => {
     let ignore = false;
     if (!ignore) {
-      // sets default theme on load
+      // sets user default theme on load
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         setTheme("color-theme-dark");
         setTogTheme(false);
