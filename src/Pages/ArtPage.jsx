@@ -30,23 +30,18 @@ const ArtPage = (props) => {
             <Comp6 title={"Texture Fields"} />
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery.textureFields[3]} info={Content.gallery.textureFields[3].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
                 <Comp7 image={Content.gallery.textureFields[1]} info={Content.gallery.textureFields[1].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
-            </div>
-
-            <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.textureFields[2]} info={Content.gallery.textureFields[2].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
-                <Comp7 image={Content.gallery.textureFields[4]} info={Content.gallery.textureFields[4].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
             </div>
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery.textureFields[7]} info={Content.gallery.textureFields[7].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
+                <Comp7 image={Content.gallery.textureFields[3]} info={Content.gallery.textureFields[3].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
                 <Comp7 image={Content.gallery.textureFields[5]} info={Content.gallery.textureFields[5].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
             </div>
 
             <div className="artpage-gallery-row">
-                <Comp7 image={Content.gallery.textureFields[6]} info={Content.gallery.textureFields[6].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
                 <Comp7 image={Content.gallery.textureFields[0]} info={Content.gallery.textureFields[0].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
+                <Comp7 image={Content.gallery.textureFields[4]} info={Content.gallery.textureFields[4].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
             </div>
 
             {/* <Comp6 title={"Origami"} />

@@ -6,14 +6,12 @@ import MachineError2 from '../Images/ArtPageImages/MachineError/jpg/A-Scan_4.jpg
 import MachineError3 from '../Images/ArtPageImages/MachineError/jpg/B-Structure_4.jpg';
 import MachineError4 from '../Images/ArtPageImages/MachineError/jpg/C-Scan_8.jpg';
 
-import TextureFields1 from '../Images/ArtPageImages/TextureFields/jpg/Calc.jpg';
-import TextureFields2 from '../Images/ArtPageImages/TextureFields/jpg/Dream-Point-Scape.jpg';
-import TextureFields3 from '../Images/ArtPageImages/TextureFields/jpg/Err-Sec.jpg';
-import TextureFields4 from '../Images/ArtPageImages/TextureFields/jpg/Motor-Tome.jpg';
-import TextureFields5 from '../Images/ArtPageImages/TextureFields/jpg/Neon-Crust.jpg';
-import TextureFields6 from '../Images/ArtPageImages/TextureFields/jpg/Qua.jpg';
-import TextureFields7 from '../Images/ArtPageImages/TextureFields/jpg/Stone-Dance.jpg';
-import TextureFields8 from '../Images/ArtPageImages/TextureFields/jpg/The-One-with-the-Orange-Band.jpg';
+import TextureFields1 from '../Images/ArtPageImages/TextureFields/jpg/Dream-Point-Scape.jpg';
+import TextureFields2 from '../Images/ArtPageImages/TextureFields/jpg/Motor-Tome.jpg';
+import TextureFields3 from '../Images/ArtPageImages/TextureFields/jpg/Neon-Crust.jpg';
+import TextureFields4 from '../Images/ArtPageImages/TextureFields/jpg/Aqua-Tile.jpg';
+import TextureFields5 from '../Images/ArtPageImages/TextureFields/jpg/Stone-Dance.jpg';
+import TextureFields6 from '../Images/ArtPageImages/TextureFields/jpg/The-One-with-the-Orange-Band.jpg';
 
 
 const ArtContent = {
@@ -35,8 +33,6 @@ const ArtContent = {
             <img className="gallery-image" src={TextureFields4} alt="gallery" width={"100%"} tabIndex={0} />,
             <img className="gallery-image" src={TextureFields5} alt="gallery" width={"100%"} tabIndex={0} />,
             <img className="gallery-image" src={TextureFields6} alt="gallery" width={"100%"} tabIndex={0} />,
-            <img className="gallery-image" src={TextureFields7} alt="gallery" width={"100%"} tabIndex={0} />,
-            <img className="gallery-image" src={TextureFields8} alt="gallery" width={"100%"} tabIndex={0} />,
         ],
     },
     origami: [
