@@ -8,15 +8,23 @@ const ArtPage = (props) => {
     return (
         <div id="artpage" className="page-content">
 
-            <Comp6 title={"Forefront"} containerFirst={"container-first"} />
+            <Comp6 title={"Gallery"} containerFirst={"container-first"} />
 
+            <div className="flex-center artpage-layout-2"><a href="#Forefront" className="link-desat">Forefront</a></div>
+            <div className="flex-center artpage-layout-3"><a href="#MachineError" className="link-desat">Machine Error</a></div>
+            <div className="flex-center artpage-layout-4"><a href="#TextureFields" className="link-desat">Texture Fields</a></div>
+
+            <a name="Forefront" />
+            <div className="artpage-layout-width flex-center"><h2>Forefront</h2></div>
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.forefront[0]} info={Content.gallery.forefront[0].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
                 <Comp7 image={Content.gallery.forefront[1]} info={Content.gallery.forefront[1].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
             </div>
 
-            <Comp6 title={"Machine Error"} />
-
+            <br />
+            <a name="MachineError" />
+            <div className="artpage-layout-width flex-center"><h2>Machine Error</h2></div>
+            
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.machineError[3]} info={Content.gallery.machineError[3].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
                 <Comp7 image={Content.gallery.machineError[2]} info={Content.gallery.machineError[2].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
@@ -27,8 +35,10 @@ const ArtPage = (props) => {
                 <Comp7 image={Content.gallery.machineError[1]} info={Content.gallery.machineError[1].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
             </div>
 
-            <Comp6 title={"Texture Fields"} />
-
+            <br />
+            <a name="TextureFields" />
+            <div className="artpage-layout-width flex-center"><h2>Texture Fields</h2></div>
+            
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.textureFields[1]} info={Content.gallery.textureFields[1].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
                 <Comp7 image={Content.gallery.textureFields[2]} info={Content.gallery.textureFields[2].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
