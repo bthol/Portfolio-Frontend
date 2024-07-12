@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Notify } from './Modals/Notify';
-import { Header } from './Templates/Header';
-import { Footer } from './Templates/Footer';
+import { Header } from './Template/Header';
+import { Footer } from './Template/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
 import { ArtPage } from './Pages/ArtPage';
@@ -10,73 +10,44 @@ import { Comp8 } from './RenderComp/Comp8';
 
 function App() {
 
-  // ERROR ALERTS
-  const featureAlert = (e) => {
+  // GLOBAL VARIABLES
+  let winHeight, trackLength, docheight;
+  const [cdCache, setCdCache] = useState();
+  
+  // NOTIFICATION STATE
+  const [featureNotify, setFeatureNotify] = useState(false);
+  const notifyFeature = (e, bool) => {
     e.preventDefault();
-    alert("Feature still in development");
-  };
-  const featureAlertFunct = (e) => {
-    featureAlert(e);
+    setFeatureNotify(bool);
   };
   
-  // IDLE MODAL
-  // 5 min = 300 secs
-  let idleDelay = 300;
+  const [internetConnectNotify, setInternetConnectNotify] = useState(false);
+  const notifyInternetConnect = (e, bool) => {
+    setInternetConnectNotify(bool);
+  };
   
-  let idleCounter;
-  let idleCount = 0;
-  const [modalShow, setModalShow] = useState(false);
-  const setModalFunct = (bool) => {
-    setModalShow(bool)
-    if (bool === false) {
-      count();
+  // IDLE NOTIFICATION
+  const secondsIdle = 300; // 300 seconds = 5 minutes // number of seconds idle before notify
+  const [idleNotify, setIdleNotify] = useState(false);
+  const notifyIdle = (e, bool) => {
+    // displays idle notification for a bool argument of true
+    setIdleNotify(bool);
+  };
+  
+  const [idleVar, setIdleVar] = useState({});
+  const active = () => {
+    // runs for all user activity
+    // debounces for secondsIdle number of seconds to display idle notification
+    if (!idleNotify) {
+      clearTimeout(idleVar);
+      setIdleVar(
+        setTimeout((e) => {
+          notifyIdle(e, true);
+          clearTimeout(idleVar);
+        }, secondsIdle * 1000)
+      )
     }
   };
-  
-  const count = () => {
-    idleCounter = setInterval(() => {
-      if (idleCount === idleDelay) {
-        setModalFunct(true);
-        clearInterval(idleCounter);
-      } else {
-        idleCount += 1;
-      }
-    }, 1000)
-  };
-  
-  useEffect(() => {
-    // callback starts the count
-    count();
-    // listner restarts count
-    document.addEventListener("mousemove", () => {
-      // console.log("mousemove");
-      idleCount = 0;
-    });
-    document.addEventListener("keydown", () => {
-      // console.log("keydown");
-      idleCount = 0;
-    });
-    document.addEventListener("touchmove", () => {
-      // console.log("touchmove");
-      idleCount = 0;
-    });
-
-    const onVisibilityChange = () => {
-      // stop count on nav away
-      if (document.visibilityState === "hidden") {
-        clearInterval(idleCounter);
-        idleCount = 0;
-      }
-      // restart count on nav back
-      if (document.visibilityState === "visible") {
-        clearInterval(idleCounter);
-        count()
-      }
-    };
-    document.addEventListener("visibilitychange", onVisibilityChange);
-
-    return () => clearTimeout(idleCounter);
-  }, []);
 
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
   const [mobile, setMobile] = useState(false);
@@ -96,9 +67,8 @@ function App() {
   };
 
   // TRACKLENGTH BAR LOGIC
-  const [docScroll, setDocScroll] = useState(0);
-
-  let winHeight, trackLength, docheight;
+  // const [docScroll, setDocScroll] = useState(0);
+  let docScroll = 0;
 
   const getHeight = () => {
     return Math.max(
@@ -119,32 +89,42 @@ function App() {
   getInfo();
 
   const scrollAmmount = () => {
-    let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    let scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
     let pctScrolled = Math.floor(scrollTop / trackLength * 100);
     if (pctScrolled >= 0) {
-      setDocScroll(pctScrolled)
+        docScroll = pctScrolled;
     }
   };
-
-  window.addEventListener("resize", () => {
-    getInfo();
-    if (window.innerWidth < 768) {
-      setMobile(true);
-    } else {
-      setMobBool(false);
+  
+  useEffect(() => {
+    let ignore = false;
+    if (!ignore) {
+      window.addEventListener("resize", () => {
+        active();
+        getInfo();
+        scrollAmmount();
+        if (window.innerWidth < 768) {
+          setMobile(true);
+        } else {
+          setMobBool(false);
+        }
+      }, { passive: true });
+      
+      window.addEventListener("scroll", () => {
+        active();
+        getInfo();
+        scrollAmmount();
+      }, { passive: true });
     }
-  }, { passive: true });
-
-  window.addEventListener("scroll", () => {
-    scrollAmmount();
-  }, { passive: true });
-
+    return () => {ignore = true};
+  }, []);
 
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-light");
   const [togTheme, setTogTheme] = useState(true);
   const [btnTheme, setBtnTheme] = useState("theme-btn-light");
   const themeTransTime = 180;
+
   const updateLikeBtn = () => {
     // detects if liked and display accordingly
     if (localStorage.getItem("liked")) {
@@ -156,6 +136,7 @@ function App() {
       likeBtn.classList.remove('like-btn-animation');
     }
   };
+
   const toggleTheme = () => {
     setTogTheme(!togTheme)
     if (togTheme) {
@@ -182,8 +163,8 @@ function App() {
         setBtnTheme("theme-btn-dark");
       }
     }
-    return () => { ignore = true }
-  }, [])
+    return () => { ignore = true };
+  }, []);
   
   // Page Data State
   const [portfolioViews, setPortfolioViews] = useState(<Comp8 />);
@@ -203,11 +184,11 @@ function App() {
           .then(res => res.json())
           .then((data) => {
             if (!ignore) {
-              setPortfolioLikes(`: ${data.data[0].portfolioLikes}`)
+              setPortfolioLikes(`: ${data.data[0].portfolioLikes}`);
               
               // if new to page
               if (localStorage.getItem("viewed") === null) {
-                setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`)
+                setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`);
                 fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
                   method: 'PATCH',
                   headers: {
@@ -216,41 +197,47 @@ function App() {
                   body: JSON.stringify({
                     portfolioViews: data.data[0].portfolioViews + 1,
                   })
-                })
+                });
                 localStorage.setItem("viewed", true);
               }
             } else {
-              setPortfolioViews(`: ${data.data[0].portfolioViews}`)
+              setPortfolioViews(`: ${data.data[0].portfolioViews}`);
             }
           })
         },
+        
         () => {
           // onRejected
           // Notify if offline
           if (!window.navigator.onLine) {
-            alert("The user is not connected to the internet. Please connect to the internet for a fully featured experience.")
+            setInternetConnectNotify(true);
           }
           // Display message in place of resources to avoid the appearance of infinite loading
-          setPortfolioLikes("failed to load")
-          setPortfolioViews("failed to load")
+          setPortfolioLikes("failed to load");
+          setPortfolioViews("failed to load");
           
-          // trigger 10 second countdown for connection retry
+          // trigger 1 minute countdown for connection retry
           let cd = 0;
-          const cdCache = setInterval(() => {
-            if (cd === 10) {
-              cd = 0;
-              clearInterval(cdCache);
-              getResources();
-            } else {
-              cd += 1;
-            }
-          }, 1000)
+          clearInterval(cdCache);
+          setCdCache(
+            setInterval(() => {
+              if (cd === 60) {
+                cd = 0;
+                getResources();
+              } else {
+                cd += 1;
+              }
+            }, 60 * 1000)
+          );
         }
       )
     };
-    getResources();
+    if (!ignore) {
+      // run first and only once
+      getResources();
+    }
     return () => { ignore = true }
-  }, [])
+  }, []);
 
   // Like Button
   const likePortfolio = () => {
@@ -287,11 +274,12 @@ function App() {
   }
   
   return (
-    <div id="root-react" className={`App color ${theme}`}>
+    <div id="root-react" className={`App color ${theme}`} onTouchMove={active} onMouseMove={active} onClick={active} onKeyDown={active} >
+
       <Header
         toggleTheme={toggleTheme}
         docScroll={docScroll}
-        featureAlertFunct={featureAlertFunct}
+        notifyFeature={notifyFeature}
         goPage={goPage}
         btnTheme={btnTheme}
       ></Header>
@@ -299,7 +287,7 @@ function App() {
       {
         page === 0 &&
         <GenericPage
-          featureAlertFunct={featureAlertFunct}
+          notifyFeature={notifyFeature}
           mobile={mobile}
         />
       }
@@ -307,7 +295,7 @@ function App() {
       {
         page === 1 &&
         <HomePage
-          featureAlertFunct={featureAlertFunct}
+          notifyFeature={notifyFeature}
           mobile={mobile}
           portfolioViews={portfolioViews}
           portfolioLikes={portfolioLikes}
@@ -321,18 +309,21 @@ function App() {
       {
         page === 2 &&
         <ArtPage
-          featureAlertFunct={featureAlertFunct}
+          notifyFeature={notifyFeature}
           mobile={mobile}
           enter={enter}
         />
       }
 
       <div className="flex-center">
-        <div className="flex-center top-link-style button-hover" onClick={(e) => { window.scrollTo(0, 0); }} >back to top</div>
+        <div className="flex-center top-link-style button-hover" onClick={ window.scrollTo(0, 0) } >back to top</div>
       </div>
 
-      {modalShow && <Notify setModal={setModalFunct} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes, I am still here"} />}
       <Footer />
+
+      {featureNotify && <Notify setDisplay={notifyFeature} enter={enter} title={"Feature Unavailable"} message={"You will be unable to use that feature until it becomes available."} closeBtnText={"close"} />}
+      {internetConnectNotify && <Notify setDisplay={notifyInternetConnect} enter={enter} title={"No Internet Connection"} message={"The user is not connected to the internet. Please connect to the internet for a fully featured experience."} closeBtnText={"close"} />}
+      {idleNotify && <Notify setDisplay={notifyIdle} enter={enter} title={"Session Timeout"} message={"Are you still there?"} closeBtnText={"Yes"} />}
 
     </div>
   )

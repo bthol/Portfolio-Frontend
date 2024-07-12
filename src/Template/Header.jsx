@@ -69,14 +69,11 @@ const Header = (props) => {
                 <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
                 <p className="cursor-default"><u>Utility</u></p>
                 <a onClick={(e) => {
-                    props.featureAlertFunct(e);
-                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>GoodEval</a>
+                    props.notifyFeature(e, true);
+                }} href="" className="link-desat" tabIndex={navTabIdx2}>Sysmod</a>
                 <a onClick={(e) => {
-                    props.featureAlertFunct(e);
-                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Crypt</a>
-                <a onClick={(e) => {
-                    props.featureAlertFunct(e);
-                }} href="" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Sysmod</a>
+                    props.notifyFeature(e, true);
+                }} href="" className="link-desat" tabIndex={navTabIdx2}>Recipient</a>
             </div>,
         },
     ];

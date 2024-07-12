@@ -12,7 +12,7 @@ const Notify = (props) => {
                     <p className="text-xlarge">{props.message}</p>
                     <br />
                     <div>
-                        <button onClick={() => { props.setModal(false) }} className="buttons modal-button" autoFocus>{props.closeBtnText}</button>
+                        <button onClick={(e) => { props.setDisplay(e, false) }} onKeyDown={(e) => {if (props.enter(e) === true) {props.setDisplay(e, false)}}} className="buttons modal-button" autoFocus>{props.closeBtnText}</button>
                     </div>
                 </div>
             </div>

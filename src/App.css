@@ -390,7 +390,7 @@ hr {
   width: 75px;
   padding: 1px 6px;
   margin: 0px 8px;
-  border-radius: 3px;
+  border-radius: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
