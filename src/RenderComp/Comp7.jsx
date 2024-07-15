@@ -57,7 +57,6 @@ const Comp7 = (props) => {
                     aH = a.offsetHeight;
                     aW = a.offsetWidth;
                     const newWidth = getNewWidth(iAR, iW, aH, aW);
-                    // 75
                     a.firstChild.style.width = `${newWidth}px`;
                 })
             }
@@ -69,7 +68,7 @@ const Comp7 = (props) => {
             <div>{props.image}</div>
             {!select && <div className="gallery-image-select">
                 {sized && props.image}
-                <div>{`${props.info} `}<small>&copy;</small> by Blake Thollaug </div>
+                <div>{`${props.info} `} by Blake Thollaug </div>
             </div>}
         </div>
     )

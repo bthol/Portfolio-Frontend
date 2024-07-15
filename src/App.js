@@ -12,7 +12,15 @@ function App() {
 
   // GLOBAL VARIABLES
   let winHeight, trackLength, docheight;
-  const [cdCache, setCdCache] = useState();
+  const [cdCache, setCDCache] = useState({});
+
+  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
+  const [mobile, setMobile] = useState(true); // defaults to mobile environment
+  const [mobileFirst, setMobileFirst] = useState(true);
+  if (mobileFirst && window.innerWidth > 768) {
+    setMobileFirst(false); // prevent retest
+    setMobile(false); // change environment
+  };
   
   // NOTIFICATION STATE
   const [featureNotify, setFeatureNotify] = useState(false);
@@ -26,15 +34,16 @@ function App() {
     setInternetConnectNotify(bool);
   };
   
-  // IDLE NOTIFICATION
-  const secondsIdle = 300; // 300 seconds = 5 minutes // number of seconds idle before notify
   const [idleNotify, setIdleNotify] = useState(false);
   const notifyIdle = (e, bool) => {
     // displays idle notification for a bool argument of true
     setIdleNotify(bool);
   };
   
+  // IDLE NOTIFICATION
+  const secondsIdle = 300; // 300 seconds = 5 minutes // number of seconds idle before notify
   const [idleVar, setIdleVar] = useState({});
+
   const active = () => {
     // runs for all user activity
     // debounces for secondsIdle number of seconds to display idle notification
@@ -49,14 +58,6 @@ function App() {
     }
   };
 
-  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
-  const [mobile, setMobile] = useState(false);
-  const [mobBool, setMobBool] = useState(true);
-  if (window.innerWidth < 768 && mobBool) {
-    setMobBool(false);
-    setMobile(true);
-  };
-
   // KEYSTROKE TESTING
   const enter = (e) => {
     if (e.key === 'Enter') {
@@ -67,8 +68,7 @@ function App() {
   };
 
   // TRACKLENGTH BAR LOGIC
-  // const [docScroll, setDocScroll] = useState(0);
-  let docScroll = 0;
+  const [docScroll, setDocScroll] = useState(0);
 
   const getHeight = () => {
     return Math.max(
@@ -92,7 +92,7 @@ function App() {
     let scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
     let pctScrolled = Math.floor(scrollTop / trackLength * 100);
     if (pctScrolled >= 0) {
-        docScroll = pctScrolled;
+        setDocScroll(pctScrolled);
     }
   };
   
@@ -103,11 +103,7 @@ function App() {
         active();
         getInfo();
         scrollAmmount();
-        if (window.innerWidth < 768) {
-          setMobile(true);
-        } else {
-          setMobBool(false);
-        }
+        
       }, { passive: true });
       
       window.addEventListener("scroll", () => {
@@ -138,7 +134,7 @@ function App() {
   };
 
   const toggleTheme = () => {
-    setTogTheme(!togTheme)
+    setTogTheme(!togTheme);
     if (togTheme) {
       setBtnTheme("theme-btn-dark");
     } else {
@@ -217,18 +213,17 @@ function App() {
           setPortfolioViews("failed to load");
           
           // trigger 1 minute countdown for connection retry
-          let cd = 0;
+          const secondsCD = 60; // seconds before
+          let cd = 0; // count
           clearInterval(cdCache);
-          setCdCache(
-            setInterval(() => {
+          setCDCache(setInterval(() => {
               if (cd === 60) {
                 cd = 0;
                 getResources();
               } else {
                 cd += 1;
               }
-            }, 60 * 1000)
-          );
+          }, secondsCD * 1000));
         }
       )
     };
@@ -264,44 +259,44 @@ function App() {
         console.error(err);
       }
     }
-  }
+  };
     
   // PAGE NAVIGATION LOGIC
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);
-    window.scrollTo(0, 0);
-  }
+    window.scrollTo(0,0);
+  };
   
   return (
     <div id="root-react" className={`App color ${theme}`} onTouchMove={active} onMouseMove={active} onClick={active} onKeyDown={active} >
-
+      
       <Header
-        toggleTheme={toggleTheme}
         docScroll={docScroll}
+        btnTheme={btnTheme}
+        toggleTheme={toggleTheme}
         notifyFeature={notifyFeature}
         goPage={goPage}
-        btnTheme={btnTheme}
       ></Header>
 
       {
         page === 0 &&
         <GenericPage
-          notifyFeature={notifyFeature}
           mobile={mobile}
+          notifyFeature={notifyFeature}
         />
       }
 
       {
         page === 1 &&
         <HomePage
-          notifyFeature={notifyFeature}
-          mobile={mobile}
+          theme={theme}
           portfolioViews={portfolioViews}
           portfolioLikes={portfolioLikes}
-          likePortfolio={likePortfolio}
+          mobile={mobile}
           enter={enter}
-          theme={theme}
+          notifyFeature={notifyFeature}
+          likePortfolio={likePortfolio}
           updateLikeBtn={updateLikeBtn}
         />
       }
@@ -309,14 +304,14 @@ function App() {
       {
         page === 2 &&
         <ArtPage
-          notifyFeature={notifyFeature}
           mobile={mobile}
+          notifyFeature={notifyFeature}
           enter={enter}
         />
       }
 
       <div className="flex-center">
-        <div className="flex-center top-link-style button-hover" onClick={ window.scrollTo(0, 0) } >back to top</div>
+        <div className="flex-center top-link-style button-hover" onClick={ () => {window.scrollTo(0,0)} } >back to top</div>
       </div>
 
       <Footer />

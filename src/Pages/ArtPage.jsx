@@ -16,6 +16,7 @@ const ArtPage = (props) => {
             </div>
 
             <a name="Forefront" />
+
             <div className="artpage-layout-width flex-center"><h2>Forefront</h2></div>
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.forefront[0]} info={Content.gallery.forefront[0].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />

@@ -50,7 +50,7 @@ const HomePage = (props) => {
         } else {
             setCarousel(false);
         }
-    }, { passive: true });
+    });
 
     const highlightButton = (pos) => {
         setCarBut0("carBut-hover");
@@ -212,6 +212,7 @@ const HomePage = (props) => {
                     }
                 </div>
             </div>
+
             <div id="homepage-mid-2" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.skills[0].sectionTitle}</h3>
                 <div className="section-lists">
@@ -239,6 +240,7 @@ const HomePage = (props) => {
                         : <div><br /></div>
                 }
             </div>
+
             <div id="homepage-mid-3" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.experience[0].sectionTitle}</h3>
                 <div className="content-highlight">
@@ -259,6 +261,7 @@ const HomePage = (props) => {
                 </div>
                 <br />
             </div>
+
             <div id="homepage-mid-4" className="content-container shadow-behind container-last">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.education[0].sectionTitle}</h3>
                 <Comp4
@@ -280,7 +283,9 @@ const HomePage = (props) => {
                 ></Comp4>
                 <br />
             </div>
+
             {modalShow && <Verify setModal={setModalFunct} title={"Send Email"} message={"Are you sure you want to send an email?"} closeBtnText={"Cancel"} actionBtnText={"Continue"} link={true} href={"mailto:bthollaug@gmail.com?subject=Contact from Portfolio Website"}/>}
+        
         </div>
     )
 }
