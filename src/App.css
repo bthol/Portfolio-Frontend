@@ -27,7 +27,6 @@
 /* QUERIES */
   /* RESPONSIVITY */
   /* INTERACTIVITY */
-    /* SCROLL-BEHAVIOR */
     /* HOVER-EFFECTS */
 /* EMBELLISHMENT */
   /* VISUAL-FX */
@@ -187,12 +186,12 @@
 
 .flex-around {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .flex-around-align {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -352,7 +351,7 @@ hr {
 }
 
 /*-----------------------------------------------BUTTON-STYLE-TEMPLATE-----------------------------------------------*/
-.buttons {
+.buttons { /* works with button element default */
   cursor: pointer;
   padding: 3px 5px;
   color: var(--font-color-1);
@@ -380,6 +379,7 @@ hr {
   color: var(--font-color-1);
 }
 
+/* theme button */
 .theme-button-container {
   color: var(--font-color-1);
   width: 85px;
@@ -399,8 +399,8 @@ hr {
 }
 .theme-btn-slider {
   position: relative;
-  border-radius: 3px;
-  height: 90%;
+  border-radius: 5px;
+  height: 80%;
   width: 40%;
   background: var(--contrast2);
 }
@@ -631,11 +631,6 @@ hr {
 
 /*-----------------------------------------------INTERACTIVITY-----------------------------------------------*/
 
-/*-----------------------------------------------SCROLL-BEHAVIOR-----------------------------------------------*/
-/* #artpage.page-content {
-  scroll-behavior: smooth;
-} */
-
 /*-----------------------------------------------HOVER-EFFECTS-----------------------------------------------*/
 @media(hover: hover) and (pointer: fine) {
   .buttons:hover {
@@ -686,9 +681,9 @@ hr {
 }
 
 .fx3d {
-  -moz-box-shadow: inset 5px 0px 10px var(--color-gray);
-  -webkit-box-shadow: inset 5px 0px 10px var(--color-gray);
-  box-shadow: inset 0px 0px 10px var(--color-gray);
+  -moz-box-shadow: inset 0px 0px 5px var(--color-gray);
+  -webkit-box-shadow: inset 0px 0px 5px var(--color-gray);
+  box-shadow: inset 0px 0px 5px var(--color-gray);
 }
 
 .fade-left {

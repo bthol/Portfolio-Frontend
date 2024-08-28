@@ -22,7 +22,7 @@ function App() {
     setMobile(false); // change environment
   };
   
-  // NOTIFICATION STATE
+  // NOTIFICATION STATES
   const [featureNotify, setFeatureNotify] = useState(false);
   const notifyFeature = (e, bool) => {
     e.preventDefault();
@@ -36,23 +36,23 @@ function App() {
   
   const [idleNotify, setIdleNotify] = useState(false);
   const notifyIdle = (e, bool) => {
-    // displays idle notification for a bool argument of true
     setIdleNotify(bool);
   };
   
   // IDLE NOTIFICATION
-  const secondsIdle = 300; // 300 seconds = 5 minutes // number of seconds idle before notify
+  const secondsIdle = 10; // 600 seconds = 10 minutes // number of seconds idle before notify
   const [idleVar, setIdleVar] = useState({});
 
   const active = () => {
-    // runs for all user activity
-    // debounces for secondsIdle number of seconds to display idle notification
+    // runs for most common user activity
     if (!idleNotify) {
       clearTimeout(idleVar);
       setIdleVar(
+        // debounces for secondsIdle number of seconds
         setTimeout((e) => {
-          notifyIdle(e, true);
+          // then displays idle notification
           clearTimeout(idleVar);
+          notifyIdle(e, true);
         }, secondsIdle * 1000)
       )
     }
@@ -100,14 +100,12 @@ function App() {
     let ignore = false;
     if (!ignore) {
       window.addEventListener("resize", () => {
-        active();
         getInfo();
         scrollAmmount();
         
       }, { passive: true });
       
       window.addEventListener("scroll", () => {
-        active();
         getInfo();
         scrollAmmount();
       }, { passive: true });
