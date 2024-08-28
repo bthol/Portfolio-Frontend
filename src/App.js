@@ -40,7 +40,7 @@ function App() {
   };
   
   // IDLE NOTIFICATION
-  const secondsIdle = 10; // 600 seconds = 10 minutes // number of seconds idle before notify
+  const secondsIdle = 600; // 600 seconds = 10 minutes // number of seconds idle before notify
   const [idleVar, setIdleVar] = useState({});
 
   const active = () => {
