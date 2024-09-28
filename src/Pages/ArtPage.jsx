@@ -9,7 +9,7 @@ const ArtPage = (props) => {
         <div id="artpage" className="page-content">
 
             <Comp6 title={"Gallery"} containerFirst={"container-first"} />
-            <div className="artpage-layout-width flex-around">
+            <div className="artpage-layout-width flex-center">
                 <div className="flex-center content-highlight fx3d"><a href="#Forefront" className="link-desat">Forefront</a></div>
                 <div className="flex-center content-highlight fx3d"><a href="#MachineError" className="link-desat">Machine Error</a></div>
                 <div className="flex-center content-highlight fx3d"><a href="#TextureFields" className="link-desat">Texture Fields</a></div>

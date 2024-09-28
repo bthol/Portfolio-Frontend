@@ -40,7 +40,7 @@ function App() {
   };
   
   // IDLE NOTIFICATION
-  const secondsIdle = 600; // 600 seconds = 10 minutes // number of seconds idle before notify
+  const secondsIdle = 600 * 1000; // 600 seconds = 10 minutes // number of seconds idle before notify
   const [idleVar, setIdleVar] = useState({});
 
   const active = () => {
@@ -53,7 +53,7 @@ function App() {
           // then displays idle notification
           clearTimeout(idleVar);
           notifyIdle(e, true);
-        }, secondsIdle * 1000)
+        }, secondsIdle)
       )
     }
   };
@@ -67,7 +67,7 @@ function App() {
     }
   };
 
-  // TRACKLENGTH BAR LOGIC
+  // TRACKLENGTH BAR
   const [docScroll, setDocScroll] = useState(0);
 
   const getHeight = () => {
@@ -259,7 +259,7 @@ function App() {
     }
   };
     
-  // PAGE NAVIGATION LOGIC
+  // PAGE NAVIGATION
   const [page, setPage] = useState(1); // sets default page
   const goPage = (p) => { // function for page navigation
     setPage(p);

@@ -850,7 +850,7 @@ hr {
 
 .gallery-image {
   width: 33vw;
-  border: 1.75vmin ridge hsl(60, 5%, 18%);
+  border: 1.25vmin ridge hsl(60, 5%, 18%);
   border-radius: 3px;
   cursor: pointer;
 }
