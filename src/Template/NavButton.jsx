@@ -4,9 +4,10 @@ const NavButton = (props) => {
     const menuOverflow = () => {
         const navMenu = document.querySelectorAll(".nav-menu-list")[props.id];
         if (navMenu.offsetHeight > 180) {
+            // style for dropdown menu
             navMenu.style.overflow = "-moz-scrollbars-vertical";
             navMenu.style.overflowY = "scroll";
-            navMenu.style.height = "180px";
+            navMenu.style.height = "175px";
         }
     };
 

@@ -66,11 +66,15 @@ const Header = (props) => {
                 <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
                 <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
                 <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
+                <a href="https://bthol.github.io/Lapis-Papyrus-Scalpellus/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Lapis Papyrus Scalpellus</a>
                 <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
                 <p className="cursor-default"><u>Utility</u></p>
                 <a onClick={(e) => {
                     props.notifyFeature(e, true);
-                }} href="" className="link-desat" tabIndex={navTabIdx2}>Sysmod</a>
+                }} href="" className="link-desat" tabIndex={navTabIdx2}>inPlace</a>
+                <a onClick={(e) => {
+                    props.notifyFeature(e, true);
+                }} href="" className="link-desat" tabIndex={navTabIdx2}>GoodEval</a>
                 <a onClick={(e) => {
                     props.notifyFeature(e, true);
                 }} href="" className="link-desat" tabIndex={navTabIdx2}>Recipient</a>
