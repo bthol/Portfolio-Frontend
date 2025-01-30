@@ -3,11 +3,11 @@ import { React } from 'react';
 const NavButton = (props) => {
     const menuOverflow = () => {
         const navMenu = document.querySelectorAll(".nav-menu-list")[props.id];
-        if (navMenu.offsetHeight > 180) {
+        if (navMenu.offsetHeight > 200) {
             // style for dropdown menu
             navMenu.style.overflow = "-moz-scrollbars-vertical";
             navMenu.style.overflowY = "scroll";
-            navMenu.style.height = "175px";
+            navMenu.style.height = "200px";
         }
     };
 

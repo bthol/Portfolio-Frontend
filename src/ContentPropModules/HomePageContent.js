@@ -1,5 +1,5 @@
 const HomePageContent = {
-  about: <div>I am a web developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skillset in order to make a valuable contribution to my team, the business, and the world at large.</div>,
+  about: <div>I am a web and app developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skillset in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [
     {
       sectionTitle: "Skills and Knowledge"
@@ -125,7 +125,7 @@ const HomePageContent = {
     {
       jobTitle: "General Assistant",
       employer: "Albany Saunas",
-      workPeriod: "Aug 2022 - Jan 2023",
+      workPeriod: "2022 - 2023",
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
@@ -145,7 +145,7 @@ const HomePageContent = {
     {
       jobTitle: "Music Composer/Audio Engineer",
       employer: "Augium Productions",
-      workPeriod: "Jan 2012 - Present",
+      workPeriod: "2012 - Present",
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">

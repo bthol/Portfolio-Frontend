@@ -39,13 +39,13 @@ const HomePage = (props) => {
 
     const [carousel, setCarousel] = useState(false);
     const [carBool, setCarBool] = useState(true);
-    if (carBool && window.innerWidth > 583) {
+    if (carBool && window.innerWidth > 768) { // 583
         setCarBool(false);
         setCarousel(true);
     }
 
     window.addEventListener("resize", () => {
-        if (window.innerWidth > 583) {
+        if (window.innerWidth > 768) { // 583
             setCarousel(true);
         } else {
             setCarousel(false);
@@ -83,48 +83,70 @@ const HomePage = (props) => {
     let carouselData = [
         {
             id: "projects-1",
-            title: <b><div tabIndex={slideTabIdx0} className="text-large flex-center">Space Battle</div></b>,
+            title: <b><h2 tabIndex={slideTabIdx0} className="flex-center-align underline project-highlight-margin">GoodEval Calculator</h2></b>,
+            links: <div class="flex-center">
+                <div class="carousel-link-layout">
+                    <div className="inline-divider"></div>
+                    <a href="https://goodeval-1d265775b25d.herokuapp.com/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a>
+                    <div className="inline-divider"></div>
+                    <a href="https://github.com/bthol/GoodEval" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a>
+                    <div className="inline-divider"></div>
+                </div>
+            </div>,
             text: <div>
-                <p><b>Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
-                <p><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling, Heroku Cloud Service Provider</p>
+                <p><b>Project Description:</b> The GoodEval Calculator is a Django stack web application developed to resemble an actual calculator that seemlessly performs both arithmetic and more advanced calculations.</p>
+                <p><b>Technologies:</b> Python, Django, Pip, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
-                <li><a href="https://bthol.github.io/Space-Battle/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a></li>
-                <li><a href="https://github.com/bthol/Space-Battle" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>GitHub Page</a></li>
+                <li>Evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
+                <li>Cursor mode allows for problem editting to avoid the inconvenience of re-entering the problem after a global clear is performed.</li>
+                <li>Pre-validates and post-validates to prevent invalid user input into calculator logic, accounting for validation differences in cursor mode.</li>
+                <li>From buttons that appear to push down when clicked to a screen that glows with digital light, the Skeumorphic graphical user interface design really looks and feels like a calculator.</li>
+            </ul>,
+        },
+        {
+            id: "projects-2",
+            title: <b><h2 tabIndex={slideTabIdx1} className="flex-center underline project-highlight-margin">Space Battle</h2></b>,
+            links: <div class="flex-center">
+                <div class="carousel-link-layout">
+                    <div className="inline-divider"></div>
+                    <a href="https://bthol.github.io/Space-Battle/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a>
+                    <div className="inline-divider"></div>
+                    <a href="https://github.com/bthol/Space-Battle" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a>
+                    <div className="inline-divider"></div>
+                </div>
+            </div>,
+            text: <div>
+                <p><b>Project Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
+                <p><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
+            </div>,
+            list: <ul>
                 <li>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
                 <li>Organized state variables, data structures, and Document Object Model (DOM) selections into respective JS modules for best code manageability practices.</li>
                 <li>Displayed pages by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
             </ul>,
         },
         {
-            id: "projects-2",
-            title: <b><div tabIndex={slideTabIdx1} className="text-large flex-center">Retro Toe</div></b>,
+            id: "projects-3",
+            title: <b><h2 tabIndex={slideTabIdx2} className="flex-center underline project-highlight-margin">Retro Toe</h2></b>,
+            links: <div class="flex-center">
+                <div class="carousel-link-layout">
+                    <div className="inline-divider"></div>
+                    <a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a>
+                    <div className="inline-divider"></div>
+                    <a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a>
+                    <div className="inline-divider"></div>
+                </div>
+            </div>,
             carousel: <img src="" alt="project carousel"></img>,
             text: <div>
-                <p><b>Description:</b> Tic Tac Toe. Retro style.</p>
+                <p><b>Project Description:</b> Tic Tac Toe. Retro style.</p>
                 <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
             </div>,
             list: <ul>
-                <li><a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a></li>
-                <li><a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>GitHub Page</a></li>
                 <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
                 <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
                 <li>Deployed the application using GitHub Pages.</li>
-            </ul>,
-        },
-        {
-            id: "projects-3",
-            title: <b><div tabIndex={slideTabIdx2} className="text-large flex-center">Magic 8 Ball</div></b>,
-            text: <div>
-                <p><b>Description:</b> Discover your destiny with the mystical guidance of the Magic 8 Ball.</p>
-                <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
-            </div>,
-            list: <ul>
-                <li><a href="https://bthol.github.io/Magic-8-Ball/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a></li>
-                <li><a href="https://github.com/bthol/Magic-8-Ball" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a></li>
-                <li>Created a breathing glow effect for the magic eight ball using asynchronous JavaScript functions to animate style.</li>
-                <li>Wrote a CSS keyframe animation that runs once for its full duration on image click before the image is updated with the answer.</li>
-                <li>Implemented a polychromatic animated background gradient.</li>
             </ul>,
         },
     ]
@@ -164,53 +186,56 @@ const HomePage = (props) => {
                 <br />
             </div>
             <div id="homepage-mid-1" className="content-container shadow-behind">
-                <div className="flex-center">
-                    <h3 className="text-x-large underline project-highlight-margin" tabIndex={0}>Project Highlights</h3>
-                </div>
-                <div className="carousel-container">
-                    <div className={`projects-carousel carPos${carPos}`}>
-                        <Comp2
-                            projectTitle={carouselData[0].title}
-                            projectText={carouselData[0].text}
-                            projectList={carouselData[0].list}
-                        ></Comp2>
-                        <br />
-                        <Comp2
-                            projectTitle={carouselData[1].title}
-                            projectText={carouselData[1].text}
-                            projectList={carouselData[1].list}
-                        ></Comp2>
-                        <br />
-                        <Comp2
-                            projectTitle={carouselData[2].title}
-                            projectText={carouselData[2].text}
-                            projectList={carouselData[2].list}
-                        ></Comp2>
-                        <br />
-                    </div>
-                    {
-                        !carousel
-                        ? <div></div>
-                        : <div className="carousel-control-panel">
-                            <div className="carButs flex-center">
-                                <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
-                                <button onClick={() => {
-                                    setCarPos(0);
-                                    highlightButton(0);
-                                }} className={`carBut ${carBut0} carBut`}></button>
-                                <button onClick={() => {
-                                    setCarPos(1);
-                                    highlightButton(1);
-                                }} className={`carBut ${carBut1}`}></button>
-                                <button onClick={() => {
-                                    setCarPos(2);
-                                    highlightButton(2);
-                                }} className={`carBut ${carBut2}`}></button>
-                                <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
-                            </div>
+                <div class="flex-center-vert">
+                    <div className="carousel-container">
+                        <div className={`projects-carousel carPos${carPos}`}>
+                            <Comp2
+                                projectTitle={carouselData[0].title}
+                                projectText={carouselData[0].text}
+                                projectLinks={carouselData[0].links}
+                                projectList={carouselData[0].list}
+                                ></Comp2>
+                            <br />
+                            <Comp2
+                                projectTitle={carouselData[1].title}
+                                projectText={carouselData[1].text}
+                                projectLinks={carouselData[1].links}
+                                projectList={carouselData[1].list}
+                                ></Comp2>
+                            <br />
+                            <Comp2
+                                projectTitle={carouselData[2].title}
+                                projectText={carouselData[2].text}
+                                projectLinks={carouselData[2].links}
+                                projectList={carouselData[2].list}
+                            ></Comp2>
+                            <br />
                         </div>
-                    }
+                        {
+                            !carousel
+                            ? <div></div>
+                            : <div className="carousel-control-panel">
+                                <div className="carButs flex-center">
+                                    <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
+                                    <button onClick={() => {
+                                        setCarPos(0);
+                                        highlightButton(0);
+                                    }} className={`carBut ${carBut0} carBut`}></button>
+                                    <button onClick={() => {
+                                        setCarPos(1);
+                                        highlightButton(1);
+                                    }} className={`carBut ${carBut1}`}></button>
+                                    <button onClick={() => {
+                                        setCarPos(2);
+                                        highlightButton(2);
+                                    }} className={`carBut ${carBut2}`}></button>
+                                    <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
+                                </div>
+                            </div>
+                        }
+                    </div>
                 </div>
+               
             </div>
 
             <div id="homepage-mid-2" className="content-container shadow-behind">

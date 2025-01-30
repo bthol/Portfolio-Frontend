@@ -527,8 +527,14 @@ hr {
 }
 
 /*-----------------------------------------------CAROUSELS-----------------------------------------------*/
+.carousel-link-layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 200px;
+}
 
-@media(min-width: 583px) {
+@media(min-width: 768px) { /* 583px */
   .carousel-container { /* use padding to see nearby slides */
     --wide: 100%;
     padding: -1%;
@@ -818,7 +824,7 @@ hr {
     margin-left: 0px;
   }
   .project-highlight-margin {
-    margin-left: 2%;
+    margin-bottom: 0px;
   }
 }
 
