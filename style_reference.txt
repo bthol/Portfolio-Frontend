@@ -18,3 +18,5 @@ white-----------rgb(255, 255, 255)
 
 grey green = #a3c1ad
 dark cyan = #5f9ea0
+
+npm install -g npm@10.9.2

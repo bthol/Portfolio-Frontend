@@ -96,22 +96,15 @@ function App() {
     }
   };
   
-  useEffect(() => {
-    let ignore = false;
-    if (!ignore) {
-      window.addEventListener("resize", () => {
-        getInfo();
-        scrollAmmount();
-        
-      }, { passive: true });
-      
-      window.addEventListener("scroll", () => {
-        getInfo();
-        scrollAmmount();
-      }, { passive: true });
-    }
-    return () => {ignore = true};
-  }, []);
+  window.addEventListener("resize", () => {
+    getInfo();
+    scrollAmmount();
+  });
+  
+  window.addEventListener("scroll", () => {
+    getInfo();
+    scrollAmmount();
+  });
 
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-light");
@@ -147,18 +140,12 @@ function App() {
     }, themeTransTime)
   };
 
-  useEffect(() => {
-    let ignore = false;
-    if (!ignore) {
-      // sets user default theme on load
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setTheme("color-theme-dark");
-        setTogTheme(false);
-        setBtnTheme("theme-btn-dark");
-      }
-    }
-    return () => { ignore = true };
-  }, []);
+  // sets user default theme on load
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme("color-theme-dark");
+    setTogTheme(false);
+    setBtnTheme("theme-btn-dark");
+  }
   
   // Page Data State
   const [portfolioViews, setPortfolioViews] = useState(<Comp8 />);
@@ -230,7 +217,7 @@ function App() {
       getResources();
     }
     return () => { ignore = true }
-  }, []);
+  }, [cdCache]);
 
   // Like Button
   const likePortfolio = () => {
