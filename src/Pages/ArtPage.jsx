@@ -5,17 +5,20 @@ import { Comp6 } from '../RenderComp/Comp6';
 import { Comp7 } from '../RenderComp/Comp7';
 
 const ArtPage = (props) => {
+    const hashLinks = {
+        gallery: <div>
+            <a href="#Forefront" className="drop link-desat fade-left">Forefront</a>
+            <a href="#MachineError" className="drop link-desat fade-left">Machine Error</a>
+            <a href="#TextureFields" className="drop link-desat fade-left">Texture Fields</a>
+        </div>,
+    };
+
     return (
         <div id="artpage" className="page-content">
 
-            <Comp6 title={"Gallery"} containerFirst={"container-first"} />
-            <div className="artpage-layout-width flex-center">
-                <div className="flex-center content-highlight fx3d"><a href="#Forefront" className="link-desat">Forefront</a></div>
-                <div className="flex-center content-highlight fx3d"><a href="#MachineError" className="link-desat">Machine Error</a></div>
-                <div className="flex-center content-highlight fx3d"><a href="#TextureFields" className="link-desat">Texture Fields</a></div>
-            </div>
+            <Comp6 title={"Gallery"} containerFirst={"container-first"} links={hashLinks.gallery}/>
 
-            <a name="Forefront" />
+            <a href="/" method="" name="Forefront" />
 
             <div className="artpage-layout-width flex-center"><h2>Forefront</h2></div>
             <div className="artpage-gallery-row">
@@ -24,7 +27,7 @@ const ArtPage = (props) => {
             </div>
 
             <br />
-            <a name="MachineError" />
+            <a href="/" name="MachineError" />
             <div className="artpage-layout-width flex-center"><h2>Machine Error</h2></div>
             
             <div className="artpage-gallery-row">
@@ -38,7 +41,7 @@ const ArtPage = (props) => {
             </div>
 
             <br />
-            <a name="TextureFields" />
+            <a href="/" name="TextureFields" />
             <div className="artpage-layout-width flex-center"><h2>Texture Fields</h2></div>
             
             <div className="artpage-gallery-row">

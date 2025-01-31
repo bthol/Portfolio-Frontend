@@ -57,6 +57,12 @@ const Header = (props) => {
                     e.preventDefault();
                     props.goPage(2);
                 }} className="link-desat" tabIndex={navTabIdx1}>Art</a>
+
+                {/* <a onClick={(e) => {
+                    e.preventDefault();
+                    props.goPage(3);
+                }} className="link-desat" tabIndex={navTabIdx1}>Music</a> */}
+                
             </div>,
         },
         {
@@ -87,12 +93,16 @@ const Header = (props) => {
             </div>
             <nav className="app-nav">
                 <div className="flex-around">
+
+                    {/* home button */}
                     <div className="home-button-container">
                         <a rel="scrollPosition" href="#"><button className="nav-buttons link-desat" onClick={() => {
                             props.goPage(1);
                             initNav();
                         }}>Home</button></a>
                     </div>
+
+                    {/* pages */}
                     <NavButton
                         id={0}
                         name={navData[0].name}
@@ -102,6 +112,8 @@ const Header = (props) => {
                         toggleNavState={toggleNavState1}
                         initNav={initNav}
                     ></NavButton>
+
+                    {/* projects */}
                     <NavButton
                         id={1}
                         name={navData[1].name}
@@ -111,6 +123,8 @@ const Header = (props) => {
                         toggleNavState={toggleNavState2}
                         initNav={initNav}
                     ></NavButton>
+
+                    {/* theme slider */}
                     <div className="theme-button-container">
                         <div className="no-select">L</div>
                         <button className={`theme-btn ${props.btnTheme}`} onClick={props.toggleTheme}>
@@ -118,6 +132,7 @@ const Header = (props) => {
                         </button>
                         <div className="no-select">D</div>
                     </div>
+
                 </div>
                 <div className="scroll-track-bar" style={{ width: `${props.docScroll}%` }}></div>
             </nav>

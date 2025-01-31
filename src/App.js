@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Notify } from './Modals/Notify';
+import { Comp8 } from './RenderComp/Comp8';
 import { Header } from './Template/Header';
 import { Footer } from './Template/Footer';
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
 import { ArtPage } from './Pages/ArtPage';
-import { Comp8 } from './RenderComp/Comp8';
+import { MusicPage } from './Pages/MusicPage';
 
 function App() {
 
@@ -289,6 +290,15 @@ function App() {
       {
         page === 2 &&
         <ArtPage
+          mobile={mobile}
+          notifyFeature={notifyFeature}
+          enter={enter}
+        />
+      }
+      
+      {
+        page === 3 &&
+        <MusicPage
           mobile={mobile}
           notifyFeature={notifyFeature}
           enter={enter}
