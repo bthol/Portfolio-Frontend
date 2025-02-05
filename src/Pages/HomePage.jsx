@@ -94,12 +94,12 @@ const HomePage = (props) => {
                 </div>
             </div>,
             text: <div>
-                <p><b>Project Description:</b> The GoodEval Calculator is a Django stack web application developed to resemble an actual calculator that seemlessly performs both arithmetic and more advanced calculations.</p>
+                <p><b>Project Description:</b> The GoodEval Calculator is a Django stack web application developed to resemble an actual calculator that seamlessly performs both arithmetic and more advanced calculations.</p>
                 <p><b>Technologies:</b> Python, Django, Pip, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
                 <li>Evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
-                <li>Cursor mode allows for problem editting to avoid the inconvenience of re-entering the problem after a global clear is performed.</li>
+                <li>Cursor mode allows for problem editing to avoid the inconvenience of re-entering the problem after a global clear is performed.</li>
                 <li>Pre-validates and post-validates to prevent invalid user input into calculator logic, accounting for validation differences in cursor mode.</li>
                 <li>From buttons that appear to push down when clicked to a screen that glows with digital light, the Skeumorphic graphical user interface design really looks and feels like a calculator.</li>
             </ul>,
@@ -145,7 +145,7 @@ const HomePage = (props) => {
             </div>,
             list: <ul>
                 <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
-                <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+                <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximally responsive design across device viewports.</li>
                 <li>Deployed the application using GitHub Pages.</li>
             </ul>,
         },
