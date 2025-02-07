@@ -84,8 +84,8 @@ const HomePage = (props) => {
         {
             id: "projects-1",
             title: <b><h2 tabIndex={slideTabIdx0} className="flex-center-align underline project-highlight-margin">GoodEval Calculator</h2></b>,
-            links: <div class="flex-center">
-                <div class="carousel-link-layout">
+            links: <div className="flex-center">
+                <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
                     <a href="https://goodeval-1d265775b25d.herokuapp.com/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx0}>Live Link</a>
                     <div className="inline-divider"></div>
@@ -107,8 +107,8 @@ const HomePage = (props) => {
         {
             id: "projects-2",
             title: <b><h2 tabIndex={slideTabIdx1} className="flex-center underline project-highlight-margin">Space Battle</h2></b>,
-            links: <div class="flex-center">
-                <div class="carousel-link-layout">
+            links: <div className="flex-center">
+                <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
                     <a href="https://bthol.github.io/Space-Battle/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx1}>Live Link</a>
                     <div className="inline-divider"></div>
@@ -129,8 +129,8 @@ const HomePage = (props) => {
         {
             id: "projects-3",
             title: <b><h2 tabIndex={slideTabIdx2} className="flex-center underline project-highlight-margin">Retro Toe</h2></b>,
-            links: <div class="flex-center">
-                <div class="carousel-link-layout">
+            links: <div className="flex-center">
+                <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
                     <a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a>
                     <div className="inline-divider"></div>
@@ -186,7 +186,7 @@ const HomePage = (props) => {
                 <br />
             </div>
             <div id="homepage-mid-1" className="content-container shadow-behind">
-                <div class="flex-center-vert">
+                <div className="flex-center-vert">
                     <div className="carousel-container">
                         <div className={`projects-carousel carPos${carPos}`}>
                             <Comp2

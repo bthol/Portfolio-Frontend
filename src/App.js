@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Notify } from './Modals/Notify';
 import { Comp8 } from './RenderComp/Comp8';
@@ -42,20 +42,19 @@ function App() {
   
   // IDLE NOTIFICATION
   const secondsIdle = 600 * 1000; // 600 seconds = 10 minutes // number of seconds idle before notify
-  const [idleVar, setIdleVar] = useState({});
+  const idleRef = useRef({});
 
-  const active = () => {
+  const active = (e) => {
     // runs for most common user activity
     if (!idleNotify) {
-      clearTimeout(idleVar);
-      setIdleVar(
-        // debounces for secondsIdle number of seconds
-        setTimeout((e) => {
-          // then displays idle notification
-          clearTimeout(idleVar);
-          notifyIdle(e, true);
-        }, secondsIdle)
-      )
+      // debounces timeout for idle on activity
+      clearTimeout(idleRef.current);
+      const id = setTimeout(() => {
+        // displays idle notification
+        clearTimeout(idleRef.current);
+        notifyIdle(e, true);
+      }, secondsIdle);
+      idleRef.current = id;
     }
   };
 
@@ -255,7 +254,7 @@ function App() {
   };
   
   return (
-    <div id="root-react" className={`App color ${theme}`} onTouchMove={active} onMouseMove={active} onClick={active} onKeyDown={active} >
+    <div id="root-react" className={`App color ${theme}`} onTouchMove={active} onMouseMove={active} onClick={active} onKeyDown={active} onScroll={active}>
       
       <Header
         docScroll={docScroll}
