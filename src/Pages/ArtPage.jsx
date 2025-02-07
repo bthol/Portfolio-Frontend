@@ -1,34 +1,51 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ArtContent as Content } from '../ContentPropModules/ArtContent';
 import { Comp5 } from '../RenderComp/Comp5';
 import { Comp6 } from '../RenderComp/Comp6';
 import { Comp7 } from '../RenderComp/Comp7';
 
 const ArtPage = (props) => {
-    const hashLinks = {
+    // section refs
+    const forefrontRef = useRef(null);
+    const machineErrorRef = useRef(null);
+    const textureFieldsRef = useRef(null);
+
+    const scrollManeuver = (ref) => {
+        // scrolls current value of given ref to view
+        ref.current.scrollIntoView({behavior: "smooth"});
+    };
+
+    const links = {
         gallery: <div>
-            <a href="#Forefront" className="drop link-desat fade-left">Forefront</a>
-            <a href="#MachineError" className="drop link-desat fade-left">Machine Error</a>
-            <a href="#TextureFields" className="drop link-desat fade-left">Texture Fields</a>
+            <div className="drop link-desat fade-left" onClick={() => {
+                scrollManeuver(forefrontRef);
+            }}>Forefront</div>
+
+            <div className="drop link-desat fade-left" onClick={() => {
+                scrollManeuver(machineErrorRef);
+            }}>Machine Error</div>
+
+            <div className="drop link-desat fade-left" onClick={() => {
+                scrollManeuver(textureFieldsRef);
+            }}>Texture Fields</div>
         </div>,
     };
 
     return (
         <div id="artpage" className="page-content">
 
-            <Comp6 title={"Gallery"} containerFirst={"container-first"} links={hashLinks.gallery}/>
+            <Comp6 title={"Gallery"} containerFirst={"container-first"} links={links.gallery}/>
 
-            <a href="/" method="" name="Forefront" />
+            <div ref={forefrontRef} className="artpage-layout-width flex-center"><h2>Forefront</h2></div>
 
-            <div className="artpage-layout-width flex-center"><h2>Forefront</h2></div>
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.forefront[0]} info={Content.gallery.forefront[0].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
                 <Comp7 image={Content.gallery.forefront[1]} info={Content.gallery.forefront[1].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
             </div>
 
             <br />
-            <a href="/" name="MachineError" />
-            <div className="artpage-layout-width flex-center"><h2>Machine Error</h2></div>
+
+            <div ref={machineErrorRef} className="machine error-section artpage-layout-width flex-center"><h2>Machine Error</h2></div>
             
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.machineError[3]} info={Content.gallery.machineError[3].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
@@ -41,8 +58,8 @@ const ArtPage = (props) => {
             </div>
 
             <br />
-            <a href="/" name="TextureFields" />
-            <div className="artpage-layout-width flex-center"><h2>Texture Fields</h2></div>
+
+            <div ref={textureFieldsRef} className="artpage-layout-width flex-center"><h2>Texture Fields</h2></div>
             
             <div className="artpage-gallery-row">
                 <Comp7 image={Content.gallery.textureFields[1]} info={Content.gallery.textureFields[1].props.src.split(/(\\|\/)/g).pop().split('.')[0]} enter={props.enter} />
