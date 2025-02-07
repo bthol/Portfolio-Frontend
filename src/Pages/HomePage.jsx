@@ -144,9 +144,9 @@ const HomePage = (props) => {
                 <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
             </div>,
             list: <ul>
-                <li>Coded algorithms for game logic from scratch using a mere 100 lines of code.</li>
-                <li>Made a mobile-friendly UI layout by utilizing relative units, and the CSS Flex and Grid modules for maximally responsive design across device viewports.</li>
-                <li>Deployed the application using GitHub Pages.</li>
+                <li>Algorithms for game logic are written from scratch using a mere 100 lines of code.</li>
+                <li>Mobile-friendly UI layout utilizes relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
+                <li>Deployment of application uses GitHub Pages.</li>
             </ul>,
         },
     ]
