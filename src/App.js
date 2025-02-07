@@ -13,7 +13,7 @@ function App() {
 
   // GLOBAL VARIABLES
   let winHeight, trackLength, docheight;
-  const [cdCache, setCDCache] = useState({});
+  const cdCache = useRef({});
 
   // BOOLEAN STATE FOR MOBILE ENVIRONMENT
   const [mobile, setMobile] = useState(true); // defaults to mobile environment
@@ -156,68 +156,57 @@ function App() {
   useEffect(() => {
     let ignore = false;
     const getResources = () => {
-      // Test for connection to backend
-      fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`).then(
-        () => {
-          // onFulfilled
-          // Request resources and display them
-          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
-          .then(res => res.json())
-          .then((data) => {
-            if (!ignore) {
-              setPortfolioLikes(`: ${data.data[0].portfolioLikes}`);
-              
-              // if new to page
-              if (localStorage.getItem("viewed") === null) {
-                setPortfolioViews(`: ${data.data[0].portfolioViews + 1}`);
-                fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-                  method: 'PATCH',
-                  headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                  },
-                  body: JSON.stringify({
-                    portfolioViews: data.data[0].portfolioViews + 1,
-                  })
-                });
-                localStorage.setItem("viewed", true);
-              }
-            } else {
-              setPortfolioViews(`: ${data.data[0].portfolioViews}`);
-            }
-          })
-        },
-        
-        () => {
-          // onRejected
-          // Notify if offline
-          if (!window.navigator.onLine) {
-            setInternetConnectNotify(true);
+      try {
+        // onFulfilled
+        // Request resources and display them
+        fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
+        .then(res => res.json())
+        .then((json) => {
+          // update likes
+          setPortfolioLikes(`: ${json.data[0].portfolioLikes}`);
+          // if new to page
+          if (localStorage.getItem("viewed") === null) {
+            // update views display
+            setPortfolioViews(`: ${json.data[0].portfolioViews + 1}`);
+            // update views in database
+            fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+              method: 'PATCH',
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+              body: JSON.stringify({
+                portfolioViews: json.data[0].portfolioViews + 1,
+              })
+            });
+            // update view variable in localStorage
+            localStorage.setItem("viewed", true);
+          } else {
+            setPortfolioViews(`: ${json.data[0].portfolioViews}`);
           }
-          // Display message in place of resources to avoid the appearance of infinite loading
-          setPortfolioLikes("failed to load");
-          setPortfolioViews("failed to load");
-          
-          // trigger 1 minute countdown for connection retry
-          const secondsCD = 60; // seconds before
-          let cd = 0; // count
-          clearInterval(cdCache);
-          setCDCache(setInterval(() => {
-              if (cd === 60) {
-                cd = 0;
-                getResources();
-              } else {
-                cd += 1;
-              }
-          }, secondsCD * 1000));
+        })
+      } catch (error) {
+        // onRejected
+        // Notify if offline
+        if (!window.navigator.onLine) {
+          setInternetConnectNotify(true);
         }
-      )
+        // Display message in place of resources to avoid the appearance of infinite loading
+        setPortfolioLikes("failed to load");
+        setPortfolioViews("failed to load");
+        // trigger countdown for connection retry
+        // const secondsCD = 30; // seconds before retry
+        // clearTimeout(cdCache.current);
+        // cdCache = setTimeout(() => {
+        //   clearTimeout(cdCache.current);
+        //   getResources();
+        // }, secondsCD * 1000);
+      }
     };
     if (!ignore) {
-      // run first and only once
       getResources();
     }
-    return () => { ignore = true }
-  }, [cdCache]);
+    return () => {ignore = true};
+  });
 
   // Like Button
   const likePortfolio = () => {
