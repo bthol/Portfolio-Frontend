@@ -169,23 +169,30 @@ function App() {
             // update views display
             setPortfolioViews(`: ${json.data[0].portfolioViews + 1}`);
             // update views in database
-            fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-              method: 'PATCH',
-              headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-              },
-              body: JSON.stringify({
-                portfolioViews: json.data[0].portfolioViews + 1,
-              })
-            });
-            // update view variable in localStorage
-            localStorage.setItem("viewed", true);
+            try {
+              fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+                method: 'PATCH',
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+                },
+                body: JSON.stringify({
+                  portfolioViews: json.data[0].portfolioViews + 1,
+                })
+              });
+              // update view variable in localStorage
+              localStorage.setItem("viewed", true);
+
+            } catch (error) {
+              console.error(error);
+            }
+
           } else {
             setPortfolioViews(`: ${json.data[0].portfolioViews}`);
           }
         })
       } catch (error) {
         // onRejected
+        console.error(error);
         // Notify if offline
         if (!window.navigator.onLine) {
           setInternetConnectNotify(true);
@@ -203,6 +210,7 @@ function App() {
       }
     };
     if (!ignore) {
+      // call on load but not re-render
       getResources();
     }
     return () => {ignore = true};
@@ -217,20 +225,24 @@ function App() {
         fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
         .then(res => res.json())
         .then((data) => {
-          fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
-            method: 'PATCH',
-            headers: {
-              'Content-type': 'application/json; charset=UTF-8',
-            },
-            body: JSON.stringify({
-              portfolioLikes: data.data[0].portfolioLikes + 1,
+          try {
+            fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+              method: 'PATCH',
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+              body: JSON.stringify({
+                portfolioLikes: data.data[0].portfolioLikes + 1,
+              })
             })
-          })
+          } catch (error) {
+            console.error(error);
+          }
         })
         localStorage.setItem("liked", true);
         updateLikeBtn();
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
+        console.error(error);
       }
     }
   };
