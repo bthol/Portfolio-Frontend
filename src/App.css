@@ -23,6 +23,7 @@
 /* COMPONENTS */
   /* LOADERS */
   /* MODALS */
+  /* POPOVERS */
   /* CLOUDFORM */
   /* CAROUSELS */
 /* QUERIES */
@@ -524,6 +525,20 @@ hr {
 @media(min-width: 768px) {
   .modal-content {
     width: max-content;
+  }
+}
+
+/*-----------------------------------------------POPOVERS-----------------------------------------------*/
+@media (min-width: 1252px) {
+  .popover {
+    position: absolute;
+    z-index: 1;
+    transform: translate(-16px, 0px);
+    width: 288.5px;
+    padding: 10px;
+    background: var(--background-polar);
+    border: 1.2px solid var(--color-gray);
+    border-top: none;
   }
 }
 

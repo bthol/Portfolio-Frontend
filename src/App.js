@@ -11,17 +11,21 @@ import { MusicPage } from './Pages/MusicPage';
 
 function App() {
 
-  // GLOBAL VARIABLES
-  let winHeight, trackLength, docheight;
-  const cdCache = useRef({});
-
-  // BOOLEAN STATE FOR MOBILE ENVIRONMENT
+  // STATE FOR ENVIRONMENT
   const [mobile, setMobile] = useState(true); // defaults to mobile environment
-  const [mobileFirst, setMobileFirst] = useState(true);
-  if (mobileFirst && window.innerWidth > 768) {
-    setMobileFirst(false); // prevent retest
-    setMobile(false); // change environment
+  const [initEnv, setInitEvn] = useState(true); // store bool for automatic env test
+  const testEnv = () => {
+    if (window.innerWidth > 768) {
+      setMobile(false); // change environment to desktop
+    } else {
+      setMobile(true); // change environment to mobile
+    }
   };
+  // run env test on load
+  if (initEnv) {
+    setInitEvn(false); // turn off automatic env test
+    testEnv(); // run env test
+  }
   
   // NOTIFICATION STATES
   const [featureNotify, setFeatureNotify] = useState(false);
@@ -68,6 +72,7 @@ function App() {
   };
 
   // TRACKLENGTH BAR
+  let winHeight, trackLength, docheight;
   const [docScroll, setDocScroll] = useState(0);
 
   const getHeight = () => {
@@ -96,14 +101,26 @@ function App() {
     }
   };
   
+  // LISTENERS
+  // custom debounce for performance improvement
+  const debounceFunctRef = useRef({});
+  const debounceFunct = (funct, delay) => {
+    clearTimeout(debounceFunctRef.current);
+    const id = setTimeout(() => {
+      clearTimeout(debounceFunctRef.current);
+      funct();
+    }, delay);
+    debounceFunctRef.current = id;
+  };
+
   window.addEventListener("resize", () => {
-    getInfo();
-    scrollAmmount();
+    debounceFunct(getInfo, 10);
+    debounceFunct(scrollAmmount, 10);
   });
   
   window.addEventListener("scroll", () => {
-    getInfo();
-    scrollAmmount();
+    debounceFunct(getInfo, 10);
+    debounceFunct(scrollAmmount, 10);
   });
 
   // THEME LOGIC

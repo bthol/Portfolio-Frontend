@@ -181,7 +181,7 @@ const HomePage = (props) => {
                 </div>
                 <br />
                 <div>
-                    <Comp9 title={"About Me"} text={Content.about} enter={props.enter} />
+                    <Comp9 title={"About Me"} text={Content.about} enter={props.enter} mobile={props.mobile} />
                 </div>
                 <br />
             </div>
