@@ -869,19 +869,21 @@ hr {
   }
   .container-first {
     border-top: 0px;
+    grid-column: 1 / 2;
   }
   #homepage-mid-1 {
     grid-column: 2 / 6;
   }
   #homepage-mid-2 {
-    /* Space for Parallax effect */
-    /* margin-bottom: 100vh; */
     grid-column: 1 / 6;
   }
   #homepage-mid-3 {
     grid-column: 1 / 6;
   }
   #homepage-mid-4 {
+    grid-column: 1 / 6;
+  }
+  #homepage-mid-5 {
     grid-column: 1 / 6;
   }
   #homepage .section-lists div {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Notify } from './Modals/Notify';
-import { Comp8 } from './RenderComp/Comp8';
+import { Comp8 } from './Components/Comp8';
 import { Header } from './Template/Header';
 import { Footer } from './Template/Footer';
 import { GenericPage } from './Pages/GenericPage';

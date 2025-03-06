@@ -1,5 +1,5 @@
 import React from 'react';
-import { GenericContent as Content } from '../ContentPropModules/GenericContent';
+import { GenericContent as Content } from '../ContentModules/GenericContent';
 
 const GenericPage = (props) => {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MusicContent as Content } from '../ContentPropModules/MusicContent';
+import { MusicContent as Content } from '../ContentModules/MusicContent';
 
 const MusicPage = (props) => {
 

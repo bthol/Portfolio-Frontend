@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { ArtContent as Content } from '../ContentPropModules/ArtContent';
-import { Comp5 } from '../RenderComp/Comp5';
-import { Comp6 } from '../RenderComp/Comp6';
-import { Comp7 } from '../RenderComp/Comp7';
+import { ArtContent as Content } from '../ContentModules/ArtContent';
+// import { Comp5 } from '../Components/Comp5';
+import { Comp6 } from '../Components/Comp6';
+import { Comp7 } from '../Components/Comp7';
 
 const ArtPage = (props) => {
     // section refs

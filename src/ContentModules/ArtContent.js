@@ -1,18 +1,20 @@
-import Forefront1 from '../Images/ArtPageImages/Forefront/jpg/Feathered-Plant.jpg';
-import Forefront2 from '../Images/ArtPageImages/Forefront/jpg/In-Organic.jpg';
+import Forefront1 from '../Images/ArtPageImages/Forefront/Feathered-Plant.jpg';
+import Forefront2 from '../Images/ArtPageImages/Forefront/In-Organic.jpg';
 
-import MachineError1 from '../Images/ArtPageImages/MachineError/jpg/A-Fracture_6.jpg';
-import MachineError2 from '../Images/ArtPageImages/MachineError/jpg/A-Scan_4.jpg';
-import MachineError3 from '../Images/ArtPageImages/MachineError/jpg/B-Structure_4.jpg';
-import MachineError4 from '../Images/ArtPageImages/MachineError/jpg/C-Scan_8.jpg';
+import MachineError1 from '../Images/ArtPageImages/MachineError/A-Fracture_6.jpg';
+import MachineError2 from '../Images/ArtPageImages/MachineError/A-Scan_4.jpg';
+import MachineError3 from '../Images/ArtPageImages/MachineError/B-Structure_4.jpg';
+import MachineError4 from '../Images/ArtPageImages/MachineError/C-Scan_8.jpg';
 
-import TextureFields1 from '../Images/ArtPageImages/TextureFields/jpg/Dream-Point-Scape.jpg';
-import TextureFields2 from '../Images/ArtPageImages/TextureFields/jpg/Motor-Tome.jpg';
-import TextureFields3 from '../Images/ArtPageImages/TextureFields/jpg/Neon-Crust.jpg';
-import TextureFields4 from '../Images/ArtPageImages/TextureFields/jpg/Aqua-Tile.jpg';
-import TextureFields5 from '../Images/ArtPageImages/TextureFields/jpg/Stone-Dance.jpg';
-import TextureFields6 from '../Images/ArtPageImages/TextureFields/jpg/The-One-with-the-Orange-Band.jpg';
+import TextureFields1 from '../Images/ArtPageImages/TextureFields/Dream-Point-Scape.jpg';
+import TextureFields2 from '../Images/ArtPageImages/TextureFields/Motor-Tome.jpg';
+import TextureFields3 from '../Images/ArtPageImages/TextureFields/Neon-Crust.jpg';
+import TextureFields4 from '../Images/ArtPageImages/TextureFields/Aqua-Tile.jpg';
+import TextureFields5 from '../Images/ArtPageImages/TextureFields/Stone-Dance.jpg';
+import TextureFields6 from '../Images/ArtPageImages/TextureFields/The-One-with-the-Orange-Band.jpg';
 
+// module containing static data
+// dynamic data is in jsx page
 
 const ArtContent = {
     gallery: {

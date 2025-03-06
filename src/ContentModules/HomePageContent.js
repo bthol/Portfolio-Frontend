@@ -1,3 +1,5 @@
+// module containing static data
+// dynamic data is in jsx page (project carousel data)
 const HomePageContent = {
   about: <div>I am a web and app developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skillset in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [

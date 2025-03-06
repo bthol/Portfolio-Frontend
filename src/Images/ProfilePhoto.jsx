@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from './png/Blake_Thollaug_Profile.png';
+import Photo from './general/Blake-Thollaug-Profile.png';
 
 const ProfilePhoto = () => {
     return <div className="profile-container">

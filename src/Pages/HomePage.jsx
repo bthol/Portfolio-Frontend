@@ -1,12 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import { Comp1 } from '../RenderComp/Comp1';
-import { Comp2 } from '../RenderComp/Comp2';
-import { Comp3 } from '../RenderComp/Comp3';
-import { Comp4 } from '../RenderComp/Comp4';
-import { Comp9 } from '../RenderComp/Comp9';
+import { Comp1 } from '../Components/Comp1';
+import { Comp2 } from '../Components/Comp2';
+import { Comp3 } from '../Components/Comp3';
+import { Comp4 } from '../Components/Comp4';
+import { Comp9 } from '../Components/Comp9';
 import { Verify } from '../Modals/Verify';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
-import { HomePageContent as Content } from '../ContentPropModules/HomePageContent';
+import { HomePageContent as Content } from '../ContentModules/HomePageContent';
+
+// import icons for scrolling icon list
+
+// pick top ten technologies
+
+// 1
+// import { JavaScript } from '../Images/icons/javascript-icon.png';
+
+// 2
+// import { HTML } from '../Images/icons/html-icon.png';
+
+// 3
+// import { CSS } from '../Images/icons/css-icon.png';
+
+// 4
+// import { Node } from '../Images/icons/node-icon.png';
+
+// 5
+// import { Express } from '../Images/icons/express-icon.png';
+
+// 6
+// import { React } from '../Images/icons/react-icon.png';
+
+// 7
+// import { MongoDB } from '../Images/icons/mongodb-icon.png';
+
+// 8
+// import { Python } from '../Images/icons/python-icon.png';
+
+// 9
+// import { Pip } from '../Images/icons/pip-icon.png';
+
+// 10
+// import { Django } from '../Images/icons/django-icon.png';
+
 
 const HomePage = (props) => {
     // LIKE BUTTON
@@ -78,7 +113,7 @@ const HomePage = (props) => {
             setLeftArrowShow(1);
             setRightArrowShow(0);
         }
-    }
+    };
 
     let carouselData = [
         {
@@ -95,7 +130,7 @@ const HomePage = (props) => {
             </div>,
             text: <div>
                 <p><b>Project Description:</b> The GoodEval Calculator is a Django stack web application developed to resemble an actual calculator that seamlessly performs both arithmetic and more advanced calculations.</p>
-                <p><b>Technologies:</b> Python, Django, Pip, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
+                <p><b>Tech Stack:</b> Python, Django, Pip, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
                 <li>Evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
@@ -118,7 +153,7 @@ const HomePage = (props) => {
             </div>,
             text: <div>
                 <p><b>Project Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
-                <p><b>Technologies:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
+                <p><b>Tech Stack:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
                 <li>Connected a custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
@@ -141,7 +176,7 @@ const HomePage = (props) => {
             carousel: <img src="" alt="project carousel"></img>,
             text: <div>
                 <p><b>Project Description:</b> Tic Tac Toe. Retro style.</p>
-                <p><b>Technologies:</b> JavaScript, HTML, CSS</p>
+                <p><b>Tech Stack:</b> JavaScript, HTML, CSS</p>
             </div>,
             list: <ul>
                 <li>Algorithms for game logic are written from scratch using a mere 100 lines of code.</li>
@@ -149,7 +184,7 @@ const HomePage = (props) => {
                 <li>Deployment of application uses GitHub Pages.</li>
             </ul>,
         },
-    ]
+    ];
 
     return (
         <div id="homepage" className="page-content">
@@ -238,7 +273,14 @@ const HomePage = (props) => {
                
             </div>
 
-            <div id="homepage-mid-2" className="content-container shadow-behind">
+            {/* <div id="homepage-mid-2">
+            
+            // put in a scrolling icon list with faded edges
+
+                <div className="content-container"></div>
+            </div> */}
+
+            <div id="homepage-mid-3" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.skills[0].sectionTitle}</h3>
                 <div className="section-lists">
                     <Comp1
@@ -266,7 +308,7 @@ const HomePage = (props) => {
                 }
             </div>
 
-            <div id="homepage-mid-3" className="content-container shadow-behind">
+            <div id="homepage-mid-4" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.experience[0].sectionTitle}</h3>
                 <div className="content-highlight">
                     <Comp3
@@ -287,7 +329,7 @@ const HomePage = (props) => {
                 <br />
             </div>
 
-            <div id="homepage-mid-4" className="content-container shadow-behind container-last">
+            <div id="homepage-mid-5" className="content-container shadow-behind container-last">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.education[0].sectionTitle}</h3>
                 <Comp4
                     school={Content.education[1].name}
