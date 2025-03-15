@@ -118,7 +118,7 @@ const HomePage = (props) => {
     let carouselData = [
         {
             id: "projects-1",
-            title: <b><h2 tabIndex={slideTabIdx0} className="flex-center-align underline project-highlight-margin">GoodEval Calculator</h2></b>,
+            title: <b><h2 tabIndex={slideTabIdx0} className="flex-center-align underline project-highlight-margin">GoodEval</h2></b>,
             links: <div className="flex-center">
                 <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
@@ -129,7 +129,7 @@ const HomePage = (props) => {
                 </div>
             </div>,
             text: <div>
-                <p><b>Project Description:</b> The GoodEval Calculator is a Django stack web application developed to resemble an actual calculator that seamlessly performs both arithmetic and more advanced calculations.</p>
+                <p><b>Project Description:</b> GoodEval is a multi-page web app computational package composed of the GoodEval Calulator and its more advanced counterpart the GoodEval Evaluator.</p>
                 <p><b>Tech Stack:</b> Python, Django, Pip, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
