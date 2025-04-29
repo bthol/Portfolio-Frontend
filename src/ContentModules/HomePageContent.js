@@ -66,7 +66,7 @@ const HomePageContent = {
       list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large">User Experience (UX) and User Interface (UI) Design</li>
         <ul>
-          <li>Responsive Design: useful for compatability with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
+          <li>Responsive Design: useful for compatibility with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
           <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
           <li>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
           <li>WAI ARIA Acessibility standard: provides interoperability with assistive technologies to enable user accessibility.</li>
@@ -151,12 +151,12 @@ const HomePageContent = {
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li >I create music in my own studio under the artist name Augium. Augium is a constructed word intended to mean the element of incriment.<br /><br /><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
+          <li >I create music in my own studio under the artist name Augium. Augium is a constructed word intended to mean "element of incriment."<br /><br /><a href="https://augium.bandcamp.com/" className="link-color link-desat" target="_blank" rel="noreferrer">See my music page</a></li>
         </ul>
         <br />
         <div>Highlights</div>
         <ul>
-          <li >Singlehandedly composed 400+ songs measuring 25+ hours in duration accross multiple genres using a variety of digital audio workstations and related technologies</li>
+          <li >Singlehandedly sound designed, composed, and engineered 400+ songs measuring 25+ hours in duration accross multiple musical genres using a variety of digital audio workstations and related technologies</li>
           <li >Involved in all phases of music production (i.e. music concept and theory, sound design, composition, performance and recording, mix engineering, and mastering)</li>
           <li >General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
           <li >Created countless audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, pitch mapping, granular)</li>
