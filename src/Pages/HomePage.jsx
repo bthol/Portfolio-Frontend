@@ -129,14 +129,13 @@ const HomePage = (props) => {
                 </div>
             </div>,
             text: <div>
-                <p><b>Project Description:</b> GoodEval is a multi-page web app computational package composed of the GoodEval Calulator and its more advanced counterpart the GoodEval Evaluator.</p>
-                <p><b>Tech Stack:</b> Python, Django, Pip, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
+                <p><b>Project Description:</b> GoodEval is a multi-page web app computational package so far composed of the GoodEval Calulator and its more advanced counterpart the Eval API powered GoodEval Evaluator.</p>
+                <p><b>Tech Stack:</b> Python, Django, Pip, Flask, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
-                <li>Evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
-                <li>Cursor mode allows for problem editing to avoid the inconvenience of re-entering the problem after a global clear is performed.</li>
-                <li>Pre-validates and post-validates to prevent invalid user input into calculator logic, accounting for validation differences in cursor mode.</li>
-                <li>From buttons that appear to push down when clicked to a screen that glows with digital light, the Skeumorphic graphical user interface design really looks and feels like a calculator.</li>
+                <li>Eval API evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
+                <li>Calculator feautures a cursor mode that allows for problem editing to avoid the inconvenience of re-entering the problem after a global clear is performed.</li>
+                <li>Pre-validation and post-validation exist in the Calculator to prevent invalid user input into logic while accounting for validation differences in cursor mode.</li>
             </ul>,
         },
         {

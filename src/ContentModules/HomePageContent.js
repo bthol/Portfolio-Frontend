@@ -35,7 +35,7 @@ const HomePageContent = {
         <li className="text-large">Python</li>
         <ul>
           <li>Libraries: Pip</li>
-          <li>Frameworks: Django</li>
+          <li>Frameworks: Django, Flask</li>
           <li>Debugging: Pylint, Pyflakes</li>
         </ul>
         <p></p>
