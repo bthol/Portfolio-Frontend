@@ -129,11 +129,11 @@ const HomePage = (props) => {
                 </div>
             </div>,
             text: <div>
-                <p><b>Project Description:</b> GoodEval is a multi-page web app computational package so far composed of the GoodEval Calulator and its more advanced counterpart the Eval API powered GoodEval Evaluator.</p>
-                <p><b>Tech Stack:</b> Python, Django, Pip, Flask, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
+                <p><b>Project Description:</b> GoodEval is a multi-page web app computational package composed of the GoodEval Calulator, its more advanced counterpart the GoodEval Evaluator powered by the Eval API, as well as a variety of form interfaces making use of the Eval API or dedicated scripts.</p>
+                <p><b>Tech Stack:</b> Python, Pip, Django, Flask, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
-                <li>Eval API evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
+                <li>The Eval API evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
                 <li>Calculator features a cursor mode that allows for problem editing to avoid the inconvenience of re-entering the problem after a global clear is performed.</li>
                 <li>Pre-validation and post-validation exist in the Calculator to prevent invalid user input into logic while accounting for validation differences in cursor mode.</li>
             </ul>,
@@ -152,12 +152,13 @@ const HomePage = (props) => {
             </div>,
             text: <div>
                 <p><b>Project Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
-                <p><b>Tech Stack:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
+                <p><b>Tech Stack:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, JS Modules, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
                 <li>Custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
                 <li>State variables, data structures, and Document Object Model (DOM) selections are organized into respective JS modules for best code manageability practices.</li>
                 <li>Pages are displayed by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
+                <li>All music and sound FX made from scratch by use of audio synthesis.</li>
             </ul>,
         },
         {

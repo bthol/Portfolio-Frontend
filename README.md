@@ -8,4 +8,4 @@
 
 https://blakethollaugportfolio.herokuapp.com/
 
-*Dev Note*: `npm run devStart 3000` = development server, `npm start` = production server
+*Dev Note*: `npm run devStart 3000` = development server, `npm start` = production server, `npm run build` = creates production build
