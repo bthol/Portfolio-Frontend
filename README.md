@@ -9,3 +9,9 @@
 https://blakethollaugportfolio.herokuapp.com/
 
 *Dev Note*: `npm run devStart 3000` = development server, `npm start` = production server, `npm run build` = creates production build
+
+**setup new dev environ**
+ - install node
+ - `$npm run build`
+ - `$npm install -g serve`
+ - test production server: `$serve -s build`
