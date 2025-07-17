@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.93cacb66.css",
+    "main.js": "/static/js/main.1dd0285e.js",
+    "static/media/Neon-Crust.jpg": "/static/media/Neon-Crust.dc881390b0129a3582d5.jpg",
+    "static/media/Motor-Tome.jpg": "/static/media/Motor-Tome.bd362fd166ae3b98e550.jpg",
+    "static/media/Aqua-Tile.jpg": "/static/media/Aqua-Tile.852a759a294383ae4a8f.jpg",
+    "static/media/C-Scan_8.jpg": "/static/media/C-Scan_8.d869d8700b260b7e47a9.jpg",
+    "static/media/In-Organic.jpg": "/static/media/In-Organic.e0b6dfd6c93cc2192230.jpg",
+    "static/media/Dream-Point-Scape.jpg": "/static/media/Dream-Point-Scape.88e1503db25991754579.jpg",
+    "static/media/Stone-Dance.jpg": "/static/media/Stone-Dance.32a8c1da111e9ede2ba5.jpg",
+    "static/media/A-Scan_4.jpg": "/static/media/A-Scan_4.18c26d868f4ae793c0a2.jpg",
+    "static/media/The-One-with-the-Orange-Band.jpg": "/static/media/The-One-with-the-Orange-Band.444bd508d1853825c888.jpg",
+    "static/media/A-Fracture_6.jpg": "/static/media/A-Fracture_6.ed4f12ccc9191c67e8cc.jpg",
+    "static/media/B-Structure_4.jpg": "/static/media/B-Structure_4.56585b9c976c113d7ee9.jpg",
+    "static/media/Blake-Thollaug-Profile.png": "/static/media/Blake-Thollaug-Profile.efacd482d771c9ca794b.png",
+    "static/media/Feathered-Plant.jpg": "/static/media/Feathered-Plant.ae8ed2d5bfd0aeab38b7.jpg",
+    "index.html": "/index.html",
+    "main.93cacb66.css.map": "/static/css/main.93cacb66.css.map",
+    "main.1dd0285e.js.map": "/static/js/main.1dd0285e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93cacb66.css",
+    "static/js/main.1dd0285e.js"
+  ]
+}
