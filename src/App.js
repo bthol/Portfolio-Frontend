@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import './App.css';
 import { Notify } from './Modals/Notify';
 import { Comp8 } from './Components/Comp8';
@@ -23,8 +23,8 @@ function App() {
   };
   // run env test on load
   if (initEnv) {
-    setInitEvn(false); // turn off automatic env test
     testEnv(); // run env test
+    setInitEvn(false); // turn off automatic env test
   }
   
   // NOTIFICATION STATES
@@ -125,6 +125,7 @@ function App() {
 
   // THEME LOGIC
   const [theme, setTheme] = useState("color-theme-light");
+  const [initTheme, setInitTheme] = useState(true);
   const [togTheme, setTogTheme] = useState(true);
   const [btnTheme, setBtnTheme] = useState("theme-btn-light");
   const themeTransTime = 180;
@@ -158,10 +159,11 @@ function App() {
   };
 
   // sets user default theme on load
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  if (initTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     setTheme("color-theme-dark");
     setTogTheme(false);
     setBtnTheme("theme-btn-dark");
+    setInitTheme(false); // turn off default theme test after 1 run
   }
   
   // Page Data State
