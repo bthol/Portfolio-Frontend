@@ -30,12 +30,9 @@ const Comp9 = (props) => {
                 
             ? <div className="content-highlight flex-center link-desat" onClick={toggle} onKeyDown={(e) => {if (props.enter(e)) {toggle()}}} tabIndex={0}><b>{props.title}</b></div>
                 
-            : <div className="content-highlight">
+            : <div className="content-highlight popover-parent">
                 <div className="cursor-pointer link-desat flex-center" onClick={toggle} onKeyDown={(e) => {if (props.enter(e)) {toggle()}}} tabIndex={0}><b>{props.title}</b></div>
-                <div className="cursor-default popover">
-                    <br />
-                    {props.text}
-                </div>
+                <div className="cursor-default popover">{props.text}</div>
             </div>
             }
         </div>

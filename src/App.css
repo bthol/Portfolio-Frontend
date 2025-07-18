@@ -530,11 +530,15 @@ hr {
 
 /*-----------------------------------------------POPOVERS-----------------------------------------------*/
 @media (min-width: 1252px) {
+  .popover-parent {
+    position: relative;
+  }
   .popover {
     position: absolute;
     z-index: 1;
-    transform: translate(-16px, 0px);
-    width: 288.5px;
+    transform: translate(-3.33%, 0%);
+    /* width: 288.5px; */
+    width: 93.3%;
     padding: 10px;
     background: var(--background-polar);
     border: 1.2px solid var(--color-gray);
