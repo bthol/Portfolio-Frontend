@@ -282,30 +282,24 @@ const HomePage = (props) => {
 
             <div id="homepage-mid-3" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.skills[0].sectionTitle}</h3>
-                <div className="section-lists">
-                    <Comp1
-                        skillsTitle={Content.skills[1].title}
-                        skillsList={Content.skills[1].list}
-                        id={Content.skills[1].id}
-                    ></Comp1>
-                    <br />
-                    <Comp1
-                        skillsTitle={Content.skills[2].title}
-                        skillsList={Content.skills[2].list}
-                        id={Content.skills[2].id}
-                    ></Comp1>
-                    <br />
-                    <Comp1
-                        skillsTitle={Content.skills[3].title}
-                        skillsList={Content.skills[3].list}
-                        id={Content.skills[3].id}
-                    ></Comp1>
-                </div>
-                {
-                    props.mobile
-                        ? <div></div>
-                        : <div><br /></div>
-                }
+                <Comp1
+                    skillsTitle={Content.skills[1].title}
+                    skillsList={Content.skills[1].list}
+                    id={Content.skills[1].id}
+                    mobile={props.mobile}
+                ></Comp1>
+                <Comp1
+                    skillsTitle={Content.skills[2].title}
+                    skillsList={Content.skills[2].list}
+                    id={Content.skills[2].id}
+                    mobile={props.mobile}
+                ></Comp1>
+                <Comp1
+                    skillsTitle={Content.skills[3].title}
+                    skillsList={Content.skills[3].list}
+                    id={Content.skills[3].id}
+                    mobile={props.mobile}
+                ></Comp1>
             </div>
 
             <div id="homepage-mid-4" className="content-container shadow-behind">

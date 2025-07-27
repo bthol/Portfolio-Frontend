@@ -92,37 +92,40 @@ const Header = (props) => {
                 <h3 id="website-title" title="Blake Thollaug's Portfolio Website">Blake Thollaug's Portfolio Website</h3>
             </div>
             <nav className="app-nav">
-                <div className="flex-around">
+                <div className="flex-between flex-gap-1">
+                    <div className="flex-around flex-gap-1">
 
-                    {/* home button */}
-                    <div className="home-button-container">
-                        <a rel="scrollPosition" href="#"><button className="nav-buttons link-desat" onClick={() => {
-                            props.goPage(1);
-                            initNav();
-                        }}>Home</button></a>
+                        {/* home button */}
+                        <div className="home-button-container">
+                            <a rel="scrollPosition" href="#"><button className="nav-buttons link-desat" onClick={() => {
+                                props.goPage(1);
+                                initNav();
+                            }}>Home</button></a>
+                        </div>
+
+                        {/* pages */}
+                        <NavButton
+                            id={0}
+                            name={navData[0].name}
+                            links={navData[0].links}
+                            navState={navState1}
+                            drop={drop1}
+                            toggleNavState={toggleNavState1}
+                            initNav={initNav}
+                        ></NavButton>
+
+                        {/* projects */}
+                        <NavButton
+                            id={1}
+                            name={navData[1].name}
+                            links={navData[1].links}
+                            navState={navState2}
+                            drop={drop2}
+                            toggleNavState={toggleNavState2}
+                            initNav={initNav}
+                        ></NavButton>
+
                     </div>
-
-                    {/* pages */}
-                    <NavButton
-                        id={0}
-                        name={navData[0].name}
-                        links={navData[0].links}
-                        navState={navState1}
-                        drop={drop1}
-                        toggleNavState={toggleNavState1}
-                        initNav={initNav}
-                    ></NavButton>
-
-                    {/* projects */}
-                    <NavButton
-                        id={1}
-                        name={navData[1].name}
-                        links={navData[1].links}
-                        navState={navState2}
-                        drop={drop2}
-                        toggleNavState={toggleNavState2}
-                        initNav={initNav}
-                    ></NavButton>
 
                     {/* theme slider */}
                     <div className="theme-button-container">
@@ -132,7 +135,6 @@ const Header = (props) => {
                         </button>
                         <div className="no-select">D</div>
                     </div>
-
                 </div>
                 <div className="scroll-track-bar" style={{ width: `${props.docScroll}%` }}></div>
             </nav>

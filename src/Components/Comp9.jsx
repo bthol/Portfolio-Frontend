@@ -27,12 +27,12 @@ const Comp9 = (props) => {
             
             // desktop version (pops over content)
             : show
-                
-            ? <div className="content-highlight flex-center link-desat" onClick={toggle} onKeyDown={(e) => {if (props.enter(e)) {toggle()}}} tabIndex={0}><b>{props.title}</b></div>
-                
-            : <div className="content-highlight popover-parent">
-                <div className="cursor-pointer link-desat flex-center" onClick={toggle} onKeyDown={(e) => {if (props.enter(e)) {toggle()}}} tabIndex={0}><b>{props.title}</b></div>
-                <div className="cursor-default popover">{props.text}</div>
+            ? <div className="popover-parent">
+                <div className="content-highlight flex-center link-desat popover-parent" onClick={toggle} onKeyDown={(e) => {if (props.enter(e)) {toggle()}}} tabIndex={0}><b>{props.title}</b></div>
+            </div>
+            : <div className="popover-parent">
+                <div className="content-highlight cursor-pointer flex-center link-desat" onClick={toggle} onKeyDown={(e) => {if (props.enter(e)) {toggle()}}} tabIndex={0}><b>{props.title}</b></div>
+                <div className="content-highlight cursor-default flex-center popover">{props.text}</div>
             </div>
             }
         </div>

@@ -1,7 +1,7 @@
 // module containing static data
 // dynamic data is in jsx page (project carousel data)
 const HomePageContent = {
-  about: <div>I am a web and app developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skillset in order to make a valuable contribution to my team, the business, and the world at large.</div>,
+  about: <div>I am a web app developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skillset in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [
     {
       sectionTitle: "Skills and Knowledge"
@@ -10,11 +10,21 @@ const HomePageContent = {
       id: "skills-1",
       title: "Programming Langauges",
       list: <ul className="skills-list remove-bullet-list border-left">
+        <li className="text-large">Python</li>
+        <ul>
+          <li>Library Management: Pip</li>
+          <li>Frameworks: Django</li>
+          <li>API: Flask</li>
+          <li>Environments: venv, pipenv, virtualenv</li>
+          <li>Packages: Numpy, Matplotlib</li>
+        </ul>
+        <p></p>
         <li className="text-large">JavaScript</li>
         <ul>
-          <li>Libraries: Node.js</li>
-          <li>Frameworks: Express.js for REST API, React for component GUI</li>
-          <li>Debugging: ESLint</li>
+          <li>Library Management: Node.js</li>
+          <li>Frameworks: React</li>
+          <li>API: Express.js</li>
+          <li>Packages: Mongoose, Dotenv, Mathjax</li>
         </ul>
         <p></p>
         <li className="text-large">HTML</li>
@@ -32,24 +42,11 @@ const HomePageContent = {
           <li>Preprocesor: Sass</li>
         </ul>
         <p></p>
-        <li className="text-large">Python</li>
-        <ul>
-          <li>Libraries: Pip</li>
-          <li>Frameworks: Django, Flask</li>
-          <li>Debugging: Pylint, Pyflakes</li>
-        </ul>
-        <p></p>
         <li className="text-large">C++</li>
         <ul>
           <li>Compiler: Clang, GCC</li>
           <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
           <li>Resources: MSYS environment, pacman package handling</li>
-        </ul>
-        <p></p>
-        <li className="text-large">Java</li>
-        <ul>
-          <li>Libraries: Java Development Kit (JDK)</li>
-          <li>Resources: Language Support for Java by Redhat</li>
         </ul>
         <p></p>
         <li className="text-large">R</li>
@@ -169,9 +166,9 @@ const HomePageContent = {
       sectionTitle: "Education"
     },
     {
-      name: "BitWise Industries",
-      period: "May 2022 - June 2022",
-      description: "BitWise industry has courses on computer programming and web development, offering a learning community to support its members in their journey toward learning how to code.",
+      name: "CNC Operator Program",
+      period: "July 2025 - Sept 2025",
+      description: "The Computer Numerically Controlled (CNC) operator job training program offered through the facilities at De Anza College train participants to be workplace-ready for CNC operator positions and more. Over the course of twelve weeks, particiapants are trainined in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
     },
     {
       name: "General Assembly",

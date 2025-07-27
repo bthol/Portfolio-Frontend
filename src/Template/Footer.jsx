@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="app-footer">
-            <div className="app-footer-link-grid flex-around">
+            <div className="app-footer-link-grid flex-around flex-wrap">
                 <ul>
                     <li><p><b>Coding</b></p></li>
                     <li><a href="https://github.com/bthol" target="_blank" rel="noreferrer" className="link-highlight">GitHub</a></li>
@@ -22,10 +22,10 @@ const Footer = () => {
             </div>
             <div>
                 <div>
-                    <p className="flex-center text-no-wrap" >Made with MERN stack technologies</p>
+                    <p className="flex-center" >Made with MERN stack technologies</p>
                 </div>
             </div>
-            <small className="flex-around text-no-wrap" >&copy; 2024, Blake Thollaug. All rights reserved.</small>
+            <small className="flex-around" >&copy; 2025, Blake Thollaug. All rights reserved.</small>
             <br />
         </footer>
     )
