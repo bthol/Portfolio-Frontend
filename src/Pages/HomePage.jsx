@@ -300,6 +300,12 @@ const HomePage = (props) => {
                     id={Content.skills[3].id}
                     mobile={props.mobile}
                 ></Comp1>
+                <Comp1
+                    skillsTitle={Content.skills[4].title}
+                    skillsList={Content.skills[4].list}
+                    id={Content.skills[4].id}
+                    mobile={props.mobile}
+                ></Comp1>
             </div>
 
             <div id="homepage-mid-4" className="content-container shadow-behind">

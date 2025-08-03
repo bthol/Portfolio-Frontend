@@ -14,17 +14,16 @@ function App() {
   // STATE FOR ENVIRONMENT
   const [mobile, setMobile] = useState(true); // defaults to mobile environment
   const [initEnv, setInitEvn] = useState(true); // store bool for automatic env test
-  const testEnv = () => {
+  // run env test on load
+  if (initEnv) {
+    // run env test
     if (window.innerWidth > 768) {
       setMobile(false); // change environment to desktop
     } else {
       setMobile(true); // change environment to mobile
     }
-  };
-  // run env test on load
-  if (initEnv) {
-    testEnv(); // run env test
-    setInitEvn(false); // turn off automatic env test
+    // turn off automatic env test
+    setInitEvn(false);
   }
   
   // NOTIFICATION STATES
@@ -75,29 +74,25 @@ function App() {
   let winHeight, trackLength, docheight;
   const [docScroll, setDocScroll] = useState(0);
 
-  const getHeight = () => {
-    return Math.max(
+  const getInfo = () => {
+    winHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
+    docheight = Math.max(
       document.body.clientHeight,
       document.documentElement.clientHeight,
       document.body.offsetHeight,
       document.documentElement.offsetHeight,
       document.body.scrollHeight,
       document.documentElement.scrollHeight
-    )
-  };
-
-  const getInfo = () => {
-    winHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
-    docheight = getHeight();
+    );
     trackLength = docheight - winHeight;
   };
   getInfo();
 
   const scrollAmmount = () => {
-    let scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    let pctScrolled = Math.floor(scrollTop / trackLength * 100);
+    const scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    const pctScrolled = scrollTop / trackLength * 100;
     if (pctScrolled >= 0) {
-        setDocScroll(pctScrolled);
+      setDocScroll(pctScrolled);
     }
   };
   
@@ -114,12 +109,12 @@ function App() {
   };
 
   window.addEventListener("resize", () => {
-    debounceFunct(getInfo, 10);
+    debounceFunct(getInfo, 5);
     debounceFunct(scrollAmmount, 10);
   });
   
   window.addEventListener("scroll", () => {
-    debounceFunct(getInfo, 10);
+    debounceFunct(getInfo, 5);
     debounceFunct(scrollAmmount, 10);
   });
 
