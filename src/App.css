@@ -286,7 +286,7 @@ hr {
   width: 8px;
   top: 2.5px;
   position: relative;
-  border: 1.6px solid var(--font-color-1);
+  border: 1.5px solid var(--font-color-1);
   border-top: hidden;
   border-left: hidden;
 }

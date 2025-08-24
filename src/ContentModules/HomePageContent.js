@@ -17,13 +17,13 @@ const HomePageContent = {
           <li>Machine Setup and Operation</li>
           <li>Computer Numerical Controlled (CNC) Machining</li>
           <ul>
-            <li>Tools: CNC Mill (horizontal and vertical), CNC Lathe (horizontal and vertical)</li>
+            <li>Tools: CNC Mill (horizontal and vertical), CNC Lathe</li>
             <li>Techniques: G-Code Programming, Automatic Tool Changer (ATC)</li>
           </ul>
           <li>Manual Machining</li>
           <ul>
             <li>Tools: Manual Mill (Bridgeport machine), Manual Lathe (LeBlond RKL-1340G)</li>
-            <li>Techniques: Zero on datum using edge finder, , chuck cleaning and installation, efficient manual tool swapping</li>
+            <li>Techniques: Zero on datum using edge finder, chuck cleaning and installation, efficient manual tool swapping</li>
           </ul>
         </ul>
         <li className="text-large"></li>
@@ -202,7 +202,7 @@ const HomePageContent = {
     {
       name: "CNC Operator Program",
       period: "July 2025 - Sept 2025",
-      description: "The Computer Numerically Controlled (CNC) operator job placement program offered through the facilities at De Anza College train participants to be workplace-ready for CNC operator positions and more. Over the course of twelve weeks, particiapants are trainined in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
+      description: "The Computer Numerically Controlled (CNC) operator job development program offered through the facilities at De Anza College train participants to be workplace-ready for CNC operator positions and more. Over the course of twelve weeks, particiapants are trainined in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
     },
     {
       name: "General Assembly",

@@ -71,6 +71,7 @@ const Header = (props) => {
 
                 <p className="cursor-default"><u>Utility</u></p>
                 <a  href="https://goodeval-1d265775b25d.herokuapp.com/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>GoodEval</a>
+                <a  href="https://bthol.github.io/Choosy/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Choosy</a>
                 <a onClick={(e) => {
                     props.notifyFeature(e, true);
                 }} href="" className="link-desat" tabIndex={navTabIdx2}>inPlace</a>
