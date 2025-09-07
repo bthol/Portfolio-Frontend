@@ -8,41 +8,6 @@ import { Verify } from '../Modals/Verify';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { HomePageContent as Content } from '../ContentModules/HomePageContent';
 
-// import icons for scrolling icon list
-
-// pick top ten technologies
-
-// 1
-// import { JavaScript } from '../Images/icons/javascript-icon.png';
-
-// 2
-// import { HTML } from '../Images/icons/html-icon.png';
-
-// 3
-// import { CSS } from '../Images/icons/css-icon.png';
-
-// 4
-// import { Node } from '../Images/icons/node-icon.png';
-
-// 5
-// import { Express } from '../Images/icons/express-icon.png';
-
-// 6
-// import { React } from '../Images/icons/react-icon.png';
-
-// 7
-// import { MongoDB } from '../Images/icons/mongodb-icon.png';
-
-// 8
-// import { Python } from '../Images/icons/python-icon.png';
-
-// 9
-// import { Pip } from '../Images/icons/pip-icon.png';
-
-// 10
-// import { Django } from '../Images/icons/django-icon.png';
-
-
 const HomePage = (props) => {
     // LIKE BUTTON
     useEffect(() => {
@@ -272,13 +237,6 @@ const HomePage = (props) => {
                 </div>
                
             </div>
-
-            {/* <div id="homepage-mid-2">
-            
-            // put in a scrolling icon list with faded edges
-
-                <div className="content-container"></div>
-            </div> */}
 
             <div id="homepage-mid-3" className="content-container shadow-behind">
                 <h3 className="underline text-x-large" tabIndex={0}>{Content.skills[0].sectionTitle}</h3>

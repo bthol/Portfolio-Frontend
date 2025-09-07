@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { ArtContent as Content } from '../ContentModules/ArtContent';
 // import { Comp5 } from '../Components/Comp5';
 import { Comp6 } from '../Components/Comp6';
@@ -10,10 +10,10 @@ const ArtPage = (props) => {
     const machineErrorRef = useRef(null);
     const textureFieldsRef = useRef(null);
 
-    const scrollManeuver = (ref) => {
+    const scrollManeuver = useCallback((ref) => {
         // scrolls current value of given ref to view
         ref.current.scrollIntoView({behavior: "smooth"});
-    };
+    }, []);
 
     const links = {
         gallery: <div>

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 const Comp7 = (props) => {
     const [sized, setSized] = useState(false);
     const [select, setSelect] = useState(true);
-    const toggleSelect = (e) => {
+    const toggleSelect = useCallback((e) => {
         new Promise((resolve) => {
             setSelect(!select);
-            resolve("resolved")
+            resolve("resolved");
         }).then(() => {
             if (select === true) {
                 // select the area
@@ -61,7 +61,7 @@ const Comp7 = (props) => {
                 })
             }
         })
-    }
+    }, [select]);
 
     return (
         <div className={`gallery-image-container ${props.galleryColumn}`} onClick={(e) => { toggleSelect(e) }} onKeyDown={(e) => { if (props.enter(e)) { toggleSelect(e) } }}>

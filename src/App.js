@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef, useCallback} from 'react';
 import './App.css';
 import { Notify } from './Modals/Notify';
 import { Comp8 } from './Components/Comp8';
@@ -28,26 +28,26 @@ function App() {
   
   // NOTIFICATION STATES
   const [featureNotify, setFeatureNotify] = useState(false);
-  const notifyFeature = (e, bool) => {
+  const notifyFeature = useCallback((e, bool) => {
     e.preventDefault();
     setFeatureNotify(bool);
-  };
+  }, []);
   
   const [internetConnectNotify, setInternetConnectNotify] = useState(false);
-  const notifyInternetConnect = (e, bool) => {
+  const notifyInternetConnect = useCallback((e, bool) => {
     setInternetConnectNotify(bool);
-  };
+  }, []);
   
   const [idleNotify, setIdleNotify] = useState(false);
-  const notifyIdle = (e, bool) => {
+  const notifyIdle = useCallback((e, bool) => {
     setIdleNotify(bool);
-  };
+  }, []);
   
   // IDLE NOTIFICATION
   const secondsIdle = 600 * 1000; // 600 seconds = 10 minutes // number of seconds idle before notify
   const idleRef = useRef({});
 
-  const active = (e) => {
+  const active = useCallback((e) => {
     // runs for most common user activity
     if (!idleNotify) {
       // debounces timeout for idle on activity
@@ -59,22 +59,22 @@ function App() {
       }, secondsIdle);
       idleRef.current = id;
     }
-  };
+  }, []);
 
   // KEYSTROKE TESTING
-  const enter = (e) => {
+  const enter = useCallback((e) => {
     if (e.key === 'Enter') {
       return true;
     } else {
       return false;
     }
-  };
+  }, []);
 
   // TRACKLENGTH BAR
   let winHeight, trackLength, docheight;
   const [docScroll, setDocScroll] = useState(0);
 
-  const getInfo = () => {
+  const getInfo = useCallback(() => {
     winHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
     docheight = Math.max(
       document.body.clientHeight,
@@ -85,28 +85,28 @@ function App() {
       document.documentElement.scrollHeight
     );
     trackLength = docheight - winHeight;
-  };
+  }, []);
   getInfo();
 
-  const scrollAmmount = () => {
+  const scrollAmmount = useCallback(() => {
     const scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
     const pctScrolled = scrollTop / trackLength * 100;
     if (pctScrolled >= 0) {
       setDocScroll(pctScrolled);
     }
-  };
+  }, []);
   
   // LISTENERS
   // custom debounce for performance improvement
   const debounceFunctRef = useRef({});
-  const debounceFunct = (funct, delay) => {
+  const debounceFunct = useCallback((funct, delay) => {
     clearTimeout(debounceFunctRef.current);
     const id = setTimeout(() => {
       clearTimeout(debounceFunctRef.current);
       funct();
     }, delay);
     debounceFunctRef.current = id;
-  };
+  }, []);
 
   window.addEventListener("resize", () => {
     debounceFunct(getInfo, 5);
@@ -125,7 +125,7 @@ function App() {
   const [btnTheme, setBtnTheme] = useState("theme-btn-light");
   const themeTransTime = 180;
 
-  const updateLikeBtn = () => {
+  const updateLikeBtn = useCallback(() => {
     // detects if liked and display accordingly
     if (localStorage.getItem("liked")) {
       const likeBtn = document.querySelector('.like-btn');
@@ -135,7 +135,7 @@ function App() {
       likeBtn.innerText = "Liked";
       likeBtn.classList.remove('like-btn-animation');
     }
-  };
+  }, []);
 
   const toggleTheme = () => {
     setTogTheme(!togTheme);
@@ -231,7 +231,7 @@ function App() {
   });
 
   // Like Button
-  const likePortfolio = () => {
+  const likePortfolio = useCallback(() => {
     // if not liked already (using localStorage)
     if (localStorage.getItem("liked") === null) {
       setPortfolioLikes(`: ${Number(portfolioLikes.slice(1, portfolioLikes.length)) + 1}`);
@@ -259,14 +259,14 @@ function App() {
         console.error(error);
       }
     }
-  };
+  }, []);
     
   // PAGE NAVIGATION
   const [page, setPage] = useState(1); // sets default page
-  const goPage = (p) => { // function for page navigation
+  const goPage = useCallback((p) => { // function for page navigation
     setPage(p);
     window.scrollTo(0,0);
-  };
+  }, []);
   
   return (
     <div id="root-react" className={`App color ${theme}`} onTouchMove={active} onMouseMove={active} onClick={active} onKeyDown={active} onScroll={active}>

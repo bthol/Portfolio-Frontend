@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useState } from "react";
 
 const Comp9 = (props) => {
     const [env, setEnv] = useState(props.mobile);
     const [show, setShow] = useState(true);
-    const toggle = () => {
+    const toggle = useCallback(() => {
         setShow(!show)
-    }
+    }, [show]);
     useEffect(() => {
         setEnv(props.mobile)
     }, [props.mobile]);

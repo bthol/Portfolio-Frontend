@@ -1,12 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 const Comp3 = (props) => {
     // SHOW MORE/LESS
     const [show, setShow] = useState(false);
     const [shown, setShown] = useState("down-arrow");
     const [togshow, setTogshow] = useState(false);
-    const toggleShown = () => {
+    const toggleShown = useCallback(() => {
         setTogshow(!togshow);
         if (!togshow) {
             setShow(true);
@@ -15,7 +15,7 @@ const Comp3 = (props) => {
             setShow(false);
             setShown("down-arrow");
         }
-    }
+    }, [togshow]);
 
     return (
         <div id={props.id}>
