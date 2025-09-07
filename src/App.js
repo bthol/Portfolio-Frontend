@@ -47,7 +47,7 @@ function App() {
   const secondsIdle = 600 * 1000; // 600 seconds = 10 minutes // number of seconds idle before notify
   const idleRef = useRef({});
 
-  const active = useCallback((e) => {
+  const active = (e) => {
     // runs for most common user activity
     if (!idleNotify) {
       // debounces timeout for idle on activity
@@ -59,7 +59,7 @@ function App() {
       }, secondsIdle);
       idleRef.current = id;
     }
-  }, []);
+  };
 
   // KEYSTROKE TESTING
   const enter = useCallback((e) => {
@@ -74,7 +74,7 @@ function App() {
   let winHeight, trackLength, docheight;
   const [docScroll, setDocScroll] = useState(0);
 
-  const getInfo = useCallback(() => {
+  const getInfo = () => {
     winHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
     docheight = Math.max(
       document.body.clientHeight,
@@ -85,16 +85,16 @@ function App() {
       document.documentElement.scrollHeight
     );
     trackLength = docheight - winHeight;
-  }, []);
+  };
   getInfo();
 
-  const scrollAmmount = useCallback(() => {
+  const scrollAmmount = () => {
     const scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
     const pctScrolled = scrollTop / trackLength * 100;
     if (pctScrolled >= 0) {
       setDocScroll(pctScrolled);
     }
-  }, []);
+  };
   
   // LISTENERS
   // custom debounce for performance improvement
@@ -259,7 +259,7 @@ function App() {
         console.error(error);
       }
     }
-  }, []);
+  }, [portfolioLikes, updateLikeBtn]);
     
   // PAGE NAVIGATION
   const [page, setPage] = useState(1); // sets default page

@@ -53,15 +53,15 @@ const Header = (props) => {
         {
             name: "Pages ",
             links: <div className="nav-menu-list">
-                <a onClick={(e) => {
+                <div onClick={(e) => {
                     e.preventDefault();
                     props.goPage(2);
-                }} className="link-desat" tabIndex={navTabIdx1}>Art</a>
+                }} className="link-desat" tabIndex={navTabIdx1}>Art</div>
 
-                {/* <a onClick={(e) => {
+                {/* <div onClick={(e) => {
                     e.preventDefault();
                     props.goPage(3);
-                }} className="link-desat" tabIndex={navTabIdx1}>Music</a> */}
+                }} className="link-desat" tabIndex={navTabIdx1}>Music</div> */}
                 
             </div>,
         },
@@ -70,18 +70,18 @@ const Header = (props) => {
             links: <div className="nav-menu-list">
 
                 <p className="cursor-default"><u>Utility</u></p>
-                <a  href="https://goodeval-1d265775b25d.herokuapp.com/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>GoodEval</a>
-                <a  href="https://bthol.github.io/Choosy/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Choosy</a>
-                <a onClick={(e) => {
+                <a  href="https://goodeval-1d265775b25d.herokuapp.com/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>GoodEval</a>
+                <a  href="https://bthol.github.io/Choosy/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Choosy</a>
+                <div onClick={(e) => {
                     props.notifyFeature(e, true);
-                }} href="" className="link-desat" tabIndex={navTabIdx2}>inPlace</a>
+                }} href="" className="link-desat" tabIndex={navTabIdx2}>inPlace</div>
                 
                 <p className="cursor-default"><u>Games</u></p>
-                <a href="https://bthol.github.io/Space-Battle/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
-                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
-                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
-                <a href="https://bthol.github.io/Lapis-Papyrus-Scalpellus/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Lapis Papyrus Scalpellus</a>
-                <a href="https://bthol.github.io/holiday-tree/" target="_blank" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
+                <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
+                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
+                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
+                <a href="https://bthol.github.io/Lapis-Papyrus-Scalpellus/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Lapis Papyrus Scalpellus</a>
+                <a href="https://bthol.github.io/holiday-tree/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
             </div>,
         },
     ];
@@ -98,10 +98,10 @@ const Header = (props) => {
 
                         {/* home button */}
                         <div className="home-button-container">
-                            <a rel="scrollPosition" href="#"><button className="nav-buttons link-desat" onClick={() => {
+                            <div rel="scrollPosition"><button className="nav-buttons link-desat" onClick={() => {
                                 props.goPage(1);
                                 initNav();
-                            }}>Home</button></a>
+                            }}>Home</button></div>
                         </div>
 
                         {/* pages */}
