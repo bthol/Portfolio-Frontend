@@ -1,7 +1,7 @@
 // module containing static data
 // dynamic data is in jsx page (project carousel data)
 const HomePageContent = {
-  about: <div>I am a web app developer that can collaborate with the team to utilize backend technologies, craft intuitive and responsive interface designs, and independently engineer full stack features. I am searching for a position to utilize and further grow my creative and technological skillset in order to make a valuable contribution to my team, the business, and the world at large.</div>,
+  about: <div>I am a creative technologist and complex problem solver that adapts to dynamic work requirements with my team to get the job done right the first time, all while upholding company standards in an efficient and effective manner. I seek to utilize and further grow my creative and technological skill set in order to make a valuable contribution to my team, the business, and the world at large.</div>,
   skills: [
     {
       sectionTitle: "Skills and Knowledge"
@@ -10,9 +10,9 @@ const HomePageContent = {
       id: "skills-1",
       title: "High-Tech Manufacturing",
       list: <ul className="skills-list remove-bullet-list border-left">
-        <li className="text-large">Subtractive Machining</li>
+        <li className="text-large">Subtractive Manufacturing</li>
         <ul>
-          <li>Print Reading (ISO and ANSI standards)</li>
+          <li>Print Reading (ISO, ANSI and ASME standards)</li>
           <li>Work Measurement and Tolerance Holding</li>
           <li>Machine Setup and Operation</li>
           <li>Computer Numerical Controlled (CNC) Machining</li>
@@ -56,9 +56,17 @@ const HomePageContent = {
         <li className="text-large">JavaScript</li>
         <ul>
           <li>Library Management: Node.js</li>
+          <li>Supersets: Typescript</li>
           <li>Frameworks: React</li>
           <li>API: Express.js</li>
           <li>Packages: Mongoose, Dotenv, Mathjax</li>
+        </ul>
+        <p></p>
+        <li className="text-large">C++</li>
+        <ul>
+          <li>Compiler: Clang, GCC</li>
+          <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
+          <li>Resources: MSYS environment, pacman package handling</li>
         </ul>
         <p></p>
         <li className="text-large">HTML</li>
@@ -73,19 +81,6 @@ const HomePageContent = {
         <ul>
           <li>Modules: Flexbox, CSS Grid</li>
           <li>Preprocessor: Sass</li>
-        </ul>
-        <p></p>
-        <li className="text-large">C++</li>
-        <ul>
-          <li>Compiler: Clang, GCC</li>
-          <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
-          <li>Resources: MSYS environment, pacman package handling</li>
-        </ul>
-        <p></p>
-        <li className="text-large">R</li>
-        <ul>
-          <li>Used for statistical programming</li>
-          <li>Excellent for small-scale science applications</li>
         </ul>
         <p></p>
       </ul>,
@@ -201,7 +196,7 @@ const HomePageContent = {
     {
       name: "CNC Operator Program",
       period: "July 2025 - Sept 2025",
-      description: "The Computer Numerically Controlled (CNC) operator job development program offered through the facilities at De Anza College train participants to be workplace-ready for CNC operator positions and more. Over the course of twelve weeks, participants are trained in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
+      description: "The Computer Numerically Controlled (CNC) operator program, offered through the facilities at De Anza College, trains participants to be workplace-ready for CNC operator positions and more. Over the course of twelve weeks, participants are trained in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
     },
     {
       name: "General Assembly",
