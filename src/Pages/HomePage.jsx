@@ -98,9 +98,9 @@ const HomePage = (props) => {
                 <p><b>Tech Stack:</b> Python, Pip, Django, Flask, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
-                <li>The Eval API evaluates string data in place of basic numeral processing to access the advantage of a whole array of key functions.</li>
-                <li>Calculator features a cursor mode that allows for problem editing to avoid the inconvenience of re-entering the problem after a global clear is performed.</li>
-                <li>Pre-validation and post-validation exist in the Calculator to prevent invalid user input into logic while accounting for validation differences in cursor mode.</li>
+                <li>Calculator features pre-validation and post-validation for user input, an edit mode for problem editting, and scientific grade functions presented in a themable interface with a togglable problem history panel.</li>
+                <li>Evaluator is powered by the Eval API, which evaluates string data in place of basic numeral processing to access the advantage of a whole array of built-in key functions.</li>
+                <li>Operator explores the concept of operators in a series of dynamically updating calculator forms, going as far as to offer complex matrix operations including but not limited to matrix determininant calculation and matrix inversion.</li>
             </ul>,
         },
         {
@@ -117,36 +117,36 @@ const HomePage = (props) => {
             </div>,
             text: <div>
                 <p><b>Project Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
-                <p><b>Tech Stack:</b> JavaScript, HTML, CSS, JQuery, Express.js, EJS templates, JS Modules, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
+                <p><b>Tech Stack:</b> JQuery, Express.js, EJS templates, JavaScript, HTML, CSS, JS Modules, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
                 <li>Custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
                 <li>State variables, data structures, and Document Object Model (DOM) selections are organized into respective JS modules for best code manageability practices.</li>
-                <li>Pages are displayed by calling functions that mutate the DOM and tracked pages with a global variable that updates when a page's function is run.</li>
-                <li>All music and sound FX made from scratch by use of audio synthesis.</li>
+                <li>Pages are displayed by calling functions that mutate the DOM and pages are tracked with a global variable that updates when a page's function is run.</li>
+                <li>Music and sound FX crafted from scratch by use of audio synthesis.</li>
             </ul>,
         },
         {
             id: "projects-3",
-            title: <b><h2 tabIndex={slideTabIdx2} className="flex-center underline project-highlight-margin">Retro Toe</h2></b>,
+            title: <b><h2 tabIndex={slideTabIdx2} className="flex-center underline project-highlight-margin">Choosy</h2></b>,
             links: <div className="flex-center">
                 <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
-                    <a href="https://bthol.github.io/Retro-Toe/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a>
+                    <a href="https://bthol.github.io/Choosy/" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>Live Link</a>
                     <div className="inline-divider"></div>
-                    <a href="https://github.com/bthol/Tic-Tac-Toe" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a>
+                    <a href="https://github.com/bthol/Choosy" className="link-color link-desat" target="_blank" rel="noreferrer" tabIndex={slideTabIdx2}>GitHub Page</a>
                     <div className="inline-divider"></div>
                 </div>
             </div>,
             carousel: <img src="" alt="project carousel"></img>,
             text: <div>
-                <p><b>Project Description:</b> Tic Tac Toe. Retro style.</p>
-                <p><b>Tech Stack:</b> JavaScript, HTML, CSS</p>
+                <p><b>Project Description:</b> Choosy is a simple website for option selection. Need to choose? Choose Choosy!</p>
+                <p><b>Tech Stack:</b> Typescript, SASS, HTML, Github pages</p>
             </div>,
             list: <ul>
-                <li>Algorithms for game logic are written from scratch using a mere 100 lines of code.</li>
-                <li>Mobile-friendly UI layout utilizes relative units, and the CSS Flex and Grid modules for maximal responsivity across device viewports.</li>
-                <li>Deployment of application uses GitHub Pages.</li>
+                <li>Exceptionally robust and simply stylish interface that adapts to a wide range of viewports with ease and clarity.</li>
+                <li>Website architecture separates source and build code for integration of compilable development dependencies.</li>
+                <li>Quick and lightweight deployment of application via GitHub Pages.</li>
             </ul>,
         },
     ];
