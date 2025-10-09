@@ -196,7 +196,7 @@ const HomePageContent = {
     {
       name: "CNC Operator Program",
       period: "July 2025 - Sept 2025",
-      description: "The Computer Numerically Controlled (CNC) operator program, offered through the facilities at De Anza College, trains participants to be workplace-ready for CNC operator positions and more. Over the course of twelve weeks, participants are trained in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
+      description: "The Computer Numerically Controlled (CNC) operator program, offered through the facilities at De Anza College, train participants to be workplace-ready for CNC operator positions and more. Over the course of eleven weeks, participants are trained in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
     },
     {
       name: "General Assembly",
@@ -206,7 +206,7 @@ const HomePageContent = {
     {
       name: "Diablo Valley College, Berkeley City College",
       period: "June 2015 - Dec 2021",
-      description: "I studied general education with a focus on biological sciences intermittently between and occasionally in tandem with real-world work experience in the culinary, hospitality and retail industries. Initially, my intention was to obtain the Neurobiology, Physiology, and Behavior (NPB) major from the program of the same name at UC Davis following a transfer from a public university to mitigate educational costs and altogether prevent the infamous student loans; as I would come to discover, however, there was little in the way of suitable career opportunities in my field of interest, so I decided against the degree to pursue a more technological career.",
+      description: "I studied general education with a focus on biological sciences intermittently between and occasionally in tandem with real-world work experience in the culinary, hospitality and retail industries. Initially, my intention was to obtain the Neurobiology, Physiology, and Behavior (NPB) major from the program of the same name at UC Davis following a transfer from a public university to mitigate educational costs and altogether prevent infamous student loan debt; as I would come to discover, however, there was little in the way of suitable career opportunities in my field of interest, so I decided against the degree to pursue a more technological career.",
     },
   ],
 };
