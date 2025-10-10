@@ -98,9 +98,9 @@ const HomePage = (props) => {
                 <p><b>Tech Stack:</b> Python, Pip, Django, Flask, JavaScript, HTML, CSS, Heroku Cloud Service Provider (CSP)</p>
             </div>,
             list: <ul>
-                <li>Calculator features pre-validation and post-validation for user input, an edit mode for problem editting, and scientific grade functions presented in a themable interface with a togglable problem history panel.</li>
+                <li>Calculator features pre-validation and post-validation for user input, an edit mode for problem editing, and scientific grade functions presented in a theme-able interface with a togglable problem history panel.</li>
                 <li>Evaluator is powered by the Eval API, which evaluates string data in place of basic numeral processing to access the advantage of a whole array of built-in key functions.</li>
-                <li>Operator explores the concept of operators in a series of dynamically updating calculator forms, going as far as to offer complex matrix operations including but not limited to matrix determininant calculation and matrix inversion.</li>
+                <li>Operator explores the concept of operators in a series of dynamically updating calculator forms, going as far as to offer complex matrix operations including but not limited to matrix determinant calculation and matrix inversion.</li>
             </ul>,
         },
         {
