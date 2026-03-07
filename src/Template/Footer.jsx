@@ -25,7 +25,7 @@ const Footer = () => {
                     <p className="flex-center" >Made with MERN stack technologies</p>
                 </div>
             </div>
-            <small className="flex-around" >&copy; 2025, Blake Thollaug. All rights reserved.</small>
+            <small className="flex-around" >&copy; 2026, Blake Thollaug. All rights reserved.</small>
             <br />
         </footer>
     )

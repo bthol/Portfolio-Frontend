@@ -15,21 +15,59 @@ const HomePageContent = {
           <li>Print Reading (ISO, ANSI and ASME standards)</li>
           <li>Work Measurement and Tolerance Holding</li>
           <li>Machine Setup and Operation</li>
+          <li>Materials Processed</li>
+          <ul>
+            <li>AL 6061-T6</li>
+            <li>AL 7075-T651</li>
+            <li>Teflon</li>
+            <li>Polyide</li>
+            <li>Ultum</li>
+          </ul>
+
+          <p></p>
+
           <li>Computer Numerical Controlled (CNC) Machining</li>
+
+          <p>Tools</p>
+
           <ul>
-            <li>Tools: CNC Mill (horizontal and vertical), CNC Lathe</li>
-            <li>Techniques: G-Code Programming, Automatic Tool Changer (ATC)</li>
+            <li>Haas VF Series Mills (3SSYT, 2SSYT and 5SS)</li>
+            <li>Fanuc Robodrill T21IFA Mill</li>
+            <li>Haas ST 20 Lathe</li>
+            <li>Okuma OSP-P300LA Lathe</li>
           </ul>
+
+          <p>Techniques</p>
+
+          <ul>
+            <li>Manual Data Input commands</li>
+            <li>Zero-ing to test work coordinate system matches work datum</li>
+            <li>Edgefinder indication for work offset</li>
+            <li>Manual indication with dial indicator for work offset</li>
+          </ul>
+
+          <p></p>
+
           <li>Manual Machining</li>
+
+          <p>Tools</p>
+
           <ul>
-            <li>Tools: Manual Mill (Bridgeport machine), Manual Lathe (LeBlond RKL-1340G)</li>
-            <li>Techniques: Zero on datum using edge finder, chuck cleaning and installation, efficient manual tool swapping</li>
+            <li>Manual Mill (Bridgeport machine)</li>
+            <li>Manual Lathe (LeBlond RKL-1340G)</li>
+          </ul>
+
+          <p>Techniques</p>
+
+          <ul>
+            <li>Zero on datum using edge finder</li>
+            <li>chuck cleaning and installation</li>
+            <li>efficient manual tool swapping</li>
           </ul>
         </ul>
-        <li className="text-large"></li>
-        <ul>
-        </ul>
+        
         <p></p>
+
         <li className="text-large">Precision Measurement Instruments</li>
         <ul>
           <li>Calipers (interior and exterior): Vernier, Dial, and Digital</li>
@@ -94,16 +132,14 @@ const HomePageContent = {
           <li>Responsive Design: useful for compatibility with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
           <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
           <li>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
-          <li>WAI ARIA Accessibility standard: provides interoperability with assistive technologies to enable user accessibility.</li>
         </ul>
         <p></p>
-        <li className="text-large">Digital Graphic Software</li>
+        <li className="text-large">Graphical Processing Software for Digital Graphics</li>
         <ul>
           <li>Affinity Photo</li>
           <li>Affinity Designer</li>
           <li>Canva</li>
           <li>Paint.net</li>
-          <li>MS Paint</li>
         </ul>
         <p></p>
       </ul>,
@@ -121,7 +157,7 @@ const HomePageContent = {
         <p></p>
         <li className="text-large">Audio Processors</li>
         <ul>
-          <li>Equalzers (parametric, stereographic, linear phase and adaptive)</li>
+          <li>Equalizers (parametric, stereographic, linear phase and adaptive)</li>
           <li>Compressors (tube, analog emulation, graphical, Automatic Gain Consideration(AGC))</li>
           <li>Limiters (0dB Peak, brickwall, soft clip)</li>
           <li>Stereo Processors (limit, spread, merge, position, generate, and modulate)</li>
@@ -148,6 +184,24 @@ const HomePageContent = {
   experience: [
     {
       sectionTitle: "Work Experience Highlights"
+    },
+    {
+      jobTitle: "CNC Machinist",
+      employer: "FM Industries Inc. of NGK group",
+      workPeriod: "2025 - current",
+      list: <div className="exp-list">
+        <div>Description</div>
+        <ul className="remove-bullet-list">
+          <li>My commitment to FMI under the machine operator role includes but is not limited to the safe and efficient operation of machines, part quality assurance by means of the precision measurement of parts to confirm dimensions are as indicated on the part's respective print(s), and accurate and timely entry of work data into appropriate workplace documents.</li>
+        </ul>
+        <br />
+        <div>Highlights</div>
+        <ul>
+          <li>Gained hands-on experience operating multiple different kinds of CNC machines for both mills and lathes</li>
+          <li>Developed a proficiency with the handling and usage of manual equipment for non-destructive measurement and for work-holding solutions</li>
+          <li>Became versatile in Haas, Fanuc, and Okuma controls for running, stopping, and resetting program as well as common Manual Data Input (MDI) commands such as tool changing and zero-ing to test work coordinate systems</li>
+        </ul>
+      </div>
     },
     {
       jobTitle: "General Assistant",
@@ -196,7 +250,7 @@ const HomePageContent = {
     {
       name: "CNC Operator Program",
       period: "July 2025 - Sept 2025",
-      description: "The Computer Numerically Controlled (CNC) operator program, offered through the facilities at De Anza College, train participants to be workplace-ready for CNC operator positions and more. Over the course of eleven weeks, participants are trained in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through independent project-based learning.",
+      description: "The Computer Numerically Controlled (CNC) operator program, offered through the facilities at De Anza College, train participants to be workplace-ready for CNC operator positions and more. Over the course of eleven weeks, participants are trained in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through detailed lecture on theory and independent project-based learning.",
     },
     {
       name: "General Assembly",
