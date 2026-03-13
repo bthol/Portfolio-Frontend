@@ -558,13 +558,21 @@ hr {
 }
 
 /*-----------------------------------------------CLOUDFORM-----------------------------------------------*/
+.cloudform {
+  position: sticky;
+  top: 0px;
+}
+
 .cloud {
   border-radius: 100px;
+  height: 50px;
+  cursor: pointer;
 }
 
 .rain {
   border-radius: 30px 30px 0px 0px;
   background: var(--color-background-3);
+  height: max-content;
 }
 
 .drop {
@@ -575,6 +583,9 @@ hr {
   -webkit-box-shadow: inset 10px 0px 10px -5px var(--color-gray);
   box-shadow: inset 10px 0px 15px -10px var(--color-gray);
   transition: all 500ms linear;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 500ms ease-out;
 }
 
 .cloud-link-container {
@@ -591,18 +602,6 @@ hr {
   gap: 10px;
   align-items: center;
   padding: 10px 0px;
-}
-
-@media(min-width: 500px) {
-  .cloud-link-container > div {
-    width: 80%;
-  }
-}
-
-@media(min-width: 418px) {
-  .cloud-link-container {
-    margin-left: 35px;
-  }
 }
 
 @media(hover: hover) and (pointer: fine) {

@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useState } from 'react';
 import { ArtContent as Content } from '../ContentModules/ArtContent';
 // import { Comp5 } from '../Components/Comp5';
 import { Comp6 } from '../Components/Comp6';
@@ -9,24 +9,50 @@ const ArtPage = (props) => {
     const forefrontRef = useRef(null);
     const machineErrorRef = useRef(null);
     const textureFieldsRef = useRef(null);
-
+    // let scrollTimeout;
     const scrollManeuver = useCallback((ref) => {
         // scrolls current value of given ref to view
-        ref.current.scrollIntoView({behavior: "smooth"});
+        ref.current.scrollIntoView({behavior: "smooth", block:"center"});
     }, []);
+
+    const [showDrops, setShowDrops] = useState(false);
+    const togShowDrops = () => {
+        setShowDrops(!showDrops)
+        if (showDrops) {
+            // .rain height max-content visibility visible
+            document.querySelectorAll('.drop').forEach((drop) => {
+                drop.style.opacity = 1;
+                drop.style.visibility = 'visible';
+            })
+            document.querySelector('.rain').style.height = 'max-content';
+        } else {
+            // .rain height 25px, .drop visibility hidden
+            document.querySelectorAll('.drop').forEach((drop) => {
+                drop.style.opacity = 0;
+                const cache = setTimeout(() => {
+                    clearTimeout(cache);
+                    drop.style.visibility = 'hidden';
+                }, 500);
+            })
+            document.querySelector('.rain').style.height = '25px';
+        }
+    };
 
     const links = {
         gallery: <div>
             <div className="drop link-desat fade-left" onClick={() => {
                 scrollManeuver(forefrontRef);
+                togShowDrops();
             }}>Forefront</div>
 
             <div className="drop link-desat fade-left" onClick={() => {
                 scrollManeuver(machineErrorRef);
+                togShowDrops();
             }}>Machine Error</div>
 
             <div className="drop link-desat fade-left" onClick={() => {
                 scrollManeuver(textureFieldsRef);
+                togShowDrops();
             }}>Texture Fields</div>
         </div>,
     };
@@ -34,7 +60,7 @@ const ArtPage = (props) => {
     return (
         <div id="artpage" className="page-content">
 
-            <Comp6 title={"Gallery"} containerFirst={"container-first"} links={links.gallery}/>
+            <Comp6 title={"Gallery"} containerFirst={"container-first"} links={links.gallery} togShowDrops={togShowDrops} />
 
             <div ref={forefrontRef} className="artpage-layout-width flex-center"><h2>Forefront</h2></div>
 
