@@ -16,12 +16,22 @@ const HomePageContent = {
           <li>Work Measurement and Tolerance Holding</li>
           <li>Machine Setup and Operation</li>
           <li>Materials Processed</li>
+
+          <p>Metals</p>
+          
           <ul>
+            <li>1075 HCS (High Carbon Steel)</li>
+            <li>316 SS (Stainless Steel)</li>
             <li>AL 6061-T6</li>
             <li>AL 7075-T651</li>
+          </ul>
+
+          <p>Plastics</p>
+
+          <ul>
             <li>Teflon</li>
-            <li>Polyide</li>
-            <li>Ultum</li>
+            <li>Polymide</li>
+            <li>Ultem</li>
           </ul>
 
           <p></p>
