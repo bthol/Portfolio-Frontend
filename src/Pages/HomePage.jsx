@@ -27,8 +27,8 @@ const HomePage = (props) => {
     };
 
     // CAROUSEL (for tablet and larger)
-    const [leftArrowShow, setLeftArrowShow] = useState(0);
-    const [rightArrowShow, setRightArrowShow] = useState(1);
+    const [leftArrowShow, setLeftArrowShow] = useState("hidden");
+    const [rightArrowShow, setRightArrowShow] = useState("visible");
     const [carPos, setCarPos] = useState(0);
     const [carBut0, setCarBut0] = useState("highlight-carBut");
     const [carBut1, setCarBut1] = useState("carBut-hover");
@@ -61,24 +61,48 @@ const HomePage = (props) => {
             setSlideTabIdx1(-1);
             setSlideTabIdx2(-1);
             setCarBut0("highlight-carBut")
-            setLeftArrowShow(0);
-            setRightArrowShow(1);
+            setLeftArrowShow("hidden");
+            setRightArrowShow("visible");
         } else if (pos === 1) {
             setSlideTabIdx0(-1);
             setSlideTabIdx1(0);
             setSlideTabIdx2(-1);
             setCarBut1("highlight-carBut")
-            setLeftArrowShow(1);
-            setRightArrowShow(1);
+            setLeftArrowShow("visible");
+            setRightArrowShow("visible");
         } else if (pos === 2) {
             setSlideTabIdx0(-1);
             setSlideTabIdx1(-1);
             setSlideTabIdx2(0);
             setCarBut2("highlight-carBut")
-            setLeftArrowShow(1);
-            setRightArrowShow(0);
+            setLeftArrowShow("visible");
+            setRightArrowShow("hidden");
         }
     };
+
+    // carousel autoscroll animation
+    const autoscrollRate = 15000; // in imilliseconds
+    const [carouselTimeout, setCarouselTimeout] = useState({});
+    const carAnimCallback = (pos) => {
+        if (pos === 2) {
+            highlightButton(0);
+            setCarPos(0);
+        } else {
+            highlightButton(pos + 1);
+            setCarPos(pos + 1);
+        }
+    };
+    useEffect(() => {
+        if (carousel) {
+            clearTimeout(carouselTimeout);
+            setCarouselTimeout(
+                setTimeout(() => {
+                    clearTimeout(carouselTimeout);
+                    carAnimCallback(carPos);
+                }, autoscrollRate)
+            );
+        }
+    }, [carPos]);
 
     let carouselData = [
         {
@@ -187,6 +211,8 @@ const HomePage = (props) => {
             </div>
             <div id="homepage-mid-1" className="content-container shadow-behind">
                 <div className="flex-center-vert">
+
+
                     <div className="carousel-container">
                         <div className={`projects-carousel carPos${carPos}`}>
                             <Comp2
@@ -216,24 +242,32 @@ const HomePage = (props) => {
                             ? <div></div>
                             : <div className="carousel-control-panel">
                                 <div className="carButs flex-center">
-                                    <div className="arrow left-arrow carousel-arrow" style={{"opacity":`${leftArrowShow}`}}></div>
+                                    <div className="arrow left-arrow carousel-arrow" style={{"visibility":`${leftArrowShow}`}} onClick={() => {
+                                        setCarPos(carPos - 1)
+                                        highlightButton(carPos - 1)
+                                    }}></div>
                                     <button onClick={() => {
                                         setCarPos(0);
                                         highlightButton(0);
-                                    }} className={`carBut ${carBut0} carBut`}></button>
+                                    }} className={`carBut ${carBut0} carBut`}><div></div></button>
                                     <button onClick={() => {
                                         setCarPos(1);
                                         highlightButton(1);
-                                    }} className={`carBut ${carBut1}`}></button>
+                                    }} className={`carBut ${carBut1}`}><div></div></button>
                                     <button onClick={() => {
                                         setCarPos(2);
                                         highlightButton(2);
-                                    }} className={`carBut ${carBut2}`}></button>
-                                    <div className="arrow right-arrow carousel-arrow" style={{"opacity":`${rightArrowShow}`}}></div>
+                                    }} className={`carBut ${carBut2}`}><div></div></button>
+                                    <div className="arrow right-arrow carousel-arrow" style={{"visibility":`${rightArrowShow}`}} onClick={() => {
+                                        setCarPos(carPos + 1)
+                                        highlightButton(carPos + 1)
+                                    }}></div>
                                 </div>
                             </div>
                         }
                     </div>
+
+
                 </div>
                
             </div>

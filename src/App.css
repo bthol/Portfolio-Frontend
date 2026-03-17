@@ -640,8 +640,8 @@ hr {
     padding: 3vmin;
     width: var(--wide);
     margin-left: 1%;
-    -moz-box-shadow: -.1vw -1vw 0vw 0vw var(--color-gray);
-    -webkit-box-shadow: -.1vw -1vw 0vw 0vw var(--color-gray);
+    -moz-box-shadow: -.2vw 0vw 0vw -.1vw var(--color-gray);
+    -webkit-box-shadow: -.2vw 0vw 0vw -.1vw var(--color-gray);
     box-shadow: -.2vw 0vw 0vw -.1vw var(--color-gray);
   }
   .carPos0 {
@@ -661,10 +661,17 @@ hr {
   .highlight-carBut {
     border: 1px ridge var(--button-dark-detail);
     background-color: var(--color-gray);
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .highlight-carBut > div {
+    background: #0ba6f4;
+    height: 100%;
+    animation: autoscrollbar 15000ms linear;  /* duration must be same as autoscrollRate in HomePage.jsx */
   }
   .carousel-arrow {
     top: 13px;
-    /* cursor: pointer; */
+    cursor: pointer;
   }
   .carousel-control-panel {
     border-width: .5px 0px .5px 0px;
@@ -673,6 +680,15 @@ hr {
     background: linear-gradient(270deg, var(--color-background-3) 0%, var(--background-polar) 30%, var(--background-polar) 70%, var(--color-background-3) 100%);
     padding: 10px 0px;
     height: 45px;
+  }
+}
+
+@keyframes autoscrollbar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
   }
 }
 

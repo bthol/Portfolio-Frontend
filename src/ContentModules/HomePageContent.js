@@ -20,7 +20,7 @@ const HomePageContent = {
           <p>Metals</p>
           
           <ul>
-            <li>1075 HCS (High Carbon Steel)</li>
+            <li>1075 HSS (High Speed Steel)</li>
             <li>316 SS (Stainless Steel)</li>
             <li>AL 6061-T6</li>
             <li>AL 7075-T651</li>
