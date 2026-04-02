@@ -12,8 +12,10 @@ const HomePageContent = {
       list: <ul className="skills-list remove-bullet-list border-left">
         <li className="text-large">Subtractive Manufacturing</li>
         <ul>
+
           <li>Print Reading (ISO, ANSI and ASME standards)</li>
           <li>Work Measurement and Tolerance Holding</li>
+          <li>Safe and effective Work Handling</li>
           <li>Machine Setup and Operation</li>
           <li>Materials Processed</li>
 
@@ -42,17 +44,19 @@ const HomePageContent = {
 
           <ul>
             <li>Haas VF Series Mills (3SSYT, 2SSYT and 5SS)</li>
-            <li>Fanuc Robodrill T21IFA Mill</li>
-            <li>Haas ST 20 Lathe</li>
+            <li>Fanuc Robodrills: Alpha-D21LiB5 ADV Plus, Alpha-T21IFA</li>
             <li>Okuma OSP-P300LA Lathe</li>
+            <li>Haas ST 20 Lathe</li>
           </ul>
 
           <p>Techniques</p>
 
           <ul>
-            <li>Manual Data Input commands</li>
+            <li>Manual Data Input (MDI) commands</li>
             <li>Zero-ing to test work coordinate system matches work datum</li>
+            <li>Locator Pin indication for work positioning</li>
             <li>Edgefinder indication for work offset</li>
+            <li>Indicator Probe for work offset</li>
             <li>Manual indication with dial indicator for work offset</li>
           </ul>
 
@@ -74,18 +78,21 @@ const HomePageContent = {
             <li>chuck cleaning and installation</li>
             <li>efficient manual tool swapping</li>
           </ul>
+
         </ul>
         
         <p></p>
 
         <li className="text-large">Precision Measurement Instruments</li>
         <ul>
-          <li>Calipers (interior and exterior): Vernier, Dial, and Digital</li>
+          <li>Calipers (interior and exterior measurements): Vernier, Dial, and Digital</li>
           <li>Micrometers: Vernier, Digital, Depth Micrometer</li>
           <li>Surface Gauges: Height Gauge</li>
           <li>Bore Gauges: Telescopic Bore Gauge, Plug Gauges, Small-hole Gauge</li>
         </ul>
+
         <p></p>
+
       </ul>,
     },
     {
@@ -106,11 +113,11 @@ const HomePageContent = {
           <li>Library Management: Node.js</li>
           <li>Supersets: Typescript</li>
           <li>Frameworks: React</li>
-          <li>API: Express.js</li>
+          <li>Server: Express.js</li>
           <li>Packages: Mongoose, Dotenv, Mathjax</li>
         </ul>
         <p></p>
-        <li className="text-large">C++</li>
+        <li className="text-large">C/C++</li>
         <ul>
           <li>Compiler: Clang, GCC</li>
           <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
@@ -208,7 +215,7 @@ const HomePageContent = {
         <div>Highlights</div>
         <ul>
           <li>Gained hands-on experience operating multiple different kinds of CNC machines for both mills and lathes</li>
-          <li>Developed a proficiency with the handling and usage of manual equipment for non-destructive measurement and for work-holding solutions</li>
+          <li>Developed a proficiency with the handling and usage of manual equipment for non-destructive measurement and for common work-holding and tool-holding solutions</li>
           <li>Became versatile in Haas, Fanuc, and Okuma controls for running, stopping, and resetting program as well as common Manual Data Input (MDI) commands such as tool changing and zero-ing to test work coordinate systems</li>
         </ul>
       </div>

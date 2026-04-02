@@ -15,12 +15,12 @@ This repository contains the front end code to my portfolio website, which utilz
 
 **Commands**:
  - start development server     : `$npm run devStart`
- - start production server      : `$npm start` 
+ - start production server      : `$npm start`
  - create production build      : `$npm run build`
-
 
 **setup new dev environ**
  - install node
  - `$npm run build`
  - `$npm install -g serve`
  - test production server: `$serve -s build`
+
