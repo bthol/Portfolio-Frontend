@@ -1,10 +1,14 @@
 import React from 'react';
 import { MusicContent as Content } from '../ContentModules/MusicContent';
+import { Comp10 } from '../Components/Comp10';
 
 const MusicPage = (props) => {
 
     return (
-        <div className="page-content">
+        <div id='musicpage' className="page-content">
+            
+            <Comp10 title={"Music"} />
+
             <div id="generic-section-1" className="content-container shadow-behind container-first">
                 <h3 className="underline text-x-large">Section Title</h3>
                 {

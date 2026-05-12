@@ -51,37 +51,48 @@ const Header = (props) => {
 
     const navData = [
         {
-            name: "Pages ",
+            name: "Projects",
             links: <div className="nav-menu-list">
+
+                <p className="cursor-default"><u>Utility</u></p>
+                
                 <div onClick={(e) => {
                     e.preventDefault();
                     props.goPage(2);
-                }} className="link-desat" tabIndex={navTabIdx1}>Art</div>
+                }} className="link-desat" tabIndex={navTabIdx1}>Software</div>
 
-                {/* <div onClick={(e) => {
+                <p className="cursor-default"><u>Entertainment</u></p>
+
+                <div onClick={(e) => {
                     e.preventDefault();
                     props.goPage(3);
-                }} className="link-desat" tabIndex={navTabIdx1}>Music</div> */}
+                }} className="link-desat" tabIndex={navTabIdx1}>Games</div>
                 
             </div>,
         },
         {
-            name: "Projects ",
+            name: "Media",
             links: <div className="nav-menu-list">
 
-                <p className="cursor-default"><u>Utility</u></p>
-                <a  href="https://goodeval-1d265775b25d.herokuapp.com/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>GoodEval</a>
-                <a  href="https://bthol.github.io/Choosy/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Choosy</a>
+                {/* <p className="cursor-default"><u>Eyes</u></p> */}
+
                 <div onClick={(e) => {
-                    props.notifyFeature(e, true);
-                }} href="" className="link-desat" tabIndex={navTabIdx2}>inPlace</div>
+                    e.preventDefault();
+                    props.goPage(4);
+                }} className="link-desat" tabIndex={navTabIdx2}>Gallery</div>
                 
-                <p className="cursor-default"><u>Games</u></p>
-                <a href="https://bthol.github.io/Space-Battle/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Space Battle</a>
-                <a href="https://bthol.github.io/Retro-Toe/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Retro Toe</a>
-                <a href="https://bthol.github.io/Magic-8-Ball/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Magic 8 Ball</a>
-                <a href="https://bthol.github.io/Lapis-Papyrus-Scalpellus/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Lapis Papyrus Scalpellus</a>
-                <a href="https://bthol.github.io/holiday-tree/" target="_blank" rel="noreferrer" className="link-desat" tabIndex={navTabIdx2}>Holiday Tree</a>
+                {/* <div onClick={(e) => {
+                    e.preventDefault();
+                    props.goPage(5);
+                }} className="link-desat" tabIndex={navTabIdx2}>Origami</div> */}
+
+                {/* <p className="cursor-default"><u>Ears</u></p> */}
+
+                {/* <div onClick={(e) => {
+                    e.preventDefault();
+                    props.goPage(6);
+                }} className="link-desat" tabIndex={navTabIdx2}>Music</div> */}
+                
             </div>,
         },
     ];

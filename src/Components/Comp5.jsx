@@ -2,13 +2,13 @@ import React from "react";
 
 const Comp5 = (props) => {
     return (
-        <div className="artpage-layout-width origami-grid-layout">
+        <div className="layout-width origami-grid-layout">
             <div className="origami-grid-images">
                 {props.image1}
                 {props.image2}
             </div>
             <div className="content-container">
-                <div>{props.name}</div>
+                <p>About</p>
                 <div>{props.describe}</div>
             </div>
         </div>

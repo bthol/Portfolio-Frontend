@@ -1,10 +1,14 @@
 import React from 'react';
 import { GenericContent as Content } from '../ContentModules/GenericContent';
+import { Comp10 } from '../Components/Comp10';
 
 const GenericPage = (props) => {
 
     return (
         <div className="page-content">
+
+            <Comp10 title={"Generic Page Title"} />
+
             <div id="generic-section-1" className="content-container shadow-behind container-first">
                 <h3 className="underline text-x-large">Section Title</h3>
                 {

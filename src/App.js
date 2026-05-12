@@ -2,11 +2,16 @@ import React, { useState, useEffect, useRef, useCallback} from 'react';
 import './App.css';
 import { Notify } from './Modals/Notify';
 import { Comp8 } from './Components/Comp8';
+// template imports
 import { Header } from './Template/Header';
 import { Footer } from './Template/Footer';
+// page content imports
 import { GenericPage } from './Pages/GenericPage';
 import { HomePage } from './Pages/HomePage';
-import { ArtPage } from './Pages/ArtPage';
+import { SoftwarePage } from './Pages/SoftwarePage';
+import { GamePage } from './Pages/GamePage';
+import { GalleryPage } from './Pages/GalleryPage';
+import { OrigamiPage } from './Pages/OrigamiPage';
 import { MusicPage } from './Pages/MusicPage';
 
 function App() {
@@ -303,7 +308,25 @@ function App() {
 
       {
         page === 2 &&
-        <ArtPage
+        <SoftwarePage
+          mobile={mobile}
+          notifyFeature={notifyFeature}
+          enter={enter}
+        />
+      }
+
+      {
+        page === 3 &&
+        <GamePage
+          mobile={mobile}
+          notifyFeature={notifyFeature}
+          enter={enter}
+        />
+      }
+
+      {
+        page === 4 &&
+        <GalleryPage
           mobile={mobile}
           notifyFeature={notifyFeature}
           enter={enter}
@@ -311,7 +334,16 @@ function App() {
       }
       
       {
-        page === 3 &&
+        page === 5 &&
+        <OrigamiPage
+          mobile={mobile}
+          notifyFeature={notifyFeature}
+          enter={enter}
+        />
+      }
+      
+      {
+        page === 6 &&
         <MusicPage
           mobile={mobile}
           notifyFeature={notifyFeature}
