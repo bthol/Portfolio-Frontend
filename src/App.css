@@ -109,11 +109,15 @@
 
 /*-----------------------------------------------TEMPLATE-LAYOUT-----------------------------------------------*/
 
+#root-react {
+  min-height: 100vh;
+}
+
 /*-----------------------------------------------HEADER-TEMPLATE-----------------------------------------------*/
 .app-header {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   top: 0%;
 }
 
@@ -580,10 +584,9 @@ hr {
 
 /*-----------------------------------------------CLOUDFORM-----------------------------------------------*/
 .cloudform {
-  /* for grid/flex parents */
-  /* align-self: start; */
   position: sticky;
-  top: 0;
+  top: var(--below-header);
+  z-index: 2;
 }
 
 .cloud {
@@ -593,7 +596,7 @@ hr {
 }
 
 .rain {
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px;
   background: var(--color-background-3);
   height: max-content;
 }
@@ -608,7 +611,7 @@ hr {
   transition: all 500ms linear;
   visibility: visible;
   opacity: 1;
-  transition: opacity 500ms ease-out;
+  transition: opacity 800ms cubic-bezier(0, 0, .75, 1);
 }
 
 .cloud-link-container {

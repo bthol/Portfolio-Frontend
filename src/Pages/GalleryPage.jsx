@@ -78,10 +78,11 @@ const GalleryPage = (props) => {
                     // hidden
                     document.querySelectorAll('.drop').forEach((drop) => {
                         drop.style.opacity = 0;
-                        const cache = setTimeout(() => {
-                            clearTimeout(cache);
-                            drop.style.visibility = 'hidden';
-                        }, 500);
+                        drop.style.visibility = 'hidden';
+                        // const cache = setTimeout(() => {
+                        //     clearTimeout(cache);
+                        //     drop.style.visibility = 'hidden';
+                        // }, 100);
                     })
                     linkContainer.current.style.height = '0px';
                 }
