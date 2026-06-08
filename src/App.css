@@ -1103,7 +1103,7 @@ hr {
   position: fixed;
   width: 100%;
   height: var(--areaHeight);
-  z-index: 1;
+  z-index: 2;
   top: calc(var(--below-header) - 8px);
   left: 0px;
   display: flex;
@@ -1111,7 +1111,7 @@ hr {
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  background-color: #000000b3;
+  background-color: #010102cc;
 }
 
 .gallerypage-gallery-row {
