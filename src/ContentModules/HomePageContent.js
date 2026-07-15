@@ -88,7 +88,7 @@ const HomePageContent = {
           <li>Calipers (interior and exterior measurements): Vernier, Dial, and Digital</li>
           <li>Micrometers: Vernier, Digital, Depth Micrometer</li>
           <li>Surface Gauges: Height Gauge</li>
-          <li>Bore Gauges: Telescopic Bore Gauge, Plug Gauges, Small-hole Gauge</li>
+          <li>Bore Gauges: Telescopic Bore Gauge, Plug Gauges, Adjustable Vernier Gauge</li>
         </ul>
 
         <p></p>
@@ -103,18 +103,19 @@ const HomePageContent = {
         <ul>
           <li>Library Management: Pip</li>
           <li>Frameworks: Django</li>
-          <li>API: Flask</li>
+          <li>API: Flask, FastAPI</li>
           <li>Environments: venv, pipenv, virtualenv</li>
-          <li>Packages: Numpy, Matplotlib</li>
+          <li>Packages: Numpy, Cmath, Matplotlib, Pydantic</li>
         </ul>
         <p></p>
         <li className="text-large">JavaScript</li>
         <ul>
           <li>Library Management: Node.js</li>
           <li>Supersets: Typescript</li>
-          <li>Frameworks: React</li>
+          <li>Frameworks: React, Electron</li>
           <li>Server: Express.js</li>
-          <li>Packages: Mongoose, Dotenv, Mathjax</li>
+          <li>Packages: Mongoose ODM, Nodemon, CORS, DotEnv, EJS, Mathjax</li>
+          <li>Web API Interfaces: Web Storage API, Web Worker API, Web Audio API</li>
         </ul>
         <p></p>
         <li className="text-large">C/C++</li>
@@ -130,12 +131,16 @@ const HomePageContent = {
           <li>modals and forms</li>
           <li>Audio and player controls</li>
           <li>raster images & vector graphics</li>
+          <li>Language Specification</li>
+          <li>Viewport Unit Scale</li>
+          <li>Content Security Policy</li>
         </ul>
         <p></p>
         <li className="text-large">CSS</li>
         <ul>
           <li>Modules: Flexbox, CSS Grid</li>
           <li>Preprocessor: Sass</li>
+          <li>Frameworks: Bootstrap</li>
         </ul>
         <p></p>
       </ul>,
@@ -185,12 +190,12 @@ const HomePageContent = {
           <li>Saturation/Distortion</li>
         </ul>
         <p></p>
-        <li className="text-large">Audio Synthesis</li>
+        <li className="text-large">Audio Synthesis Methods</li>
         <ul>
           <li>Additive (noise and/or Digitally Controlled Oscillator(DCO) generate signals combined to form one sound through the unison psychoacoustic effect)</li>
           <li>Subtractive (hipass, lopass, bandpass, and shelf filters modulated with ASDR, ASD, AD, and graphical envelopes)</li>
           <li>Frequency Modulation (FM), Amplitude Modulation (AM), Ring Modulation (RM), Pulse Width Modulation (PWM) (properties of a modulator signal acts on properties of a carrier signal)</li>
-          <li>Granular (audio sample spliced into parts looped at high frequency to generate tones)</li>
+          <li>Granular (audio samples are spliced into parts and looped at high frequency to generate "dirty" tones)</li>
           <li>Pitch Mapping (tones are generated relative to a map visually characterizing changes in frequency and amplitude across time)</li>
           <li>Spectral (audible frequency spectrum is divided into separately manipulated sections)</li>
         </ul>
@@ -205,7 +210,7 @@ const HomePageContent = {
     {
       jobTitle: "CNC Machinist",
       employer: "FM Industries Inc. of NGK group",
-      workPeriod: "2025 - current",
+      workPeriod: "2025 - present",
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
@@ -242,8 +247,8 @@ const HomePageContent = {
     },
     {
       jobTitle: "Music Composer/Audio Engineer",
-      employer: "Augium Productions",
-      workPeriod: "2012 - Present",
+      employer: "Augium Productions (Self Employment)",
+      workPeriod: "2012 - present",
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
@@ -253,7 +258,7 @@ const HomePageContent = {
         <div>Highlights</div>
         <ul>
           <li >Singlehandedly sound designed, composed, and engineered 400+ songs measuring 25+ hours in duration across multiple musical genres using a variety of digital audio workstations and related technologies</li>
-          <li >Involved in all phases of music production (i.e. music concept and theory, sound design, composition, performance and recording, mix engineering, and mastering)</li>
+          <li >Involved in all phases of music production (i.e. music concept and theory, sound design, composition, performance and recording, mix engineering and mastering)</li>
           <li >General mastering ensures that the audio playback is consistent on a variety of playback systems (e.g. headphone, car stereo, laptop, professional studio monitors, et cetera).</li>
           <li >Created countless audio synthesizer patches using various digital methods of audio synthesis (additive, subtractive, FM, AM, PWM, wavetable, parametric physical modelling, re-synthesis, spectral, pitch mapping, granular)</li>
         </ul>

@@ -6,8 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self';
+
+      connect-src 'self'
+      https://bthol-portfolio-backend.herokuapp.com/
+      ;
+
+      img-src 'self'
+      data:
+      ../Images/
+      ;
+
+      style-src 'self' 'unsafe-inline'
+      https://fonts.googleapis.com
+      ;
+
+      font-src 'self' data:
+      https://fonts.gstatic.com
+      https://fonts.googleapis.com/css2?family=Orbitron&display=swap
+      https://fonts.googleapis.com/css2?family=Raleway&display=swap
+      ;"
+    />
+    <meta
       name="Blake Thollaug's Portfolio Website"
-      content="I created this website to showcase my technological and creative skillset through the website itself and the projects hosted thereon."
+      content="I created this website to showcase my knowledge and skill through the website itself and the projects hosted thereon."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
