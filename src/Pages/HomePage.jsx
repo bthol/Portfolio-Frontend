@@ -7,6 +7,8 @@ import { Comp9 } from '../Components/Comp9';
 import { Verify } from '../Modals/Verify';
 import { ProfilePhoto } from '../Images/ProfilePhoto';
 import { HomePageContent as Content } from '../ContentModules/HomePageContent';
+import { SoftwareContent as Soft } from '../ContentModules/SoftwareContent';
+import { GameContent as Game } from '../ContentModules/GameContent';
 
 const HomePage = (props) => {
     // LIKE BUTTON
@@ -118,14 +120,10 @@ const HomePage = (props) => {
                 </div>
             </div>,
             text: <div>
-                <p><b>Project Description:</b> GoodEval is a multi-page web app computational package composed of the GoodEval Calculator, its more advanced counterpart the GoodEval Evaluator powered by the Eval API, as well as a variety of form interfaces making use of the Eval API or dedicated scripts.</p>
-                <p><b>Tech Stack:</b> Python, Pip, Django, Flask, JavaScript, HTML, CSS, Heroku</p>
+                <p><b>Description:</b> {Soft.software[0].description}</p>
+                <p><b>Tech Stack:</b> {Soft.software[0].techStack}</p>
             </div>,
-            list: <ul>
-                <li>Calculator features custom scripts for pre-validation and post-validation for user input, an edit mode for problem editing, and scientific grade functions presented in a theme-able interface with a togglable problem history panel.</li>
-                <li>Evaluator is powered by the Eval API, which evaluates string data in place of basic numeral processing to access the advantage of a whole array of built-in key functions.</li>
-                <li>Operator explores the concept of operators in a series of dynamically updating calculator forms, going as far as to offer complex matrix operations including but not limited to matrix determinant calculation and matrix inversion.</li>
-            </ul>,
+            list: Soft.software[0].list,
         },
         {
             id: "projects-2",
@@ -140,15 +138,10 @@ const HomePage = (props) => {
                 </div>
             </div>,
             text: <div>
-                <p><b>Project Description:</b> Fight off the alien horde for a new high score in this arcade-style battle game!</p>
-                <p><b>Tech Stack:</b> JQuery, Express.js, EJS templates, JavaScript, HTML, CSS, JS Modules, MongoDB Atlas, Mongoose Object Document Modelling (ODM), Heroku Cloud Service Provider (CSP)</p>
+                <p><b>Description:</b> {Game.games[0].description}</p>
+                <p><b>Tech Stack:</b> {Game.games[0].techStack}</p>
             </div>,
-            list: <ul>
-                <li>Custom RESTful API linked to a cloud database that allows game scores to be stored between sessions, so that the top 10 scores of all time can be displayed on the scoreboard page.</li>
-                <li>State variables, data structures, and Document Object Model (DOM) selections are organized into respective JS modules for best code manageability practices.</li>
-                <li>Pages are displayed by calling functions that mutate the DOM and pages are tracked with a global variable that updates when a page's function is run.</li>
-                <li>Music and sound FX are designed and crafted with the use of software audio synthesis.</li>
-            </ul>,
+            list: Game.games[0].list,
         },
         {
             id: "projects-3",
@@ -164,15 +157,10 @@ const HomePage = (props) => {
             </div>,
             carousel: <img src="" alt="project carousel"></img>,
             text: <div>
-                <p><b>Project Description:</b> Choosy is a simple website for option selection. Need to choose? Choose Choosy!</p>
-                <p><b>Tech Stack:</b> Typescript, SASS, HTML, Github pages</p>
+                <p><b>Description:</b> {Soft.software[1].description}</p>
+                <p><b>Tech Stack:</b> {Soft.software[1].techStack}</p>
             </div>,
-            list: <ul>
-                <li>Exceptionally robust and simply stylish interface that adapts to a wide range of viewports with ease and clarity.</li>
-                <li>Website architecture separates source and build code for integration of transpilable development dependencies.</li>
-                <li>Stochastic programming constrained to randomized selection methods' selection process to preserve system stability in other respects</li>
-                <li>Quick and lightweight deployment of application via GitHub Pages.</li>
-            </ul>,
+            list: Soft.software[1].list,
         },
     ];
 

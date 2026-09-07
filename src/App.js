@@ -47,6 +47,13 @@ function App() {
   const notifyIdle = useCallback((e, bool) => {
     setIdleNotify(bool);
   }, []);
+
+  // CONNECTIVITY NOTIFICATION
+  useEffect(() => {
+    window.addEventListener('offline', (e) => {
+      notifyInternetConnect(e, true);
+    });
+  }, []);
   
   // IDLE NOTIFICATION
   const secondsIdle = 600 * 1000; // 600 seconds = 10 minutes // number of seconds idle before notify
@@ -171,10 +178,19 @@ function App() {
   const [portfolioLikes, setPortfolioLikes] = useState(<Comp8 />);
   
   // fetch data on load
-  const ID = "64a90dfc4b3042dcaabdf1b4";
+  const [ID, setID] = useState("64a90dfc4b3042dcaabdf1b4");
+  const [noData, setNoData] = useState('∅'); // 🚫
   useEffect(() => {
     let ignore = false;
     const getResources = () => {
+      // test internet connection
+      if (!window.navigator.onLine) {
+        // render no data symbol for data not received due no internet
+        setPortfolioViews(noData);
+        setPortfolioLikes(noData);
+        // prevent fetch request if no internet
+        return () => {ignore = true};
+      }
       try {
         // onFulfilled
         // Request resources and display them
@@ -217,8 +233,8 @@ function App() {
           setInternetConnectNotify(true);
         }
         // Display message in place of resources to avoid the appearance of infinite loading
-        setPortfolioLikes("failed to load");
-        setPortfolioViews("failed to load");
+        setPortfolioLikes(noData);
+        setPortfolioViews(noData);
         // trigger countdown for connection retry
         // const secondsCD = 30; // seconds before retry
         // clearTimeout(cdCache.current);

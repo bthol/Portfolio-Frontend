@@ -543,7 +543,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #00000066;
+  background-color: #010102cc;
 }
 
 .modal-content {
@@ -1039,7 +1039,8 @@ hr {
   font-weight: 600;
   padding: 8px;
   border-radius: 25px;
-  color: #e59500;
+  background: #000000;
+  animation: playbutton-teaser 650ms linear infinite;
 }
 
 @media(min-width: 768px) {
@@ -1053,6 +1054,12 @@ hr {
 
   #gamepage .layout-width {
     grid-column: 1 / 4;
+  }
+
+  .comp11-layout > a {
+    background: none;
+    color: #e59500;
+    animation: none;
   }
 }
 
@@ -1111,7 +1118,6 @@ hr {
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  background-color: #010102cc;
 }
 
 .gallerypage-gallery-row {

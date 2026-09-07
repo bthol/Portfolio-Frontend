@@ -10,38 +10,77 @@ const HomePageContent = {
       id: "skills-1",
       title: "High-Tech Manufacturing",
       list: <ul className="skills-list remove-bullet-list border-left">
-        <li className="text-large">Subtractive Manufacturing</li>
+        <li className="text-large">Materials Processed</li>
         <ul>
-
-          <li>Print Reading (ISO, ANSI and ASME standards)</li>
-          <li>Work Measurement and Tolerance Holding</li>
-          <li>Safe and effective Work Handling</li>
-          <li>Machine Setup and Operation</li>
-          <li>Materials Processed</li>
-
           <p>Metals</p>
-          
+
           <ul>
-            <li>1075 HSS (High Speed Steel)</li>
-            <li>316 SS (Stainless Steel)</li>
-            <li>AL 6061-T6</li>
-            <li>AL 7075-T651</li>
+            <li>6061-T6 and 7075-T651 Aluminum Alloy grades</li>
+            <li>304 and 316 Austenitic Stainless Steel Alloy grades</li>
+            <li>1075 High Speed Steel Alloy Grade</li>
           </ul>
 
           <p>Plastics</p>
 
           <ul>
-            <li>Teflon</li>
-            <li>Polymide</li>
-            <li>Ultem</li>
+            <li>Teflon ( Polytetrafluoroethylene, Synthetic Thermoplastic Flouropolymer with the lowest coefficient of friction for known solids)</li>
+            <li>Polyimide ( heat-resistant high-performance plastic polymer )</li>
+            <li>Ultem ( Polyetherimide, cost efficient Thermoplastic )</li>
+            <li>Rexolite 1422 ( thermoset cross-linked polystyrene copolymer with high dielectric strength )</li>
           </ul>
 
-          <p></p>
+        </ul>
 
-          <li>Computer Numerical Controlled (CNC) Machining</li>
+        <p></p>
+        <li className="text-large">Measurement Instruments</li>
+        <p></p>
 
-          <p>Tools</p>
+        <ul>
+          <p>Calipers</p>
+          <ul>
+            <li>Vernier</li>
+            <li>Dial</li>
+            <li>Digital</li>
+          </ul>
 
+          <p>Micrometers</p>
+          <ul>
+            <li>Vernier</li>
+            <li>Digital</li>
+            <li>Depth Micrometer</li>
+          </ul>
+
+          <p>Gauges</p>
+          <ul>
+            <li>Height Gauge</li>
+            <li>Telescopic Bore Gauge</li>
+            <li>Plug Gauge</li>
+            <li>Adjustable Bore Gauge</li>
+          </ul>
+
+          <p>Shadow Imaging</p>
+          <ul>
+            <li>Optical Comparitor</li>
+          </ul>
+        </ul>
+        
+        <p></p>
+        <li className="text-large">Subtractive Manufacturing</li>
+        <p></p>
+        
+        <ul>
+          <p>Overview</p>
+          <ul>
+            <li>Print Reading (ISO, ANSI and ASME standards)</li>
+            <li>Machine Setup and Operation</li>
+            <li>Work measurement and tolerance holding</li>
+            <li>Safe and effective work handling</li>
+            <li>Clean and organized production environment</li>
+          </ul>
+        </ul>
+
+        <ul>
+          <p>Computer Numerical Control (CNC) Machine Tools</p>
           <ul>
             <li>Haas VF Series Mills (3SSYT, 2SSYT and 5SS)</li>
             <li>Fanuc Robodrills: Alpha-D21LiB5 ADV Plus, Alpha-T21IFA</li>
@@ -49,8 +88,7 @@ const HomePageContent = {
             <li>Haas ST 20 Lathe</li>
           </ul>
 
-          <p>Techniques</p>
-
+          <p>CNC Techniques</p>
           <ul>
             <li>Manual Data Input (MDI) commands</li>
             <li>Zero-ing to test work coordinate system matches work datum</li>
@@ -58,110 +96,133 @@ const HomePageContent = {
             <li>Edgefinder indication for work offset</li>
             <li>Indicator Probe for work offset</li>
             <li>Manual indication with dial indicator for work offset</li>
+            <li>Clocking with dowel pins for precise work-holding rotational orientation</li>
           </ul>
 
-          <p></p>
-
-          <li>Manual Machining</li>
-
-          <p>Tools</p>
-
+          <p>Manual Machine Tools</p>
           <ul>
             <li>Manual Mill (Bridgeport machine)</li>
             <li>Manual Lathe (LeBlond RKL-1340G)</li>
           </ul>
 
-          <p>Techniques</p>
+          <p>Manual Machine Techniques</p>
 
           <ul>
+            <li>Pilot a bore by pecking a stub drill</li>
+            <li>Square a vise to a machine axis</li>
             <li>Zero on datum using edge finder</li>
             <li>chuck cleaning and installation</li>
-            <li>efficient manual tool swapping</li>
           </ul>
+          
+          <p></p>
 
         </ul>
-        
-        <p></p>
-
-        <li className="text-large">Precision Measurement Instruments</li>
-        <ul>
-          <li>Calipers (interior and exterior measurements): Vernier, Dial, and Digital</li>
-          <li>Micrometers: Vernier, Digital, Depth Micrometer</li>
-          <li>Surface Gauges: Height Gauge</li>
-          <li>Bore Gauges: Telescopic Bore Gauge, Plug Gauges, Adjustable Vernier Gauge</li>
-        </ul>
-
-        <p></p>
 
       </ul>,
     },
     {
       id: "skills-2",
-      title: "Computer Programming",
+      title: "Software Development",
       list: <ul className="skills-list remove-bullet-list border-left">
-        <li className="text-large">Python</li>
+
+        <li className="text-large">Software Details</li>
         <ul>
-          <li>Library Management: Pip</li>
-          <li>Frameworks: Django</li>
-          <li>API: Flask, FastAPI</li>
-          <li>Environments: venv, pipenv, virtualenv</li>
-          <li>Packages: Numpy, Cmath, Matplotlib, Pydantic</li>
+          <p>Operating Systems</p>
+          <ul>
+            <li>Windows</li>
+            <li>MacOS</li>
+          </ul>
+        </ul>
+
+        <ul>
+          <p>Platforms</p>
+          <ul>
+            <li>Website (Online)</li>
+            <li>Desktop (Offline)</li>
+            <li>Browser Extension</li>
+          </ul>
         </ul>
         <p></p>
-        <li className="text-large">JavaScript</li>
-        <ul>
-          <li>Library Management: Node.js</li>
-          <li>Supersets: Typescript</li>
-          <li>Frameworks: React, Electron</li>
-          <li>Server: Express.js</li>
-          <li>Packages: Mongoose ODM, Nodemon, CORS, DotEnv, EJS, Mathjax</li>
-          <li>Web API Interfaces: Web Storage API, Web Worker API, Web Audio API</li>
-        </ul>
+
+        <li className="text-large">Programming Languages</li>
         <p></p>
-        <li className="text-large">C/C++</li>
         <ul>
-          <li>Compiler: Clang, GCC</li>
-          <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
-          <li>Resources: MSYS environment, pacman package handling</li>
+          <p>Python</p>
+          <ul>
+            <li>Library Management: Pip</li>
+            <li>Frameworks: Django</li>
+            <li>API: Flask, FastAPI</li>
+            <li>Environments: venv, pipenv, virtualenv</li>
+            <li>Packages: Numpy, Cmath, Matplotlib, Pydantic</li>
+          </ul>
+          <p></p>
+
+          <p>JavaScript</p>
+          <ul>
+            <li>Library Management: Node.js</li>
+            <li>Supersets: Typescript</li>
+            <li>Frameworks: React, Electron</li>
+            <li>Server: Express.js</li>
+            <li>Packages: Mongoose ODM, Nodemon, CORS, DotEnv, EJS Templating, Mathjax Mathematics Display Engine</li>
+            <li>Web API Interfaces: Web Storage API, Web Worker API, Web Audio API</li>
+          </ul>
+          <p></p>
+
+          <p>C/C++</p>
+          <ul>
+            <li>Compiler: Clang, GCC</li>
+            <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
+            <li>Resources: MSYS environment, pacman package handling</li>
+          </ul>
+          <p></p>
+
+          <p>HTML</p>
+          <ul>
+            <li>markdown content</li>
+            <li>modals and forms</li>
+            <li>Audio and player controls</li>
+            <li>raster images & vector graphics</li>
+            <li>Language Specification</li>
+            <li>Viewport Unit Scale</li>
+            <li>Content Security Policy</li>
+          </ul>
+          <p></p>
+
+          <p>CSS</p>
+          <ul>
+            <li>Modules: Flexbox, CSS Grid</li>
+            <li>Preprocessor: Sass</li>
+            <li>Frameworks: Bootstrap</li>
+          </ul>
+          <p></p>
+
         </ul>
-        <p></p>
-        <li className="text-large">HTML</li>
-        <ul>
-          <li>markdown content</li>
-          <li>modals and forms</li>
-          <li>Audio and player controls</li>
-          <li>raster images & vector graphics</li>
-          <li>Language Specification</li>
-          <li>Viewport Unit Scale</li>
-          <li>Content Security Policy</li>
-        </ul>
-        <p></p>
-        <li className="text-large">CSS</li>
-        <ul>
-          <li>Modules: Flexbox, CSS Grid</li>
-          <li>Preprocessor: Sass</li>
-          <li>Frameworks: Bootstrap</li>
-        </ul>
-        <p></p>
       </ul>,
     },
     {
       id: "skills-3",
       title: "Graphic Design",
       list: <ul className="skills-list remove-bullet-list border-left">
-        <li className="text-large">Web Application User Experience (UX) and User Interface (UI) Design</li>
+        <li className="text-large">Subjects</li>
         <ul>
-          <li>Responsive Design: useful for compatibility with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
-          <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
-          <li>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
+          <li>Website</li>
+          <li>Business Card</li>
+          <li>Album Cover</li>
         </ul>
         <p></p>
-        <li className="text-large">Graphical Processing Software for Digital Graphics</li>
+        <li className="text-large">Digital Graphics Software</li>
         <ul>
           <li>Affinity Photo</li>
           <li>Affinity Designer</li>
           <li>Canva</li>
           <li>Paint.net</li>
+        </ul>
+        <p></p>
+        <li className="text-large">User Experience (UX) and User Interface (UI) Design Principles</li>
+        <ul>
+          <li>Responsive Design: useful for compatibility with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
+          <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
+          <li>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
         </ul>
         <p></p>
       </ul>,
@@ -205,50 +266,48 @@ const HomePageContent = {
   ],
   experience: [
     {
-      sectionTitle: "Work Experience Highlights"
+      sectionTitle: "Career Background"
     },
     {
-      jobTitle: "CNC Machinist",
+      jobTitle: "Apprentice Machinist",
       employer: "FM Industries Inc. of NGK group",
-      workPeriod: "2025 - present",
+      workPeriod: "Sept 2026 - Present",
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
-          <li>My commitment to FMI under the machine operator role includes but is not limited to the safe and efficient operation of machines, part quality assurance by means of the precision measurement of parts to confirm dimensions are as indicated on the part's respective print(s), and accurate and timely entry of work data into appropriate workplace documents.</li>
+          <li>The Apprentice Machinist title is given to particpipants of the FMI Apprenticeship program. Participants are practically trained to operate on a whole variety of machines throughout the production floor in addition to relevant college coursework to bolster skill with knowledge.</li>
+        </ul>
+        <br />
+        <div>Highlights</div>
+        <ul>
+          <li>Recognized for strong work ethic and value of part quality</li>
+          <li>Provided the opportunity to gain comprehensive machine tool knowledge from both a theoretical and practical perspective</li>
+        </ul>
+      </div>
+    },
+    {
+      jobTitle: "CNC Mill Machinist 1",
+      employer: "FM Industries Inc. of NGK group",
+      workPeriod: "Nov 2025 - Sept 2026",
+      list: <div className="exp-list">
+        <div>Description</div>
+        <ul className="remove-bullet-list">
+          <li>My commitment to FMI under the machine operator role involves safe and efficient machine operation, part quality assurance by taking strategic precision measurements to confirm dimensions are within tolerances indicated by print or else by making corrective machine adjustments, as well as accurate and timely entry of work data into appropriate workplace documention.</li>
         </ul>
         <br />
         <div>Highlights</div>
         <ul>
           <li>Gained hands-on experience operating multiple different kinds of CNC machines for both mills and lathes</li>
-          <li>Developed a proficiency with the handling and usage of manual equipment for non-destructive measurement and for common work-holding and tool-holding solutions</li>
-          <li>Became versatile in Haas, Fanuc, and Okuma controls for running, stopping, and resetting program as well as common Manual Data Input (MDI) commands such as tool changing and zero-ing to test work coordinate systems</li>
-        </ul>
-      </div>
-    },
-    {
-      jobTitle: "General Assistant",
-      employer: "Albany Saunas",
-      workPeriod: "2022 - 2023",
-      list: <div className="exp-list">
-        <div>Description</div>
-        <ul className="remove-bullet-list">
-          <li>In essence, I performed whichever tasks that were requisite to the best of my ability, which typically included setting up and breaking down massage rooms, measuring and correcting hot tub water conditions, washing saunas as needed, as well as maintaining a clean and orderly store and storefront.</li>
-        </ul>
-        <br />
-        <div>Highlights</div>
-        <ul>
-          <li>Adapting to changes in work tasks and approaches to task completion</li>
-          <li>Troubleshooting software and hardware problems with video surveillance system and other workplace technologies to identify and implement technical solutions</li>
-          <li>Updating customer data in prototype software database to account for customer and business needs</li>
-          <li>Measuring furnace temperature using the AOPUTTRIVER AP-2732 non-contact infrared thermometer</li>
-          <li>Testing and correcting water PH and chlorine levels to be within accepted ranges</li>
+          <li>Upskilled handling and usage of manual equipment for non-destructive measurement and for common work-holding and tool-holding solutions</li>
+          <li>Familiarized Haas, Fanuc, and Okuma controls for running, stopping, and resetting program as well as common Manual Data Input (MDI) commands such as tool changing and zero-ing to test work coordinate systems</li>
+          <li>Sustained best chip management and preventative maintenance practices for all operated machines</li>
         </ul>
       </div>
     },
     {
       jobTitle: "Music Composer/Audio Engineer",
       employer: "Augium Productions (Self Employment)",
-      workPeriod: "2012 - present",
+      workPeriod: "Jan 2012 - Present",
       list: <div className="exp-list">
         <div>Description</div>
         <ul className="remove-bullet-list">
@@ -272,7 +331,7 @@ const HomePageContent = {
     {
       name: "CNC Operator Program",
       period: "July 2025 - Sept 2025",
-      description: "The Computer Numerically Controlled (CNC) operator program, offered through the facilities at De Anza College, train participants to be workplace-ready for CNC operator positions and more. Over the course of eleven weeks, participants are trained in the theory and practice of the fundamentals of manual machining and given extensive hands on experience with CNC machines through detailed lecture on theory and independent project-based learning.",
+      description: "The Computer Numerically Controlled (CNC) operator program, offered through the facilities at De Anza College, train students to be workplace-ready for CNC operator positions and more. Over the course of eleven weeks, students are trained in the theory and practice of the fundamentals of manual machining and given hands on experience with CNC machines through detailed lecture on theory and project-based learning.",
     },
     {
       name: "General Assembly",

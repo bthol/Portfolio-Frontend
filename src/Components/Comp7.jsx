@@ -66,7 +66,7 @@ const Comp7 = (props) => {
     return (
         <div className={`gallery-image-container ${props.galleryColumn}`} onClick={(e) => { toggleSelect(e) }} onKeyDown={(e) => { if (props.enter(e)) { toggleSelect(e) } }}>
             <div>{props.image}</div>
-            {!select && <div className="gallery-image-select">
+            {!select && <div className="gallery-image-select modal-container">
                 {sized && props.image}
                 <div>{`${props.info} `} by Blake Thollaug </div>
             </div>}
