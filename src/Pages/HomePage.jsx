@@ -15,7 +15,7 @@ const HomePage = (props) => {
     useEffect(() => {
         // update style on theme change
         props.updateLikeBtn();
-    }, [props.theme]);
+    }, [props]);
 
     // SPAM PROTECTION FOR emailto html scheme
     const [modalShow, setModalShow] = useState(false);

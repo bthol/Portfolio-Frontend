@@ -9,12 +9,12 @@ const Comp12 = (props) => {
                     props.notifyFeature(e, true);
                 }
             }}>Try this Software</a>
-            <p>Software Type: {props.softwareType}</p>
-            <p>Platform: {props.platform}</p>
-            <p>Purpose: {props.purpose}</p>
-            <p>Tech Stack: {props.techStack}</p>
-            <p>Description: {props.description}</p>
-            <p>{props.list}</p>
+            <p><b>Software Type</b>: {props.softwareType}</p>
+            <p><b>Platform</b>: {props.platform}</p>
+            <p><b>Purpose</b>: {props.purpose}</p>
+            <p><b>Tech Stack</b>: {props.techStack}</p>
+            <p><b>Description</b>: {props.description}</p>
+            <div>{props.list}</div>
         </div>
     )
 }

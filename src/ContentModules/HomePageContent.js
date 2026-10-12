@@ -15,9 +15,9 @@ const HomePageContent = {
           <p>Metals</p>
 
           <ul>
-            <li>6061-T6 and 7075-T651 Aluminum Alloy grades</li>
-            <li>304 and 316 Austenitic Stainless Steel Alloy grades</li>
-            <li>1075 High Speed Steel Alloy Grade</li>
+            <li>6061-T6 and 7075-T651 Aluminum alloy grades</li>
+            <li>303, 304 and 316 Austenitic Stainless Steel alloy grades</li>
+            <li>1075 High Speed Steel alloy grade</li>
           </ul>
 
           <p>Plastics</p>
@@ -31,9 +31,7 @@ const HomePageContent = {
 
         </ul>
 
-        <p></p>
-        <li className="text-large">Measurement Instruments</li>
-        <p></p>
+        <li className="text-large">Metrology Instruments</li>
 
         <ul>
           <p>Calipers</p>
@@ -48,25 +46,29 @@ const HomePageContent = {
             <li>Vernier</li>
             <li>Digital</li>
             <li>Depth Micrometer</li>
+            <li>3-point Internal Micrometer</li>
           </ul>
 
           <p>Gauges</p>
           <ul>
             <li>Height Gauge</li>
-            <li>Telescopic Bore Gauge</li>
             <li>Plug Gauge</li>
-            <li>Adjustable Bore Gauge</li>
+            <li>Telescopic Bore Gauge</li>
+            <li>Chamfer Gauge</li>
           </ul>
 
           <p>Shadow Imaging</p>
           <ul>
             <li>Optical Comparitor</li>
           </ul>
+          
+          <p>Chemical Concentration</p>
+          <ul>
+            <li>Analog Hand-held Refractometer (Testing Coolant Concentration)</li>
+          </ul>
         </ul>
         
-        <p></p>
         <li className="text-large">Subtractive Manufacturing</li>
-        <p></p>
         
         <ul>
           <p>Overview</p>
@@ -153,7 +155,7 @@ const HomePageContent = {
             <li>Frameworks: Django</li>
             <li>API: Flask, FastAPI</li>
             <li>Environments: venv, pipenv, virtualenv</li>
-            <li>Packages: Numpy, Cmath, Matplotlib, Pydantic</li>
+            <li>Packages: Numpy, Cmath, Decimal, Matplotlib, Pydantic</li>
           </ul>
           <p></p>
 
@@ -163,8 +165,8 @@ const HomePageContent = {
             <li>Supersets: Typescript</li>
             <li>Frameworks: React, Electron</li>
             <li>Server: Express.js</li>
-            <li>Packages: Mongoose ODM, Nodemon, CORS, DotEnv, EJS Templating, Mathjax Mathematics Display Engine</li>
-            <li>Web API Interfaces: Web Storage API, Web Worker API, Web Audio API</li>
+            <li>Packages: Mongoose ODM, EJS Templating, Mathjax, Decimal.js</li>
+            <li>Web API Interfaces: Web Storage API, Web Worker API, Web Audio API, Abort API</li>
           </ul>
           <p></p>
 

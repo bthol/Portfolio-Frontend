@@ -650,7 +650,6 @@ hr {
 @media(min-width: 768px) { /* 583px */
   .carousel-container { /* use padding to see nearby slides */
     --wide: 100%;
-    padding: -1%;
     overflow: hidden;
     /* height: 100%; */
     display: flex;
@@ -740,7 +739,7 @@ hr {
     width: 23vw;
   }
   .shadow-behind {
-    -moz-box-box-shadow: 0px 0px 3px .1px var(--color-shadow);
+    -moz-box-shadow: 0px 0px 3px .1px var(--color-shadow);
     -webkit-box-shadow: 0px 0px 3px .1px var(--color-shadow);
     box-shadow: 0px 0px 3px .1px var(--color-shadow);
   }
@@ -780,7 +779,7 @@ hr {
     background: var(--color-gray);
   }
   .hover-effect:hover {
-    -moz-box-box-shadow: 0px 0px 4px .5px var(--color-shadow);
+    -moz-box-shadow:     0px 0px 4px .5px var(--color-shadow);
      -webkit-box-shadow: 0px 0px 4px .5px var(--color-shadow);
              box-shadow: 0px 0px 4px .5px var(--color-shadow);
   }
@@ -788,14 +787,15 @@ hr {
     animation: flashy 850ms infinite cubic-bezier(0, .5, 0.5, 0.8);
   }
   .comp11-layout > a:hover {
-    background: #000000;
     animation: playbutton-teaser 650ms linear infinite;
   }
 
   .comp11-layout:hover {
-    -moz-box-box-shadow: 0px 0px 4px .5px var(--font-link-color);
-     -webkit-box-shadow: 0px 0px 4px .5px var(--font-link-color);
-             box-shadow: 0px 0px 4px 1px var(--font-link-color);
+    position: relative;
+    transform: translate(0px, -5px);
+    -moz-box-shadow:     0px 5px 5px 0px var(--font-link-color);
+     -webkit-box-shadow: 0px 5px 5px 0px var(--font-link-color);
+             box-shadow: 0px 5px 5px 0px var(--font-link-color);
     outline: 1px solid var(--contrast1);
   }
 }
@@ -1029,6 +1029,9 @@ hr {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   place-items: center;
+  transition:
+    box-shadow var(--anim-rate) linear,
+    transform var(--anim-rate) linear;
 }
 
 .comp11-layout > h3 {
@@ -1038,8 +1041,6 @@ hr {
 .comp11-layout > a {
   font-weight: 600;
   padding: 8px;
-  border-radius: 25px;
-  background: #000000;
   animation: playbutton-teaser 650ms linear infinite;
 }
 
@@ -1067,6 +1068,7 @@ hr {
 #gallerypage.page-content {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  overflow-anchor: none;
 }
 
 #gallerypage .layout-width {

@@ -8,7 +8,7 @@ const SoftwareContent = {
             softwareType: "Application Software",
             platform: "Website",
             purpose: "Mathematical Computation and Research",
-            techStack: "Django, Python, Pip, JavaScript, HTML, CSS, MathJax, Flask API, Heroku CSP",
+            techStack: "Django, Python, Pip, JavaScript, HTML, CSS, MathJax, Decimal.js, Flask API, Abort API, Heroku CSP",
             description: "GoodEval is a multi-page web app computational package. A main page lists all the pages, and each page is a distinctive computational software.",
             list: <ul>
                 <li>Calculator features input pre-validation and post-validation, an edit mode for problem editing, and scientific grade functions presented in a theme-able interface with a history panel.</li>
