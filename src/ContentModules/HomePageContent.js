@@ -10,7 +10,7 @@ const HomePageContent = {
       id: "skills-1",
       title: "High-Tech Manufacturing",
       list: <ul className="skills-list remove-bullet-list border-left">
-        <li className="text-large">Materials Processed</li>
+        <div className="text-large">Materials Processed</div>
         <ul>
           <p>Metals</p>
 
@@ -31,7 +31,7 @@ const HomePageContent = {
 
         </ul>
 
-        <li className="text-large">Metrology Instruments</li>
+        <p className="text-large">Metrology Instruments</p>
 
         <ul>
           <p>Calipers</p>
@@ -68,7 +68,7 @@ const HomePageContent = {
           </ul>
         </ul>
         
-        <li className="text-large">Subtractive Manufacturing</li>
+        <p className="text-large">Subtractive Manufacturing</p>
         
         <ul>
           <p>Overview</p>
@@ -108,7 +108,6 @@ const HomePageContent = {
           </ul>
 
           <p>Manual Machine Techniques</p>
-
           <ul>
             <li>Pilot a bore by pecking a stub drill</li>
             <li>Square a vise to a machine axis</li>
@@ -116,7 +115,7 @@ const HomePageContent = {
             <li>chuck cleaning and installation</li>
           </ul>
           
-          <p></p>
+          <br />
 
         </ul>
 
@@ -127,7 +126,7 @@ const HomePageContent = {
       title: "Software Development",
       list: <ul className="skills-list remove-bullet-list border-left">
 
-        <li className="text-large">Software Details</li>
+        <div className="text-large">Software Details</div>
         <ul>
           <p>Operating Systems</p>
           <ul>
@@ -144,10 +143,9 @@ const HomePageContent = {
             <li>Browser Extension</li>
           </ul>
         </ul>
-        <p></p>
 
-        <li className="text-large">Programming Languages</li>
-        <p></p>
+        <p className="text-large">Programming Languages</p>
+
         <ul>
           <p>Python</p>
           <ul>
@@ -157,7 +155,6 @@ const HomePageContent = {
             <li>Environments: venv, pipenv, virtualenv</li>
             <li>Packages: Numpy, Cmath, Decimal, Matplotlib, Pydantic</li>
           </ul>
-          <p></p>
 
           <p>JavaScript</p>
           <ul>
@@ -168,7 +165,6 @@ const HomePageContent = {
             <li>Packages: Mongoose ODM, EJS Templating, Mathjax, Decimal.js</li>
             <li>Web API Interfaces: Web Storage API, Web Worker API, Web Audio API, Abort API</li>
           </ul>
-          <p></p>
 
           <p>C/C++</p>
           <ul>
@@ -176,7 +172,6 @@ const HomePageContent = {
             <li>Debugging: clangd, Microsoft C/C++ VS Code Extension</li>
             <li>Resources: MSYS environment, pacman package handling</li>
           </ul>
-          <p></p>
 
           <p>HTML</p>
           <ul>
@@ -188,7 +183,6 @@ const HomePageContent = {
             <li>Viewport Unit Scale</li>
             <li>Content Security Policy</li>
           </ul>
-          <p></p>
 
           <p>CSS</p>
           <ul>
@@ -196,7 +190,7 @@ const HomePageContent = {
             <li>Preprocessor: Sass</li>
             <li>Frameworks: Bootstrap</li>
           </ul>
-          <p></p>
+          <br />
 
         </ul>
       </ul>,
@@ -205,42 +199,42 @@ const HomePageContent = {
       id: "skills-3",
       title: "Graphic Design",
       list: <ul className="skills-list remove-bullet-list border-left">
-        <li className="text-large">Subjects</li>
+        <p className="text-large">Subjects</p>
         <ul>
           <li>Website</li>
           <li>Business Card</li>
           <li>Album Cover</li>
         </ul>
-        <p></p>
-        <li className="text-large">Digital Graphics Software</li>
+
+        <p className="text-large">Digital Graphics Software</p>
         <ul>
           <li>Affinity Photo</li>
           <li>Affinity Designer</li>
           <li>Canva</li>
           <li>Paint.net</li>
         </ul>
-        <p></p>
-        <li className="text-large">User Experience (UX) and User Interface (UI) Design Principles</li>
+
+        <p className="text-large">User Experience (UX) and User Interface (UI) Design Principles</p>
         <ul>
           <li>Responsive Design: useful for compatibility with various device viewport dimensions and necessary for the growing number of devices on the technology market.</li>
           <li>Interactive Design: provides user feedback for a more intuitive and compelling user experience to prevent change blindness, so new user features don't go unnoticed.</li>
           <li>Mobile First Design: a design practice where the interface layout is first created on mobile viewports and then adapted to desktop and larger, since users most often use mobile devices to browse the internet.</li>
         </ul>
-        <p></p>
+        <br />
       </ul>,
     },
     {
       id: "skills-4",
       title: "Music Production",
       list: <ul className="skills-list remove-bullet-list border-left">
-        <li className="text-large">Audio Engineering</li>
+        <p className="text-large">Audio Engineering</p>
         <ul>
           <li>autodidact: committed to self-directed knowledge acquisition spanning years</li>
           <li>Produced and engineered 25+ hours of audio</li>
           <li>Deep understanding of digital signal processing (DSP)</li>
         </ul>
-        <p></p>
-        <li className="text-large">Audio Processors</li>
+
+        <p className="text-large">Audio Processors</p>
         <ul>
           <li>Equalizers (parametric, stereographic, linear phase and adaptive)</li>
           <li>Compressors (tube, analog emulation, graphical, Automatic Gain Consideration(AGC))</li>
@@ -252,8 +246,8 @@ const HomePageContent = {
           <li>Chorus/flanger Effects (utilizing the unison psychoaccoustic effect)</li>
           <li>Saturation/Distortion</li>
         </ul>
-        <p></p>
-        <li className="text-large">Audio Synthesis Methods</li>
+
+        <p className="text-large">Audio Synthesis Methods</p>
         <ul>
           <li>Additive (noise and/or Digitally Controlled Oscillator(DCO) generate signals combined to form one sound through the unison psychoacoustic effect)</li>
           <li>Subtractive (hipass, lopass, bandpass, and shelf filters modulated with ASDR, ASD, AD, and graphical envelopes)</li>
@@ -262,7 +256,7 @@ const HomePageContent = {
           <li>Pitch Mapping (tones are generated relative to a map visually characterizing changes in frequency and amplitude across time)</li>
           <li>Spectral (audible frequency spectrum is divided into separately manipulated sections)</li>
         </ul>
-        <p></p>
+        <br />
       </ul>,
     }
   ],
