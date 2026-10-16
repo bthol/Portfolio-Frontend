@@ -4,7 +4,7 @@ const Comp12 = (props) => {
     return(
         <div className="content-container shadow-behind layout-width">
             <h3 className="underline text-x-large">{props.name}</h3>
-            <a href={props.url} target="_blank" rel="noreferrer" style={{cursor:"pointer"}} className="link-desat" onClick={(e) => {
+            <a href={props.url} target="_blank" rel="noreferrer" style={{cursor:"pointer"}} className="link-color link-desat" onClick={(e) => {
                 if (props.url === null || props.url === undefined) {
                     props.notifyFeature(e, true);
                 }

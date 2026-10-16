@@ -5,7 +5,6 @@ const Comp2 = (props) => {
         <div id={props.id} className="carousel-item">
             {props.projectTitle}
             {props.projectLinks}
-            <br /> 
             {props.projectText}
             {props.projectList}
         </div>

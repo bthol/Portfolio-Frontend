@@ -109,7 +109,7 @@ const HomePage = (props) => {
     let carouselData = [
         {
             id: "projects-1",
-            title: <b><h2 tabIndex={slideTabIdx0} className="flex-center-align underline project-highlight-margin">GoodEval</h2></b>,
+            title: <b><h2 tabIndex={slideTabIdx0} className="flex-center-align project-highlight-margin">GoodEval</h2></b>,
             links: <div className="flex-center">
                 <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
@@ -127,7 +127,7 @@ const HomePage = (props) => {
         },
         {
             id: "projects-2",
-            title: <b><h2 tabIndex={slideTabIdx1} className="flex-center underline project-highlight-margin">Space Battle</h2></b>,
+            title: <b><h2 tabIndex={slideTabIdx1} className="flex-center project-highlight-margin">Space Battle</h2></b>,
             links: <div className="flex-center">
                 <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
@@ -145,7 +145,7 @@ const HomePage = (props) => {
         },
         {
             id: "projects-3",
-            title: <b><h2 tabIndex={slideTabIdx2} className="flex-center underline project-highlight-margin">Choosy</h2></b>,
+            title: <b><h2 tabIndex={slideTabIdx2} className="flex-center project-highlight-margin">Choosy</h2></b>,
             links: <div className="flex-center">
                 <div className="carousel-link-layout">
                     <div className="inline-divider"></div>
@@ -201,7 +201,7 @@ const HomePage = (props) => {
             <div id="homepage-mid-1" className="content-container shadow-behind">
                 <div className="flex-center-vert">
 
-
+                    <h2 className="underline text-x-large flex-center" tabIndex={0}>Major Projects</h2>
                     <div className="carousel-container">
                         <div className={`projects-carousel carPos${carPos}`}>
                             <Comp2
@@ -209,22 +209,21 @@ const HomePage = (props) => {
                                 projectText={carouselData[0].text}
                                 projectLinks={carouselData[0].links}
                                 projectList={carouselData[0].list}
-                                ></Comp2>
-                            <br />
+                            ></Comp2>
+                            
                             <Comp2
                                 projectTitle={carouselData[1].title}
                                 projectText={carouselData[1].text}
                                 projectLinks={carouselData[1].links}
                                 projectList={carouselData[1].list}
-                                ></Comp2>
-                            <br />
+                            ></Comp2>
+
                             <Comp2
                                 projectTitle={carouselData[2].title}
                                 projectText={carouselData[2].text}
                                 projectLinks={carouselData[2].links}
                                 projectList={carouselData[2].list}
                             ></Comp2>
-                            <br />
                         </div>
                         {
                             !carousel

@@ -56,15 +56,16 @@ const HomePageContent = {
             <li>Telescopic Bore Gauge</li>
             <li>Chamfer Gauge</li>
           </ul>
+          
+          <p>Chemical Concentration</p>
+          <ul>
+            <li>Analog Hand-held Refractometer</li>
+            <li>Digital Refractometer</li>
+          </ul>
 
           <p>Shadow Imaging</p>
           <ul>
             <li>Optical Comparitor</li>
-          </ul>
-          
-          <p>Chemical Concentration</p>
-          <ul>
-            <li>Analog Hand-held Refractometer (Testing Coolant Concentration)</li>
           </ul>
         </ul>
         
