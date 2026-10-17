@@ -49,9 +49,51 @@ function App() {
   }, []);
 
   // CONNECTIVITY NOTIFICATION
-  useEffect(() => {
-    window.addEventListener('offline', (e) => {
-      notifyInternetConnect(e, true);
+  const [connectTestControl, setConnectTestControl] = useState(new AbortController()); // controller for backend call in test
+  const [connectionBuffer, setConnectionBuffer] = useState({}); // stores the timeout
+  const [connectTestStatus, setConnectTestStatus] = useState(false); // stores true once test has run
+  const networkConnectionTest = useCallback(async (e, signal, notify=true) => {
+    try {
+      const response = await fetch('https://bthol-portfolio-backend.herokuapp.com/subjective/connect', { signal });
+      notify && !response.ok && notifyInternetConnect(e, true);
+      return response.ok;
+    } catch (err) {
+      if (err.name === 'AbortError') {
+        // connection re-established => test aborted
+        return true;
+      } else {
+        // error caught and not aborted
+        notify && notifyInternetConnect(e, true);
+        return false;
+      }
+    }
+  }, []);
+  useEffect( () => {
+    window.addEventListener('online', async () => {
+      // test status
+      if (connectTestStatus) {
+        // abort connection test
+        connectTestControl.abort();
+        // setup new control
+        setConnectTestControl(new AbortController());
+        // reset status
+        setConnectTestStatus(false);
+      } else {
+        // clear timeout
+        clearTimeout(connectionBuffer);
+      }
+    });
+    window.addEventListener('offline', async (e) => {
+      setConnectionBuffer(
+        setTimeout( async () => {
+          // indicate fulfilment of timeout
+          setConnectTestStatus(true);
+          // run network test
+          networkConnectionTest(e, connectTestControl.signal);
+          // clean up buffer
+          clearTimeout(connectionBuffer);
+        }, 10 * 1000)
+      );
     });
   }, []);
   
@@ -178,8 +220,7 @@ function App() {
   const [portfolioLikes, setPortfolioLikes] = useState(<Comp8 />);
   
   // fetch data on load
-  const [ID, setID] = useState("64a90dfc4b3042dcaabdf1b4");
-  const [noData, setNoData] = useState('∅'); // 🚫
+  const [noData, setNoData] = useState('∅');
   useEffect(() => {
     let ignore = false;
     const getResources = () => {
@@ -194,7 +235,7 @@ function App() {
       try {
         // onFulfilled
         // Request resources and display them
-        fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/`)
+        fetch('https://bthol-portfolio-backend.herokuapp.com/subjective/')
         .then(res => res.json())
         .then((json) => {
           // update likes
@@ -205,7 +246,7 @@ function App() {
             setPortfolioViews(`: ${json.data[0].portfolioViews + 1}`);
             // update views in database
             try {
-              fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+              fetch('https://bthol-portfolio-backend.herokuapp.com/subjective/64a90dfc4b3042dcaabdf1b4', {
                 method: 'PATCH',
                 headers: {
                   'Content-type': 'application/json; charset=UTF-8',
@@ -261,7 +302,7 @@ function App() {
         .then(res => res.json())
         .then((data) => {
           try {
-            fetch(`https://bthol-portfolio-backend.herokuapp.com/subjective/${ID}`, {
+            fetch('https://bthol-portfolio-backend.herokuapp.com/subjective/64a90dfc4b3042dcaabdf1b4', {
               method: 'PATCH',
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
